@@ -1,0 +1,12 @@
+# Esperimento A — dipendenze
+# Python 3.14.3
+
+anthropic>=0.40,<1.0
+openai>=1.50,<2.0
+google-generativeai>=0.8,<1.0
+python-dotenv>=1.0,<2.0
+pandas>=2.2,<3.0
+scikit-learn>=1.4,<2.0
+numpy>=1.26,<3.0
+scipy>=1.13,<2.0
+statsmodels>=0.14,<1.0

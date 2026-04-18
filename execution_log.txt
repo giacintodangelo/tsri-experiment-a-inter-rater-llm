@@ -1,0 +1,52 @@
+[2026-04-18T23:07:10.851230+00:00] ======================================================================
+[2026-04-18T23:07:10.851405+00:00] Esperimento A — Inter-Rater Reliability tra LLM indipendenti
+[2026-04-18T23:07:10.851547+00:00] ======================================================================
+[2026-04-18T23:07:10.851671+00:00] Verifica integrita' theory-data.json...
+[2026-04-18T23:07:10.852994+00:00]   SHA-256 OK: 98d277369e0213d54f55910ea8157c86dc3a690e3f8cbb81605fa036b8401b5a
+[2026-04-18T23:07:10.856358+00:00]   Prompt delle primitive salvato in theory_primitives_prompt.txt (16841 char)
+[2026-04-18T23:07:10.856547+00:00] Estrazione dei 10 sistemi di test...
+[2026-04-18T23:07:10.858242+00:00]   S1: Sistema di prenotazione voli (tipo Kayak/Skyscanner) (987 char)
+[2026-04-18T23:07:10.858413+00:00]   S2: Patch Tuesday Microsoft (1143 char)
+[2026-04-18T23:07:10.858562+00:00]   S3: Replit (IDE collaborativo live) (1071 char)
+[2026-04-18T23:07:10.858691+00:00]   S4: Regolazione endocrina della glicemia (1026 char)
+[2026-04-18T23:07:10.858839+00:00]   S5: Metamorfosi della rana (1045 char)
+[2026-04-18T23:07:10.858994+00:00]   S6: Migrazione verticale del plancton (1039 char)
+[2026-04-18T23:07:10.859150+00:00]   S7: Redazione di un quotidiano cartaceo (1182 char)
+[2026-04-18T23:07:10.859297+00:00]   S8: Cooperativa di pescatori di un piccolo porto (1152 char)
+[2026-04-18T23:07:10.859436+00:00]   S9: Causa di beatificazione nella Chiesa cattolica (1235 char)
+[2026-04-18T23:07:10.859574+00:00]   S10: Conto corrente bancario (1200 char)
+[2026-04-18T23:07:10.859713+00:00] 
+Esecuzione 30 chiamate API...
+[2026-04-18T23:08:08.972446+00:00]   [OK] J1_CLAUDE/S1: 27 primitive identificate (58.1s, attempt 1)
+[2026-04-18T23:09:03.092526+00:00]   [OK] J1_CLAUDE/S2: 30 primitive identificate (54.1s, attempt 1)
+[2026-04-18T23:10:00.002403+00:00]   [FAIL] J1_CLAUDE/S3 attempt 1: ValueError: Impossibile estrarre JSON dalla risposta
+[2026-04-18T23:10:53.958259+00:00]   [OK] J1_CLAUDE/S3: 31 primitive identificate (50.9s, attempt 2)
+[2026-04-18T23:11:26.758360+00:00]   [OK] J1_CLAUDE/S4: 18 primitive identificate (32.8s, attempt 1)
+[2026-04-18T23:11:50.657233+00:00]   [OK] J1_CLAUDE/S5: 11 primitive identificate (23.9s, attempt 1)
+[2026-04-18T23:12:27.344187+00:00]   [OK] J1_CLAUDE/S6: 15 primitive identificate (36.7s, attempt 1)
+[2026-04-18T23:13:29.035840+00:00]   [OK] J1_CLAUDE/S7: 30 primitive identificate (61.7s, attempt 1)
+[2026-04-18T23:14:14.205325+00:00]   [OK] J1_CLAUDE/S8: 29 primitive identificate (45.2s, attempt 1)
+[2026-04-18T23:14:52.363025+00:00]   [OK] J1_CLAUDE/S9: 20 primitive identificate (38.2s, attempt 1)
+[2026-04-18T23:15:43.596773+00:00]   [OK] J1_CLAUDE/S10: 26 primitive identificate (51.2s, attempt 1)
+[2026-04-18T23:15:43.597692+00:00]   [skip] J2_OPENAI/S1: gia' presente
+[2026-04-18T23:15:43.597932+00:00]   [skip] J2_OPENAI/S2: gia' presente
+[2026-04-18T23:15:43.598154+00:00]   [skip] J2_OPENAI/S3: gia' presente
+[2026-04-18T23:15:43.598381+00:00]   [skip] J2_OPENAI/S4: gia' presente
+[2026-04-18T23:15:43.598640+00:00]   [skip] J2_OPENAI/S5: gia' presente
+[2026-04-18T23:15:43.598894+00:00]   [skip] J2_OPENAI/S6: gia' presente
+[2026-04-18T23:15:43.599105+00:00]   [skip] J2_OPENAI/S7: gia' presente
+[2026-04-18T23:15:43.599333+00:00]   [skip] J2_OPENAI/S8: gia' presente
+[2026-04-18T23:15:43.599579+00:00]   [skip] J2_OPENAI/S9: gia' presente
+[2026-04-18T23:15:43.599951+00:00]   [skip] J2_OPENAI/S10: gia' presente
+[2026-04-18T23:15:43.600770+00:00]   [skip] J3_GEMINI/S1: gia' presente
+[2026-04-18T23:15:43.600993+00:00]   [skip] J3_GEMINI/S2: gia' presente
+[2026-04-18T23:15:43.601243+00:00]   [skip] J3_GEMINI/S3: gia' presente
+[2026-04-18T23:15:43.601469+00:00]   [skip] J3_GEMINI/S4: gia' presente
+[2026-04-18T23:15:43.601743+00:00]   [skip] J3_GEMINI/S5: gia' presente
+[2026-04-18T23:15:43.601976+00:00]   [skip] J3_GEMINI/S6: gia' presente
+[2026-04-18T23:15:43.602257+00:00]   [skip] J3_GEMINI/S7: gia' presente
+[2026-04-18T23:15:43.602515+00:00]   [skip] J3_GEMINI/S8: gia' presente
+[2026-04-18T23:15:43.602753+00:00]   [skip] J3_GEMINI/S9: gia' presente
+[2026-04-18T23:15:43.603003+00:00]   [skip] J3_GEMINI/S10: gia' presente
+[2026-04-18T23:15:43.603133+00:00] 
+Tutte le chiamate completate.

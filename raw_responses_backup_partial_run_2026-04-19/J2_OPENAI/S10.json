@@ -1,0 +1,102 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S10",
+  "system_title": "Conto corrente bancario",
+  "attempt": 1,
+  "elapsed_s": 7.64,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 900,
+    "prompt_tokens": 5323,
+    "total_tokens": 6223,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4096
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "M1",
+      "quote": "Un cittadino apre un conto corrente presso una banca. Per farlo presenta documento di identità, codice fiscale, referenze lavorative.",
+      "removal_test": "Senza l'identità, non sarebbe possibile distinguere tra i diversi titolari di conto, rendendo impossibile la gestione personalizzata dei conti."
+    },
+    {
+      "id": "T1",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta.",
+      "removal_test": "Senza la transazione tra due parti, non ci sarebbero scambi di denaro tra il cliente e altre entità, rendendo il conto corrente inutile."
+    },
+    {
+      "id": "T2",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza l'oggetto di trasferimento, non ci sarebbe alcun movimento di denaro tra conti, eliminando la funzione principale del conto corrente."
+    },
+    {
+      "id": "T3",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi.",
+      "removal_test": "Senza l'accordo, non ci sarebbero regole per bloccare transazioni sospette, aumentando il rischio di attività illegali."
+    },
+    {
+      "id": "T4",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza l'irreversibilità, le transazioni potrebbero essere annullate arbitrariamente, compromettendo la fiducia nel sistema bancario."
+    },
+    {
+      "id": "I1",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido (linea di credito concessa dalla banca).",
+      "removal_test": "Senza l'esistenza quantificabile, non sarebbe possibile determinare il saldo del conto, rendendo impossibile la gestione delle finanze del cliente."
+    },
+    {
+      "id": "I2",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.",
+      "removal_test": "Senza la finitezza, non ci sarebbero limiti di soglia per l'imposta di bollo, eliminando un aspetto fiscale importante."
+    },
+    {
+      "id": "I3",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta.",
+      "removal_test": "Senza l'appartenenza al contenitore, non ci sarebbe modo di sapere a quale conto appartengono i fondi, rendendo impossibile la gestione delle transazioni."
+    },
+    {
+      "id": "I4",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza lo stato, non sarebbe possibile conoscere la condizione attuale del conto, come il saldo disponibile."
+    },
+    {
+      "id": "W2",
+      "quote": "Il cliente può chiudere il conto in qualsiasi momento; la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.",
+      "removal_test": "Senza stati e transizioni, non ci sarebbe un processo strutturato per l'apertura e la chiusura del conto, rendendo il sistema disorganizzato."
+    },
+    {
+      "id": "W3",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML).",
+      "removal_test": "Senza le regole, non ci sarebbero criteri per bloccare transazioni sospette, compromettendo la sicurezza del sistema."
+    },
+    {
+      "id": "N2",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "Senza la traccia temporale costitutiva, non ci sarebbe modo di documentare le transazioni nel tempo, rendendo impossibile il monitoraggio delle attività del conto."
+    }
+  ],
+  "primitive_ids": [
+    "M1",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "W2",
+    "W3",
+    "N2"
+  ],
+  "n_primitives": 12,
+  "raw_response": "{\"primitives\": [{\"id\": \"M1\", \"quote\": \"Un cittadino apre un conto corrente presso una banca. Per farlo presenta documento di identità, codice fiscale, referenze lavorative.\", \"removal_test\": \"Senza l'identità, non sarebbe possibile distinguere tra i diversi titolari di conto, rendendo impossibile la gestione personalizzata dei conti.\"}, {\"id\": \"T1\", \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta.\", \"removal_test\": \"Senza la transazione tra due parti, non ci sarebbero scambi di denaro tra il cliente e altre entità, rendendo il conto corrente inutile.\"}, {\"id\": \"T2\", \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\", \"removal_test\": \"Senza l'oggetto di trasferimento, non ci sarebbe alcun movimento di denaro tra conti, eliminando la funzione principale del conto corrente.\"}, {\"id\": \"T3\", \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi.\", \"removal_test\": \"Senza l'accordo, non ci sarebbero regole per bloccare transazioni sospette, aumentando il rischio di attività illegali.\"}, {\"id\": \"T4\", \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\", \"removal_test\": \"Senza l'irreversibilità, le transazioni potrebbero essere annullate arbitrariamente, compromettendo la fiducia nel sistema bancario.\"}, {\"id\": \"I1\", \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido (linea di credito concessa dalla banca).\", \"removal_test\": \"Senza l'esistenza quantificabile, non sarebbe possibile determinare il saldo del conto, rendendo impossibile la gestione delle finanze del cliente.\"}, {\"id\": \"I2\", \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.\", \"removal_test\": \"Senza la finitezza, non ci sarebbero limiti di soglia per l'imposta di bollo, eliminando un aspetto fiscale importante.\"}, {\"id\": \"I3\", \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta.\", \"removal_test\": \"Senza l'appartenenza al contenitore, non ci sarebbe modo di sapere a quale conto appartengono i fondi, rendendo impossibile la gestione delle transazioni.\"}, {\"id\": \"I4\", \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\", \"removal_test\": \"Senza lo stato, non sarebbe possibile conoscere la condizione attuale del conto, come il saldo disponibile.\"}, {\"id\": \"W2\", \"quote\": \"Il cliente può chiudere il conto in qualsiasi momento; la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.\", \"removal_test\": \"Senza stati e transizioni, non ci sarebbe un processo strutturato per l'apertura e la chiusura del conto, rendendo il sistema disorganizzato.\"}, {\"id\": \"W3\", \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML).\", \"removal_test\": \"Senza le regole, non ci sarebbero criteri per bloccare transazioni sospette, compromettendo la sicurezza del sistema.\"}, {\"id\": \"N2\", \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\", \"removal_test\": \"Senza la traccia temporale costitutiva, non ci sarebbe modo di documentare le transazioni nel tempo, rendendo impossibile il monitoraggio delle attività del conto.\"}]}",
+  "timestamp_utc": "2026-04-18T22:34:50.690052+00:00"
+}

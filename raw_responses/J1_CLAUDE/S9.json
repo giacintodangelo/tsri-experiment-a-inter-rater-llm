@@ -1,0 +1,141 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 38.16,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6144,
+    "output_tokens": 2626,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "la sua diocesi può avviare una causa di beatificazione [...] Il processo può durare decenni o secoli",
+      "removal_test": "Senza persistenza intenzionale, il dossier, le testimonianze, gli scritti e l'intera causa si dissolverebbero nel tempo. Non esisterebbe alcun meccanismo per combattere la dissoluzione naturale della memoria del candidato attraverso decenni o secoli di processo."
+    },
+    {
+      "id": "C2",
+      "quote": "gli scritti del candidato — lettere, diari, omelie — vengono esaminati da una commissione teologica per escludere eresie",
+      "removal_test": "Senza forma, gli scritti del candidato non avrebbero struttura analizzabile. La commissione teologica non potrebbe identificare contenuti ereticali perché non esisterebbe una struttura dottrinale rispetto a cui valutare la conformità."
+    },
+    {
+      "id": "C3",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi",
+      "removal_test": "Senza ritrovabilità, il dossier compilato dal postulatore non potrebbe essere localizzato e trasmesso alla Congregazione. La fase diocesana non potrebbe mai connettersi alla fase romana."
+    },
+    {
+      "id": "C4",
+      "quote": "la raccolta di testimonianze scritte e orali [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie",
+      "removal_test": "Senza accumulazione, non esisterebbe un corpus crescente di evidenze. Il dossier non potrebbe formarsi per stratificazione progressiva di testimonianze, scritti e documentazione medica."
+    },
+    {
+      "id": "C5",
+      "quote": "Un postulatore (nominato) compila il dossier [...] testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori",
+      "removal_test": "Senza relazione, le testimonianze sarebbero frammenti isolati non collegati al candidato né tra loro. Il dossier non potrebbe essere un corpus coerente di artefatti connessi a una stessa causa."
+    },
+    {
+      "id": "I4",
+      "quote": "Dopo parere positivo, il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'. [...] alcune cause sono archiviate ('sospese')",
+      "removal_test": "Senza stato, non si potrebbe sapere in quale fase si trova una causa in un dato momento. Non esisterebbe distinzione operativa tra candidato, Venerabile, Beato, Santo, o causa sospesa."
+    },
+    {
+      "id": "M1",
+      "quote": "Quando una persona cattolica muore in odore di santità [...] il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo'",
+      "removal_test": "Senza identità, non esisterebbe un soggetto persistente a cui attribuire i titoli progressivi. La causa non potrebbe riferirsi a una persona specifica attraverso decenni o secoli di processo."
+    },
+    {
+      "id": "M2",
+      "quote": "Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'",
+      "removal_test": "Senza legame al gruppo, non esisterebbe il meccanismo di ingresso nelle categorie canoniche (Venerabile, Beato, Santo). Il processo non avrebbe esito — nessuno potrebbe essere formalmente ascritto al gruppo dei santi."
+    },
+    {
+      "id": "M3",
+      "quote": "Dopo parere positivo, il Papa firma un decreto che attribuisce il titolo di 'Venerabile' [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'",
+      "removal_test": "Senza differenziazione, tutti i candidati sarebbero equivalenti. Non esisterebbe la gerarchia Venerabile→Beato→Santo con diritti e riconoscimenti diversi associati a ciascun livello."
+    },
+    {
+      "id": "M4",
+      "quote": "una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato [...] Il processo ha regole canoniche codificate",
+      "removal_test": "Senza confine dentro/fuori, chiunque potrebbe essere dichiarato santo senza processo. Non esisterebbe la distinzione strutturale tra chi appartiene al canone dei santi e chi ne è escluso, né la protezione dell'integrità dottrinale del gruppo."
+    },
+    {
+      "id": "W1",
+      "quote": "la sua diocesi può avviare una causa di beatificazione [...] il dossier viene inviato a Roma",
+      "removal_test": "Senza unità di lavoro, non esisterebbe un oggetto processabile — la 'causa' come entità che entra nel processo, viene trasformata dalle fasi e ne esce con un esito. Il processo non avrebbe su cosa operare."
+    },
+    {
+      "id": "W2",
+      "quote": "La fase diocesana [...] il dossier viene inviato a Roma [...] decreto che attribuisce il titolo di 'Venerabile' [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'",
+      "removal_test": "Senza stati e transizioni, non esisterebbe la sequenza ordinata delle fasi. La causa non potrebbe avanzare in modo strutturato da diocesi a Roma, da candidato a Venerabile a Beato a Santo."
+    },
+    {
+      "id": "W3",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983) [...] per escludere eresie [...] un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica",
+      "removal_test": "Senza regole, qualsiasi transizione sarebbe valida. Non esisterebbe il criterio che distingue un'avanzamento legittimo da uno illegittimo, né la definizione di cosa costituisce un miracolo accettabile."
+    },
+    {
+      "id": "W4",
+      "quote": "Un postulatore (nominato) compila il dossier [...] una commissione di cardinali e consultori valuta [...] il Papa firma un decreto",
+      "removal_test": "Senza responsabilità, nessuna fase avrebbe un agente designato. Non si saprebbe chi deve raccogliere le testimonianze, chi valuta le virtù eroiche, chi ha l'autorità finale di firma. Il processo si dissolverebbe in azioni senza titolare."
+    },
+    {
+      "id": "S3",
+      "quote": "Il processo può durare decenni o secoli; alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente",
+      "removal_test": "Senza slot temporali, non esisterebbe la struttura del tempo processuale — le fasi non avrebbero collocazione temporale, le cause sospese non potrebbero essere riattivate in un momento futuro, e la durata pluridecennale non sarebbe gestibile."
+    },
+    {
+      "id": "CO2",
+      "quote": "testimonianze scritte e orali [...] gli scritti del candidato — lettere, diari, omelie — vengono esaminati da una commissione teologica",
+      "removal_test": "Senza significato codificato, le testimonianze e gli scritti sarebbero rumore privo di interpretazione. La commissione teologica non potrebbe decodificare il contenuto dottrinale degli scritti né valutare le affermazioni di grazia ricevuta."
+    },
+    {
+      "id": "CO3",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi",
+      "removal_test": "Senza direzionalità, il dossier non avrebbe destinatario. La trasmissione dalla diocesi alla Congregazione non potrebbe avvenire — il messaggio non supererebbe la separazione geografica e istituzionale."
+    },
+    {
+      "id": "N2",
+      "quote": "Il processo può durare decenni o secoli [...] testimonianze [...] di chi ha conosciuto il candidato",
+      "removal_test": "Senza traccia temporale costitutiva, le testimonianze perderebbero il loro ancoraggio cronologico. Non si potrebbe stabilire quando i fatti attestati sono avvenuti, quando le grazie sono state ricevute, né ordinare temporalmente le evidenze accumulate."
+    },
+    {
+      "id": "N3",
+      "quote": "un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica",
+      "removal_test": "Senza indicazione indiretta, la guarigione fisica non potrebbe essere letta come segnale di intercessione soprannaturale. Il sistema perderebbe la capacità di inferire lo stato spirituale del candidato (santità) da fenomeni osservabili nel mondo fisico."
+    },
+    {
+      "id": "N5",
+      "quote": "testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori, gente comune che afferma di aver ricevuto grazie",
+      "removal_test": "Senza asimmetria sorgente-osservatore, non esisterebbe la struttura fondamentale del processo: il candidato (sorgente, ormai morto) emette segnali — comportamenti, scritti, effetti — che osservatori attivi (commissioni, postulatore, testimoni) raccolgono e interpretano senza che la sorgente partecipi consapevolmente."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "I4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "S3",
+    "CO2",
+    "CO3",
+    "N2",
+    "N3",
+    "N5"
+  ],
+  "n_primitives": 20,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione [...] Il processo può durare decenni o secoli\",\n      \"removal_test\": \"Senza persistenza intenzionale, il dossier, le testimonianze, gli scritti e l'intera causa si dissolverebbero nel tempo. Non esisterebbe alcun meccanismo per combattere la dissoluzione naturale della memoria del candidato attraverso decenni o secoli di processo.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"gli scritti del candidato — lettere, diari, omelie — vengono esaminati da una commissione teologica per escludere eresie\",\n      \"removal_test\": \"Senza forma, gli scritti del candidato non avrebbero struttura analizzabile. La commissione teologica non potrebbe identificare contenuti ereticali perché non esisterebbe una struttura dottrinale rispetto a cui valutare la conformità.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi\",\n      \"removal_test\": \"Senza ritrovabilità, il dossier compilato dal postulatore non potrebbe essere localizzato e trasmesso alla Congregazione. La fase diocesana non potrebbe mai connettersi alla fase romana.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"la raccolta di testimonianze scritte e orali [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie\",\n      \"removal_test\": \"Senza accumulazione, non esisterebbe un corpus crescente di evidenze. Il dossier non potrebbe formarsi per stratificazione progressiva di testimonianze, scritti e documentazione medica.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier [...] testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori\",\n      \"removal_test\": \"Senza relazione, le testimonianze sarebbero frammenti isolati non collegati al candidato né tra loro. Il dossier non potrebbe essere un corpus coerente di artefatti connessi a una stessa causa.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"Dopo parere positivo, il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'. [...] alcune cause sono archiviate ('sospese')\",\n      \"removal_test\": \"Senza stato, non si potrebbe sapere in quale fase si trova una causa in un dato momento. Non esisterebbe distinzione operativa tra candidato, Venerabile, Beato, Santo, o causa sospesa.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Quando una persona cattolica muore in odore di santità [...] il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo'\",\n      \"removal_test\": \"Senza identità, non esisterebbe un soggetto persistente a cui attribuire i titoli progressivi. La causa non potrebbe riferirsi a una persona specifica attraverso decenni o secoli di processo.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'\",\n      \"removal_test\": \"Senza legame al gruppo, non esisterebbe il meccanismo di ingresso nelle categorie canoniche (Venerabile, Beato, Santo). Il processo non avrebbe esito — nessuno potrebbe essere formalmente ascritto al gruppo dei santi.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"Dopo parere positivo, il Papa firma un decreto che attribuisce il titolo di 'Venerabile' [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'\",\n      \"removal_test\": \"Senza differenziazione, tutti i candidati sarebbero equivalenti. Non esisterebbe la gerarchia Venerabile→Beato→Santo con diritti e riconoscimenti diversi associati a ciascun livello.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato [...] Il processo ha regole canoniche codificate\",\n      \"removal_test\": \"Senza confine dentro/fuori, chiunque potrebbe essere dichiarato santo senza processo. Non esisterebbe la distinzione strutturale tra chi appartiene al canone dei santi e chi ne è escluso, né la protezione dell'integrità dottrinale del gruppo.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione [...] il dossier viene inviato a Roma\",\n      \"removal_test\": \"Senza unità di lavoro, non esisterebbe un oggetto processabile — la 'causa' come entità che entra nel processo, viene trasformata dalle fasi e ne esce con un esito. Il processo non avrebbe su cosa operare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"La fase diocesana [...] il dossier viene inviato a Roma [...] decreto che attribuisce il titolo di 'Venerabile' [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'\",\n      \"removal_test\": \"Senza stati e transizioni, non esisterebbe la sequenza ordinata delle fasi. La causa non potrebbe avanzare in modo strutturato da diocesi a Roma, da candidato a Venerabile a Beato a Santo.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983) [...] per escludere eresie [...] un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica\",\n      \"removal_test\": \"Senza regole, qualsiasi transizione sarebbe valida. Non esisterebbe il criterio che distingue un'avanzamento legittimo da uno illegittimo, né la definizione di cosa costituisce un miracolo accettabile.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier [...] una commissione di cardinali e consultori valuta [...] il Papa firma un decreto\",\n      \"removal_test\": \"Senza responsabilità, nessuna fase avrebbe un agente designato. Non si saprebbe chi deve raccogliere le testimonianze, chi valuta le virtù eroiche, chi ha l'autorità finale di firma. Il processo si dissolverebbe in azioni senza titolare.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"Il processo può durare decenni o secoli; alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente\",\n      \"removal_test\": \"Senza slot temporali, non esisterebbe la struttura del tempo processuale — le fasi non avrebbero collocazione temporale, le cause sospese non potrebbero essere riattivate in un momento futuro, e la durata pluridecennale non sarebbe gestibile.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"testimonianze scritte e orali [...] gli scritti del candidato — lettere, diari, omelie — vengono esaminati da una commissione teologica\",\n      \"removal_test\": \"Senza significato codificato, le testimonianze e gli scritti sarebbero rumore privo di interpretazione. La commissione teologica non potrebbe decodificare il contenuto dottrinale degli scritti né valutare le affermazioni di grazia ricevuta.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi\",\n      \"removal_test\": \"Senza direzionalità, il dossier non avrebbe destinatario. La trasmissione dalla diocesi alla Congregazione non potrebbe avvenire — il messaggio non supererebbe la separazione geografica e istituzionale.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"Il processo può durare decenni o secoli [...] testimonianze [...] di chi ha conosciuto il candidato\",\n      \"removal_test\": \"Senza traccia temporale costitutiva, le testimonianze perderebbero il loro ancoraggio cronologico. Non si potrebbe stabilire quando i fatti attestati sono avvenuti, quando le grazie sono state ricevute, né ordinare temporalmente le evidenze accumulate.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica\",\n      \"removal_test\": \"Senza indicazione indiretta, la guarigione fisica non potrebbe essere letta come segnale di intercessione soprannaturale. Il sistema perderebbe la capacità di inferire lo stato spirituale del candidato (santità) da fenomeni osservabili nel mondo fisico.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori, gente comune che afferma di aver ricevuto grazie\",\n      \"removal_test\": \"Senza asimmetria sorgente-osservatore, non esisterebbe la struttura fondamentale del processo: il candidato (sorgente, ormai morto) emette segnali — comportamenti, scritti, effetti — che osservatori attivi (commissioni, postulatore, testimoni) raccolgono e interpretano senza che la sorgente partecipi consapevolmente.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:14:52.361297+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 4.91,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 468,
+    "prompt_tokens": 5307,
+    "total_tokens": 5775,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4096
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).",
+      "removal_test": "Senza la persistenza intenzionale, il corpo non riuscirebbe a mantenere la glicemia entro la finestra ristretta, portando a fluttuazioni pericolose."
+    },
+    {
+      "id": "T1",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas, viene rilasciata quando il glucosio sale dopo un pasto: si lega a recettori sulle cellule muscolari, adipose e epatiche.",
+      "removal_test": "Senza la relazione tra insulina e recettori cellulari, il glucosio non verrebbe assorbito efficacemente dalle cellule, causando iperglicemia."
+    },
+    {
+      "id": "T2",
+      "quote": "Il glucagone, prodotto dalle cellule alfa, fa il contrario: quando il glucosio scende (digiuno, esercizio), stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.",
+      "removal_test": "Senza il trasferimento di glucosio dal fegato al sangue, il corpo non potrebbe aumentare la glicemia durante il digiuno o l'esercizio."
+    },
+    {
+      "id": "N2",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.",
+      "removal_test": "Senza la traccia temporale costitutiva, non sarebbe possibile valutare la glicemia media nel tempo, rendendo difficile il monitoraggio del controllo glicemico."
+    },
+    {
+      "id": "N5",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.",
+      "removal_test": "Senza l'asimmetria sorgente-osservatore, il pancreas non potrebbe rilevare i livelli di glucosio e rispondere adeguatamente con il rilascio di insulina o glucagone."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "T1",
+    "T2",
+    "N2",
+    "N5"
+  ],
+  "n_primitives": 5,
+  "raw_response": "{\"primitives\": [{\"id\": \"C1\", \"quote\": \"Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).\", \"removal_test\": \"Senza la persistenza intenzionale, il corpo non riuscirebbe a mantenere la glicemia entro la finestra ristretta, portando a fluttuazioni pericolose.\"}, {\"id\": \"T1\", \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas, viene rilasciata quando il glucosio sale dopo un pasto: si lega a recettori sulle cellule muscolari, adipose e epatiche.\", \"removal_test\": \"Senza la relazione tra insulina e recettori cellulari, il glucosio non verrebbe assorbito efficacemente dalle cellule, causando iperglicemia.\"}, {\"id\": \"T2\", \"quote\": \"Il glucagone, prodotto dalle cellule alfa, fa il contrario: quando il glucosio scende (digiuno, esercizio), stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.\", \"removal_test\": \"Senza il trasferimento di glucosio dal fegato al sangue, il corpo non potrebbe aumentare la glicemia durante il digiuno o l'esercizio.\"}, {\"id\": \"N2\", \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.\", \"removal_test\": \"Senza la traccia temporale costitutiva, non sarebbe possibile valutare la glicemia media nel tempo, rendendo difficile il monitoraggio del controllo glicemico.\"}, {\"id\": \"N5\", \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.\", \"removal_test\": \"Senza l'asimmetria sorgente-osservatore, il pancreas non potrebbe rilevare i livelli di glucosio e rispondere adeguatamente con il rilascio di insulina o glucagone.\"}]}",
+  "timestamp_utc": "2026-04-18T22:34:14.090734+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S5",
+  "system_title": "Metamorfosi della rana",
+  "attempt": 1,
+  "elapsed_s": 4.84,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 398,
+    "prompt_tokens": 5305,
+    "total_tokens": 5703,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "C4",
+      "quote": "Per settimane vive in acqua stagnante, cresce, accumula massa.",
+      "removal_test": "Senza l'accumulazione, il girino non potrebbe crescere e svilupparsi in una rana adulta."
+    },
+    {
+      "id": "W2",
+      "quote": "A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi.",
+      "removal_test": "Senza stati e transizioni, non ci sarebbe un ordine strutturato nel processo di metamorfosi, impedendo il passaggio da girino a rana."
+    },
+    {
+      "id": "W3",
+      "quote": "determinato da temperatura, disponibilità di cibo, livelli ormonali",
+      "removal_test": "Senza regole, non ci sarebbero condizioni specifiche che innescano la metamorfosi, rendendo il processo caotico e non garantito."
+    },
+    {
+      "id": "T4",
+      "quote": "Quando la metamorfosi è completa, la rana adulta esce dall'acqua",
+      "removal_test": "Senza irreversibilità, la rana potrebbe tornare allo stato di girino, rendendo impossibile il completamento del ciclo di vita."
+    },
+    {
+      "id": "M1",
+      "quote": "Una rana nasce come girino acquatico",
+      "removal_test": "Senza identità, non ci sarebbe continuità tra il girino e la rana adulta, rendendo il ciclo di vita incoerente."
+    },
+    {
+      "id": "M2",
+      "quote": "Il ciclo si ripete: uova → girini → metamorfosi → adulti.",
+      "removal_test": "Senza legame al gruppo, non ci sarebbe una chiara appartenenza al ciclo di vita della rana, interrompendo la continuità generazionale."
+    }
+  ],
+  "primitive_ids": [
+    "C4",
+    "W2",
+    "W3",
+    "T4",
+    "M1",
+    "M2"
+  ],
+  "n_primitives": 6,
+  "raw_response": "{\"primitives\": [{\"id\": \"C4\", \"quote\": \"Per settimane vive in acqua stagnante, cresce, accumula massa.\", \"removal_test\": \"Senza l'accumulazione, il girino non potrebbe crescere e svilupparsi in una rana adulta.\"}, {\"id\": \"W2\", \"quote\": \"A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi.\", \"removal_test\": \"Senza stati e transizioni, non ci sarebbe un ordine strutturato nel processo di metamorfosi, impedendo il passaggio da girino a rana.\"}, {\"id\": \"W3\", \"quote\": \"determinato da temperatura, disponibilità di cibo, livelli ormonali\", \"removal_test\": \"Senza regole, non ci sarebbero condizioni specifiche che innescano la metamorfosi, rendendo il processo caotico e non garantito.\"}, {\"id\": \"T4\", \"quote\": \"Quando la metamorfosi è completa, la rana adulta esce dall'acqua\", \"removal_test\": \"Senza irreversibilità, la rana potrebbe tornare allo stato di girino, rendendo impossibile il completamento del ciclo di vita.\"}, {\"id\": \"M1\", \"quote\": \"Una rana nasce come girino acquatico\", \"removal_test\": \"Senza identità, non ci sarebbe continuità tra il girino e la rana adulta, rendendo il ciclo di vita incoerente.\"}, {\"id\": \"M2\", \"quote\": \"Il ciclo si ripete: uova → girini → metamorfosi → adulti.\", \"removal_test\": \"Senza legame al gruppo, non ci sarebbe una chiara appartenenza al ciclo di vita della rana, interrompendo la continuità generazionale.\"}]}",
+  "timestamp_utc": "2026-04-18T22:52:42.152470+00:00"
+}

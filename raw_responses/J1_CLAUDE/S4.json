@@ -1,0 +1,129 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 32.79,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6103,
+    "output_tokens": 2193,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "I1",
+      "quote": "il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)",
+      "removal_test": "Senza esistenza quantificabile non ci sarebbe un valore misurabile della glicemia: il sistema non potrebbe rilevare se il glucosio è alto o basso, rendendo impossibile qualsiasi risposta regolatoria."
+    },
+    {
+      "id": "I4",
+      "quote": "quando il glucosio sale dopo un pasto [...] quando il glucosio scende (digiuno, esercizio)",
+      "removal_test": "Senza stato corrente del glucosio il pancreas non avrebbe nulla su cui agire: non saprebbe se rilasciare insulina o glucagone. L'intero meccanismo di feedback collassa."
+    },
+    {
+      "id": "C2",
+      "quote": "una finestra ristretta (~70-100 mg/dL a digiuno)",
+      "removal_test": "Senza forma — cioè senza la struttura definita dell'intervallo fisiologico — non esisterebbe un riferimento rispetto al quale classificare un valore come normale, alto o basso. Il range non è un processo, è una struttura."
+    },
+    {
+      "id": "I2",
+      "quote": "stimola il fegato a rilasciare glucosio dalle riserve di glicogeno",
+      "removal_test": "Senza finitezza le riserve di glicogeno sarebbero infinite: il glucagone potrebbe sempre attingere al fegato senza limite, eliminando il rischio di ipoglicemia prolungata e rendendo superflua la regolazione."
+    },
+    {
+      "id": "N1",
+      "quote": "il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Senza emissione involontaria il glucosio non segnalerebbe passivamente la propria concentrazione: il pancreas non avrebbe input su cui operare. La regolazione non potrebbe partire."
+    },
+    {
+      "id": "N3",
+      "quote": "il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Senza indicazione indiretta la concentrazione di glucosio non indicherebbe lo stato metabolico sottostante (pasto appena consumato, digiuno, esercizio): il segnale chimico sarebbe un dato grezzo senza capacità di puntare a una condizione del sistema."
+    },
+    {
+      "id": "N5",
+      "quote": "il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Senza asimmetria sorgente-osservatore non ci sarebbe distinzione tra chi emette (il glucosio nel sangue) e chi osserva e reagisce (le cellule pancreatiche): il meccanismo di sensing unidirezionale collasserebbe in una comunicazione simmetrica che non corrisponde alla biologia del sistema."
+    },
+    {
+      "id": "W2",
+      "quote": "viene rilasciata quando il glucosio sale [...] si lega a recettori [...] che aprono canali e assorbono glucosio",
+      "removal_test": "Senza stati e transizioni la risposta insulinica sarebbe un atto atomico indifferenziato: sparirebbe la sequenza ordinata (glucosio sale → rilascio insulina → legame recettoriale → apertura canali → assorbimento) che costituisce il processo fisiologico."
+    },
+    {
+      "id": "W3",
+      "quote": "l'insulina [...] si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue",
+      "removal_test": "Senza regole non ci sarebbe selettività: l'insulina non saprebbe a quali cellule legarsi né quali canali aprire. Il processo diventerebbe rumore biochimico non strutturato."
+    },
+    {
+      "id": "T1",
+      "quote": "l'insulina [...] si lega a recettori sulle cellule muscolari, adipose e epatiche",
+      "removal_test": "Senza due parti — ormone e cellula bersaglio — non ci sarebbe interazione: l'insulina circolerebbe senza effetto e le cellule non riceverebbero il segnale di assorbire glucosio."
+    },
+    {
+      "id": "T2",
+      "quote": "aprono canali e assorbono glucosio dal sangue [...] stimola il fegato a rilasciare glucosio dalle riserve di glicogeno",
+      "removal_test": "Senza oggetto di trasferimento il glucosio non si sposterebbe tra compartimenti: non passerebbe dal sangue alle cellule né dal glicogeno epatico al sangue. La regolazione sarebbe segnalazione senza effetto materiale."
+    },
+    {
+      "id": "M4",
+      "quote": "il cervello consuma glucosio esclusivamente: una caduta prolungata porta a confusione, svenimento, coma",
+      "removal_test": "Senza confine dentro/fuori non ci sarebbe distinzione tra il compartimento cerebrale e il resto del sistema: la dipendenza esclusiva del cervello dal glucosio ematico — e la sua vulnerabilità specifica — non sarebbe strutturalmente rappresentabile."
+    },
+    {
+      "id": "C1",
+      "quote": "il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta",
+      "removal_test": "Senza persistenza intenzionale il sistema non 'terrebbe' la glicemia nell'intervallo: ogni perturbazione si dissolverebbe senza risposta correttiva. Il mantenimento attivo contro la dissoluzione è esattamente ciò che C1 descrive."
+    },
+    {
+      "id": "N2",
+      "quote": "il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio",
+      "removal_test": "Senza traccia temporale costitutiva l'HbA1c non esisterebbe come misura: il dato è inseparabile dal suo ancoraggio temporale (3 mesi). Rimuovere il tempo interno al dato significa rimuovere il dato stesso."
+    },
+    {
+      "id": "N4",
+      "quote": "il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio",
+      "removal_test": "Senza pattern per accumulazione non ci sarebbe integrazione nel tempo: l'HbA1c non sarebbe una media storica ma una misura istantanea come qualsiasi altra glicemia. Si perderebbe la capacità di solidificare il flusso temporale in un unico valore diagnostico."
+    },
+    {
+      "id": "C4",
+      "quote": "integrando l'esposizione dei globuli rossi al glucosio",
+      "removal_test": "Senza accumulazione l'esposizione cumulativa al glucosio non si sommerebbe nel tempo: ogni momento sarebbe indipendente e l'HbA1c non potrebbe formarsi come corpus crescente di esposizione glicata."
+    },
+    {
+      "id": "W1",
+      "quote": "se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue",
+      "removal_test": "Senza unità di lavoro il glucosio non sarebbe l'entità che 'entra nel processo' di regolazione per essere trasformata: sparirebbe il soggetto che il workflow metabolico prende in carico e su cui opera."
+    },
+    {
+      "id": "C5",
+      "quote": "danneggiando vasi, reni, nervi nel lungo termine",
+      "removal_test": "Senza relazione non ci sarebbe connessione strutturale tra iperglicemia cronica e organi bersaglio: il glucosio elevato e il danno vascolare/renale/nervoso sarebbero fatti separati e non correlati."
+    }
+  ],
+  "primitive_ids": [
+    "I1",
+    "I4",
+    "C2",
+    "I2",
+    "N1",
+    "N3",
+    "N5",
+    "W2",
+    "W3",
+    "T1",
+    "T2",
+    "M4",
+    "C1",
+    "N2",
+    "N4",
+    "C4",
+    "W1",
+    "C5"
+  ],
+  "n_primitives": 18,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"I1\",\n      \"quote\": \"il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)\",\n      \"removal_test\": \"Senza esistenza quantificabile non ci sarebbe un valore misurabile della glicemia: il sistema non potrebbe rilevare se il glucosio è alto o basso, rendendo impossibile qualsiasi risposta regolatoria.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"quando il glucosio sale dopo un pasto [...] quando il glucosio scende (digiuno, esercizio)\",\n      \"removal_test\": \"Senza stato corrente del glucosio il pancreas non avrebbe nulla su cui agire: non saprebbe se rilasciare insulina o glucagone. L'intero meccanismo di feedback collassa.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"una finestra ristretta (~70-100 mg/dL a digiuno)\",\n      \"removal_test\": \"Senza forma — cioè senza la struttura definita dell'intervallo fisiologico — non esisterebbe un riferimento rispetto al quale classificare un valore come normale, alto o basso. Il range non è un processo, è una struttura.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"stimola il fegato a rilasciare glucosio dalle riserve di glicogeno\",\n      \"removal_test\": \"Senza finitezza le riserve di glicogeno sarebbero infinite: il glucagone potrebbe sempre attingere al fegato senza limite, eliminando il rischio di ipoglicemia prolungata e rendendo superflua la regolazione.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Senza emissione involontaria il glucosio non segnalerebbe passivamente la propria concentrazione: il pancreas non avrebbe input su cui operare. La regolazione non potrebbe partire.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Senza indicazione indiretta la concentrazione di glucosio non indicherebbe lo stato metabolico sottostante (pasto appena consumato, digiuno, esercizio): il segnale chimico sarebbe un dato grezzo senza capacità di puntare a una condizione del sistema.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Senza asimmetria sorgente-osservatore non ci sarebbe distinzione tra chi emette (il glucosio nel sangue) e chi osserva e reagisce (le cellule pancreatiche): il meccanismo di sensing unidirezionale collasserebbe in una comunicazione simmetrica che non corrisponde alla biologia del sistema.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"viene rilasciata quando il glucosio sale [...] si lega a recettori [...] che aprono canali e assorbono glucosio\",\n      \"removal_test\": \"Senza stati e transizioni la risposta insulinica sarebbe un atto atomico indifferenziato: sparirebbe la sequenza ordinata (glucosio sale → rilascio insulina → legame recettoriale → apertura canali → assorbimento) che costituisce il processo fisiologico.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"l'insulina [...] si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue\",\n      \"removal_test\": \"Senza regole non ci sarebbe selettività: l'insulina non saprebbe a quali cellule legarsi né quali canali aprire. Il processo diventerebbe rumore biochimico non strutturato.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"l'insulina [...] si lega a recettori sulle cellule muscolari, adipose e epatiche\",\n      \"removal_test\": \"Senza due parti — ormone e cellula bersaglio — non ci sarebbe interazione: l'insulina circolerebbe senza effetto e le cellule non riceverebbero il segnale di assorbire glucosio.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"aprono canali e assorbono glucosio dal sangue [...] stimola il fegato a rilasciare glucosio dalle riserve di glicogeno\",\n      \"removal_test\": \"Senza oggetto di trasferimento il glucosio non si sposterebbe tra compartimenti: non passerebbe dal sangue alle cellule né dal glicogeno epatico al sangue. La regolazione sarebbe segnalazione senza effetto materiale.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"il cervello consuma glucosio esclusivamente: una caduta prolungata porta a confusione, svenimento, coma\",\n      \"removal_test\": \"Senza confine dentro/fuori non ci sarebbe distinzione tra il compartimento cerebrale e il resto del sistema: la dipendenza esclusiva del cervello dal glucosio ematico — e la sua vulnerabilità specifica — non sarebbe strutturalmente rappresentabile.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"quote\": \"il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta\",\n      \"removal_test\": \"Senza persistenza intenzionale il sistema non 'terrebbe' la glicemia nell'intervallo: ogni perturbazione si dissolverebbe senza risposta correttiva. Il mantenimento attivo contro la dissoluzione è esattamente ciò che C1 descrive.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio\",\n      \"removal_test\": \"Senza traccia temporale costitutiva l'HbA1c non esisterebbe come misura: il dato è inseparabile dal suo ancoraggio temporale (3 mesi). Rimuovere il tempo interno al dato significa rimuovere il dato stesso.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio\",\n      \"removal_test\": \"Senza pattern per accumulazione non ci sarebbe integrazione nel tempo: l'HbA1c non sarebbe una media storica ma una misura istantanea come qualsiasi altra glicemia. Si perderebbe la capacità di solidificare il flusso temporale in un unico valore diagnostico.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"integrando l'esposizione dei globuli rossi al glucosio\",\n      \"removal_test\": \"Senza accumulazione l'esposizione cumulativa al glucosio non si sommerebbe nel tempo: ogni momento sarebbe indipendente e l'HbA1c non potrebbe formarsi come corpus crescente di esposizione glicata.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue\",\n      \"removal_test\": \"Senza unità di lavoro il glucosio non sarebbe l'entità che 'entra nel processo' di regolazione per essere trasformata: sparirebbe il soggetto che il workflow metabolico prende in carico e su cui opera.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"danneggiando vasi, reni, nervi nel lungo termine\",\n      \"removal_test\": \"Senza relazione non ci sarebbe connessione strutturale tra iperglicemia cronica e organi bersaglio: il glucosio elevato e il danno vascolare/renale/nervoso sarebbero fatti separati e non correlati.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:11:26.757217+00:00"
+}

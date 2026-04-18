@@ -1,0 +1,72 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 5.97,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 538,
+    "prompt_tokens": 5338,
+    "total_tokens": 5876,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati da una commissione teologica per escludere eresie.",
+      "removal_test": "Senza la persistenza intenzionale, gli scritti del candidato non sarebbero conservati e disponibili per l'esame, rendendo impossibile valutare la loro ortodossia."
+    },
+    {
+      "id": "C3",
+      "quote": "La fase diocesana prevede la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato.",
+      "removal_test": "Senza ritrovabilità, le testimonianze e gli scritti non sarebbero facilmente accessibili per la valutazione, ostacolando il processo di beatificazione."
+    },
+    {
+      "id": "C5",
+      "quote": "Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato.",
+      "removal_test": "Senza relazione, non ci sarebbe connessione tra il candidato e le virtù eroiche da valutare, rendendo impossibile il giudizio."
+    },
+    {
+      "id": "M2",
+      "quote": "Un postulatore (nominato) compila il dossier.",
+      "removal_test": "Senza il legame al gruppo, il postulatore non avrebbe un ruolo definito nel processo, compromettendo la raccolta e la presentazione delle informazioni."
+    },
+    {
+      "id": "W3",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).",
+      "removal_test": "Senza regole, il processo di beatificazione non avrebbe una struttura definita, portando a decisioni arbitrarie e incoerenti."
+    },
+    {
+      "id": "W4",
+      "quote": "Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato.",
+      "removal_test": "Senza responsabilità, non ci sarebbe un gruppo specifico incaricato di valutare il candidato, causando disorganizzazione e mancanza di autorità nel processo."
+    },
+    {
+      "id": "S1",
+      "quote": "Il processo può durare decenni o secoli; alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente.",
+      "removal_test": "Senza la risorsa finita, il tempo non sarebbe considerato un fattore limitante, e le cause potrebbero protrarsi indefinitamente senza risoluzione."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C3",
+    "C5",
+    "M2",
+    "W3",
+    "W4",
+    "S1"
+  ],
+  "n_primitives": 7,
+  "raw_response": "{\"primitives\": [{\"id\": \"C1\", \"quote\": \"Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati da una commissione teologica per escludere eresie.\", \"removal_test\": \"Senza la persistenza intenzionale, gli scritti del candidato non sarebbero conservati e disponibili per l'esame, rendendo impossibile valutare la loro ortodossia.\"}, {\"id\": \"C3\", \"quote\": \"La fase diocesana prevede la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato.\", \"removal_test\": \"Senza ritrovabilità, le testimonianze e gli scritti non sarebbero facilmente accessibili per la valutazione, ostacolando il processo di beatificazione.\"}, {\"id\": \"C5\", \"quote\": \"Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato.\", \"removal_test\": \"Senza relazione, non ci sarebbe connessione tra il candidato e le virtù eroiche da valutare, rendendo impossibile il giudizio.\"}, {\"id\": \"M2\", \"quote\": \"Un postulatore (nominato) compila il dossier.\", \"removal_test\": \"Senza il legame al gruppo, il postulatore non avrebbe un ruolo definito nel processo, compromettendo la raccolta e la presentazione delle informazioni.\"}, {\"id\": \"W3\", \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).\", \"removal_test\": \"Senza regole, il processo di beatificazione non avrebbe una struttura definita, portando a decisioni arbitrarie e incoerenti.\"}, {\"id\": \"W4\", \"quote\": \"Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato.\", \"removal_test\": \"Senza responsabilità, non ci sarebbe un gruppo specifico incaricato di valutare il candidato, causando disorganizzazione e mancanza di autorità nel processo.\"}, {\"id\": \"S1\", \"quote\": \"Il processo può durare decenni o secoli; alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente.\", \"removal_test\": \"Senza la risorsa finita, il tempo non sarebbe considerato un fattore limitante, e le cause potrebbero protrarsi indefinitamente senza risoluzione.\"}]}",
+  "timestamp_utc": "2026-04-18T22:53:05.615307+00:00"
+}

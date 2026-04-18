@@ -1,0 +1,1055 @@
+{
+  "metadata": {
+    "experiment": "Esperimento A — Inter-Rater Reliability tra LLM indipendenti",
+    "llms": {
+      "J1_CLAUDE": "claude-sonnet-4-6 (DEVIAZIONE da pre-registrato Claude Opus 4.7 — vedi REPORT.md)",
+      "J2_OPENAI": "gpt-4o",
+      "J3_GEMINI": "gemini-2.5-pro"
+    },
+    "n_systems": 10,
+    "n_primitives": 34,
+    "n_coders": 3,
+    "n_decisions": 1020
+  },
+  "summary_stats": {
+    "primitives_per_system": {
+      "J1_CLAUDE": {
+        "mean": 23.7,
+        "std": 6.783067152844648,
+        "min": 11,
+        "max": 31,
+        "totals_per_system": [
+          27,
+          30,
+          31,
+          18,
+          11,
+          15,
+          30,
+          29,
+          20,
+          26
+        ]
+      },
+      "J2_OPENAI": {
+        "mean": 7.1,
+        "std": 1.9209372712298547,
+        "min": 4,
+        "max": 11,
+        "totals_per_system": [
+          8,
+          11,
+          8,
+          5,
+          6,
+          4,
+          6,
+          7,
+          7,
+          9
+        ]
+      },
+      "J3_GEMINI": {
+        "mean": 22.2,
+        "std": 5.2687759489277965,
+        "min": 13,
+        "max": 30,
+        "totals_per_system": [
+          15,
+          26,
+          23,
+          22,
+          13,
+          23,
+          29,
+          23,
+          18,
+          30
+        ]
+      }
+    }
+  },
+  "fleiss_kappa_all_3": {
+    "kappa": 0.12414324220254133,
+    "n_items": 340,
+    "n_coders": 3
+  },
+  "fleiss_kappa_without_claude": {
+    "kappa": -0.061459904225203,
+    "n_items": 340,
+    "n_coders": 2
+  },
+  "cohen_kappa_openai_gemini": 0.11624765037593998,
+  "pairwise_cohen_kappa": {
+    "J1_CLAUDE__J2_OPENAI": 0.18667154476120784,
+    "J1_CLAUDE__J3_GEMINI": 0.3378186968838527,
+    "J2_OPENAI__J3_GEMINI": 0.11624765037593998
+  },
+  "decision": {
+    "fleiss_kappa": 0.12414324220254133,
+    "verdict": "H0_CONFIRMED",
+    "interpretation": "Primitive NON oggettivamente riconoscibili. Tre LLM diversi non convergono. Il vocabolario è idiosincratico o mal definito. Il corpus empirico dei '30 casi per primitiva' è da rivedere."
+  },
+  "per_primitive": {
+    "C1": {
+      "unanime_yes": 5,
+      "unanime_no": 3,
+      "mixed": 2,
+      "agreement_rate": 0.8,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 5,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.6,
+        "J1_CLAUDE__J3_GEMINI": 1.0,
+        "J2_OPENAI__J3_GEMINI": 0.6
+      }
+    },
+    "C2": {
+      "unanime_yes": 0,
+      "unanime_no": 1,
+      "mixed": 9,
+      "agreement_rate": 0.1,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.09090909090909094,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "C3": {
+      "unanime_yes": 3,
+      "unanime_no": 4,
+      "mixed": 3,
+      "agreement_rate": 0.7,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 3,
+        "J3_GEMINI": 6
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.44444444444444453,
+        "J1_CLAUDE__J3_GEMINI": 1.0,
+        "J2_OPENAI__J3_GEMINI": 0.44444444444444453
+      }
+    },
+    "C4": {
+      "unanime_yes": 2,
+      "unanime_no": 0,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 9
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.05405405405405406
+      }
+    },
+    "C5": {
+      "unanime_yes": 1,
+      "unanime_no": 4,
+      "mixed": 5,
+      "agreement_rate": 0.5,
+      "presence_by_coder": {
+        "J1_CLAUDE": 5,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 4
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.4,
+        "J1_CLAUDE__J3_GEMINI": 0.4,
+        "J2_OPENAI__J3_GEMINI": 0.09090909090909094
+      }
+    },
+    "I1": {
+      "unanime_yes": 1,
+      "unanime_no": 1,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.11764705882352955,
+        "J1_CLAUDE__J3_GEMINI": 0.375,
+        "J2_OPENAI__J3_GEMINI": -0.17647058823529393
+      }
+    },
+    "I2": {
+      "unanime_yes": 2,
+      "unanime_no": 2,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.19354838709677413,
+        "J1_CLAUDE__J3_GEMINI": 0.736842105263158,
+        "J2_OPENAI__J3_GEMINI": 0.11764705882352955
+      }
+    },
+    "I3": {
+      "unanime_yes": 1,
+      "unanime_no": 1,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 3,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 9
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.41176470588235303,
+        "J1_CLAUDE__J3_GEMINI": 0.09090909090909083,
+        "J2_OPENAI__J3_GEMINI": 0.024390243902438935
+      }
+    },
+    "I4": {
+      "unanime_yes": 0,
+      "unanime_no": 0,
+      "mixed": 10,
+      "agreement_rate": 0.0,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "T1": {
+      "unanime_yes": 3,
+      "unanime_no": 3,
+      "mixed": 4,
+      "agreement_rate": 0.6,
+      "presence_by_coder": {
+        "J1_CLAUDE": 5,
+        "J2_OPENAI": 4,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.8,
+        "J1_CLAUDE__J3_GEMINI": 0.19999999999999996,
+        "J2_OPENAI__J3_GEMINI": 0.4
+      }
+    },
+    "T2": {
+      "unanime_yes": 2,
+      "unanime_no": 2,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.11764705882352955,
+        "J1_CLAUDE__J3_GEMINI": 0.736842105263158,
+        "J2_OPENAI__J3_GEMINI": 0.19354838709677413
+      }
+    },
+    "T3": {
+      "unanime_yes": 2,
+      "unanime_no": 4,
+      "mixed": 4,
+      "agreement_rate": 0.6,
+      "presence_by_coder": {
+        "J1_CLAUDE": 4,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.5454545454545454,
+        "J1_CLAUDE__J3_GEMINI": 0.4,
+        "J2_OPENAI__J3_GEMINI": 0.4
+      }
+    },
+    "T4": {
+      "unanime_yes": 1,
+      "unanime_no": 3,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.2857142857142857,
+        "J1_CLAUDE__J3_GEMINI": 0.4,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "M1": {
+      "unanime_yes": 2,
+      "unanime_no": 0,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 10
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.11764705882352955,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "M2": {
+      "unanime_yes": 4,
+      "unanime_no": 1,
+      "mixed": 5,
+      "agreement_rate": 0.5,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 5,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.19999999999999996,
+        "J1_CLAUDE__J3_GEMINI": 0.736842105263158,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "M3": {
+      "unanime_yes": 1,
+      "unanime_no": 1,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.13793103448275867,
+        "J1_CLAUDE__J3_GEMINI": -0.0869565217391306,
+        "J2_OPENAI__J3_GEMINI": 0.09090909090909083
+      }
+    },
+    "M4": {
+      "unanime_yes": 1,
+      "unanime_no": 1,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 9
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.05405405405405406,
+        "J1_CLAUDE__J3_GEMINI": 0.6153846153846154,
+        "J2_OPENAI__J3_GEMINI": 0.024390243902438935
+      }
+    },
+    "W1": {
+      "unanime_yes": 0,
+      "unanime_no": 1,
+      "mixed": 9,
+      "agreement_rate": 0.1,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.21052631578947367,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "W2": {
+      "unanime_yes": 5,
+      "unanime_no": 0,
+      "mixed": 5,
+      "agreement_rate": 0.5,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 5,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.4
+      }
+    },
+    "W3": {
+      "unanime_yes": 7,
+      "unanime_no": 0,
+      "mixed": 3,
+      "agreement_rate": 0.7,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 7,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.736842105263158
+      }
+    },
+    "W4": {
+      "unanime_yes": 1,
+      "unanime_no": 2,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.13793103448275867,
+        "J1_CLAUDE__J3_GEMINI": 0.34782608695652173,
+        "J2_OPENAI__J3_GEMINI": 0.09090909090909083
+      }
+    },
+    "S1": {
+      "unanime_yes": 2,
+      "unanime_no": 2,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 5,
+        "J2_OPENAI": 4,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.4,
+        "J1_CLAUDE__J3_GEMINI": 0.19999999999999996,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "S2": {
+      "unanime_yes": 0,
+      "unanime_no": 3,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 4,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 4
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.5454545454545454,
+        "J1_CLAUDE__J3_GEMINI": -0.25,
+        "J2_OPENAI__J3_GEMINI": -0.36363636363636354
+      }
+    },
+    "S3": {
+      "unanime_yes": 2,
+      "unanime_no": 1,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 8,
+        "J2_OPENAI": 3,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.19354838709677413,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.19999999999999996
+      }
+    },
+    "S4": {
+      "unanime_yes": 0,
+      "unanime_no": 4,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 2
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.2857142857142857,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "CO1": {
+      "unanime_yes": 3,
+      "unanime_no": 1,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 3,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.44444444444444453,
+        "J1_CLAUDE__J3_GEMINI": 0.09090909090909094,
+        "J2_OPENAI__J3_GEMINI": 0.19354838709677413
+      }
+    },
+    "CO2": {
+      "unanime_yes": 2,
+      "unanime_no": 1,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 6,
+        "J2_OPENAI": 2,
+        "J3_GEMINI": 8
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.2857142857142857,
+        "J1_CLAUDE__J3_GEMINI": 0.09090909090909094,
+        "J2_OPENAI__J3_GEMINI": 0.11764705882352955
+      }
+    },
+    "CO3": {
+      "unanime_yes": 0,
+      "unanime_no": 3,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 4
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.44444444444444453,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "CO4": {
+      "unanime_yes": 0,
+      "unanime_no": 4,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 4,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 5
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.4,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "N1": {
+      "unanime_yes": 0,
+      "unanime_no": 2,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 6
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.34782608695652173,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "N2": {
+      "unanime_yes": 4,
+      "unanime_no": 0,
+      "mixed": 6,
+      "agreement_rate": 0.4,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 6,
+        "J3_GEMINI": 4
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.6153846153846154
+      }
+    },
+    "N3": {
+      "unanime_yes": 0,
+      "unanime_no": 0,
+      "mixed": 10,
+      "agreement_rate": 0.0,
+      "presence_by_coder": {
+        "J1_CLAUDE": 10,
+        "J2_OPENAI": 0,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.0,
+        "J1_CLAUDE__J3_GEMINI": 0.0,
+        "J2_OPENAI__J3_GEMINI": 0.0
+      }
+    },
+    "N4": {
+      "unanime_yes": 0,
+      "unanime_no": 3,
+      "mixed": 7,
+      "agreement_rate": 0.3,
+      "presence_by_coder": {
+        "J1_CLAUDE": 7,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 4
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.09090909090909083,
+        "J1_CLAUDE__J3_GEMINI": 0.44444444444444453,
+        "J2_OPENAI__J3_GEMINI": -0.19047619047619047
+      }
+    },
+    "N5": {
+      "unanime_yes": 1,
+      "unanime_no": 1,
+      "mixed": 8,
+      "agreement_rate": 0.2,
+      "presence_by_coder": {
+        "J1_CLAUDE": 9,
+        "J2_OPENAI": 1,
+        "J3_GEMINI": 7
+      },
+      "pairwise_kappa": {
+        "J1_CLAUDE__J2_OPENAI": 0.024390243902438935,
+        "J1_CLAUDE__J3_GEMINI": 0.41176470588235303,
+        "J2_OPENAI__J3_GEMINI": 0.09090909090909083
+      }
+    }
+  },
+  "per_system": {
+    "S1": {
+      "unanime_yes": 5,
+      "unanime_no": 6,
+      "mixed": 23,
+      "agreement_rate_over_present": 0.17857142857142858,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 27,
+        "J2_OPENAI": 8,
+        "J3_GEMINI": 15
+      }
+    },
+    "S2": {
+      "unanime_yes": 9,
+      "unanime_no": 2,
+      "mixed": 23,
+      "agreement_rate_over_present": 0.28125,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 30,
+        "J2_OPENAI": 11,
+        "J3_GEMINI": 26
+      }
+    },
+    "S3": {
+      "unanime_yes": 8,
+      "unanime_no": 1,
+      "mixed": 25,
+      "agreement_rate_over_present": 0.24242424242424243,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 31,
+        "J2_OPENAI": 8,
+        "J3_GEMINI": 23
+      }
+    },
+    "S4": {
+      "unanime_yes": 3,
+      "unanime_no": 8,
+      "mixed": 23,
+      "agreement_rate_over_present": 0.11538461538461539,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 18,
+        "J2_OPENAI": 5,
+        "J3_GEMINI": 22
+      }
+    },
+    "S5": {
+      "unanime_yes": 5,
+      "unanime_no": 16,
+      "mixed": 13,
+      "agreement_rate_over_present": 0.2777777777777778,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 11,
+        "J2_OPENAI": 6,
+        "J3_GEMINI": 13
+      }
+    },
+    "S6": {
+      "unanime_yes": 2,
+      "unanime_no": 8,
+      "mixed": 24,
+      "agreement_rate_over_present": 0.07692307692307693,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 15,
+        "J2_OPENAI": 4,
+        "J3_GEMINI": 23
+      }
+    },
+    "S7": {
+      "unanime_yes": 6,
+      "unanime_no": 1,
+      "mixed": 27,
+      "agreement_rate_over_present": 0.18181818181818182,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 30,
+        "J2_OPENAI": 6,
+        "J3_GEMINI": 29
+      }
+    },
+    "S8": {
+      "unanime_yes": 6,
+      "unanime_no": 4,
+      "mixed": 24,
+      "agreement_rate_over_present": 0.2,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 29,
+        "J2_OPENAI": 7,
+        "J3_GEMINI": 23
+      }
+    },
+    "S9": {
+      "unanime_yes": 6,
+      "unanime_no": 10,
+      "mixed": 18,
+      "agreement_rate_over_present": 0.25,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 20,
+        "J2_OPENAI": 7,
+        "J3_GEMINI": 18
+      }
+    },
+    "S10": {
+      "unanime_yes": 8,
+      "unanime_no": 3,
+      "mixed": 23,
+      "agreement_rate_over_present": 0.25806451612903225,
+      "primitives_identified_per_coder": {
+        "J1_CLAUDE": 26,
+        "J2_OPENAI": 9,
+        "J3_GEMINI": 30
+      }
+    }
+  },
+  "nuclear_fr_recovery": {
+    "CO1": {
+      "by_all_3_coders": 3,
+      "by_exactly_2_coders": 2,
+      "by_exactly_1_coder": 4,
+      "by_0_coders": 1,
+      "unanime_identification_rate": 0.3,
+      "per_system": [
+        {
+          "system": "S1",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S2",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S3",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S4",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S5",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S6",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S7",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S8",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S9",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S10",
+          "n_coders_found": 2
+        }
+      ]
+    },
+    "M2": {
+      "by_all_3_coders": 4,
+      "by_exactly_2_coders": 3,
+      "by_exactly_1_coder": 2,
+      "by_0_coders": 1,
+      "unanime_identification_rate": 0.4,
+      "per_system": [
+        {
+          "system": "S1",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S2",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S3",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S4",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S5",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S6",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S7",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S8",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S9",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S10",
+          "n_coders_found": 2
+        }
+      ]
+    },
+    "N5": {
+      "by_all_3_coders": 1,
+      "by_exactly_2_coders": 6,
+      "by_exactly_1_coder": 2,
+      "by_0_coders": 1,
+      "unanime_identification_rate": 0.1,
+      "per_system": [
+        {
+          "system": "S1",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S2",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S3",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S4",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S5",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S6",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S7",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S8",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S9",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S10",
+          "n_coders_found": 3
+        }
+      ]
+    },
+    "T1": {
+      "by_all_3_coders": 3,
+      "by_exactly_2_coders": 1,
+      "by_exactly_1_coder": 3,
+      "by_0_coders": 3,
+      "unanime_identification_rate": 0.3,
+      "per_system": [
+        {
+          "system": "S1",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S2",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S3",
+          "n_coders_found": 1
+        },
+        {
+          "system": "S4",
+          "n_coders_found": 2
+        },
+        {
+          "system": "S5",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S6",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S7",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S8",
+          "n_coders_found": 3
+        },
+        {
+          "system": "S9",
+          "n_coders_found": 0
+        },
+        {
+          "system": "S10",
+          "n_coders_found": 3
+        }
+      ]
+    }
+  },
+  "openai_stability_check": {
+    "total_cells_differing": 25,
+    "total_cells": 340,
+    "bitwise_agreement_rate": 0.9264705882352942,
+    "cohen_kappa_intra_model": 0.7786227732055422,
+    "per_system_diff": {
+      "S1": {
+        "n_current": 8,
+        "n_backup": 9,
+        "added_in_new_run": [],
+        "removed_in_new_run": [
+          "N4"
+        ]
+      },
+      "S2": {
+        "n_current": 11,
+        "n_backup": 11,
+        "added_in_new_run": [],
+        "removed_in_new_run": []
+      },
+      "S3": {
+        "n_current": 8,
+        "n_backup": 8,
+        "added_in_new_run": [
+          "M3",
+          "N2"
+        ],
+        "removed_in_new_run": [
+          "S1",
+          "S2"
+        ]
+      },
+      "S4": {
+        "n_current": 5,
+        "n_backup": 5,
+        "added_in_new_run": [
+          "C5"
+        ],
+        "removed_in_new_run": [
+          "N5"
+        ]
+      },
+      "S5": {
+        "n_current": 6,
+        "n_backup": 4,
+        "added_in_new_run": [
+          "C4",
+          "T4",
+          "M1",
+          "M2"
+        ],
+        "removed_in_new_run": [
+          "W1",
+          "N2"
+        ]
+      },
+      "S6": {
+        "n_current": 4,
+        "n_backup": 4,
+        "added_in_new_run": [],
+        "removed_in_new_run": []
+      },
+      "S7": {
+        "n_current": 6,
+        "n_backup": 6,
+        "added_in_new_run": [
+          "T1",
+          "S3"
+        ],
+        "removed_in_new_run": [
+          "S1",
+          "CO1"
+        ]
+      },
+      "S8": {
+        "n_current": 7,
+        "n_backup": 6,
+        "added_in_new_run": [
+          "T1",
+          "T3"
+        ],
+        "removed_in_new_run": [
+          "W1"
+        ]
+      },
+      "S9": {
+        "n_current": 7,
+        "n_backup": 7,
+        "added_in_new_run": [],
+        "removed_in_new_run": []
+      },
+      "S10": {
+        "n_current": 9,
+        "n_backup": 12,
+        "added_in_new_run": [
+          "N5"
+        ],
+        "removed_in_new_run": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ]
+      }
+    }
+  }
+}

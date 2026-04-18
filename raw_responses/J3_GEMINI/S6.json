@@ -1,0 +1,158 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S6",
+  "system_title": "Migrazione verticale del plancton",
+  "attempt": 1,
+  "elapsed_s": 53.66,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5251,
+    "completion_tokens": 2196,
+    "total_tokens": 12281
+  },
+  "primitives_identified": [
+    {
+      "id": "I1",
+      "quote": "miliardi di piccoli organismi — copepodi, krill, meduse piccole, pesci lanterna — compiono una migrazione verticale.",
+      "removal_test": "Senza questa primitiva, la scala e la rilevanza del fenomeno sarebbero sconosciute. Si parlerebbe di 'alcuni organismi che si muovono', non del 'più grande movimento di biomassa del pianeta'."
+    },
+    {
+      "id": "I2",
+      "quote": "nutrirsi del fitoplancton che è abbondante nei primi 50 metri.",
+      "removal_test": "Senza la finitezza e la localizzazione della risorsa (cibo), la migrazione verso la superficie perderebbe la sua ragione d'essere. Se il cibo fosse ovunque, non ci sarebbe bisogno di rischiare salendo in superficie."
+    },
+    {
+      "id": "I3",
+      "quote": "si rifugiano in profondità (200-1000 metri) dove l'acqua è scura",
+      "removal_test": "Senza il concetto di contenitore (gli strati di profondità), la migrazione verticale sarebbe indefinibile. Il sistema si basa sul movimento degli organismi tra contenitori diversi (la zona profonda e la zona di superficie)."
+    },
+    {
+      "id": "I4",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie.",
+      "removal_test": "Senza stati discreti (essere in profondità, essere in superficie), non sarebbe possibile descrivere la migrazione come un processo. L'intero sistema è un cambiamento ciclico dello stato di localizzazione degli organismi."
+    },
+    {
+      "id": "T2",
+      "quote": "i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale.",
+      "removal_test": "Senza il trasferimento di un oggetto (il carbonio), la migrazione perderebbe la sua importanza ecologica globale come 'pompa biologica'. Resterebbe solo una strategia di sopravvivenza locale."
+    },
+    {
+      "id": "T4",
+      "quote": "trasportano carbonio dall'atmosfera al fondale.",
+      "removal_test": "Senza l'irreversibilità (su scale temporali ecologiche), la pompa del carbonio non funzionerebbe. Se il carbonio tornasse in superficie con la stessa facilità con cui scende, non ci sarebbe alcun sequestro netto sul fondale."
+    },
+    {
+      "id": "M1",
+      "quote": "copepodi, krill, meduse piccole, pesci lanterna",
+      "removal_test": "Senza identità distinte, non si potrebbero differenziare i comportamenti delle varie specie ('Alcune specie aspettano la luna piena...'). Il fenomeno apparirebbe come il movimento di una massa indifferenziata."
+    },
+    {
+      "id": "M2",
+      "quote": "miliardi di piccoli organismi [...] compiono una migrazione verticale.",
+      "removal_test": "Senza il legame al gruppo (definito dal comportamento condiviso), il fenomeno sarebbe una collezione di movimenti individuali e non coordinati, piuttosto che un movimento di massa collettivo."
+    },
+    {
+      "id": "M3",
+      "quote": "Alcune specie aspettano la luna piena e modificano la profondità raggiunta.",
+      "removal_test": "Senza differenziazione, la migrazione sarebbe un comportamento monolitico e identico per tutti i partecipanti. Il sistema perderebbe la sua complessità e le sue sfumature comportamentali."
+    },
+    {
+      "id": "M4",
+      "quote": "compiono una migrazione verticale.",
+      "removal_test": "Senza un confine (in questo caso, comportamentale), non si potrebbe definire il gruppo dei 'migranti' distinguendolo dagli organismi stanziali. Il fenomeno stesso non potrebbe essere isolato e studiato come un'entità a sé stante."
+    },
+    {
+      "id": "W1",
+      "quote": "miliardi di piccoli organismi [...] compiono una migrazione verticale.",
+      "removal_test": "Senza un'unità di lavoro (l'organismo), non ci sarebbe un 'soggetto' che attraversa le fasi del processo. Il workflow non avrebbe nulla da processare."
+    },
+    {
+      "id": "W2",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie per nutrirsi. All'alba ridiscendono.",
+      "removal_test": "Senza stati e transizioni, la migrazione non sarebbe un processo ciclico e ordinato, ma un movimento casuale. L'intera descrizione del sistema collasserebbe."
+    },
+    {
+      "id": "W3",
+      "quote": "l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto.",
+      "removal_test": "Senza regole, le transizioni tra gli stati (salita, discesa) sarebbero acausali e non sincronizzate. Le regole (basate sulla luce) sono ciò che coordina il movimento di miliardi di individui."
+    },
+    {
+      "id": "S1",
+      "quote": "Di notte salgono verso la superficie per nutrirsi del fitoplancton",
+      "removal_test": "Senza una risorsa finita (la combinazione spazio-temporale 'superficie di notte' per nutrirsi in relativa sicurezza), non ci sarebbe competizione né la necessità di un meccanismo di scheduling per accedervi."
+    },
+    {
+      "id": "S2",
+      "quote": "miliardi di piccoli organismi [...] salgono verso la superficie per nutrirsi",
+      "removal_test": "Senza un richiedente, non ci sarebbe domanda per la risorsa. L'intero sistema è guidato dalla necessità dei richiedenti (gli organismi) di accedere alla risorsa (cibo in superficie)."
+    },
+    {
+      "id": "S3",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie",
+      "removal_test": "Senza slot temporali (giorno/notte), le attività (nascondersi/nutrirsi) non sarebbero legate a momenti specifici. Il carattere 'diel', ovvero giornaliero, della migrazione verrebbe meno."
+    },
+    {
+      "id": "S4",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie",
+      "removal_test": "Senza il vincolo di non-sovrapposizione, un organismo potrebbe essere contemporaneamente in superficie a nutrirsi e in profondità a nascondersi. Questo è fisicamente impossibile e la sua impossibilità è il problema fondamentale che la migrazione risolve."
+    },
+    {
+      "id": "CO1",
+      "quote": "l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode",
+      "removal_test": "Senza un emittente (il sole/la luna) e un destinatario (l'occhio dell'organismo), non ci sarebbe il segnale che innesca e sincronizza la migrazione. Il meccanismo di trigger verrebbe a mancare."
+    },
+    {
+      "id": "CO2",
+      "quote": "l'intensità luminosa scende sotto una soglia [...] innescando il nuoto verso l'alto.",
+      "removal_test": "Senza un significato codificato, il segnale (la variazione di luce) sarebbe rumore privo di informazione. L'organismo non saprebbe come interpretarlo e non verrebbe innescata alcuna azione coordinata."
+    },
+    {
+      "id": "CO4",
+      "quote": "si rifugiano in profondità [...] dove l'acqua è scura",
+      "removal_test": "Senza un canale (l'acqua), il segnale luminoso non potrebbe propagarsi dall'emittente al destinatario. Le proprietà del canale (l'attenuazione della luce in acqua) determinano a quale profondità il segnale viene percepito."
+    },
+    {
+      "id": "N1",
+      "quote": "i predatori visivi non li vedono.",
+      "removal_test": "Senza l'emissione involontaria di un segnale (la visibilità), non ci sarebbe alcun rischio a rimanere in superficie. L'intera strategia di nascondersi in profondità durante il giorno perderebbe il suo scopo."
+    },
+    {
+      "id": "N3",
+      "quote": "i predatori visivi non li vedono.",
+      "removal_test": "Senza l'indicazione indiretta, la visibilità del plancton non segnalerebbe la presenza di cibo ai predatori. La pressione predatoria che guida l'evoluzione di questo comportamento verrebbe meno."
+    },
+    {
+      "id": "N5",
+      "quote": "i predatori visivi non li vedono.",
+      "removal_test": "Senza l'asimmetria tra sorgente (plancton) e osservatore (predatore), la relazione sarebbe di comunicazione e non di predazione. Il concetto di 'nascondersi' presuppone un osservatore da cui la sorgente vuole celare informazioni."
+    }
+  ],
+  "primitive_ids": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "T2",
+    "T4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "CO1",
+    "CO2",
+    "CO4",
+    "N1",
+    "N3",
+    "N5"
+  ],
+  "n_primitives": 23,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"I1\",\n      \"quote\": \"miliardi di piccoli organismi — copepodi, krill, meduse piccole, pesci lanterna — compiono una migrazione verticale.\",\n      \"removal_test\": \"Senza questa primitiva, la scala e la rilevanza del fenomeno sarebbero sconosciute. Si parlerebbe di 'alcuni organismi che si muovono', non del 'più grande movimento di biomassa del pianeta'.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"nutrirsi del fitoplancton che è abbondante nei primi 50 metri.\",\n      \"removal_test\": \"Senza la finitezza e la localizzazione della risorsa (cibo), la migrazione verso la superficie perderebbe la sua ragione d'essere. Se il cibo fosse ovunque, non ci sarebbe bisogno di rischiare salendo in superficie.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"si rifugiano in profondità (200-1000 metri) dove l'acqua è scura\",\n      \"removal_test\": \"Senza il concetto di contenitore (gli strati di profondità), la migrazione verticale sarebbe indefinibile. Il sistema si basa sul movimento degli organismi tra contenitori diversi (la zona profonda e la zona di superficie).\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie.\",\n      \"removal_test\": \"Senza stati discreti (essere in profondità, essere in superficie), non sarebbe possibile descrivere la migrazione come un processo. L'intero sistema è un cambiamento ciclico dello stato di localizzazione degli organismi.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale.\",\n      \"removal_test\": \"Senza il trasferimento di un oggetto (il carbonio), la migrazione perderebbe la sua importanza ecologica globale come 'pompa biologica'. Resterebbe solo una strategia di sopravvivenza locale.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"trasportano carbonio dall'atmosfera al fondale.\",\n      \"removal_test\": \"Senza l'irreversibilità (su scale temporali ecologiche), la pompa del carbonio non funzionerebbe. Se il carbonio tornasse in superficie con la stessa facilità con cui scende, non ci sarebbe alcun sequestro netto sul fondale.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"copepodi, krill, meduse piccole, pesci lanterna\",\n      \"removal_test\": \"Senza identità distinte, non si potrebbero differenziare i comportamenti delle varie specie ('Alcune specie aspettano la luna piena...'). Il fenomeno apparirebbe come il movimento di una massa indifferenziata.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"miliardi di piccoli organismi [...] compiono una migrazione verticale.\",\n      \"removal_test\": \"Senza il legame al gruppo (definito dal comportamento condiviso), il fenomeno sarebbe una collezione di movimenti individuali e non coordinati, piuttosto che un movimento di massa collettivo.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"Alcune specie aspettano la luna piena e modificano la profondità raggiunta.\",\n      \"removal_test\": \"Senza differenziazione, la migrazione sarebbe un comportamento monolitico e identico per tutti i partecipanti. Il sistema perderebbe la sua complessità e le sue sfumature comportamentali.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"compiono una migrazione verticale.\",\n      \"removal_test\": \"Senza un confine (in questo caso, comportamentale), non si potrebbe definire il gruppo dei 'migranti' distinguendolo dagli organismi stanziali. Il fenomeno stesso non potrebbe essere isolato e studiato come un'entità a sé stante.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"miliardi di piccoli organismi [...] compiono una migrazione verticale.\",\n      \"removal_test\": \"Senza un'unità di lavoro (l'organismo), non ci sarebbe un 'soggetto' che attraversa le fasi del processo. Il workflow non avrebbe nulla da processare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie per nutrirsi. All'alba ridiscendono.\",\n      \"removal_test\": \"Senza stati e transizioni, la migrazione non sarebbe un processo ciclico e ordinato, ma un movimento casuale. L'intera descrizione del sistema collasserebbe.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto.\",\n      \"removal_test\": \"Senza regole, le transizioni tra gli stati (salita, discesa) sarebbero acausali e non sincronizzate. Le regole (basate sulla luce) sono ciò che coordina il movimento di miliardi di individui.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"Di notte salgono verso la superficie per nutrirsi del fitoplancton\",\n      \"removal_test\": \"Senza una risorsa finita (la combinazione spazio-temporale 'superficie di notte' per nutrirsi in relativa sicurezza), non ci sarebbe competizione né la necessità di un meccanismo di scheduling per accedervi.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"quote\": \"miliardi di piccoli organismi [...] salgono verso la superficie per nutrirsi\",\n      \"removal_test\": \"Senza un richiedente, non ci sarebbe domanda per la risorsa. L'intero sistema è guidato dalla necessità dei richiedenti (gli organismi) di accedere alla risorsa (cibo in superficie).\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie\",\n      \"removal_test\": \"Senza slot temporali (giorno/notte), le attività (nascondersi/nutrirsi) non sarebbero legate a momenti specifici. Il carattere 'diel', ovvero giornaliero, della migrazione verrebbe meno.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie\",\n      \"removal_test\": \"Senza il vincolo di non-sovrapposizione, un organismo potrebbe essere contemporaneamente in superficie a nutrirsi e in profondità a nascondersi. Questo è fisicamente impossibile e la sua impossibilità è il problema fondamentale che la migrazione risolve.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode\",\n      \"removal_test\": \"Senza un emittente (il sole/la luna) e un destinatario (l'occhio dell'organismo), non ci sarebbe il segnale che innesca e sincronizza la migrazione. Il meccanismo di trigger verrebbe a mancare.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"l'intensità luminosa scende sotto una soglia [...] innescando il nuoto verso l'alto.\",\n      \"removal_test\": \"Senza un significato codificato, il segnale (la variazione di luce) sarebbe rumore privo di informazione. L'organismo non saprebbe come interpretarlo e non verrebbe innescata alcuna azione coordinata.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"si rifugiano in profondità [...] dove l'acqua è scura\",\n      \"removal_test\": \"Senza un canale (l'acqua), il segnale luminoso non potrebbe propagarsi dall'emittente al destinatario. Le proprietà del canale (l'attenuazione della luce in acqua) determinano a quale profondità il segnale viene percepito.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"i predatori visivi non li vedono.\",\n      \"removal_test\": \"Senza l'emissione involontaria di un segnale (la visibilità), non ci sarebbe alcun rischio a rimanere in superficie. L'intera strategia di nascondersi in profondità durante il giorno perderebbe il suo scopo.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"i predatori visivi non li vedono.\",\n      \"removal_test\": \"Senza l'indicazione indiretta, la visibilità del plancton non segnalerebbe la presenza di cibo ai predatori. La pressione predatoria che guida l'evoluzione di questo comportamento verrebbe meno.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"i predatori visivi non li vedono.\",\n      \"removal_test\": \"Senza l'asimmetria tra sorgente (plancton) e osservatore (predatore), la relazione sarebbe di comunicazione e non di predazione. Il concetto di 'nascondersi' presuppone un osservatore da cui la sorgente vuole celare informazioni.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T22:57:56.160621+00:00"
+}

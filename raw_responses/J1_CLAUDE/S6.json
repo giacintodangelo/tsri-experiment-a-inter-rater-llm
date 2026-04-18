@@ -1,0 +1,111 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S6",
+  "system_title": "Migrazione verticale del plancton",
+  "attempt": 1,
+  "elapsed_s": 36.69,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6085,
+    "output_tokens": 2008,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "N1",
+      "quote": "l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto",
+      "removal_test": "Senza emissione involontaria (la luce solare che penetra l'acqua, emessa passivamente dall'ambiente), non esisterebbe il segnale che guida la migrazione. Il sistema perderebbe il suo motore causale primario."
+    },
+    {
+      "id": "N3",
+      "quote": "l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto",
+      "removal_test": "La luce non indica direttamente il pericolo dei predatori né la disponibilità di fitoplancton — li indica indirettamente. Senza questa indicazione indiretta, l'organismo non avrebbe accesso all'informazione sullo stato del sistema (predatori, cibo, ora del giorno) e non potrebbe regolare il comportamento."
+    },
+    {
+      "id": "N2",
+      "quote": "La discesa mattutina e la salita serale sono sincronizzate dalla luce",
+      "removal_test": "Il ciclo diel è un pattern temporale costitutivo: il dato (posizione verticale dell'organismo) è inseparabile dal momento della giornata. Rimuovere la traccia temporale significherebbe perdere la sincronizzazione — la migrazione diventerebbe rumore casuale invece di un ritmo."
+    },
+    {
+      "id": "N4",
+      "quote": "Ogni giorno, in tutti gli oceani del pianeta, miliardi di piccoli organismi compiono una migrazione verticale",
+      "removal_test": "Il pattern emerge dall'accumulazione sistematica di segnali ripetuti nel tempo (ciclo giorno/notte, stagioni, fasi lunari). Senza l'accumulo che solidifica il flusso temporale in comportamento strutturato, non esisterebbe una migrazione regolare ma solo risposte isolate e non coordinate."
+    },
+    {
+      "id": "N5",
+      "quote": "i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale",
+      "removal_test": "La pompa biologica è un effetto sistemico che la sorgente (il plancton) produce senza esserne consapevole e senza intenderlo. L'osservatore (il sistema climatico, o il ricercatore che lo misura) legge un segnale che la sorgente non sa di emettere. Senza questa asimmetria, il trasporto di carbonio non sarebbe distinguibile come informazione sul ciclo del carbonio."
+    },
+    {
+      "id": "I1",
+      "quote": "miliardi di piccoli organismi — copepodi, krill, meduse piccole, pesci lanterna",
+      "removal_test": "La quantità di biomassa in migrazione è operativamente rilevante: è ciò che rende la diel vertical migration 'il più grande movimento di biomassa del pianeta'. Senza esistenza quantificabile, non si potrebbe distinguere un evento ecologicamente significativo da un fenomeno marginale."
+    },
+    {
+      "id": "I2",
+      "quote": "il fitoplancton che è abbondante nei primi 50 metri",
+      "removal_test": "La finitezza del fitoplancton nei primi 50 metri è la ragione strutturale per cui la migrazione ha senso: la risorsa non è distribuita uniformemente né illimitata. Senza finitezza, non ci sarebbe pressione selettiva per salire di notte e scendere di giorno."
+    },
+    {
+      "id": "I4",
+      "quote": "Durante il giorno si rifugiano in profondità (200-1000 metri) [...] Di notte salgono verso la superficie",
+      "removal_test": "Ogni organismo si trova in uno stato corrente (in profondità / in superficie / in transizione) che determina il suo comportamento successivo e la sua esposizione ai predatori. Senza stato corrente tracciabile, il sistema non potrebbe essere descritto né governato dalla logica del ciclo."
+    },
+    {
+      "id": "W2",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono [...] All'alba ridiscendono",
+      "removal_test": "La migrazione è una sequenza ordinata di stati (profondità diurna → risalita serale → superficie notturna → discesa mattutina) con transizioni definite. Senza stati e transizioni, il comportamento collasserebbe in movimento non strutturato, perdendo il carattere ciclico e prevedibile."
+    },
+    {
+      "id": "W3",
+      "quote": "Alcune specie aspettano la luna piena e modificano la profondità raggiunta. Altre si fermano a profondità intermedie quando c'è uno strato denso di fitoplancton",
+      "removal_test": "Le regole (soglia luminosa, presenza di deep chlorophyll maximum, fase lunare) determinano quali transizioni sono valide e quando. Senza regole, ogni organismo si muoverebbe indipendentemente da condizioni ambientali strutturate, e il pattern collettivo scomparirebbe."
+    },
+    {
+      "id": "C4",
+      "quote": "i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale",
+      "removal_test": "Il carbonio si accumula progressivamente sul fondale per effetto cumulativo delle migrazioni quotidiane. Senza accumulazione, ogni ciclo sarebbe neutro rispetto al bilancio del carbonio e la pompa biologica non esisterebbe come fenomeno emergente."
+    },
+    {
+      "id": "M4",
+      "quote": "dove l'acqua è scura e i predatori visivi non li vedono",
+      "removal_test": "La profondità funziona come confine dentro/fuori: sotto una certa soglia luminosa si è 'dentro' (al sicuro), sopra si è 'fuori' (esposti). Senza questo confine strutturale, la profondità non avrebbe valore protettivo e la logica della migrazione verrebbe meno."
+    },
+    {
+      "id": "S3",
+      "quote": "La discesa mattutina e la salita serale sono sincronizzate dalla luce",
+      "removal_test": "Il ciclo luce/buio divide il tempo in slot allocabili (notte = superficie per nutrirsi, giorno = profondità per nascondersi). Senza slot temporali, le due funzioni incompatibili (nutrirsi in superficie, evitare predatori in profondità) non potrebbero essere separate e coordinate."
+    },
+    {
+      "id": "S4",
+      "quote": "Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie",
+      "removal_test": "Un organismo non può essere simultaneamente in superficie e in profondità. La non-sovrapposizione temporale è ciò che rende possibile la strategia: i due comportamenti incompatibili sono separati nel tempo. Senza questo vincolo, la migrazione non avrebbe senso come soluzione adattiva."
+    },
+    {
+      "id": "T2",
+      "quote": "i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale",
+      "removal_test": "Il carbonio viene fisicamente trasferito dalla superficie al fondale attraverso il corpo degli organismi e i loro detriti. Senza oggetto di trasferimento che si sposta da un luogo all'altro, la pompa biologica non esisterebbe come meccanismo di trasporto reale."
+    }
+  ],
+  "primitive_ids": [
+    "N1",
+    "N3",
+    "N2",
+    "N4",
+    "N5",
+    "I1",
+    "I2",
+    "I4",
+    "W2",
+    "W3",
+    "C4",
+    "M4",
+    "S3",
+    "S4",
+    "T2"
+  ],
+  "n_primitives": 15,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"N1\",\n      \"quote\": \"l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto\",\n      \"removal_test\": \"Senza emissione involontaria (la luce solare che penetra l'acqua, emessa passivamente dall'ambiente), non esisterebbe il segnale che guida la migrazione. Il sistema perderebbe il suo motore causale primario.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"l'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto\",\n      \"removal_test\": \"La luce non indica direttamente il pericolo dei predatori né la disponibilità di fitoplancton — li indica indirettamente. Senza questa indicazione indiretta, l'organismo non avrebbe accesso all'informazione sullo stato del sistema (predatori, cibo, ora del giorno) e non potrebbe regolare il comportamento.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"La discesa mattutina e la salita serale sono sincronizzate dalla luce\",\n      \"removal_test\": \"Il ciclo diel è un pattern temporale costitutivo: il dato (posizione verticale dell'organismo) è inseparabile dal momento della giornata. Rimuovere la traccia temporale significherebbe perdere la sincronizzazione — la migrazione diventerebbe rumore casuale invece di un ritmo.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"Ogni giorno, in tutti gli oceani del pianeta, miliardi di piccoli organismi compiono una migrazione verticale\",\n      \"removal_test\": \"Il pattern emerge dall'accumulazione sistematica di segnali ripetuti nel tempo (ciclo giorno/notte, stagioni, fasi lunari). Senza l'accumulo che solidifica il flusso temporale in comportamento strutturato, non esisterebbe una migrazione regolare ma solo risposte isolate e non coordinate.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale\",\n      \"removal_test\": \"La pompa biologica è un effetto sistemico che la sorgente (il plancton) produce senza esserne consapevole e senza intenderlo. L'osservatore (il sistema climatico, o il ricercatore che lo misura) legge un segnale che la sorgente non sa di emettere. Senza questa asimmetria, il trasporto di carbonio non sarebbe distinguibile come informazione sul ciclo del carbonio.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"miliardi di piccoli organismi — copepodi, krill, meduse piccole, pesci lanterna\",\n      \"removal_test\": \"La quantità di biomassa in migrazione è operativamente rilevante: è ciò che rende la diel vertical migration 'il più grande movimento di biomassa del pianeta'. Senza esistenza quantificabile, non si potrebbe distinguere un evento ecologicamente significativo da un fenomeno marginale.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"il fitoplancton che è abbondante nei primi 50 metri\",\n      \"removal_test\": \"La finitezza del fitoplancton nei primi 50 metri è la ragione strutturale per cui la migrazione ha senso: la risorsa non è distribuita uniformemente né illimitata. Senza finitezza, non ci sarebbe pressione selettiva per salire di notte e scendere di giorno.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità (200-1000 metri) [...] Di notte salgono verso la superficie\",\n      \"removal_test\": \"Ogni organismo si trova in uno stato corrente (in profondità / in superficie / in transizione) che determina il suo comportamento successivo e la sua esposizione ai predatori. Senza stato corrente tracciabile, il sistema non potrebbe essere descritto né governato dalla logica del ciclo.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono [...] All'alba ridiscendono\",\n      \"removal_test\": \"La migrazione è una sequenza ordinata di stati (profondità diurna → risalita serale → superficie notturna → discesa mattutina) con transizioni definite. Senza stati e transizioni, il comportamento collasserebbe in movimento non strutturato, perdendo il carattere ciclico e prevedibile.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Alcune specie aspettano la luna piena e modificano la profondità raggiunta. Altre si fermano a profondità intermedie quando c'è uno strato denso di fitoplancton\",\n      \"removal_test\": \"Le regole (soglia luminosa, presenza di deep chlorophyll maximum, fase lunare) determinano quali transizioni sono valide e quando. Senza regole, ogni organismo si muoverebbe indipendentemente da condizioni ambientali strutturate, e il pattern collettivo scomparirebbe.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale\",\n      \"removal_test\": \"Il carbonio si accumula progressivamente sul fondale per effetto cumulativo delle migrazioni quotidiane. Senza accumulazione, ogni ciclo sarebbe neutro rispetto al bilancio del carbonio e la pompa biologica non esisterebbe come fenomeno emergente.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"dove l'acqua è scura e i predatori visivi non li vedono\",\n      \"removal_test\": \"La profondità funziona come confine dentro/fuori: sotto una certa soglia luminosa si è 'dentro' (al sicuro), sopra si è 'fuori' (esposti). Senza questo confine strutturale, la profondità non avrebbe valore protettivo e la logica della migrazione verrebbe meno.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"La discesa mattutina e la salita serale sono sincronizzate dalla luce\",\n      \"removal_test\": \"Il ciclo luce/buio divide il tempo in slot allocabili (notte = superficie per nutrirsi, giorno = profondità per nascondersi). Senza slot temporali, le due funzioni incompatibili (nutrirsi in superficie, evitare predatori in profondità) non potrebbero essere separate e coordinate.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"Durante il giorno si rifugiano in profondità [...] Di notte salgono verso la superficie\",\n      \"removal_test\": \"Un organismo non può essere simultaneamente in superficie e in profondità. La non-sovrapposizione temporale è ciò che rende possibile la strategia: i due comportamenti incompatibili sono separati nel tempo. Senza questo vincolo, la migrazione non avrebbe senso come soluzione adattiva.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"i detriti fecali depositati in profondità trasportano carbonio dall'atmosfera al fondale\",\n      \"removal_test\": \"Il carbonio viene fisicamente trasferito dalla superficie al fondale attraverso il corpo degli organismi e i loro detriti. Senza oggetto di trasferimento che si sposta da un luogo all'altro, la pompa biologica non esisterebbe come meccanismo di trasporto reale.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:12:27.343341+00:00"
+}

@@ -1,0 +1,201 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S2",
+  "system_title": "Patch Tuesday Microsoft",
+  "attempt": 1,
+  "elapsed_s": 54.12,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6099,
+    "output_tokens": 3712,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Microsoft rilascia un pacchetto cumulativo di aggiornamenti di sicurezza per Windows, Office e gli altri prodotti della famiglia",
+      "removal_test": "Senza persistenza intenzionale, le patch non verrebbero conservate e distribuite come artefatti stabili: ogni fix esisterebbe solo nell'atto del rilascio e non sarebbe recuperabile dai client in momenti successivi."
+    },
+    {
+      "id": "C2",
+      "quote": "Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei",
+      "removal_test": "Senza forma, il bollettino non avrebbe struttura riconoscibile: non ci sarebbe distinzione tra campo 'sistemi affetti', campo 'gravità' e campo 'workaround'. Il contenuto sarebbe testo informe non processabile sistematicamente."
+    },
+    {
+      "id": "C3",
+      "quote": "Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta",
+      "removal_test": "Senza ritrovabilità, gli amministratori e i ricercatori non potrebbero localizzare il bollettino relativo a una specifica vulnerabilità: le patch esisterebbero ma sarebbero inaccessibili come informazione consultabile."
+    },
+    {
+      "id": "C4",
+      "quote": "Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo di aggiornamenti",
+      "removal_test": "Senza accumulazione, non esisterebbe un corpus crescente di patch mensili: ogni rilascio sarebbe un evento isolato senza storia cumulativa, rendendo impossibile tracciare l'evoluzione della superficie di attacco nel tempo."
+    },
+    {
+      "id": "C5",
+      "quote": "Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low), e assegnata a un team interno",
+      "removal_test": "Senza relazione, il CVE non sarebbe collegato alla patch corrispondente, né alla classificazione di gravità, né al team assegnato: ogni artefatto informativo esisterebbe come isola disconnessa dagli altri."
+    },
+    {
+      "id": "I1",
+      "quote": "vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali — dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty",
+      "removal_test": "Senza esistenza quantificabile, Microsoft non saprebbe quante vulnerabilità sono in lavorazione, quante sono state risolte nel ciclo corrente, quante restano aperte: la gestione del backlog diventerebbe impossibile."
+    },
+    {
+      "id": "I3",
+      "quote": "assegnata a un team interno",
+      "removal_test": "Senza appartenenza al contenitore, nessuna vulnerabilità avrebbe un proprietario responsabile: il processo di risoluzione non avrebbe un agente designato e le segnalazioni rimarrebbero in uno stato di responsabilità indeterminata."
+    },
+    {
+      "id": "I4",
+      "quote": "viene classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "Senza stato, non si potrebbe distinguere una vulnerabilità critica non ancora patchata da una già risolta o da una classificata a bassa priorità: la triage operativa collasserebbe."
+    },
+    {
+      "id": "T2",
+      "quote": "le patch vengono distribuite attraverso Windows Update: i client le scaricano in background, richiedono riavvio, applicano il fix",
+      "removal_test": "Senza oggetto di trasferimento, non ci sarebbe nulla che si propaga da Microsoft ai client: la patch esiste nel datacenter Microsoft ma non raggiunge mai i sistemi da proteggere."
+    },
+    {
+      "id": "T4",
+      "quote": "I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati — il fenomeno detto 'exploit Wednesday'",
+      "removal_test": "Senza irreversibilità, il rilascio pubblico della patch potrebbe essere 'ritirato' e la finestra di exploit Wednesday non esisterebbe come problema strutturale: è proprio perché il rilascio non può essere annullato che i client non aggiornati restano esposti permanentemente."
+    },
+    {
+      "id": "M1",
+      "quote": "Ogni segnalazione riceve un identificativo CVE",
+      "removal_test": "Senza identità, due segnalazioni della stessa vulnerabilità non potrebbero essere riconosciute come la stessa entità: non ci sarebbe modo di deduplicare, tracciare o riferirsi univocamente a una specifica vulnerabilità attraverso il ciclo di vita."
+    },
+    {
+      "id": "M2",
+      "quote": "le patch vengono testate internamente e con un gruppo di Insider",
+      "removal_test": "Senza legame al gruppo, non esisterebbe la distinzione tra chi appartiene al programma Insider (e riceve le patch in anteprima) e chi non vi appartiene: il meccanismo di test pre-release collasserebbe."
+    },
+    {
+      "id": "M3",
+      "quote": "viene classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "Senza differenziazione, tutte le vulnerabilità avrebbero lo stesso peso: non ci sarebbe modo di prioritizzare il patching, e una vulnerabilità Low riceverebbe le stesse risorse e urgenza di una Critical."
+    },
+    {
+      "id": "M4",
+      "quote": "vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC)",
+      "removal_test": "Senza confine dentro/fuori, non esisterebbe la distinzione tra segnalazioni ricevute attraverso canali ufficiali e informazioni che circolano all'esterno: il processo di responsible disclosure non avrebbe un perimetro, e le vulnerabilità potrebbero diventare pubbliche prima che la patch sia pronta."
+    },
+    {
+      "id": "W1",
+      "quote": "vulnerabilità vengono segnalate a Microsoft — ricevono un CVE, vengono classificate, assegnate a un team, testate, rilasciate",
+      "removal_test": "Senza unità di lavoro, non ci sarebbe un'entità discreta che entra nel processo e lo attraversa: il workflow non avrebbe un oggetto su cui operare e le fasi successive non avrebbero nulla da trasformare."
+    },
+    {
+      "id": "W2",
+      "quote": "Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità, e assegnata a un team interno. Prima della release, le patch vengono testate internamente e con un gruppo di Insider. Il giorno del rilascio, le patch vengono distribuite",
+      "removal_test": "Senza stati e transizioni, la vulnerabilità non avrebbe un percorso strutturato dalla segnalazione al rilascio: non si saprebbe se una patch è in fase di triage, in test o pronta per il deploy, e il processo diventerebbe non governabile."
+    },
+    {
+      "id": "W3",
+      "quote": "Gli amministratori aziendali possono posticipare il deploy di 30 giorni tramite WSUS o Intune",
+      "removal_test": "Senza regole, non esisterebbero i vincoli che definiscono cosa è permesso nel processo: la finestra di 30 giorni di posticipo non sarebbe una regola applicabile ma una prassi arbitraria, e non ci sarebbe distinzione tra deploy immediato e deploy differito come stati legittimi."
+    },
+    {
+      "id": "W4",
+      "quote": "assegnata a un team interno",
+      "removal_test": "Senza responsabilità, nessun team sarebbe formalmente incaricato di sviluppare e validare la patch: la vulnerabilità potrebbe restare in uno stato di lavorazione senza un agente che ne risponde."
+    },
+    {
+      "id": "S1",
+      "quote": "Ogni secondo martedì del mese",
+      "removal_test": "Senza risorsa finita, la finestra di rilascio mensile non sarebbe una risorsa scarsa da allocare: si potrebbe rilasciare patch in qualsiasi momento senza coordinamento, e il Patch Tuesday come istituzione non avrebbe ragione di esistere."
+    },
+    {
+      "id": "S3",
+      "quote": "Ogni secondo martedì del mese — Gli amministratori aziendali possono posticipare il deploy di 30 giorni",
+      "removal_test": "Senza slot temporali, non esisterebbero unità di tempo allocabili: né il martedì come slot di rilascio né la finestra di 30 giorni come slot di posticipo avrebbero struttura operativa."
+    },
+    {
+      "id": "S4",
+      "quote": "Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo",
+      "removal_test": "Senza non-sovrapposizione, due Patch Tuesday potrebbero occupare lo stesso slot temporale: il fatto che il rilascio di febbraio e quello di marzo non si sovrappongano non è una scelta ma un vincolo fisico del tempo che S4 incarna."
+    },
+    {
+      "id": "CO1",
+      "quote": "vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC) — dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty",
+      "removal_test": "Senza emittente e destinatario, non esisterebbe la relazione comunicativa tra ricercatore e Microsoft: le vulnerabilità scoperte resterebbero nella testa del ricercatore senza un destinatario istituzionale a cui indirizzarle."
+    },
+    {
+      "id": "CO2",
+      "quote": "Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "Senza significato codificato, 'Critical' non avrebbe un significato condiviso tra chi assegna la classificazione e chi la legge: ogni team interpreterebbe la gravità in modo idiosincratico e la comunicazione della severità collasserebbe."
+    },
+    {
+      "id": "CO3",
+      "quote": "le patch vengono distribuite attraverso Windows Update: i client le scaricano in background",
+      "removal_test": "Senza direzionalità, le patch non avrebbero una destinazione: esisterebbero come artefatti disponibili ma senza un meccanismo che le indirizzi verso i sistemi specifici che ne hanno bisogno."
+    },
+    {
+      "id": "CO4",
+      "quote": "le patch vengono distribuite attraverso Windows Update — tramite WSUS o Intune",
+      "removal_test": "Senza canale, non esisterebbe l'infrastruttura attraverso cui le patch viaggiano: Windows Update, WSUS e Intune sono i canali fisici e logici che rendono possibile la propagazione; senza di essi la patch esiste ma non può raggiungere i client."
+    },
+    {
+      "id": "N1",
+      "quote": "I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati",
+      "removal_test": "Senza emissione involontaria, la patch non emetterebbe informazione sulla vulnerabilità che corregge: il reverse engineering di 'exploit Wednesday' è possibile proprio perché la patch emette involontariamente il segnale di ciò che era rotto, senza che Microsoft intenda comunicarlo agli attaccanti."
+    },
+    {
+      "id": "N2",
+      "quote": "Ogni secondo martedì del mese — nei 30 giorni precedenti — Gli amministratori aziendali possono posticipare il deploy di 30 giorni",
+      "removal_test": "Senza traccia temporale costitutiva, non si saprebbe quando una vulnerabilità è stata segnalata, quando la patch è stata rilasciata, quando scade la finestra di posticipo: l'intera gestione del ciclo di vita delle patch perderebbe la sua dimensione temporale operativa."
+    },
+    {
+      "id": "N3",
+      "quote": "viene classificata per gravità (Critical/Important/Moderate/Low) — Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti",
+      "removal_test": "Senza indicazione indiretta, la classificazione di gravità e il bollettino non indicherebbero nulla sullo stato reale del sistema: non si potrebbe inferire dall'esterno quanto un sistema non patchato sia esposto, né quale sia la superficie di attacco effettiva."
+    },
+    {
+      "id": "N4",
+      "quote": "Nei 30 giorni precedenti, vulnerabilità vengono segnalate a Microsoft — Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo",
+      "removal_test": "Senza pattern per accumulazione, le segnalazioni del mese non si aggregherebbero in un pacchetto cumulativo: ogni vulnerabilità richiederebbe un rilascio separato e non esisterebbe la struttura del 'pacchetto mensile' come serie accumulata."
+    },
+    {
+      "id": "N5",
+      "quote": "I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati",
+      "removal_test": "Senza asimmetria sorgente-osservatore, i client non aggiornati non sarebbero osservati dagli attaccanti senza saperlo: è proprio l'asimmetria — l'attaccante sa cosa è vulnerabile, il client non sa di essere osservato — che rende 'exploit Wednesday' un fenomeno strutturale e non un incidente occasionale."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "I1",
+    "I3",
+    "I4",
+    "T2",
+    "T4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "S1",
+    "S3",
+    "S4",
+    "CO1",
+    "CO2",
+    "CO3",
+    "CO4",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+  ],
+  "n_primitives": 30,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"Microsoft rilascia un pacchetto cumulativo di aggiornamenti di sicurezza per Windows, Office e gli altri prodotti della famiglia\",\n      \"removal_test\": \"Senza persistenza intenzionale, le patch non verrebbero conservate e distribuite come artefatti stabili: ogni fix esisterebbe solo nell'atto del rilascio e non sarebbe recuperabile dai client in momenti successivi.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei\",\n      \"removal_test\": \"Senza forma, il bollettino non avrebbe struttura riconoscibile: non ci sarebbe distinzione tra campo 'sistemi affetti', campo 'gravità' e campo 'workaround'. Il contenuto sarebbe testo informe non processabile sistematicamente.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta\",\n      \"removal_test\": \"Senza ritrovabilità, gli amministratori e i ricercatori non potrebbero localizzare il bollettino relativo a una specifica vulnerabilità: le patch esisterebbero ma sarebbero inaccessibili come informazione consultabile.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo di aggiornamenti\",\n      \"removal_test\": \"Senza accumulazione, non esisterebbe un corpus crescente di patch mensili: ogni rilascio sarebbe un evento isolato senza storia cumulativa, rendendo impossibile tracciare l'evoluzione della superficie di attacco nel tempo.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low), e assegnata a un team interno\",\n      \"removal_test\": \"Senza relazione, il CVE non sarebbe collegato alla patch corrispondente, né alla classificazione di gravità, né al team assegnato: ogni artefatto informativo esisterebbe come isola disconnessa dagli altri.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali — dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty\",\n      \"removal_test\": \"Senza esistenza quantificabile, Microsoft non saprebbe quante vulnerabilità sono in lavorazione, quante sono state risolte nel ciclo corrente, quante restano aperte: la gestione del backlog diventerebbe impossibile.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"assegnata a un team interno\",\n      \"removal_test\": \"Senza appartenenza al contenitore, nessuna vulnerabilità avrebbe un proprietario responsabile: il processo di risoluzione non avrebbe un agente designato e le segnalazioni rimarrebbero in uno stato di responsabilità indeterminata.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"viene classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"Senza stato, non si potrebbe distinguere una vulnerabilità critica non ancora patchata da una già risolta o da una classificata a bassa priorità: la triage operativa collasserebbe.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"le patch vengono distribuite attraverso Windows Update: i client le scaricano in background, richiedono riavvio, applicano il fix\",\n      \"removal_test\": \"Senza oggetto di trasferimento, non ci sarebbe nulla che si propaga da Microsoft ai client: la patch esiste nel datacenter Microsoft ma non raggiunge mai i sistemi da proteggere.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati — il fenomeno detto 'exploit Wednesday'\",\n      \"removal_test\": \"Senza irreversibilità, il rilascio pubblico della patch potrebbe essere 'ritirato' e la finestra di exploit Wednesday non esisterebbe come problema strutturale: è proprio perché il rilascio non può essere annullato che i client non aggiornati restano esposti permanentemente.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE\",\n      \"removal_test\": \"Senza identità, due segnalazioni della stessa vulnerabilità non potrebbero essere riconosciute come la stessa entità: non ci sarebbe modo di deduplicare, tracciare o riferirsi univocamente a una specifica vulnerabilità attraverso il ciclo di vita.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"le patch vengono testate internamente e con un gruppo di Insider\",\n      \"removal_test\": \"Senza legame al gruppo, non esisterebbe la distinzione tra chi appartiene al programma Insider (e riceve le patch in anteprima) e chi non vi appartiene: il meccanismo di test pre-release collasserebbe.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"viene classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"Senza differenziazione, tutte le vulnerabilità avrebbero lo stesso peso: non ci sarebbe modo di prioritizzare il patching, e una vulnerabilità Low riceverebbe le stesse risorse e urgenza di una Critical.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC)\",\n      \"removal_test\": \"Senza confine dentro/fuori, non esisterebbe la distinzione tra segnalazioni ricevute attraverso canali ufficiali e informazioni che circolano all'esterno: il processo di responsible disclosure non avrebbe un perimetro, e le vulnerabilità potrebbero diventare pubbliche prima che la patch sia pronta.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft — ricevono un CVE, vengono classificate, assegnate a un team, testate, rilasciate\",\n      \"removal_test\": \"Senza unità di lavoro, non ci sarebbe un'entità discreta che entra nel processo e lo attraversa: il workflow non avrebbe un oggetto su cui operare e le fasi successive non avrebbero nulla da trasformare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità, e assegnata a un team interno. Prima della release, le patch vengono testate internamente e con un gruppo di Insider. Il giorno del rilascio, le patch vengono distribuite\",\n      \"removal_test\": \"Senza stati e transizioni, la vulnerabilità non avrebbe un percorso strutturato dalla segnalazione al rilascio: non si saprebbe se una patch è in fase di triage, in test o pronta per il deploy, e il processo diventerebbe non governabile.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Gli amministratori aziendali possono posticipare il deploy di 30 giorni tramite WSUS o Intune\",\n      \"removal_test\": \"Senza regole, non esisterebbero i vincoli che definiscono cosa è permesso nel processo: la finestra di 30 giorni di posticipo non sarebbe una regola applicabile ma una prassi arbitraria, e non ci sarebbe distinzione tra deploy immediato e deploy differito come stati legittimi.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"assegnata a un team interno\",\n      \"removal_test\": \"Senza responsabilità, nessun team sarebbe formalmente incaricato di sviluppare e validare la patch: la vulnerabilità potrebbe restare in uno stato di lavorazione senza un agente che ne risponde.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"Ogni secondo martedì del mese\",\n      \"removal_test\": \"Senza risorsa finita, la finestra di rilascio mensile non sarebbe una risorsa scarsa da allocare: si potrebbe rilasciare patch in qualsiasi momento senza coordinamento, e il Patch Tuesday come istituzione non avrebbe ragione di esistere.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"Ogni secondo martedì del mese — Gli amministratori aziendali possono posticipare il deploy di 30 giorni\",\n      \"removal_test\": \"Senza slot temporali, non esisterebbero unità di tempo allocabili: né il martedì come slot di rilascio né la finestra di 30 giorni come slot di posticipo avrebbero struttura operativa.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo\",\n      \"removal_test\": \"Senza non-sovrapposizione, due Patch Tuesday potrebbero occupare lo stesso slot temporale: il fatto che il rilascio di febbraio e quello di marzo non si sovrappongano non è una scelta ma un vincolo fisico del tempo che S4 incarna.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC) — dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty\",\n      \"removal_test\": \"Senza emittente e destinatario, non esisterebbe la relazione comunicativa tra ricercatore e Microsoft: le vulnerabilità scoperte resterebbero nella testa del ricercatore senza un destinatario istituzionale a cui indirizzarle.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"Senza significato codificato, 'Critical' non avrebbe un significato condiviso tra chi assegna la classificazione e chi la legge: ogni team interpreterebbe la gravità in modo idiosincratico e la comunicazione della severità collasserebbe.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"le patch vengono distribuite attraverso Windows Update: i client le scaricano in background\",\n      \"removal_test\": \"Senza direzionalità, le patch non avrebbero una destinazione: esisterebbero come artefatti disponibili ma senza un meccanismo che le indirizzi verso i sistemi specifici che ne hanno bisogno.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"le patch vengono distribuite attraverso Windows Update — tramite WSUS o Intune\",\n      \"removal_test\": \"Senza canale, non esisterebbe l'infrastruttura attraverso cui le patch viaggiano: Windows Update, WSUS e Intune sono i canali fisici e logici che rendono possibile la propagazione; senza di essi la patch esiste ma non può raggiungere i client.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati\",\n      \"removal_test\": \"Senza emissione involontaria, la patch non emetterebbe informazione sulla vulnerabilità che corregge: il reverse engineering di 'exploit Wednesday' è possibile proprio perché la patch emette involontariamente il segnale di ciò che era rotto, senza che Microsoft intenda comunicarlo agli attaccanti.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"Ogni secondo martedì del mese — nei 30 giorni precedenti — Gli amministratori aziendali possono posticipare il deploy di 30 giorni\",\n      \"removal_test\": \"Senza traccia temporale costitutiva, non si saprebbe quando una vulnerabilità è stata segnalata, quando la patch è stata rilasciata, quando scade la finestra di posticipo: l'intera gestione del ciclo di vita delle patch perderebbe la sua dimensione temporale operativa.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"viene classificata per gravità (Critical/Important/Moderate/Low) — Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti\",\n      \"removal_test\": \"Senza indicazione indiretta, la classificazione di gravità e il bollettino non indicherebbero nulla sullo stato reale del sistema: non si potrebbe inferire dall'esterno quanto un sistema non patchato sia esposto, né quale sia la superficie di attacco effettiva.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"Nei 30 giorni precedenti, vulnerabilità vengono segnalate a Microsoft — Ogni secondo martedì del mese, Microsoft rilascia un pacchetto cumulativo\",\n      \"removal_test\": \"Senza pattern per accumulazione, le segnalazioni del mese non si aggregherebbero in un pacchetto cumulativo: ogni vulnerabilità richiederebbe un rilascio separato e non esisterebbe la struttura del 'pacchetto mensile' come serie accumulata.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati\",\n      \"removal_test\": \"Senza asimmetria sorgente-osservatore, i client non aggiornati non sarebbero osservati dagli attaccanti senza saperlo: è proprio l'asimmetria — l'attaccante sa cosa è vulnerabile, il client non sa di essere osservato — che rende 'exploit Wednesday' un fenomeno strutturale e non un incidente occasionale.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:09:03.091590+00:00"
+}

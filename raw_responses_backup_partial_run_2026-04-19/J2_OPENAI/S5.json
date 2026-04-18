@@ -1,0 +1,54 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S5",
+  "system_title": "Metamorfosi della rana",
+  "attempt": 1,
+  "elapsed_s": 5.79,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 449,
+    "prompt_tokens": 5305,
+    "total_tokens": 5754,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4096
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "W2",
+      "quote": "A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi. L'ormone tiroideo tirosina scatena una riorganizzazione radicale: spuntano le zampe posteriori, poi le anteriori, si formano i polmoni, le branchie regrediscono, la coda viene riassorbita, il tubo digerente si accorcia e si adatta a dieta carnivora, la pelle cambia struttura.",
+      "removal_test": "Senza W2, non ci sarebbe un ordine strutturato nella metamorfosi della rana. Le trasformazioni fisiche e funzionali non seguirebbero una sequenza definita, compromettendo il passaggio da girino ad adulto."
+    },
+    {
+      "id": "W3",
+      "quote": "Determinato da temperatura, disponibilità di cibo, livelli ormonali",
+      "removal_test": "Senza W3, non ci sarebbero regole che governano quando e come inizia la metamorfosi. La rana non saprebbe quando iniziare il processo di trasformazione, compromettendo la sua sopravvivenza."
+    },
+    {
+      "id": "W1",
+      "quote": "Il ciclo si ripete: uova → girini → metamorfosi → adulti.",
+      "removal_test": "Senza W1, non ci sarebbe un'unità di lavoro definita per il ciclo di vita della rana. Il processo di crescita e trasformazione non sarebbe riconosciuto come un'entità coesa, rendendo difficile la comprensione e gestione del ciclo di vita."
+    },
+    {
+      "id": "N2",
+      "quote": "Il tempo dal girino all'adulto varia da 8 settimane a 2-3 anni secondo la specie e le condizioni.",
+      "removal_test": "Senza N2, non ci sarebbe una traccia temporale costitutiva che documenta la durata del processo di metamorfosi. Non si potrebbe misurare o prevedere il tempo necessario per la trasformazione."
+    }
+  ],
+  "primitive_ids": [
+    "W2",
+    "W3",
+    "W1",
+    "N2"
+  ],
+  "n_primitives": 4,
+  "raw_response": "{\"primitives\": [{\"id\": \"W2\", \"quote\": \"A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi. L'ormone tiroideo tirosina scatena una riorganizzazione radicale: spuntano le zampe posteriori, poi le anteriori, si formano i polmoni, le branchie regrediscono, la coda viene riassorbita, il tubo digerente si accorcia e si adatta a dieta carnivora, la pelle cambia struttura.\", \"removal_test\": \"Senza W2, non ci sarebbe un ordine strutturato nella metamorfosi della rana. Le trasformazioni fisiche e funzionali non seguirebbero una sequenza definita, compromettendo il passaggio da girino ad adulto.\"}, {\"id\": \"W3\", \"quote\": \"Determinato da temperatura, disponibilità di cibo, livelli ormonali\", \"removal_test\": \"Senza W3, non ci sarebbero regole che governano quando e come inizia la metamorfosi. La rana non saprebbe quando iniziare il processo di trasformazione, compromettendo la sua sopravvivenza.\"}, {\"id\": \"W1\", \"quote\": \"Il ciclo si ripete: uova → girini → metamorfosi → adulti.\", \"removal_test\": \"Senza W1, non ci sarebbe un'unità di lavoro definita per il ciclo di vita della rana. Il processo di crescita e trasformazione non sarebbe riconosciuto come un'entità coesa, rendendo difficile la comprensione e gestione del ciclo di vita.\"}, {\"id\": \"N2\", \"quote\": \"Il tempo dal girino all'adulto varia da 8 settimane a 2-3 anni secondo la specie e le condizioni.\", \"removal_test\": \"Senza N2, non ci sarebbe una traccia temporale costitutiva che documenta la durata del processo di metamorfosi. Non si potrebbe misurare o prevedere il tempo necessario per la trasformazione.\"}]}",
+  "timestamp_utc": "2026-04-18T22:34:19.886447+00:00"
+}

@@ -1,0 +1,200 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S10",
+  "system_title": "Conto corrente bancario",
+  "attempt": 1,
+  "elapsed_s": 54.42,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5271,
+    "completion_tokens": 2656,
+    "total_tokens": 12352
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza la persistenza, non esisterebbe una cronologia delle operazioni. Il concetto di 'estratto conto' sarebbe impossibile e il saldo corrente non avrebbe una storia verificabile."
+    },
+    {
+      "id": "C2",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza una forma definita, i dati delle transazioni sarebbero caotici e inutilizzabili. Sarebbe impossibile calcolare saldi, applicare commissioni o analizzare i dati in modo automatico."
+    },
+    {
+      "id": "C3",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "Senza la ritrovabilità, anche se le transazioni fossero registrate, sarebbe impossibile per il cliente o la banca consultarle. Non si potrebbero verificare pagamenti passati o risolvere dispute."
+    },
+    {
+      "id": "C4",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "Senza l'accumulazione, il sistema potrebbe memorizzare solo l'ultima transazione. Verrebbe persa la capacità di avere una storia finanziaria completa, rendendo impossibile il calcolo della giacenza media."
+    },
+    {
+      "id": "I1",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido",
+      "removal_test": "Senza l'esistenza quantificabile, il conto non avrebbe un saldo. L'intero scopo di un conto corrente, ovvero misurare una quantità di denaro, verrebbe meno."
+    },
+    {
+      "id": "I2",
+      "quote": "se il cliente ha un fido (linea di credito concessa dalla banca).",
+      "removal_test": "Senza la finitezza, la linea di credito (fido) sarebbe illimitata, esponendo la banca a un rischio infinito. Il concetto di 'scoperto' perderebbe di significato."
+    },
+    {
+      "id": "I3",
+      "quote": "La banca verifica, assegna un IBAN e una carta.",
+      "removal_test": "Senza l'appartenenza a un contenitore (identificato dall'IBAN), sarebbe impossibile associare il denaro a un cliente specifico. I fondi sarebbero un unico ammasso indistinto."
+    },
+    {
+      "id": "I4",
+      "quote": "In caso decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.",
+      "removal_test": "Senza la nozione di stato, un conto non potrebbe essere 'attivo', 'congelato', 'bloccato' o 'chiuso'. La gestione del ciclo di vita e dei rischi del conto sarebbe impossibile."
+    },
+    {
+      "id": "T1",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale...",
+      "removal_test": "Senza le due parti, una transazione non avrebbe né un'origine né una destinazione. Sarebbe impossibile inviare o ricevere denaro perché mancherebbe il concetto di 'altro' nell'operazione."
+    },
+    {
+      "id": "T2",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte...",
+      "removal_test": "Senza un oggetto di trasferimento (l'importo), le transazioni sarebbero interazioni vuote. Non ci sarebbe alcun valore economico scambiato tra le parti."
+    },
+    {
+      "id": "T3",
+      "quote": "Un cittadino apre un conto corrente presso una banca.",
+      "removal_test": "Senza un accordo, non esisterebbe la relazione contrattuale tra banca e cliente. Ogni operazione (come un bonifico) mancherebbe della necessaria autorizzazione."
+    },
+    {
+      "id": "M1",
+      "quote": "Per farlo presenta documento di identità, codice fiscale, referenze lavorative.",
+      "removal_test": "Senza l'identità, la banca non saprebbe a chi appartiene il conto. Sarebbe impossibile rispettare le normative e garantire la sicurezza dei fondi."
+    },
+    {
+      "id": "M2",
+      "quote": "Un cittadino apre un conto corrente presso una banca.",
+      "removal_test": "Senza il legame al gruppo, non ci sarebbe una relazione formale tra il cittadino e la banca. La persona sarebbe un estraneo, senza diritti né doveri, e non potrebbe usare i servizi bancari."
+    },
+    {
+      "id": "M3",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido",
+      "removal_test": "Senza la differenziazione, tutti i clienti avrebbero esattamente gli stessi prodotti e condizioni. Sarebbe impossibile offrire servizi personalizzati come una linea di credito (fido) basata sul profilo del cliente."
+    },
+    {
+      "id": "M4",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML)",
+      "removal_test": "Senza un confine, non ci sarebbe distinzione tra operazioni lecite ed illecite, o tra utenti autorizzati e non. La banca non potrebbe applicare controlli di sicurezza o normativi."
+    },
+    {
+      "id": "W1",
+      "quote": "La banca verifica, assegna un IBAN e una carta.",
+      "removal_test": "Senza un'unità di lavoro (es. la richiesta di apertura conto), i processi della banca non avrebbero un oggetto su cui operare. Sarebbe impossibile tracciare lo stato di una richiesta specifica."
+    },
+    {
+      "id": "W2",
+      "quote": "In caso decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.",
+      "removal_test": "Senza stati e transizioni, un processo non potrebbe evolvere. Un conto non potrebbe passare da 'attivo' a 'congelato'. Ogni azione sarebbe atomica e senza una sequenza logica."
+    },
+    {
+      "id": "W3",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.",
+      "removal_test": "Senza regole, il comportamento del sistema sarebbe arbitrario. Le imposte non verrebbero applicate, i conti non verrebbero chiusi per inattività e le condizioni contrattuali non avrebbero effetto."
+    },
+    {
+      "id": "W4",
+      "quote": "il cliente viene contattato per chiarire l'origine dei fondi.",
+      "removal_test": "Senza la responsabilità, i passi di un processo non sarebbero assegnati a nessuno. Nessuno (né il cliente, né la banca) sarebbe tenuto a compiere le azioni necessarie, bloccando i workflow."
+    },
+    {
+      "id": "S1",
+      "quote": "verso l'estero richiedono più giorni e commissioni.",
+      "removal_test": "Senza una risorsa finita (come la capacità di elaborazione o il tempo degli operatori), tutte le operazioni sarebbero istantanee. Il concetto di tempi di attesa o di cut-off orari non esisterebbe."
+    },
+    {
+      "id": "S2",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta.",
+      "removal_test": "Senza un richiedente, il sistema sarebbe inerte. Nessuno inizierebbe transazioni, bonifici o pagamenti, e le risorse del sistema non verrebbero mai utilizzate."
+    },
+    {
+      "id": "S3",
+      "quote": "I bonifici verso IBAN italiani arrivano in giornata",
+      "removal_test": "Senza slot temporali, sarebbe impossibile gestire e comunicare i tempi di esecuzione. Non si potrebbe distinguere tra un'operazione 'istantanea', una 'in giornata' o una che richiede 'più giorni'."
+    },
+    {
+      "id": "CO1",
+      "quote": "il cliente viene contattato per chiarire l'origine dei fondi.",
+      "removal_test": "Senza emittente e destinatario, la comunicazione sarebbe impossibile. La banca non potrebbe inviare l'estratto conto a un cliente specifico o contattarlo per chiarimenti."
+    },
+    {
+      "id": "CO2",
+      "quote": "assegna un IBAN",
+      "removal_test": "Senza un significato codificato, l'IBAN sarebbe una stringa di caratteri senza senso e l'estratto conto un insieme di numeri incomprensibili. La comunicazione non trasmetterebbe informazioni utili."
+    },
+    {
+      "id": "CO3",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "Senza la direzionalità, le comunicazioni sarebbero inviate a tutti indistintamente. L'estratto conto di un cliente arriverebbe a tutti gli altri, con un'enorme violazione della privacy."
+    },
+    {
+      "id": "CO4",
+      "quote": "il cliente viene contattato per chiarire l'origine dei fondi.",
+      "removal_test": "Senza un canale, non ci sarebbe un mezzo per trasmettere i messaggi. Anche se la banca volesse inviare un estratto conto, non avrebbe modo di farlo arrivare al cliente."
+    },
+    {
+      "id": "N2",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte...",
+      "removal_test": "Senza una traccia temporale, le transazioni sarebbero un elenco non ordinato. Sarebbe impossibile ricostruire la cronologia, calcolare la giacenza media o capire l'ordine degli eventi."
+    },
+    {
+      "id": "N3",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML)",
+      "removal_test": "Senza l'indicazione indiretta, la banca potrebbe reagire solo a problemi espliciti. Non potrebbe inferire un rischio di riciclaggio analizzando i pattern delle transazioni del cliente."
+    },
+    {
+      "id": "N4",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.",
+      "removal_test": "Senza l'accumulazione di dati in serie temporali, sarebbe impossibile calcolare metriche aggregate nel tempo come la 'giacenza media annua'. Si potrebbero vedere solo le singole transazioni isolate."
+    },
+    {
+      "id": "N5",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML)",
+      "removal_test": "Senza l'asimmetria, il cliente dovrebbe essere consapevole e partecipe di ogni attività di monitoraggio sul proprio conto, rendendo inefficace qualsiasi controllo di sicurezza o antiriciclaggio."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "T1",
+    "T2",
+    "T3",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "S1",
+    "S2",
+    "S3",
+    "CO1",
+    "CO2",
+    "CO3",
+    "CO4",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+  ],
+  "n_primitives": 30,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\",\n      \"removal_test\": \"Senza la persistenza, non esisterebbe una cronologia delle operazioni. Il concetto di 'estratto conto' sarebbe impossibile e il saldo corrente non avrebbe una storia verificabile.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\",\n      \"removal_test\": \"Senza una forma definita, i dati delle transazioni sarebbero caotici e inutilizzabili. Sarebbe impossibile calcolare saldi, applicare commissioni o analizzare i dati in modo automatico.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\",\n      \"removal_test\": \"Senza la ritrovabilità, anche se le transazioni fossero registrate, sarebbe impossibile per il cliente o la banca consultarle. Non si potrebbero verificare pagamenti passati o risolvere dispute.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\",\n      \"removal_test\": \"Senza l'accumulazione, il sistema potrebbe memorizzare solo l'ultima transazione. Verrebbe persa la capacità di avere una storia finanziaria completa, rendendo impossibile il calcolo della giacenza media.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido\",\n      \"removal_test\": \"Senza l'esistenza quantificabile, il conto non avrebbe un saldo. L'intero scopo di un conto corrente, ovvero misurare una quantità di denaro, verrebbe meno.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"se il cliente ha un fido (linea di credito concessa dalla banca).\",\n      \"removal_test\": \"Senza la finitezza, la linea di credito (fido) sarebbe illimitata, esponendo la banca a un rischio infinito. Il concetto di 'scoperto' perderebbe di significato.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"La banca verifica, assegna un IBAN e una carta.\",\n      \"removal_test\": \"Senza l'appartenenza a un contenitore (identificato dall'IBAN), sarebbe impossibile associare il denaro a un cliente specifico. I fondi sarebbero un unico ammasso indistinto.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"In caso decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.\",\n      \"removal_test\": \"Senza la nozione di stato, un conto non potrebbe essere 'attivo', 'congelato', 'bloccato' o 'chiuso'. La gestione del ciclo di vita e dei rischi del conto sarebbe impossibile.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale...\",\n      \"removal_test\": \"Senza le due parti, una transazione non avrebbe né un'origine né una destinazione. Sarebbe impossibile inviare o ricevere denaro perché mancherebbe il concetto di 'altro' nell'operazione.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte...\",\n      \"removal_test\": \"Senza un oggetto di trasferimento (l'importo), le transazioni sarebbero interazioni vuote. Non ci sarebbe alcun valore economico scambiato tra le parti.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"Un cittadino apre un conto corrente presso una banca.\",\n      \"removal_test\": \"Senza un accordo, non esisterebbe la relazione contrattuale tra banca e cliente. Ogni operazione (come un bonifico) mancherebbe della necessaria autorizzazione.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Per farlo presenta documento di identità, codice fiscale, referenze lavorative.\",\n      \"removal_test\": \"Senza l'identità, la banca non saprebbe a chi appartiene il conto. Sarebbe impossibile rispettare le normative e garantire la sicurezza dei fondi.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Un cittadino apre un conto corrente presso una banca.\",\n      \"removal_test\": \"Senza il legame al gruppo, non ci sarebbe una relazione formale tra il cittadino e la banca. La persona sarebbe un estraneo, senza diritti né doveri, e non potrebbe usare i servizi bancari.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido\",\n      \"removal_test\": \"Senza la differenziazione, tutti i clienti avrebbero esattamente gli stessi prodotti e condizioni. Sarebbe impossibile offrire servizi personalizzati come una linea di credito (fido) basata sul profilo del cliente.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML)\",\n      \"removal_test\": \"Senza un confine, non ci sarebbe distinzione tra operazioni lecite ed illecite, o tra utenti autorizzati e non. La banca non potrebbe applicare controlli di sicurezza o normativi.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"La banca verifica, assegna un IBAN e una carta.\",\n      \"removal_test\": \"Senza un'unità di lavoro (es. la richiesta di apertura conto), i processi della banca non avrebbero un oggetto su cui operare. Sarebbe impossibile tracciare lo stato di una richiesta specifica.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"In caso decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.\",\n      \"removal_test\": \"Senza stati e transizioni, un processo non potrebbe evolvere. Un conto non potrebbe passare da 'attivo' a 'congelato'. Ogni azione sarebbe atomica e senza una sequenza logica.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.\",\n      \"removal_test\": \"Senza regole, il comportamento del sistema sarebbe arbitrario. Le imposte non verrebbero applicate, i conti non verrebbero chiusi per inattività e le condizioni contrattuali non avrebbero effetto.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"il cliente viene contattato per chiarire l'origine dei fondi.\",\n      \"removal_test\": \"Senza la responsabilità, i passi di un processo non sarebbero assegnati a nessuno. Nessuno (né il cliente, né la banca) sarebbe tenuto a compiere le azioni necessarie, bloccando i workflow.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"verso l'estero richiedono più giorni e commissioni.\",\n      \"removal_test\": \"Senza una risorsa finita (come la capacità di elaborazione o il tempo degli operatori), tutte le operazioni sarebbero istantanee. Il concetto di tempi di attesa o di cut-off orari non esisterebbe.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta.\",\n      \"removal_test\": \"Senza un richiedente, il sistema sarebbe inerte. Nessuno inizierebbe transazioni, bonifici o pagamenti, e le risorse del sistema non verrebbero mai utilizzate.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"I bonifici verso IBAN italiani arrivano in giornata\",\n      \"removal_test\": \"Senza slot temporali, sarebbe impossibile gestire e comunicare i tempi di esecuzione. Non si potrebbe distinguere tra un'operazione 'istantanea', una 'in giornata' o una che richiede 'più giorni'.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"il cliente viene contattato per chiarire l'origine dei fondi.\",\n      \"removal_test\": \"Senza emittente e destinatario, la comunicazione sarebbe impossibile. La banca non potrebbe inviare l'estratto conto a un cliente specifico o contattarlo per chiarimenti.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"assegna un IBAN\",\n      \"removal_test\": \"Senza un significato codificato, l'IBAN sarebbe una stringa di caratteri senza senso e l'estratto conto un insieme di numeri incomprensibili. La comunicazione non trasmetterebbe informazioni utili.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\",\n      \"removal_test\": \"Senza la direzionalità, le comunicazioni sarebbero inviate a tutti indistintamente. L'estratto conto di un cliente arriverebbe a tutti gli altri, con un'enorme violazione della privacy.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"il cliente viene contattato per chiarire l'origine dei fondi.\",\n      \"removal_test\": \"Senza un canale, non ci sarebbe un mezzo per trasmettere i messaggi. Anche se la banca volesse inviare un estratto conto, non avrebbe modo di farlo arrivare al cliente.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte...\",\n      \"removal_test\": \"Senza una traccia temporale, le transazioni sarebbero un elenco non ordinato. Sarebbe impossibile ricostruire la cronologia, calcolare la giacenza media o capire l'ordine degli eventi.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML)\",\n      \"removal_test\": \"Senza l'indicazione indiretta, la banca potrebbe reagire solo a problemi espliciti. Non potrebbe inferire un rischio di riciclaggio analizzando i pattern delle transazioni del cliente.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.\",\n      \"removal_test\": \"Senza l'accumulazione di dati in serie temporali, sarebbe impossibile calcolare metriche aggregate nel tempo come la 'giacenza media annua'. Si potrebbero vedere solo le singole transazioni isolate.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML)\",\n      \"removal_test\": \"Senza l'asimmetria, il cliente dovrebbe essere consapevole e partecipe di ogni attività di monitoraggio sul proprio conto, rendendo inefficace qualsiasi controllo di sicurezza o antiriciclaggio.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T23:01:18.270668+00:00"
+}

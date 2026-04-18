@@ -1,0 +1,177 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S10",
+  "system_title": "Conto corrente bancario",
+  "attempt": 1,
+  "elapsed_s": 51.23,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6135,
+    "output_tokens": 3074,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "M1",
+      "quote": "presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica, assegna un IBAN e una carta",
+      "removal_test": "Senza identità verificabile non esiste un titolare del conto: impossibile attribuire transazioni, applicare il fido, eseguire la successione o bloccare per AML. Il sistema collassa perché non sa 'di chi' è il conto."
+    },
+    {
+      "id": "M2",
+      "quote": "Un cittadino apre un conto corrente presso una banca",
+      "removal_test": "Senza il legame formale tra persona e istituto non esiste il rapporto contrattuale. Non ci sono obblighi reciproci, niente IBAN, niente estratto conto. Il conto non è di nessuno."
+    },
+    {
+      "id": "M4",
+      "quote": "In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi",
+      "removal_test": "Senza il confine dentro/fuori non si può congelare il conto né distinguere chi ha diritto di operare da chi non ce l'ha. Chiunque potrebbe prelevare dopo il decesso."
+    },
+    {
+      "id": "C1",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione",
+      "removal_test": "Senza persistenza intenzionale le transazioni avvengono ma scompaiono. Niente estratto conto, niente saldo verificabile, niente base per contestazioni o audit fiscale."
+    },
+    {
+      "id": "C3",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni",
+      "removal_test": "Senza ritrovabilità il cliente non può accedere alla propria storia transazionale. Le registrazioni esistono ma sono inaccessibili: impossibile verificare addebiti, fare dichiarazioni fiscali, contestare errori."
+    },
+    {
+      "id": "C4",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione",
+      "removal_test": "Senza accumulazione il registro contiene solo l'ultima operazione. Il saldo non è calcolabile, l'estratto conto non esiste, la storia del rapporto bancario è persa."
+    },
+    {
+      "id": "I1",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido",
+      "removal_test": "Senza quantificazione non esiste il saldo. Non si sa se il cliente ha fondi sufficienti per un pagamento, se ha sforato il fido, se supera la soglia dei 5000€ per l'imposta di bollo."
+    },
+    {
+      "id": "I2",
+      "quote": "Il fido ha un tasso di interesse: lo scoperto costa",
+      "removal_test": "Senza finitezza il fido sarebbe illimitato e gratuito. Il tasso di interesse esiste precisamente perché il credito concesso è una risorsa finita che la banca presta a costo."
+    },
+    {
+      "id": "I3",
+      "quote": "La banca verifica, assegna un IBAN e una carta",
+      "removal_test": "Senza appartenenza al contenitore i fondi depositati non sono 'del cliente presso la banca'. Non si può sapere a chi appartiene quale somma, rendendo impossibile qualsiasi operazione di addebito o accredito."
+    },
+    {
+      "id": "I4",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML) [...] In caso di decesso del titolare, il conto viene congelato",
+      "removal_test": "Senza stato corrente il conto non può essere 'attivo', 'bloccato' o 'congelato'. Ogni operazione sarebbe sempre eseguibile indipendentemente dalla condizione del conto."
+    },
+    {
+      "id": "T1",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta",
+      "removal_test": "Senza due parti non esiste transazione bancaria: un bonifico senza mittente e destinatario è un numero che appare dal nulla. L'intero sistema di pagamento collassa."
+    },
+    {
+      "id": "T2",
+      "quote": "fa bonifici [...] I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni",
+      "removal_test": "Senza oggetto di trasferimento il denaro non si sposta: il saldo del mittente non diminuisce e quello del destinatario non aumenta. Il bonifico è un'etichetta vuota."
+    },
+    {
+      "id": "T3",
+      "quote": "Per farlo presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica",
+      "removal_test": "Senza accordo formalizzato non esiste il contratto di conto corrente. Nessun obbligo per la banca di custodire i fondi, nessun diritto del cliente di operare, nessuna base per il fido o le commissioni."
+    },
+    {
+      "id": "T4",
+      "quote": "saldo dopo l'operazione [...] I bonifici verso IBAN italiani arrivano in giornata",
+      "removal_test": "Senza irreversibilità ogni transazione potrebbe essere annullata unilateralmente. Il sistema bancario si fonda sull'irrevocabilità del pagamento eseguito: senza di essa nessun venditore accetterebbe un bonifico."
+    },
+    {
+      "id": "W1",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi",
+      "removal_test": "Senza un'unità di lavoro identificabile (la transazione sospetta) non c'è nulla da bloccare, esaminare o sbloccare. Il processo AML non ha oggetto su cui operare."
+    },
+    {
+      "id": "W2",
+      "quote": "La banca può bloccare transazioni sospette [...] il cliente viene contattato per chiarire l'origine dei fondi",
+      "removal_test": "Senza stati e transizioni la transazione sospetta non può passare da 'bloccata' a 'chiarita' o 'rifiutata'. Il processo AML è una sequenza di stati: senza di essa è un atto unico senza esito gestibile."
+    },
+    {
+      "id": "W3",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale [...] la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini",
+      "removal_test": "Senza regole non si sa quando applicare l'imposta di bollo, quando bloccare per AML, quando chiudere per inattività. Il sistema opera per arbitrio anziché per criteri definiti."
+    },
+    {
+      "id": "W4",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML) [...] la banca può chiuderlo unilateralmente",
+      "removal_test": "Senza responsabilità assegnata nessuno è tenuto a eseguire il blocco AML, contattare il cliente, o chiudere il conto per inattività. Le regole esistono ma nessuno le applica."
+    },
+    {
+      "id": "CO1",
+      "quote": "il cliente viene contattato per chiarire l'origine dei fondi",
+      "removal_test": "Senza emittente e destinatario identificati la banca non può notificare il blocco AML né ricevere la spiegazione del cliente. La transazione rimane bloccata indefinitamente senza possibilità di risoluzione."
+    },
+    {
+      "id": "CO2",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni [...] data, importo, controparte, causale",
+      "removal_test": "Senza significato codificato condiviso l'estratto conto è una sequenza di numeri non interpretabili. Cliente e banca non condividono il linguaggio per leggere 'causale: stipendio marzo' o 'commissione bonifico estero'."
+    },
+    {
+      "id": "CO3",
+      "quote": "I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni e commissioni",
+      "removal_test": "Senza direzionalità il bonifico non sa dove andare: l'IBAN del destinatario è esattamente il meccanismo di indirizzamento. Senza di esso i fondi non raggiungono nessuno."
+    },
+    {
+      "id": "CO4",
+      "quote": "I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni",
+      "removal_test": "Senza canale (infrastruttura interbancaria SEPA, SWIFT) i bonifici non hanno mezzo di propagazione. La differenza di tempi tra bonifici nazionali e internazionali è esattamente la differenza tra canali diversi."
+    },
+    {
+      "id": "N2",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione",
+      "removal_test": "Senza traccia temporale costitutiva le transazioni perdono il loro quando. Non si può calcolare la giacenza media annua per l'imposta di bollo, non si può ricostruire la sequenza degli eventi, non si può verificare se un bonifico è arrivato in giornata."
+    },
+    {
+      "id": "N3",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale [...] La banca può bloccare transazioni sospette per antiriciclaggio",
+      "removal_test": "Senza indicazione indiretta il saldo non indica la ricchezza del cliente, il pattern di transazioni non indica attività sospetta, la giacenza media non indica l'obbligo fiscale. Il sistema perde la capacità di inferire stati non direttamente osservabili."
+    },
+    {
+      "id": "N4",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni [...] giacenza media annua",
+      "removal_test": "Senza accumulazione sistematica non si può calcolare la giacenza media annua (richiede la serie storica dei saldi giornalieri), né produrre l'estratto mensile, né rilevare pattern AML su sequenze di operazioni."
+    },
+    {
+      "id": "N5",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi",
+      "removal_test": "Senza asimmetria sorgente-osservatore non esiste l'AML: il sistema funziona proprio perché la banca osserva il comportamento del cliente senza che questi sappia di essere monitorato fino al momento del blocco. Se il cliente sapesse sempre i criteri esatti, l'AML sarebbe eludibile."
+    }
+  ],
+  "primitive_ids": [
+    "M1",
+    "M2",
+    "M4",
+    "C1",
+    "C3",
+    "C4",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "CO1",
+    "CO2",
+    "CO3",
+    "CO4",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+  ],
+  "n_primitives": 26,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"M1\",\n      \"quote\": \"presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica, assegna un IBAN e una carta\",\n      \"removal_test\": \"Senza identità verificabile non esiste un titolare del conto: impossibile attribuire transazioni, applicare il fido, eseguire la successione o bloccare per AML. Il sistema collassa perché non sa 'di chi' è il conto.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Un cittadino apre un conto corrente presso una banca\",\n      \"removal_test\": \"Senza il legame formale tra persona e istituto non esiste il rapporto contrattuale. Non ci sono obblighi reciproci, niente IBAN, niente estratto conto. Il conto non è di nessuno.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi\",\n      \"removal_test\": \"Senza il confine dentro/fuori non si può congelare il conto né distinguere chi ha diritto di operare da chi non ce l'ha. Chiunque potrebbe prelevare dopo il decesso.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione\",\n      \"removal_test\": \"Senza persistenza intenzionale le transazioni avvengono ma scompaiono. Niente estratto conto, niente saldo verificabile, niente base per contestazioni o audit fiscale.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni\",\n      \"removal_test\": \"Senza ritrovabilità il cliente non può accedere alla propria storia transazionale. Le registrazioni esistono ma sono inaccessibili: impossibile verificare addebiti, fare dichiarazioni fiscali, contestare errori.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione\",\n      \"removal_test\": \"Senza accumulazione il registro contiene solo l'ultima operazione. Il saldo non è calcolabile, l'estratto conto non esiste, la storia del rapporto bancario è persa.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido\",\n      \"removal_test\": \"Senza quantificazione non esiste il saldo. Non si sa se il cliente ha fondi sufficienti per un pagamento, se ha sforato il fido, se supera la soglia dei 5000€ per l'imposta di bollo.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"Il fido ha un tasso di interesse: lo scoperto costa\",\n      \"removal_test\": \"Senza finitezza il fido sarebbe illimitato e gratuito. Il tasso di interesse esiste precisamente perché il credito concesso è una risorsa finita che la banca presta a costo.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"La banca verifica, assegna un IBAN e una carta\",\n      \"removal_test\": \"Senza appartenenza al contenitore i fondi depositati non sono 'del cliente presso la banca'. Non si può sapere a chi appartiene quale somma, rendendo impossibile qualsiasi operazione di addebito o accredito.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML) [...] In caso di decesso del titolare, il conto viene congelato\",\n      \"removal_test\": \"Senza stato corrente il conto non può essere 'attivo', 'bloccato' o 'congelato'. Ogni operazione sarebbe sempre eseguibile indipendentemente dalla condizione del conto.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta\",\n      \"removal_test\": \"Senza due parti non esiste transazione bancaria: un bonifico senza mittente e destinatario è un numero che appare dal nulla. L'intero sistema di pagamento collassa.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"fa bonifici [...] I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni\",\n      \"removal_test\": \"Senza oggetto di trasferimento il denaro non si sposta: il saldo del mittente non diminuisce e quello del destinatario non aumenta. Il bonifico è un'etichetta vuota.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"Per farlo presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica\",\n      \"removal_test\": \"Senza accordo formalizzato non esiste il contratto di conto corrente. Nessun obbligo per la banca di custodire i fondi, nessun diritto del cliente di operare, nessuna base per il fido o le commissioni.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"saldo dopo l'operazione [...] I bonifici verso IBAN italiani arrivano in giornata\",\n      \"removal_test\": \"Senza irreversibilità ogni transazione potrebbe essere annullata unilateralmente. Il sistema bancario si fonda sull'irrevocabilità del pagamento eseguito: senza di essa nessun venditore accetterebbe un bonifico.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi\",\n      \"removal_test\": \"Senza un'unità di lavoro identificabile (la transazione sospetta) non c'è nulla da bloccare, esaminare o sbloccare. Il processo AML non ha oggetto su cui operare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"La banca può bloccare transazioni sospette [...] il cliente viene contattato per chiarire l'origine dei fondi\",\n      \"removal_test\": \"Senza stati e transizioni la transazione sospetta non può passare da 'bloccata' a 'chiarita' o 'rifiutata'. Il processo AML è una sequenza di stati: senza di essa è un atto unico senza esito gestibile.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale [...] la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini\",\n      \"removal_test\": \"Senza regole non si sa quando applicare l'imposta di bollo, quando bloccare per AML, quando chiudere per inattività. Il sistema opera per arbitrio anziché per criteri definiti.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML) [...] la banca può chiuderlo unilateralmente\",\n      \"removal_test\": \"Senza responsabilità assegnata nessuno è tenuto a eseguire il blocco AML, contattare il cliente, o chiudere il conto per inattività. Le regole esistono ma nessuno le applica.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"il cliente viene contattato per chiarire l'origine dei fondi\",\n      \"removal_test\": \"Senza emittente e destinatario identificati la banca non può notificare il blocco AML né ricevere la spiegazione del cliente. La transazione rimane bloccata indefinitamente senza possibilità di risoluzione.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni [...] data, importo, controparte, causale\",\n      \"removal_test\": \"Senza significato codificato condiviso l'estratto conto è una sequenza di numeri non interpretabili. Cliente e banca non condividono il linguaggio per leggere 'causale: stipendio marzo' o 'commissione bonifico estero'.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni e commissioni\",\n      \"removal_test\": \"Senza direzionalità il bonifico non sa dove andare: l'IBAN del destinatario è esattamente il meccanismo di indirizzamento. Senza di esso i fondi non raggiungono nessuno.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni\",\n      \"removal_test\": \"Senza canale (infrastruttura interbancaria SEPA, SWIFT) i bonifici non hanno mezzo di propagazione. La differenza di tempi tra bonifici nazionali e internazionali è esattamente la differenza tra canali diversi.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione\",\n      \"removal_test\": \"Senza traccia temporale costitutiva le transazioni perdono il loro quando. Non si può calcolare la giacenza media annua per l'imposta di bollo, non si può ricostruire la sequenza degli eventi, non si può verificare se un bonifico è arrivato in giornata.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale [...] La banca può bloccare transazioni sospette per antiriciclaggio\",\n      \"removal_test\": \"Senza indicazione indiretta il saldo non indica la ricchezza del cliente, il pattern di transazioni non indica attività sospetta, la giacenza media non indica l'obbligo fiscale. Il sistema perde la capacità di inferire stati non direttamente osservabili.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni [...] giacenza media annua\",\n      \"removal_test\": \"Senza accumulazione sistematica non si può calcolare la giacenza media annua (richiede la serie storica dei saldi giornalieri), né produrre l'estratto mensile, né rilevare pattern AML su sequenze di operazioni.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi\",\n      \"removal_test\": \"Senza asimmetria sorgente-osservatore non esiste l'AML: il sistema funziona proprio perché la banca osserva il comportamento del cliente senza che questi sappia di essere monitorato fino al momento del blocco. Se il cliente sapesse sempre i criteri esatti, l'AML sarebbe eludibile.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:15:43.595277+00:00"
+}

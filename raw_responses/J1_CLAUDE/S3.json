@@ -1,0 +1,207 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S3",
+  "system_title": "Replit (IDE collaborativo live)",
+  "attempt": 2,
+  "elapsed_s": 50.94,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6071,
+    "output_tokens": 3679,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Senza C1 il codice scritto non sopravviverebbe alla sessione. Non ci sarebbero checkpoint, nessun archivio, nessuna persistenza del progetto tra una sessione e l'altra. Il sistema diventerebbe un foglio bianco che si cancella."
+    },
+    {
+      "id": "C2",
+      "quote": "Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.",
+      "removal_test": "Senza C2 il codice non avrebbe struttura sintattica — nessun file, nessun formato, nessuna distinzione tra codice valido e testo arbitrario. L'IDE non saprebbe cosa eseguire né come interpretarlo."
+    },
+    {
+      "id": "C3",
+      "quote": "I progetti pubblici sono ricercabili, fork-abili, citabili.",
+      "removal_test": "Senza C3 i progetti pubblici esisterebbero ma sarebbero irraggiungibili. Nessun utente potrebbe trovare il lavoro altrui, il marketplace perderebbe senso, e la dimensione comunitaria collasserebbe."
+    },
+    {
+      "id": "C4",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi.",
+      "removal_test": "Senza C4 non ci sarebbe storia del progetto — ogni checkpoint è un'aggiunta al corpus delle versioni. Il sistema perderebbe la capacità di mostrare l'evoluzione del codice nel tempo."
+    },
+    {
+      "id": "C5",
+      "quote": "I progetti pubblici sono ricercabili, fork-abili, citabili.",
+      "removal_test": "Senza C5 ogni Repl sarebbe un'isola. Il fork non potrebbe stabilire una relazione esplicita tra progetto originale e derivato. La citabilità implica un legame tra artefatti distinti."
+    },
+    {
+      "id": "I1",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "Senza I1 il sistema non potrebbe sapere quanta quota è stata consumata né quanto ne rimane. Non ci sarebbe base per bloccare o rallentare l'esecuzione a esaurimento."
+    },
+    {
+      "id": "I2",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati; se esaurito, l'esecuzione viene bloccata o rallentata.",
+      "removal_test": "Senza I2 le risorse sarebbero infinite — nessun tier avrebbe senso, nessun blocco sarebbe giustificato, il modello di business basato su upgrade collasserebbe."
+    },
+    {
+      "id": "I4",
+      "quote": "Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Senza I4 il Repl non avrebbe uno stato corrente tracciabile — non si potrebbe distinguere un progetto attivo da uno archiviato, né applicare politiche differenziate in base alla condizione."
+    },
+    {
+      "id": "T2",
+      "quote": "I progetti pubblici sono fork-abili.",
+      "removal_test": "Senza T2 il fork non trasferirebbe nulla — non ci sarebbe copia del codice che passa dall'originale al nuovo progetto. Il fork diventerebbe un puntatore vuoto senza contenuto trasferito."
+    },
+    {
+      "id": "T3",
+      "quote": "Un marketplace permette di vendere template. Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Senza T3 non ci sarebbe accordo tra venditore e acquirente nel marketplace, né tra chi invita e chi accetta i permessi. Le transazioni e le collaborazioni avverrebbero senza consenso formalizzato."
+    },
+    {
+      "id": "T4",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "Senza T4 il consumo di quota potrebbe essere annullato — ogni esecuzione potrebbe essere 'restituita'. Il sistema di quota perderebbe coerenza: si potrebbe eseguire, consumare, poi richiedere il rimborso del consumo."
+    },
+    {
+      "id": "M1",
+      "quote": "Ogni utente ha un cursore colorato visibile agli altri in tempo reale.",
+      "removal_test": "Senza M1 i cursori colorati non sarebbero distinguibili — non si saprebbe chi sta modificando cosa. La collaborazione live diventerebbe un caos di modifiche anonime indistinguibili."
+    },
+    {
+      "id": "M2",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Senza M2 non ci sarebbe appartenenza al progetto — chiunque potrebbe accedere a qualsiasi Repl o nessuno potrebbe accedere a nulla. La distinzione tra collaboratore e estraneo scomparirebbe."
+    },
+    {
+      "id": "M3",
+      "quote": "suddivisi in tier (free, hacker, teams). Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Senza M3 tutti gli utenti avrebbero le stesse risorse e gli stessi diritti. Nessun incentivo all'upgrade, nessuna distinzione tra admin e lettore, nessuna differenziazione di accesso alle funzionalità."
+    },
+    {
+      "id": "M4",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Senza M4 non ci sarebbe confine tra chi è dentro un progetto e chi è fuori. Qualsiasi utente potrebbe scrivere su qualsiasi Repl privato. Il concetto stesso di progetto privato o di team chiuso cesserebbe di esistere."
+    },
+    {
+      "id": "W2",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Senza W2 non ci sarebbero transizioni di stato tracciate — nessun passaggio da 'attivo' ad 'archiviato', nessuna sequenza di versioni. Il sistema non saprebbe in quale fase si trova un progetto."
+    },
+    {
+      "id": "W3",
+      "quote": "se esaurito, l'esecuzione viene bloccata o rallentata. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Senza W3 non ci sarebbero regole che governano le transizioni — nessun criterio per bloccare l'esecuzione, nessuna soglia temporale per l'archiviazione. Il sistema si comporterebbe in modo arbitrario o non si comporterebbe affatto."
+    },
+    {
+      "id": "W4",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin. Gli amministratori di un team vedono dashboard con attività dei membri.",
+      "removal_test": "Senza W4 nessuno sarebbe responsabile di nessuna fase del progetto. L'admin non avrebbe autorità distinta, i permessi write non assegnerebbero responsabilità di modifica. La collaborazione strutturata collasserebbe in accesso indifferenziato."
+    },
+    {
+      "id": "S1",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati, suddivisi in tier. Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "Senza S1 non ci sarebbe risorsa finita da allocare nel tempo — nessuna quota mensile, nessun limite di CPU per sessione. Lo scheduling delle esecuzioni non avrebbe oggetto."
+    },
+    {
+      "id": "S2",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "Senza S2 nessuno richiederebbe risorse — le esecuzioni avverrebbero senza un richiedente identificato. Non si potrebbe attribuire il consumo a un account specifico né applicare limiti personalizzati."
+    },
+    {
+      "id": "S3",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata.",
+      "removal_test": "Senza S3 non ci sarebbero slot temporali allocabili — la quota mensile è esattamente il tempo porzionato in unità assegnabili per account. Senza questa struttura non si potrebbe misurare né esaurire la quota."
+    },
+    {
+      "id": "S4",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.",
+      "removal_test": "Senza S4 la stessa quota potrebbe essere usata due volte — due esecuzioni potrebbero consumare lo stesso slot senza conflitto. Il blocco a esaurimento non avrebbe fondamento logico."
+    },
+    {
+      "id": "CO1",
+      "quote": "Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.",
+      "removal_test": "Senza CO1 non ci sarebbe comunicazione tra collaboratori — nessuna chat, nessuna visibilità dei cursori altrui. La collaborazione live si ridurrebbe a modifiche simultanee senza coordinamento."
+    },
+    {
+      "id": "CO2",
+      "quote": "Ghostwriter, un assistente AI che suggerisce completamenti e può generare codice da descrizioni.",
+      "removal_test": "Senza CO2 le descrizioni in linguaggio naturale non potrebbero essere tradotte in codice — il significato non sarebbe codificato in forma eseguibile. Ghostwriter non avrebbe un codice condiviso tra utente e sistema per interpretare le richieste."
+    },
+    {
+      "id": "CO3",
+      "quote": "Gli utenti possono invitare collaboratori. Un sistema di chat integrata accompagna il codice.",
+      "removal_test": "Senza CO3 i messaggi in chat non avrebbero destinatario — non si potrebbe indirizzare una comunicazione a un collaboratore specifico. L'invito non raggiungerebbe nessuno."
+    },
+    {
+      "id": "CO4",
+      "quote": "Un ambiente di programmazione nel browser. Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.",
+      "removal_test": "Senza CO4 non ci sarebbe infrastruttura che trasporta i cursori in tempo reale, i messaggi di chat, i suggerimenti di Ghostwriter. Ogni forma di comunicazione nel sistema perderebbe il mezzo fisico di trasmissione."
+    },
+    {
+      "id": "N1",
+      "quote": "Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "Senza N1 i membri del team non emetterebbero tracce della loro attività — nessuna linea di codice registrata, nessuna ora tracciata. La dashboard non avrebbe dati da mostrare perché l'attività non genererebbe segnale."
+    },
+    {
+      "id": "N2",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori vedono dashboard con attività dei membri: ore spent.",
+      "removal_test": "Senza N2 i checkpoint non avrebbero timestamp — non si saprebbe quando è avvenuta ogni versione. Le 'ore spent' non sarebbero calcolabili. La serie storica delle modifiche perderebbe la sua dimensione temporale."
+    },
+    {
+      "id": "N3",
+      "quote": "linee di codice, pattern di collaborazione. Ghostwriter suggerisce completamenti.",
+      "removal_test": "Senza N3 le linee di codice non indicherebbero nulla sul lavoro svolto, i pattern non indicherebbero nulla sulla collaborazione, i token precedenti non indicherebbero nulla sul completamento probabile. Il segnale perderebbe la sua capacità di dire qualcosa sul sistema sottostante."
+    },
+    {
+      "id": "N4",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "Senza N4 non ci sarebbe accumulo sistematico dei dati di attività — ogni checkpoint sarebbe isolato, nessuna serie storica, nessun pattern calcolabile. La dashboard mostrerebbe al massimo l'istante corrente, mai la tendenza."
+    },
+    {
+      "id": "N5",
+      "quote": "Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "Senza N5 l'osservazione degli amministratori sarebbe simmetrica — i membri saprebbero esattamente cosa viene monitorato e come. La dashboard presuppone che i membri lavorino senza essere pienamente consapevoli di cosa viene registrato e aggregato su di loro."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "I1",
+    "I2",
+    "I4",
+    "T2",
+    "T3",
+    "T4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W2",
+    "W3",
+    "W4",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "CO1",
+    "CO2",
+    "CO3",
+    "CO4",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+  ],
+  "n_primitives": 31,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Senza C1 il codice scritto non sopravviverebbe alla sessione. Non ci sarebbero checkpoint, nessun archivio, nessuna persistenza del progetto tra una sessione e l'altra. Il sistema diventerebbe un foglio bianco che si cancella.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.\",\n      \"removal_test\": \"Senza C2 il codice non avrebbe struttura sintattica — nessun file, nessun formato, nessuna distinzione tra codice valido e testo arbitrario. L'IDE non saprebbe cosa eseguire né come interpretarlo.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"I progetti pubblici sono ricercabili, fork-abili, citabili.\",\n      \"removal_test\": \"Senza C3 i progetti pubblici esisterebbero ma sarebbero irraggiungibili. Nessun utente potrebbe trovare il lavoro altrui, il marketplace perderebbe senso, e la dimensione comunitaria collasserebbe.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi.\",\n      \"removal_test\": \"Senza C4 non ci sarebbe storia del progetto — ogni checkpoint è un'aggiunta al corpus delle versioni. Il sistema perderebbe la capacità di mostrare l'evoluzione del codice nel tempo.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"I progetti pubblici sono ricercabili, fork-abili, citabili.\",\n      \"removal_test\": \"Senza C5 ogni Repl sarebbe un'isola. Il fork non potrebbe stabilire una relazione esplicita tra progetto originale e derivato. La citabilità implica un legame tra artefatti distinti.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"Senza I1 il sistema non potrebbe sapere quanta quota è stata consumata né quanto ne rimane. Non ci sarebbe base per bloccare o rallentare l'esecuzione a esaurimento.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati; se esaurito, l'esecuzione viene bloccata o rallentata.\",\n      \"removal_test\": \"Senza I2 le risorse sarebbero infinite — nessun tier avrebbe senso, nessun blocco sarebbe giustificato, il modello di business basato su upgrade collasserebbe.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Senza I4 il Repl non avrebbe uno stato corrente tracciabile — non si potrebbe distinguere un progetto attivo da uno archiviato, né applicare politiche differenziate in base alla condizione.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"I progetti pubblici sono fork-abili.\",\n      \"removal_test\": \"Senza T2 il fork non trasferirebbe nulla — non ci sarebbe copia del codice che passa dall'originale al nuovo progetto. Il fork diventerebbe un puntatore vuoto senza contenuto trasferito.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"Un marketplace permette di vendere template. Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Senza T3 non ci sarebbe accordo tra venditore e acquirente nel marketplace, né tra chi invita e chi accetta i permessi. Le transazioni e le collaborazioni avverrebbero senza consenso formalizzato.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"Senza T4 il consumo di quota potrebbe essere annullato — ogni esecuzione potrebbe essere 'restituita'. Il sistema di quota perderebbe coerenza: si potrebbe eseguire, consumare, poi richiedere il rimborso del consumo.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Ogni utente ha un cursore colorato visibile agli altri in tempo reale.\",\n      \"removal_test\": \"Senza M1 i cursori colorati non sarebbero distinguibili — non si saprebbe chi sta modificando cosa. La collaborazione live diventerebbe un caos di modifiche anonime indistinguibili.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Senza M2 non ci sarebbe appartenenza al progetto — chiunque potrebbe accedere a qualsiasi Repl o nessuno potrebbe accedere a nulla. La distinzione tra collaboratore e estraneo scomparirebbe.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"suddivisi in tier (free, hacker, teams). Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Senza M3 tutti gli utenti avrebbero le stesse risorse e gli stessi diritti. Nessun incentivo all'upgrade, nessuna distinzione tra admin e lettore, nessuna differenziazione di accesso alle funzionalità.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Senza M4 non ci sarebbe confine tra chi è dentro un progetto e chi è fuori. Qualsiasi utente potrebbe scrivere su qualsiasi Repl privato. Il concetto stesso di progetto privato o di team chiuso cesserebbe di esistere.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Senza W2 non ci sarebbero transizioni di stato tracciate — nessun passaggio da 'attivo' ad 'archiviato', nessuna sequenza di versioni. Il sistema non saprebbe in quale fase si trova un progetto.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"se esaurito, l'esecuzione viene bloccata o rallentata. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Senza W3 non ci sarebbero regole che governano le transizioni — nessun criterio per bloccare l'esecuzione, nessuna soglia temporale per l'archiviazione. Il sistema si comporterebbe in modo arbitrario o non si comporterebbe affatto.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin. Gli amministratori di un team vedono dashboard con attività dei membri.\",\n      \"removal_test\": \"Senza W4 nessuno sarebbe responsabile di nessuna fase del progetto. L'admin non avrebbe autorità distinta, i permessi write non assegnerebbero responsabilità di modifica. La collaborazione strutturata collasserebbe in accesso indifferenziato.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati, suddivisi in tier. Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"Senza S1 non ci sarebbe risorsa finita da allocare nel tempo — nessuna quota mensile, nessun limite di CPU per sessione. Lo scheduling delle esecuzioni non avrebbe oggetto.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"Senza S2 nessuno richiederebbe risorse — le esecuzioni avverrebbero senza un richiedente identificato. Non si potrebbe attribuire il consumo a un account specifico né applicare limiti personalizzati.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata.\",\n      \"removal_test\": \"Senza S3 non ci sarebbero slot temporali allocabili — la quota mensile è esattamente il tempo porzionato in unità assegnabili per account. Senza questa struttura non si potrebbe misurare né esaurire la quota.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.\",\n      \"removal_test\": \"Senza S4 la stessa quota potrebbe essere usata due volte — due esecuzioni potrebbero consumare lo stesso slot senza conflitto. Il blocco a esaurimento non avrebbe fondamento logico.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.\",\n      \"removal_test\": \"Senza CO1 non ci sarebbe comunicazione tra collaboratori — nessuna chat, nessuna visibilità dei cursori altrui. La collaborazione live si ridurrebbe a modifiche simultanee senza coordinamento.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"Ghostwriter, un assistente AI che suggerisce completamenti e può generare codice da descrizioni.\",\n      \"removal_test\": \"Senza CO2 le descrizioni in linguaggio naturale non potrebbero essere tradotte in codice — il significato non sarebbe codificato in forma eseguibile. Ghostwriter non avrebbe un codice condiviso tra utente e sistema per interpretare le richieste.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"Gli utenti possono invitare collaboratori. Un sistema di chat integrata accompagna il codice.\",\n      \"removal_test\": \"Senza CO3 i messaggi in chat non avrebbero destinatario — non si potrebbe indirizzare una comunicazione a un collaboratore specifico. L'invito non raggiungerebbe nessuno.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"Un ambiente di programmazione nel browser. Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.\",\n      \"removal_test\": \"Senza CO4 non ci sarebbe infrastruttura che trasporta i cursori in tempo reale, i messaggi di chat, i suggerimenti di Ghostwriter. Ogni forma di comunicazione nel sistema perderebbe il mezzo fisico di trasmissione.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"Senza N1 i membri del team non emetterebbero tracce della loro attività — nessuna linea di codice registrata, nessuna ora tracciata. La dashboard non avrebbe dati da mostrare perché l'attività non genererebbe segnale.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori vedono dashboard con attività dei membri: ore spent.\",\n      \"removal_test\": \"Senza N2 i checkpoint non avrebbero timestamp — non si saprebbe quando è avvenuta ogni versione. Le 'ore spent' non sarebbero calcolabili. La serie storica delle modifiche perderebbe la sua dimensione temporale.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"linee di codice, pattern di collaborazione. Ghostwriter suggerisce completamenti.\",\n      \"removal_test\": \"Senza N3 le linee di codice non indicherebbero nulla sul lavoro svolto, i pattern non indicherebbero nulla sulla collaborazione, i token precedenti non indicherebbero nulla sul completamento probabile. Il segnale perderebbe la sua capacità di dire qualcosa sul sistema sottostante.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"Senza N4 non ci sarebbe accumulo sistematico dei dati di attività — ogni checkpoint sarebbe isolato, nessuna serie storica, nessun pattern calcolabile. La dashboard mostrerebbe al massimo l'istante corrente, mai la tendenza.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"Senza N5 l'osservazione degli amministratori sarebbe simmetrica — i membri saprebbero esattamente cosa viene monitorato e come. La dashboard presuppone che i membri lavorino senza essere pienamente consapevoli di cosa viene registrato e aggregato su di loro.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:10:53.939534+00:00"
+}

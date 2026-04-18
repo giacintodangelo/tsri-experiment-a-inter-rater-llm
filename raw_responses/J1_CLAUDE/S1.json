@@ -1,0 +1,183 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S1",
+  "system_title": "Sistema di prenotazione voli (tipo Kayak/Skyscanner)",
+  "attempt": 1,
+  "elapsed_s": 58.11,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6081,
+    "output_tokens": 3440,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "S1",
+      "quote": "disponibilità residua di posti",
+      "removal_test": "Il sistema perderebbe la capacità di rappresentare la scarsità della risorsa allocabile. Senza S1 non esisterebbe la tensione operativa che rende necessaria la prenotazione — i posti sarebbero trattati come infiniti."
+    },
+    {
+      "id": "S2",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri",
+      "removal_test": "Il sistema perderebbe il richiedente che genera la domanda. Senza S2 non c'è nessuno che chiede l'allocazione di posti su un volo specifico — la scarsità di S1 resterebbe un fatto inerte senza pressione operativa."
+    },
+    {
+      "id": "S3",
+      "quote": "date specifiche [...] orari [...] disponibilità residua di posti",
+      "removal_test": "Il sistema perderebbe la struttura che rende il tempo allocabile. Senza S3 non esisterebbero unità discrete (volo del 15 marzo alle 10:30, N posti) su cui convergere risorsa, periodo e richiedente. La ricerca diventerebbe impossibile."
+    },
+    {
+      "id": "S4",
+      "quote": "disponibilità residua di posti",
+      "removal_test": "Il sistema perderebbe il vincolo che impedisce la doppia allocazione dello stesso posto. Senza S4 lo stesso sedile potrebbe essere venduto a due passeggeri per lo stesso volo — la non-sovrapposizione è il fatto fisico che rende necessaria l'intera piattaforma."
+    },
+    {
+      "id": "I1",
+      "quote": "disponibilità residua di posti",
+      "removal_test": "Il sistema perderebbe la quantificazione della risorsa. Senza I1 l'utente non saprebbe quanti posti restano — la scarsità sarebbe presente ma invisibile, non operativa."
+    },
+    {
+      "id": "I2",
+      "quote": "disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata in base alla domanda",
+      "removal_test": "Il sistema perderebbe il fondamento strutturale della scarsità. Senza I2 i posti non sarebbero finiti, i prezzi dinamici non avrebbero ragione di esistere e gli avvisi di prezzo perderebbero senso."
+    },
+    {
+      "id": "I4",
+      "quote": "disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata",
+      "removal_test": "Il sistema perderebbe la capacità di rappresentare la condizione corrente di ciascun volo. Senza I4 non si potrebbe distinguere un volo quasi esaurito da uno con posti abbondanti, né un prezzo attuale da uno obsoleto."
+    },
+    {
+      "id": "C3",
+      "quote": "La piattaforma interroga decine di compagnie aeree e aggregatori, mostra una lista di opzioni ordinabili per prezzo, durata, numero di scali",
+      "removal_test": "Il sistema perderebbe la capacità di rendere trovabili le opzioni di volo. Senza C3 l'utente saprebbe che i voli esistono ma non potrebbe raggiungerli — la funzione core della piattaforma (aggregazione e ricerca) collasserebbe."
+    },
+    {
+      "id": "C4",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Il sistema perderebbe il corpus crescente di dati comportamentali che costituisce il secondo prodotto della piattaforma. Senza C4 non esisterebbe l'asset vendibile alle compagnie — uno dei due modelli di ricavo scomparirebbe."
+    },
+    {
+      "id": "C2",
+      "quote": "L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici)",
+      "removal_test": "Il sistema perderebbe la struttura che vincola e organizza le opzioni mostrate. Senza C2 non esisterebbero le categorie (diretto/con scalo, bagaglio incluso/escluso) che rendono i filtri applicabili — le opzioni sarebbero una massa indistinta."
+    },
+    {
+      "id": "T1",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento. La piattaforma non vende direttamente — guadagna una commissione.",
+      "removal_test": "Il sistema perderebbe la struttura della transazione tra due parti (utente e compagnia aerea). Senza T1 non esisterebbe lo scambio che la piattaforma media — e con esso la commissione, che è il modello di ricavo primario."
+    },
+    {
+      "id": "T2",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento",
+      "removal_test": "Il sistema perderebbe il trasferimento dell'oggetto di scambio (denaro contro diritto al posto). Senza T2 la transazione resterebbe un accordo senza esecuzione — nessun posto verrebbe effettivamente assegnato."
+    },
+    {
+      "id": "T3",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento",
+      "removal_test": "Il sistema perderebbe il momento dell'accordo tra le parti. Senza T3 non esisterebbe il vincolo contrattuale che trasforma la selezione in prenotazione confermata — l'utente potrebbe selezionare ma non impegnarsi."
+    },
+    {
+      "id": "CO1",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "Il sistema perderebbe il canale di comunicazione proattiva tra piattaforma e utente. Senza CO1 l'utente dovrebbe tornare attivamente a controllare i prezzi — la funzione di monitoraggio delegato cesserebbe di esistere."
+    },
+    {
+      "id": "CO3",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "Il sistema perderebbe la direzionalità del messaggio verso lo specifico utente che ha impostato il monitoraggio. Senza CO3 l'avviso non raggiungerebbe il destinatario corretto — la notifica diventerebbe broadcast indifferenziato o non partirebbe affatto."
+    },
+    {
+      "id": "CO2",
+      "quote": "avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "Il sistema perderebbe la codifica del significato nell'avviso. Senza CO2 l'email non trasmetterebbe informazione strutturata (quale rotta, quale prezzo, quale soglia) — il messaggio arriverebbe ma sarebbe privo di contenuto interpretabile."
+    },
+    {
+      "id": "N1",
+      "quote": "I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie",
+      "removal_test": "Il sistema perderebbe il segnale involontario emesso dai voli (prezzo come traccia del comportamento della domanda). Senza N1 non esisterebbe il dato grezzo che alimenta sia la visualizzazione dei prezzi correnti sia le statistiche vendute alle compagnie."
+    },
+    {
+      "id": "N2",
+      "quote": "I prezzi fluttuano nel corso della giornata [...] Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Il sistema perderebbe l'ancoraggio temporale dei dati. Senza N2 un prezzo rilevato non avrebbe timestamp — non si potrebbe distinguere un prezzo attuale da uno di tre ore fa, e le serie storiche per l'intelligence di mercato sarebbero impossibili."
+    },
+    {
+      "id": "N3",
+      "quote": "I prezzi fluttuano nel corso della giornata in base alla domanda [...] Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Il sistema perderebbe la capacità di leggere indirettamente lo stato della domanda attraverso i segnali di prezzo e ricerca. Senza N3 i dati aggregati non indicherebbero nulla sul comportamento del mercato — l'intelligence vendibile alle compagnie cesserebbe di avere valore."
+    },
+    {
+      "id": "N4",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Il sistema perderebbe l'accumulo sistematico dei segnali nel tempo. Senza N4 ogni ricerca sarebbe un evento isolato — non si formerebbero le serie aggregate che costituiscono il prodotto vendibile. Il secondo modello di ricavo collasserebbe."
+    },
+    {
+      "id": "N5",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Il sistema perderebbe la struttura asimmetrica per cui gli utenti che cercano voli emettono segnali comportamentali senza sapere che questi vengono raccolti e rivenduti. Senza N5 non esisterebbe la distinzione tra sorgente inconsapevole (utente) e osservatore attivo (piattaforma che monetizza i dati)."
+    },
+    {
+      "id": "M1",
+      "quote": "Gli utenti registrati ricevono avvisi email",
+      "removal_test": "Il sistema perderebbe la capacità di riconoscere lo stesso utente nel tempo. Senza M1 non si potrebbe associare un avviso a chi lo ha impostato, né distinguere un utente registrato da un visitatore anonimo."
+    },
+    {
+      "id": "M2",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "Il sistema perderebbe il legame tra l'utente e il gruppo 'registrati'. Senza M2 non esisterebbe la distinzione operativa tra chi ha accesso alle notifiche e chi no — la funzione di monitoraggio sarebbe inaccessibile o indifferenziata."
+    },
+    {
+      "id": "M3",
+      "quote": "Gli utenti registrati ricevono avvisi email [...] La piattaforma non vende direttamente — guadagna una commissione",
+      "removal_test": "Il sistema perderebbe la differenziazione tra livelli di utenza (anonimo, registrato) e tra ruoli (utente, compagnia aerea, piattaforma). Senza M3 non esisterebbero diritti differenziati — tutti avrebbero accesso alle stesse funzioni o nessuno avrebbe accesso alle funzioni premium."
+    },
+    {
+      "id": "W1",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri [...] mostra una lista di opzioni [...] Quando seleziona un'opzione, la piattaforma lo reindirizza",
+      "removal_test": "Il sistema perderebbe l'entità che attraversa il processo (la richiesta di ricerca). Senza W1 non esisterebbe l'oggetto che entra nel workflow e viene trasformato in risultati — il processo non avrebbe input su cui operare."
+    },
+    {
+      "id": "W2",
+      "quote": "L'utente inserisce [...] La piattaforma interroga [...] mostra una lista [...] L'utente può aggiungere filtri [...] Quando seleziona un'opzione, la piattaforma lo reindirizza",
+      "removal_test": "Il sistema perderebbe la sequenza ordinata di stati (inserimento → interrogazione → visualizzazione → selezione → redirect). Senza W2 le fasi potrebbero avvenire in qualsiasi ordine o simultaneamente — il flusso di prenotazione diventerebbe incoerente."
+    },
+    {
+      "id": "W3",
+      "quote": "L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici) [...] avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "Il sistema perderebbe le regole che governano quali transizioni sono valide e quali risultati sono mostrati. Senza W3 non esisterebbero i criteri di filtraggio né le condizioni di attivazione degli avvisi — il sistema non saprebbe quando e come procedere."
+    }
+  ],
+  "primitive_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "I1",
+    "I2",
+    "I4",
+    "C3",
+    "C4",
+    "C2",
+    "T1",
+    "T2",
+    "T3",
+    "CO1",
+    "CO3",
+    "CO2",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "M1",
+    "M2",
+    "M3",
+    "W1",
+    "W2",
+    "W3"
+  ],
+  "n_primitives": 27,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"S1\",\n      \"quote\": \"disponibilità residua di posti\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di rappresentare la scarsità della risorsa allocabile. Senza S1 non esisterebbe la tensione operativa che rende necessaria la prenotazione — i posti sarebbero trattati come infiniti.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri\",\n      \"removal_test\": \"Il sistema perderebbe il richiedente che genera la domanda. Senza S2 non c'è nessuno che chiede l'allocazione di posti su un volo specifico — la scarsità di S1 resterebbe un fatto inerte senza pressione operativa.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"date specifiche [...] orari [...] disponibilità residua di posti\",\n      \"removal_test\": \"Il sistema perderebbe la struttura che rende il tempo allocabile. Senza S3 non esisterebbero unità discrete (volo del 15 marzo alle 10:30, N posti) su cui convergere risorsa, periodo e richiedente. La ricerca diventerebbe impossibile.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"disponibilità residua di posti\",\n      \"removal_test\": \"Il sistema perderebbe il vincolo che impedisce la doppia allocazione dello stesso posto. Senza S4 lo stesso sedile potrebbe essere venduto a due passeggeri per lo stesso volo — la non-sovrapposizione è il fatto fisico che rende necessaria l'intera piattaforma.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"disponibilità residua di posti\",\n      \"removal_test\": \"Il sistema perderebbe la quantificazione della risorsa. Senza I1 l'utente non saprebbe quanti posti restano — la scarsità sarebbe presente ma invisibile, non operativa.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata in base alla domanda\",\n      \"removal_test\": \"Il sistema perderebbe il fondamento strutturale della scarsità. Senza I2 i posti non sarebbero finiti, i prezzi dinamici non avrebbero ragione di esistere e gli avvisi di prezzo perderebbero senso.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di rappresentare la condizione corrente di ciascun volo. Senza I4 non si potrebbe distinguere un volo quasi esaurito da uno con posti abbondanti, né un prezzo attuale da uno obsoleto.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"La piattaforma interroga decine di compagnie aeree e aggregatori, mostra una lista di opzioni ordinabili per prezzo, durata, numero di scali\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di rendere trovabili le opzioni di volo. Senza C3 l'utente saprebbe che i voli esistono ma non potrebbe raggiungerli — la funzione core della piattaforma (aggregazione e ricerca) collasserebbe.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Il sistema perderebbe il corpus crescente di dati comportamentali che costituisce il secondo prodotto della piattaforma. Senza C4 non esisterebbe l'asset vendibile alle compagnie — uno dei due modelli di ricavo scomparirebbe.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici)\",\n      \"removal_test\": \"Il sistema perderebbe la struttura che vincola e organizza le opzioni mostrate. Senza C2 non esisterebbero le categorie (diretto/con scalo, bagaglio incluso/escluso) che rendono i filtri applicabili — le opzioni sarebbero una massa indistinta.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento. La piattaforma non vende direttamente — guadagna una commissione.\",\n      \"removal_test\": \"Il sistema perderebbe la struttura della transazione tra due parti (utente e compagnia aerea). Senza T1 non esisterebbe lo scambio che la piattaforma media — e con esso la commissione, che è il modello di ricavo primario.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento\",\n      \"removal_test\": \"Il sistema perderebbe il trasferimento dell'oggetto di scambio (denaro contro diritto al posto). Senza T2 la transazione resterebbe un accordo senza esecuzione — nessun posto verrebbe effettivamente assegnato.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento\",\n      \"removal_test\": \"Il sistema perderebbe il momento dell'accordo tra le parti. Senza T3 non esisterebbe il vincolo contrattuale che trasforma la selezione in prenotazione confermata — l'utente potrebbe selezionare ma non impegnarsi.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"Il sistema perderebbe il canale di comunicazione proattiva tra piattaforma e utente. Senza CO1 l'utente dovrebbe tornare attivamente a controllare i prezzi — la funzione di monitoraggio delegato cesserebbe di esistere.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"Il sistema perderebbe la direzionalità del messaggio verso lo specifico utente che ha impostato il monitoraggio. Senza CO3 l'avviso non raggiungerebbe il destinatario corretto — la notifica diventerebbe broadcast indifferenziato o non partirebbe affatto.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"Il sistema perderebbe la codifica del significato nell'avviso. Senza CO2 l'email non trasmetterebbe informazione strutturata (quale rotta, quale prezzo, quale soglia) — il messaggio arriverebbe ma sarebbe privo di contenuto interpretabile.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie\",\n      \"removal_test\": \"Il sistema perderebbe il segnale involontario emesso dai voli (prezzo come traccia del comportamento della domanda). Senza N1 non esisterebbe il dato grezzo che alimenta sia la visualizzazione dei prezzi correnti sia le statistiche vendute alle compagnie.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"I prezzi fluttuano nel corso della giornata [...] Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Il sistema perderebbe l'ancoraggio temporale dei dati. Senza N2 un prezzo rilevato non avrebbe timestamp — non si potrebbe distinguere un prezzo attuale da uno di tre ore fa, e le serie storiche per l'intelligence di mercato sarebbero impossibili.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"I prezzi fluttuano nel corso della giornata in base alla domanda [...] Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di leggere indirettamente lo stato della domanda attraverso i segnali di prezzo e ricerca. Senza N3 i dati aggregati non indicherebbero nulla sul comportamento del mercato — l'intelligence vendibile alle compagnie cesserebbe di avere valore.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Il sistema perderebbe l'accumulo sistematico dei segnali nel tempo. Senza N4 ogni ricerca sarebbe un evento isolato — non si formerebbero le serie aggregate che costituiscono il prodotto vendibile. Il secondo modello di ricavo collasserebbe.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Il sistema perderebbe la struttura asimmetrica per cui gli utenti che cercano voli emettono segnali comportamentali senza sapere che questi vengono raccolti e rivenduti. Senza N5 non esisterebbe la distinzione tra sorgente inconsapevole (utente) e osservatore attivo (piattaforma che monetizza i dati).\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di riconoscere lo stesso utente nel tempo. Senza M1 non si potrebbe associare un avviso a chi lo ha impostato, né distinguere un utente registrato da un visitatore anonimo.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"Il sistema perderebbe il legame tra l'utente e il gruppo 'registrati'. Senza M2 non esisterebbe la distinzione operativa tra chi ha accesso alle notifiche e chi no — la funzione di monitoraggio sarebbe inaccessibile o indifferenziata.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email [...] La piattaforma non vende direttamente — guadagna una commissione\",\n      \"removal_test\": \"Il sistema perderebbe la differenziazione tra livelli di utenza (anonimo, registrato) e tra ruoli (utente, compagnia aerea, piattaforma). Senza M3 non esisterebbero diritti differenziati — tutti avrebbero accesso alle stesse funzioni o nessuno avrebbe accesso alle funzioni premium.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri [...] mostra una lista di opzioni [...] Quando seleziona un'opzione, la piattaforma lo reindirizza\",\n      \"removal_test\": \"Il sistema perderebbe l'entità che attraversa il processo (la richiesta di ricerca). Senza W1 non esisterebbe l'oggetto che entra nel workflow e viene trasformato in risultati — il processo non avrebbe input su cui operare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"L'utente inserisce [...] La piattaforma interroga [...] mostra una lista [...] L'utente può aggiungere filtri [...] Quando seleziona un'opzione, la piattaforma lo reindirizza\",\n      \"removal_test\": \"Il sistema perderebbe la sequenza ordinata di stati (inserimento → interrogazione → visualizzazione → selezione → redirect). Senza W2 le fasi potrebbero avvenire in qualsiasi ordine o simultaneamente — il flusso di prenotazione diventerebbe incoerente.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici) [...] avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"Il sistema perderebbe le regole che governano quali transizioni sono valide e quali risultati sono mostrati. Senza W3 non esisterebbero i criteri di filtraggio né le condizioni di attivazione degli avvisi — il sistema non saprebbe quando e come procedere.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:08:08.970780+00:00"
+}

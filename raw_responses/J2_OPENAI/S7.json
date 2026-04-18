@@ -1,0 +1,66 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S7",
+  "system_title": "Redazione di un quotidiano cartaceo",
+  "attempt": 1,
+  "elapsed_s": 6.65,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 487,
+    "prompt_tokens": 5345,
+    "total_tokens": 5832,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4096
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "M2",
+      "quote": "80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport.",
+      "removal_test": "Senza M2, non ci sarebbe una chiara organizzazione dei giornalisti in gruppi specifici, rendendo difficile la gestione e l'assegnazione dei compiti."
+    },
+    {
+      "id": "W2",
+      "quote": "Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.",
+      "removal_test": "Senza W2, non ci sarebbe una sequenza strutturata di revisione, portando a un processo di pubblicazione disorganizzato e potenzialmente caotico."
+    },
+    {
+      "id": "W3",
+      "quote": "Si passano in rassegna le notizie della notte, si decide la 'prima pagina', si assegnano i pezzi.",
+      "removal_test": "Senza W3, mancherebbero le regole e le decisioni che guidano la selezione e l'assegnazione delle notizie, compromettendo la coerenza editoriale."
+    },
+    {
+      "id": "S3",
+      "quote": "Alle 19 c'è la riunione finale: taglio dei pezzi lunghi, decisione della gerarchia di titoli e occhielli.",
+      "removal_test": "Senza S3, non ci sarebbero slot temporali definiti per le riunioni e le decisioni editoriali, causando ritardi e inefficienze nel processo di pubblicazione."
+    },
+    {
+      "id": "C1",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "Senza C1, l'archivio storico non sarebbe mantenuto, perdendo la memoria storica e la possibilità di consultare articoli passati."
+    },
+    {
+      "id": "T1",
+      "quote": "Le copie vengono caricate su camion e distribuite alle edicole dalle 5.",
+      "removal_test": "Senza T1, non ci sarebbe un chiaro processo di trasferimento delle copie stampate alle edicole, interrompendo la distribuzione fisica del giornale."
+    }
+  ],
+  "primitive_ids": [
+    "M2",
+    "W2",
+    "W3",
+    "S3",
+    "C1",
+    "T1"
+  ],
+  "n_primitives": 6,
+  "raw_response": "{\"primitives\": [{\"id\": \"M2\", \"quote\": \"80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport.\", \"removal_test\": \"Senza M2, non ci sarebbe una chiara organizzazione dei giornalisti in gruppi specifici, rendendo difficile la gestione e l'assegnazione dei compiti.\"}, {\"id\": \"W2\", \"quote\": \"Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.\", \"removal_test\": \"Senza W2, non ci sarebbe una sequenza strutturata di revisione, portando a un processo di pubblicazione disorganizzato e potenzialmente caotico.\"}, {\"id\": \"W3\", \"quote\": \"Si passano in rassegna le notizie della notte, si decide la 'prima pagina', si assegnano i pezzi.\", \"removal_test\": \"Senza W3, mancherebbero le regole e le decisioni che guidano la selezione e l'assegnazione delle notizie, compromettendo la coerenza editoriale.\"}, {\"id\": \"S3\", \"quote\": \"Alle 19 c'è la riunione finale: taglio dei pezzi lunghi, decisione della gerarchia di titoli e occhielli.\", \"removal_test\": \"Senza S3, non ci sarebbero slot temporali definiti per le riunioni e le decisioni editoriali, causando ritardi e inefficienze nel processo di pubblicazione.\"}, {\"id\": \"C1\", \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\", \"removal_test\": \"Senza C1, l'archivio storico non sarebbe mantenuto, perdendo la memoria storica e la possibilità di consultare articoli passati.\"}, {\"id\": \"T1\", \"quote\": \"Le copie vengono caricate su camion e distribuite alle edicole dalle 5.\", \"removal_test\": \"Senza T1, non ci sarebbe un chiaro processo di trasferimento delle copie stampate alle edicole, interrompendo la distribuzione fisica del giornale.\"}]}",
+  "timestamp_utc": "2026-04-18T22:52:53.651325+00:00"
+}

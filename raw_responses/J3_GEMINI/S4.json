@@ -1,0 +1,152 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 48.51,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5245,
+    "completion_tokens": 2071,
+    "total_tokens": 11694
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.",
+      "removal_test": "Senza la persistenza intenzionale del glucosio sotto forma di glicogeno, il corpo non avrebbe una riserva energetica per i periodi di digiuno, portando a crisi ipoglicemiche immediate."
+    },
+    {
+      "id": "C2",
+      "quote": "si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali",
+      "removal_test": "Se l'insulina e i suoi recettori non avessero una forma specifica e complementare, il legame non potrebbe avvenire. Qualsiasi molecola potrebbe attivare i canali, o nessuna, rendendo la regolazione impossibile."
+    },
+    {
+      "id": "C4",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.",
+      "removal_test": "Senza l'accumulazione del glucosio sui globuli rossi nel tempo, non esisterebbe un modo per misurare il controllo glicemico a lungo termine, lasciando solo misurazioni istantanee."
+    },
+    {
+      "id": "I1",
+      "quote": "mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).",
+      "removal_test": "Se la concentrazione di glucosio non fosse un'esistenza quantificabile, il sistema non avrebbe un valore numerico su cui basare le sue decisioni (rilasciare insulina o glucagone)."
+    },
+    {
+      "id": "I2",
+      "quote": "stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.",
+      "removal_test": "Se le riserve di glicogeno non fossero finite, il corpo non avrebbe bisogno di un sistema per gestire la loro deplezione e ricarica. Il glucagone perderebbe la sua funzione principale."
+    },
+    {
+      "id": "I3",
+      "quote": "assorbono glucosio dal sangue.",
+      "removal_test": "Senza il concetto di contenitori (il sangue, la cellula), il movimento del glucosio sarebbe privo di significato. La regolazione si basa proprio sullo spostare la risorsa da un contenitore all'altro."
+    },
+    {
+      "id": "I4",
+      "quote": "viene rilasciata quando il glucosio sale dopo un pasto",
+      "removal_test": "Senza stati chiari come 'glicemia alta' o 'glicemia bassa', il sistema non avrebbe trigger definiti per attivare le risposte ormonali correttive."
+    },
+    {
+      "id": "T2",
+      "quote": "che aprono canali e assorbono glucosio dal sangue.",
+      "removal_test": "Se il glucosio non potesse essere trasferito dal sangue alle cellule, l'intero scopo dell'azione dell'insulina verrebbe meno. Il sistema fallirebbe nel suo obiettivo di abbassare la glicemia."
+    },
+    {
+      "id": "T3",
+      "quote": "si lega a recettori sulle cellule muscolari",
+      "removal_test": "Senza l'accordo biochimico (il legame specifico), la cellula non avrebbe modo di 'consentire' l'assorbimento di glucosio in risposta solo al segnale corretto (l'insulina). L'apertura dei canali sarebbe casuale."
+    },
+    {
+      "id": "M1",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas... Il glucagone, prodotto dalle cellule alfa",
+      "removal_test": "Se l'insulina e il glucagone non avessero identità chimiche distinte, il corpo non potrebbe produrre due effetti opposti. I recettori non potrebbero distinguerli."
+    },
+    {
+      "id": "M3",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas... Il glucagone, prodotto dalle cellule alfa",
+      "removal_test": "Senza la differenziazione tra cellule alfa e beta, il pancreas non potrebbe eseguire le due funzioni opposte e specializzate di produrre i due ormoni antagonisti."
+    },
+    {
+      "id": "M4",
+      "quote": "aprono canali e assorbono glucosio dal sangue.",
+      "removal_test": "Senza il confine della membrana cellulare, non ci sarebbe un 'dentro' e un 'fuori'. La concentrazione di glucosio non potrebbe essere regolata perché non ci sarebbe gradiente da gestire."
+    },
+    {
+      "id": "W2",
+      "quote": "viene rilasciata quando il glucosio sale dopo un pasto... quando il glucosio scende... stimola il fegato a rilasciare glucosio",
+      "removal_test": "Senza una sequenza definita di stati e transizioni, le azioni del sistema sarebbero casuali. Il rilascio di insulina deve seguire l'aumento del glucosio, non precederlo."
+    },
+    {
+      "id": "W3",
+      "quote": "viene rilasciata quando il glucosio sale dopo un pasto",
+      "removal_test": "Senza la regola 'SE la glicemia sale, ALLORA rilascia insulina', il pancreas non avrebbe la logica operativa per agire. Le regole sono il software del sistema."
+    },
+    {
+      "id": "W4",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas",
+      "removal_test": "Senza una chiara assegnazione di responsabilità, il sistema sarebbe inaffidabile. Se qualsiasi cellula potesse produrre insulina, il controllo sarebbe impossibile."
+    },
+    {
+      "id": "CO1",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas... si lega a recettori sulle cellule muscolari",
+      "removal_test": "Senza un emittente (pancreas) e un destinatario (cellule muscolari), non c'è comunicazione. L'ormone sarebbe rilasciato nel vuoto senza un bersaglio."
+    },
+    {
+      "id": "CO2",
+      "quote": "Due ormoni operano in opposizione. L'insulina... fa assorbire glucosio... Il glucagone... fa il contrario",
+      "removal_test": "Se la struttura chimica dell'insulina non avesse il significato codificato di 'assorbi glucosio', le cellule riceventi non saprebbero come interpretare il segnale e quale azione compiere."
+    },
+    {
+      "id": "CO4",
+      "quote": "mantiene la concentrazione di glucosio nel sangue",
+      "removal_test": "Senza il sangue come canale di comunicazione, il pancreas non potrebbe inviare i suoi messaggi ormonali a cellule distanti nel corpo, come quelle dei muscoli o del fegato."
+    },
+    {
+      "id": "N1",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.",
+      "removal_test": "Se la concentrazione di glucosio non fosse un'emissione involontaria e passiva, il corpo dovrebbe implementare un sistema attivo per 'comunicare' il livello di glucosio al pancreas, aumentando enormemente la complessità."
+    },
+    {
+      "id": "N2",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi",
+      "removal_test": "Se il dato HbA1c non avesse la sua traccia temporale costitutiva ('ultimi 3 mesi'), sarebbe solo un numero senza contesto, perdendo tutto il suo valore diagnostico per il controllo a lungo termine."
+    },
+    {
+      "id": "N3",
+      "quote": "Se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue",
+      "removal_test": "Senza l'indicazione indiretta, un livello di glucosio elevato sarebbe solo un fatto, non un sintomo che indica un problema sottostante nel sistema di regolazione (diabete)."
+    },
+    {
+      "id": "N5",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso",
+      "removal_test": "Senza l'asimmetria sorgente-osservatore, il glucosio nel sangue (sorgente) dovrebbe 'sapere' di essere misurato e partecipare attivamente. La telemetria si basa sul fatto che l'osservatore (pancreas) è attivo e la sorgente è passiva."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C4",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "T2",
+    "T3",
+    "M1",
+    "M3",
+    "M4",
+    "W2",
+    "W3",
+    "W4",
+    "CO1",
+    "CO2",
+    "CO4",
+    "N1",
+    "N2",
+    "N3",
+    "N5"
+  ],
+  "n_primitives": 22,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.\",\n      \"removal_test\": \"Senza la persistenza intenzionale del glucosio sotto forma di glicogeno, il corpo non avrebbe una riserva energetica per i periodi di digiuno, portando a crisi ipoglicemiche immediate.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali\",\n      \"removal_test\": \"Se l'insulina e i suoi recettori non avessero una forma specifica e complementare, il legame non potrebbe avvenire. Qualsiasi molecola potrebbe attivare i canali, o nessuna, rendendo la regolazione impossibile.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.\",\n      \"removal_test\": \"Senza l'accumulazione del glucosio sui globuli rossi nel tempo, non esisterebbe un modo per misurare il controllo glicemico a lungo termine, lasciando solo misurazioni istantanee.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).\",\n      \"removal_test\": \"Se la concentrazione di glucosio non fosse un'esistenza quantificabile, il sistema non avrebbe un valore numerico su cui basare le sue decisioni (rilasciare insulina o glucagone).\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.\",\n      \"removal_test\": \"Se le riserve di glicogeno non fossero finite, il corpo non avrebbe bisogno di un sistema per gestire la loro deplezione e ricarica. Il glucagone perderebbe la sua funzione principale.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"assorbono glucosio dal sangue.\",\n      \"removal_test\": \"Senza il concetto di contenitori (il sangue, la cellula), il movimento del glucosio sarebbe privo di significato. La regolazione si basa proprio sullo spostare la risorsa da un contenitore all'altro.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"viene rilasciata quando il glucosio sale dopo un pasto\",\n      \"removal_test\": \"Senza stati chiari come 'glicemia alta' o 'glicemia bassa', il sistema non avrebbe trigger definiti per attivare le risposte ormonali correttive.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"che aprono canali e assorbono glucosio dal sangue.\",\n      \"removal_test\": \"Se il glucosio non potesse essere trasferito dal sangue alle cellule, l'intero scopo dell'azione dell'insulina verrebbe meno. Il sistema fallirebbe nel suo obiettivo di abbassare la glicemia.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari\",\n      \"removal_test\": \"Senza l'accordo biochimico (il legame specifico), la cellula non avrebbe modo di 'consentire' l'assorbimento di glucosio in risposta solo al segnale corretto (l'insulina). L'apertura dei canali sarebbe casuale.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas... Il glucagone, prodotto dalle cellule alfa\",\n      \"removal_test\": \"Se l'insulina e il glucagone non avessero identità chimiche distinte, il corpo non potrebbe produrre due effetti opposti. I recettori non potrebbero distinguerli.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas... Il glucagone, prodotto dalle cellule alfa\",\n      \"removal_test\": \"Senza la differenziazione tra cellule alfa e beta, il pancreas non potrebbe eseguire le due funzioni opposte e specializzate di produrre i due ormoni antagonisti.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"aprono canali e assorbono glucosio dal sangue.\",\n      \"removal_test\": \"Senza il confine della membrana cellulare, non ci sarebbe un 'dentro' e un 'fuori'. La concentrazione di glucosio non potrebbe essere regolata perché non ci sarebbe gradiente da gestire.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"viene rilasciata quando il glucosio sale dopo un pasto... quando il glucosio scende... stimola il fegato a rilasciare glucosio\",\n      \"removal_test\": \"Senza una sequenza definita di stati e transizioni, le azioni del sistema sarebbero casuali. Il rilascio di insulina deve seguire l'aumento del glucosio, non precederlo.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"viene rilasciata quando il glucosio sale dopo un pasto\",\n      \"removal_test\": \"Senza la regola 'SE la glicemia sale, ALLORA rilascia insulina', il pancreas non avrebbe la logica operativa per agire. Le regole sono il software del sistema.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas\",\n      \"removal_test\": \"Senza una chiara assegnazione di responsabilità, il sistema sarebbe inaffidabile. Se qualsiasi cellula potesse produrre insulina, il controllo sarebbe impossibile.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas... si lega a recettori sulle cellule muscolari\",\n      \"removal_test\": \"Senza un emittente (pancreas) e un destinatario (cellule muscolari), non c'è comunicazione. L'ormone sarebbe rilasciato nel vuoto senza un bersaglio.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"Due ormoni operano in opposizione. L'insulina... fa assorbire glucosio... Il glucagone... fa il contrario\",\n      \"removal_test\": \"Se la struttura chimica dell'insulina non avesse il significato codificato di 'assorbi glucosio', le cellule riceventi non saprebbero come interpretare il segnale e quale azione compiere.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue\",\n      \"removal_test\": \"Senza il sangue come canale di comunicazione, il pancreas non potrebbe inviare i suoi messaggi ormonali a cellule distanti nel corpo, come quelle dei muscoli o del fegato.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.\",\n      \"removal_test\": \"Se la concentrazione di glucosio non fosse un'emissione involontaria e passiva, il corpo dovrebbe implementare un sistema attivo per 'comunicare' il livello di glucosio al pancreas, aumentando enormemente la complessità.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi\",\n      \"removal_test\": \"Se il dato HbA1c non avesse la sua traccia temporale costitutiva ('ultimi 3 mesi'), sarebbe solo un numero senza contesto, perdendo tutto il suo valore diagnostico per il controllo a lungo termine.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"Se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue\",\n      \"removal_test\": \"Senza l'indicazione indiretta, un livello di glucosio elevato sarebbe solo un fatto, non un sintomo che indica un problema sottostante nel sistema di regolazione (diabete).\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso\",\n      \"removal_test\": \"Senza l'asimmetria sorgente-osservatore, il glucosio nel sangue (sorgente) dovrebbe 'sapere' di essere misurato e partecipare attivamente. La telemetria si basa sul fatto che l'osservatore (pancreas) è attivo e la sorgente è passiva.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T22:56:22.567150+00:00"
+}

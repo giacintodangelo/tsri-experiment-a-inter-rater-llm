@@ -1,0 +1,72 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S8",
+  "system_title": "Cooperativa di pescatori di un piccolo porto",
+  "attempt": 1,
+  "elapsed_s": 5.99,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 517,
+    "prompt_tokens": 5329,
+    "total_tokens": 5846,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4096
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "M2",
+      "quote": "Nel 1962 hanno fondato una cooperativa",
+      "removal_test": "Senza il legame al gruppo, non ci sarebbe una cooperativa e i pescatori opererebbero individualmente, perdendo i benefici della cooperazione."
+    },
+    {
+      "id": "M4",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi.",
+      "removal_test": "Senza il confine dentro/fuori, chiunque potrebbe unirsi alla cooperativa senza controllo, mettendo a rischio le risorse condivise."
+    },
+    {
+      "id": "W3",
+      "quote": "Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro.",
+      "removal_test": "Senza regole, non ci sarebbe un processo strutturato per prendere decisioni importanti, portando a conflitti e inefficienze."
+    },
+    {
+      "id": "S1",
+      "quote": "Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione, e in base al meteo, che un membro anziano valuta).",
+      "removal_test": "Senza la risorsa finita, non ci sarebbe un sistema di rotazione per l'uscita delle barche, causando sovraccarico e inefficienza."
+    },
+    {
+      "id": "S2",
+      "quote": "I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni.",
+      "removal_test": "Senza il richiedente, non ci sarebbe un sistema per allocare le risorse (quota di pescato) ai membri, portando a disorganizzazione e conflitti."
+    },
+    {
+      "id": "T1",
+      "quote": "Pooling della pesca, distribuzione comune ai mercati",
+      "removal_test": "Senza due parti, non ci sarebbe un sistema di scambio tra la cooperativa e i mercati, impedendo la vendita del pescato."
+    },
+    {
+      "id": "T3",
+      "quote": "Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro.",
+      "removal_test": "Senza accordo, non ci sarebbe consenso nelle decisioni, portando a disaccordi e inefficienze."
+    }
+  ],
+  "primitive_ids": [
+    "M2",
+    "M4",
+    "W3",
+    "S1",
+    "S2",
+    "T1",
+    "T3"
+  ],
+  "n_primitives": 7,
+  "raw_response": "{\"primitives\": [{\"id\": \"M2\", \"quote\": \"Nel 1962 hanno fondato una cooperativa\", \"removal_test\": \"Senza il legame al gruppo, non ci sarebbe una cooperativa e i pescatori opererebbero individualmente, perdendo i benefici della cooperazione.\"}, {\"id\": \"M4\", \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi.\", \"removal_test\": \"Senza il confine dentro/fuori, chiunque potrebbe unirsi alla cooperativa senza controllo, mettendo a rischio le risorse condivise.\"}, {\"id\": \"W3\", \"quote\": \"Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro.\", \"removal_test\": \"Senza regole, non ci sarebbe un processo strutturato per prendere decisioni importanti, portando a conflitti e inefficienze.\"}, {\"id\": \"S1\", \"quote\": \"Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione, e in base al meteo, che un membro anziano valuta).\", \"removal_test\": \"Senza la risorsa finita, non ci sarebbe un sistema di rotazione per l'uscita delle barche, causando sovraccarico e inefficienza.\"}, {\"id\": \"S2\", \"quote\": \"I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni.\", \"removal_test\": \"Senza il richiedente, non ci sarebbe un sistema per allocare le risorse (quota di pescato) ai membri, portando a disorganizzazione e conflitti.\"}, {\"id\": \"T1\", \"quote\": \"Pooling della pesca, distribuzione comune ai mercati\", \"removal_test\": \"Senza due parti, non ci sarebbe un sistema di scambio tra la cooperativa e i mercati, impedendo la vendita del pescato.\"}, {\"id\": \"T3\", \"quote\": \"Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro.\", \"removal_test\": \"Senza accordo, non ci sarebbe consenso nelle decisioni, portando a disaccordi e inefficienze.\"}]}",
+  "timestamp_utc": "2026-04-18T22:52:59.643947+00:00"
+}

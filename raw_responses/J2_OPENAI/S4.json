@@ -1,0 +1,60 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 3.86,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 428,
+    "prompt_tokens": 5307,
+    "total_tokens": 5735,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).",
+      "removal_test": "Senza la persistenza intenzionale, il sistema non potrebbe mantenere la glicemia entro un intervallo specifico, portando a fluttuazioni pericolose."
+    },
+    {
+      "id": "C5",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas, viene rilasciata quando il glucosio sale dopo un pasto: si lega a recettori sulle cellule muscolari, adipose e epatiche.",
+      "removal_test": "Senza la relazione, l'insulina non potrebbe legarsi ai recettori cellulari, impedendo l'assorbimento del glucosio."
+    },
+    {
+      "id": "T1",
+      "quote": "Due ormoni operano in opposizione.",
+      "removal_test": "Senza la presenza di due parti in opposizione, il sistema non potrebbe bilanciare efficacemente i livelli di glucosio."
+    },
+    {
+      "id": "T2",
+      "quote": "Il glucagone, prodotto dalle cellule alfa, fa il contrario: quando il glucosio scende (digiuno, esercizio), stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.",
+      "removal_test": "Senza l'oggetto di trasferimento, il glucosio non verrebbe rilasciato nel sangue, compromettendo la regolazione della glicemia."
+    },
+    {
+      "id": "N2",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.",
+      "removal_test": "Senza la traccia temporale costitutiva, non sarebbe possibile valutare la glicemia media nel tempo, rendendo difficile il monitoraggio del controllo glicemico."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C5",
+    "T1",
+    "T2",
+    "N2"
+  ],
+  "n_primitives": 5,
+  "raw_response": "{\"primitives\": [{\"id\": \"C1\", \"quote\": \"Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).\", \"removal_test\": \"Senza la persistenza intenzionale, il sistema non potrebbe mantenere la glicemia entro un intervallo specifico, portando a fluttuazioni pericolose.\"}, {\"id\": \"C5\", \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas, viene rilasciata quando il glucosio sale dopo un pasto: si lega a recettori sulle cellule muscolari, adipose e epatiche.\", \"removal_test\": \"Senza la relazione, l'insulina non potrebbe legarsi ai recettori cellulari, impedendo l'assorbimento del glucosio.\"}, {\"id\": \"T1\", \"quote\": \"Due ormoni operano in opposizione.\", \"removal_test\": \"Senza la presenza di due parti in opposizione, il sistema non potrebbe bilanciare efficacemente i livelli di glucosio.\"}, {\"id\": \"T2\", \"quote\": \"Il glucagone, prodotto dalle cellule alfa, fa il contrario: quando il glucosio scende (digiuno, esercizio), stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.\", \"removal_test\": \"Senza l'oggetto di trasferimento, il glucosio non verrebbe rilasciato nel sangue, compromettendo la regolazione della glicemia.\"}, {\"id\": \"N2\", \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.\", \"removal_test\": \"Senza la traccia temporale costitutiva, non sarebbe possibile valutare la glicemia media nel tempo, rendendo difficile il monitoraggio del controllo glicemico.\"}]}",
+  "timestamp_utc": "2026-04-18T22:52:37.314707+00:00"
+}

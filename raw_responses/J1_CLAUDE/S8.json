@@ -1,0 +1,195 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S8",
+  "system_title": "Cooperativa di pescatori di un piccolo porto",
+  "attempt": 1,
+  "elapsed_s": 45.17,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6136,
+    "output_tokens": 3131,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "gestione condivisa di una cella frigorifera al porto",
+      "removal_test": "Il pescato deperisce prima di raggiungere i mercati del continente. La cella frigorifera è l'atto di persistenza intenzionale che combatte la dissoluzione biologica del prodotto."
+    },
+    {
+      "id": "C4",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati del continente",
+      "removal_test": "Il sistema perderebbe la capacità di costruire un corpus aggregato del pescato giornaliero. Senza accumulazione catalogata non esistono lotti, e senza lotti non esiste distribuzione ai mercati."
+    },
+    {
+      "id": "C5",
+      "quote": "distribuzione comune ai mercati, acquisto collettivo di reti e carburante",
+      "removal_test": "Il sistema perderebbe le connessioni strutturali tra artefatti e canali: il pescato non sarebbe collegato ai mercati di Napoli e Palermo, né le reti e il carburante sarebbero collegati alla cooperativa come entità acquirente."
+    },
+    {
+      "id": "I1",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia",
+      "removal_test": "Il sistema perderebbe la capacità di quantificare l'esistente. Senza pesatura e catalogazione non si sa quante risorse ci sono, e la distribuzione proporzionale delle quote mensili diventa impossibile."
+    },
+    {
+      "id": "I2",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte",
+      "removal_test": "Se il pescato fosse infinito, i prezzi non varierebbero con le scorte. La finitezza del pescato giornaliero è la ragione per cui la scarsità è operativa e i prezzi fluttuano."
+    },
+    {
+      "id": "I3",
+      "quote": "I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito",
+      "removal_test": "Il sistema perderebbe la tracciabilità di quale pescato appartiene a quale membro. Senza appartenenza al contenitore non è possibile calcolare la quota individuale né distinguere il conferito da ciascuno."
+    },
+    {
+      "id": "I4",
+      "quote": "Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie",
+      "removal_test": "Il sistema perderebbe la distinzione tra pescato destinato all'esportazione e pescato destinato al consumo locale. Senza stato corrente dell'allocazione, i lotti non possono essere instradati correttamente."
+    },
+    {
+      "id": "T1",
+      "quote": "acquisto collettivo di reti e carburante a prezzi scontati",
+      "removal_test": "Il sistema perderebbe la struttura dello scambio bilaterale. Senza due parti (cooperativa e fornitore) non esiste transazione, e l'acquisto collettivo collassa in assenza di controparte."
+    },
+    {
+      "id": "T2",
+      "quote": "pooling della pesca, distribuzione comune ai mercati del continente (Napoli, Palermo)",
+      "removal_test": "Il sistema perderebbe il trasferimento fisico del pescato dalla cooperativa ai mercati. Senza oggetto di trasferimento non c'è flusso economico e la cooperativa non genera ricavi."
+    },
+    {
+      "id": "T3",
+      "quote": "Nel 1962 hanno fondato una cooperativa",
+      "removal_test": "Il sistema perderebbe il fondamento contrattuale che rende vincolante la partecipazione. Senza accordo costitutivo, il pooling e la distribuzione comune non hanno base giuridica né obbligatoria."
+    },
+    {
+      "id": "T4",
+      "quote": "In 60 anni ci sono state 3 espulsioni: tutte per pesca illegale",
+      "removal_test": "Il sistema perderebbe la certezza delle conseguenze disciplinari. Se l'espulsione fosse reversibile come semplice undo, la sanzione perderebbe il suo effetto deterrente e la cooperativa non potrebbe garantire l'integrità dei propri membri."
+    },
+    {
+      "id": "M1",
+      "quote": "tutte a conduzione familiare",
+      "removal_test": "Il sistema perderebbe la capacità di attribuire il pescato conferito a un soggetto stabile nel tempo. Senza identità persistente del membro-famiglia non è possibile calcolare quote mensili né tracciare la storia contributiva."
+    },
+    {
+      "id": "M2",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi",
+      "removal_test": "Il sistema perderebbe la struttura del legame formale tra pescatore e cooperativa. Senza appartenenza certificata non si distingue chi ha diritto alle quote, ai voti in assemblea e agli acquisti collettivi."
+    },
+    {
+      "id": "M3",
+      "quote": "un membro anziano valuta [il meteo]",
+      "removal_test": "Il sistema perderebbe la differenziazione interna tra membri. Senza ruoli differenziati, la decisione operativa quotidiana più critica — uscire o non uscire — non ha un responsabile riconosciuto."
+    },
+    {
+      "id": "M4",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni",
+      "removal_test": "Il sistema perderebbe il confine operativo tra chi è membro e chi non lo è. Senza confine dentro/fuori, i benefici collettivi (prezzi scontati, quote, cella frigorifera) sarebbero accessibili a chiunque, rendendo la cooperativa non sostenibile."
+    },
+    {
+      "id": "W1",
+      "quote": "Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 con il pescato. La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti",
+      "removal_test": "Il sistema perderebbe l'unità processabile. Senza il pescato come input definito che entra nel processo cooperativo, non esiste nulla da pesare, catalogare, distribuire o remunerare."
+    },
+    {
+      "id": "W2",
+      "quote": "escono [...] Tornano [...] La cooperativa pesa, cataloga [...] prepara i lotti [...] distribuzione ai mercati [...] I membri ricevono mensilmente la loro quota",
+      "removal_test": "Il sistema perderebbe la sequenza ordinata delle fasi. Senza stati e transizioni definiti, il pescato potrebbe essere remunerato prima di essere pesato, o distribuito prima di essere catalogato."
+    },
+    {
+      "id": "W3",
+      "quote": "a rotazione, e in base al meteo [...] meno le trattenute per spese comuni [...] proporzionalmente al pescato conferito",
+      "removal_test": "Il sistema perderebbe le regole che governano quali transizioni sono valide. Senza regole, non si sa chi deve uscire in mare, come calcolare le quote, né quali detrazioni applicare."
+    },
+    {
+      "id": "W4",
+      "quote": "un membro anziano valuta [il meteo] [...] Le decisioni importanti sono prese in assemblea",
+      "removal_test": "Il sistema perderebbe l'attribuzione di responsabilità alle fasi critiche. Senza responsabilità assegnata, la decisione di uscita in mare non ha un agente e le decisioni strategiche non hanno un organo legittimato."
+    },
+    {
+      "id": "S1",
+      "quote": "gestione condivisa di una cella frigorifera al porto",
+      "removal_test": "Il sistema perderebbe la risorsa finita da allocare. La cella ha capacità limitata: senza questa finitezza temporale non esiste problema di scheduling né conflitto di accesso tra i 22 membri."
+    },
+    {
+      "id": "S2",
+      "quote": "a rotazione, e in base al meteo",
+      "removal_test": "Il sistema perderebbe i richiedenti che competono per la risorsa scarsa (slot di uscita, spazio in cella, quote di mercato). Senza richiedenti identificati, la rotazione non ha soggetti su cui operare."
+    },
+    {
+      "id": "S3",
+      "quote": "Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione)",
+      "removal_test": "Il sistema perderebbe la porzionatura del tempo in unità allocabili. Senza slot temporali definiti (la mattina, il turno), la rotazione non ha una struttura su cui appoggiarsi."
+    },
+    {
+      "id": "S4",
+      "quote": "non tutti — a rotazione",
+      "removal_test": "Il sistema perderebbe il vincolo fisico che impedisce a tutte le 22 barche di occupare lo stesso slot contemporaneamente. Senza non-sovrapposizione, la rotazione non avrebbe ragione di esistere."
+    },
+    {
+      "id": "CO1",
+      "quote": "Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro",
+      "removal_test": "Il sistema perderebbe il canale comunicativo formale tra i membri. Senza emittenti e destinatari strutturati nell'assemblea, le decisioni collettive non hanno un luogo di formazione legittima."
+    },
+    {
+      "id": "CO3",
+      "quote": "distribuzione comune ai mercati del continente (Napoli, Palermo)",
+      "removal_test": "Il sistema perderebbe la direzionalità del flusso informativo e commerciale. Senza indirizzamento esplicito verso Napoli o Palermo, i lotti non raggiungono i destinatari giusti."
+    },
+    {
+      "id": "N1",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte",
+      "removal_test": "Il sistema perderebbe il segnale involontario emesso dal mercato. I prezzi non sono comunicati intenzionalmente dalla cooperativa — emergono dal sistema di domanda e offerta e vengono captati come dato esterno."
+    },
+    {
+      "id": "N2",
+      "quote": "I prezzi all'ingrosso variano giornalmente",
+      "removal_test": "Il sistema perderebbe l'ancoraggio temporale dei dati di mercato. Senza timestamp, un prezzo rilevato ieri è indistinguibile da uno rilevato oggi, rendendo impossibile la gestione dinamica dei lotti."
+    },
+    {
+      "id": "N3",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte",
+      "removal_test": "Il sistema perderebbe la capacità di leggere indirettamente lo stato del mercato continentale. Il prezzo è un indicatore indiretto della domanda reale a Napoli e Palermo — senza questa indicazione, la cooperativa non sa dove e quando conviene vendere."
+    },
+    {
+      "id": "N5",
+      "quote": "un membro anziano valuta [il meteo]",
+      "removal_test": "Il sistema perderebbe l'asimmetria informativa strutturale tra il membro anziano (osservatore attivo del meteo) e gli altri membri (sorgenti passive delle condizioni operative). Senza questa asimmetria, la valutazione meteorologica non ha un soggetto privilegiato e la decisione di uscita perde il suo fondamento epistemico."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C4",
+    "C5",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "CO1",
+    "CO3",
+    "N1",
+    "N2",
+    "N3",
+    "N5"
+  ],
+  "n_primitives": 29,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"gestione condivisa di una cella frigorifera al porto\",\n      \"removal_test\": \"Il pescato deperisce prima di raggiungere i mercati del continente. La cella frigorifera è l'atto di persistenza intenzionale che combatte la dissoluzione biologica del prodotto.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati del continente\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di costruire un corpus aggregato del pescato giornaliero. Senza accumulazione catalogata non esistono lotti, e senza lotti non esiste distribuzione ai mercati.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"distribuzione comune ai mercati, acquisto collettivo di reti e carburante\",\n      \"removal_test\": \"Il sistema perderebbe le connessioni strutturali tra artefatti e canali: il pescato non sarebbe collegato ai mercati di Napoli e Palermo, né le reti e il carburante sarebbero collegati alla cooperativa come entità acquirente.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di quantificare l'esistente. Senza pesatura e catalogazione non si sa quante risorse ci sono, e la distribuzione proporzionale delle quote mensili diventa impossibile.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte\",\n      \"removal_test\": \"Se il pescato fosse infinito, i prezzi non varierebbero con le scorte. La finitezza del pescato giornaliero è la ragione per cui la scarsità è operativa e i prezzi fluttuano.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito\",\n      \"removal_test\": \"Il sistema perderebbe la tracciabilità di quale pescato appartiene a quale membro. Senza appartenenza al contenitore non è possibile calcolare la quota individuale né distinguere il conferito da ciascuno.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie\",\n      \"removal_test\": \"Il sistema perderebbe la distinzione tra pescato destinato all'esportazione e pescato destinato al consumo locale. Senza stato corrente dell'allocazione, i lotti non possono essere instradati correttamente.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"acquisto collettivo di reti e carburante a prezzi scontati\",\n      \"removal_test\": \"Il sistema perderebbe la struttura dello scambio bilaterale. Senza due parti (cooperativa e fornitore) non esiste transazione, e l'acquisto collettivo collassa in assenza di controparte.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"pooling della pesca, distribuzione comune ai mercati del continente (Napoli, Palermo)\",\n      \"removal_test\": \"Il sistema perderebbe il trasferimento fisico del pescato dalla cooperativa ai mercati. Senza oggetto di trasferimento non c'è flusso economico e la cooperativa non genera ricavi.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"Nel 1962 hanno fondato una cooperativa\",\n      \"removal_test\": \"Il sistema perderebbe il fondamento contrattuale che rende vincolante la partecipazione. Senza accordo costitutivo, il pooling e la distribuzione comune non hanno base giuridica né obbligatoria.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"In 60 anni ci sono state 3 espulsioni: tutte per pesca illegale\",\n      \"removal_test\": \"Il sistema perderebbe la certezza delle conseguenze disciplinari. Se l'espulsione fosse reversibile come semplice undo, la sanzione perderebbe il suo effetto deterrente e la cooperativa non potrebbe garantire l'integrità dei propri membri.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"tutte a conduzione familiare\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di attribuire il pescato conferito a un soggetto stabile nel tempo. Senza identità persistente del membro-famiglia non è possibile calcolare quote mensili né tracciare la storia contributiva.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi\",\n      \"removal_test\": \"Il sistema perderebbe la struttura del legame formale tra pescatore e cooperativa. Senza appartenenza certificata non si distingue chi ha diritto alle quote, ai voti in assemblea e agli acquisti collettivi.\"\n      },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"un membro anziano valuta [il meteo]\",\n      \"removal_test\": \"Il sistema perderebbe la differenziazione interna tra membri. Senza ruoli differenziati, la decisione operativa quotidiana più critica — uscire o non uscire — non ha un responsabile riconosciuto.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni\",\n      \"removal_test\": \"Il sistema perderebbe il confine operativo tra chi è membro e chi non lo è. Senza confine dentro/fuori, i benefici collettivi (prezzi scontati, quote, cella frigorifera) sarebbero accessibili a chiunque, rendendo la cooperativa non sostenibile.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 con il pescato. La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti\",\n      \"removal_test\": \"Il sistema perderebbe l'unità processabile. Senza il pescato come input definito che entra nel processo cooperativo, non esiste nulla da pesare, catalogare, distribuire o remunerare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"escono [...] Tornano [...] La cooperativa pesa, cataloga [...] prepara i lotti [...] distribuzione ai mercati [...] I membri ricevono mensilmente la loro quota\",\n      \"removal_test\": \"Il sistema perderebbe la sequenza ordinata delle fasi. Senza stati e transizioni definiti, il pescato potrebbe essere remunerato prima di essere pesato, o distribuito prima di essere catalogato.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"a rotazione, e in base al meteo [...] meno le trattenute per spese comuni [...] proporzionalmente al pescato conferito\",\n      \"removal_test\": \"Il sistema perderebbe le regole che governano quali transizioni sono valide. Senza regole, non si sa chi deve uscire in mare, come calcolare le quote, né quali detrazioni applicare.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"un membro anziano valuta [il meteo] [...] Le decisioni importanti sono prese in assemblea\",\n      \"removal_test\": \"Il sistema perderebbe l'attribuzione di responsabilità alle fasi critiche. Senza responsabilità assegnata, la decisione di uscita in mare non ha un agente e le decisioni strategiche non hanno un organo legittimato.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"gestione condivisa di una cella frigorifera al porto\",\n      \"removal_test\": \"Il sistema perderebbe la risorsa finita da allocare. La cella ha capacità limitata: senza questa finitezza temporale non esiste problema di scheduling né conflitto di accesso tra i 22 membri.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"quote\": \"a rotazione, e in base al meteo\",\n      \"removal_test\": \"Il sistema perderebbe i richiedenti che competono per la risorsa scarsa (slot di uscita, spazio in cella, quote di mercato). Senza richiedenti identificati, la rotazione non ha soggetti su cui operare.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione)\",\n      \"removal_test\": \"Il sistema perderebbe la porzionatura del tempo in unità allocabili. Senza slot temporali definiti (la mattina, il turno), la rotazione non ha una struttura su cui appoggiarsi.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"non tutti — a rotazione\",\n      \"removal_test\": \"Il sistema perderebbe il vincolo fisico che impedisce a tutte le 22 barche di occupare lo stesso slot contemporaneamente. Senza non-sovrapposizione, la rotazione non avrebbe ragione di esistere.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"Le decisioni importanti (nuove barche, modifica degli statuti, conflitti tra membri) sono prese in assemblea con un voto per membro\",\n      \"removal_test\": \"Il sistema perderebbe il canale comunicativo formale tra i membri. Senza emittenti e destinatari strutturati nell'assemblea, le decisioni collettive non hanno un luogo di formazione legittima.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"quote\": \"distribuzione comune ai mercati del continente (Napoli, Palermo)\",\n      \"removal_test\": \"Il sistema perderebbe la direzionalità del flusso informativo e commerciale. Senza indirizzamento esplicito verso Napoli o Palermo, i lotti non raggiungono i destinatari giusti.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte\",\n      \"removal_test\": \"Il sistema perderebbe il segnale involontario emesso dal mercato. I prezzi non sono comunicati intenzionalmente dalla cooperativa — emergono dal sistema di domanda e offerta e vengono captati come dato esterno.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente\",\n      \"removal_test\": \"Il sistema perderebbe l'ancoraggio temporale dei dati di mercato. Senza timestamp, un prezzo rilevato ieri è indistinguibile da uno rilevato oggi, rendendo impossibile la gestione dinamica dei lotti.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte\",\n      \"removal_test\": \"Il sistema perderebbe la capacità di leggere indirettamente lo stato del mercato continentale. Il prezzo è un indicatore indiretto della domanda reale a Napoli e Palermo — senza questa indicazione, la cooperativa non sa dove e quando conviene vendere.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"un membro anziano valuta [il meteo]\",\n      \"removal_test\": \"Il sistema perderebbe l'asimmetria informativa strutturale tra il membro anziano (osservatore attivo del meteo) e gli altri membri (sorgenti passive delle condizioni operative). Senza questa asimmetria, la valutazione meteorologica non ha un soggetto privilegiato e la decisione di uscita perde il suo fondamento epistemico.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:14:14.203944+00:00"
+}

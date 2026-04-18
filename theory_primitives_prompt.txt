@@ -1,0 +1,259 @@
+DEFINIZIONI DELLE 34 PRIMITIVE NUCLEARI DELLA TEORIA STRUTTURALE DELLA REALTA' INFORMATIVA (TSRI).
+
+Ogni primitiva e' una manifestazione locale di una o due proprieta' fondamentali all'interno di una struttura ricorrente.
+
+Le 5 proprieta' fondamentali sono:
+  P1_STATE (Stato): le entita' esistono e rappresentano frammenti di realta'.
+  P2_TRANSFORMATION (Trasformazione): lo stato muta.
+  P3_RELATIONAL_FACT (Fatto Relazionale): le entita' possono essere connesse tra loro.
+  P4_CONSTRAINT (Vincolo): non tutte le mutazioni e non tutte le connessioni sono valide.
+  P5_PARTICIPATION (Partecipazione): un osservatore rende l'informazione significativa.
+
+Le 8 strutture ricorrenti sono:
+  CONTENT, INVENTORY, TRANSACTIONS, MEMBERSHIP, WORKFLOW, SCHEDULING, COMMUNICATION, TELEMETRY.
+
+Elenco delle 34 primitive:
+
+=== C1 — Persistenza intenzionale (struttura: CONTENT) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: Il tempo come nemico. La persistenza combatte la dissoluzione. C1 si oppone a L2.
+Direzione del legame: centripeto — attrae e trattiene ciò che viene reso persistente
+Agency: attivo
+Regolarita' L2: opposizione — L'unica primitiva con relazione di opposizione diretta a una regolarità. Tutto termina, ma C1 dice 'non questo, non ancora'. Inibisce DISTRUGGERE.
+
+=== C2 — Forma (struttura: CONTENT) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: La forma non cambia col tempo — è struttura, non processo.
+Direzione del legame: saturo — proprietà intrinseca, nessuna direzione
+Agency: neutro
+Regolarita' None: nessuna relazione forte — Vincolo debole — non attiva L4 perché non implica finitezza.
+
+=== C3 — Ritrovabilità (struttura: CONTENT) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: La ritrovabilità non cambia col tempo.
+Direzione del legame: centrifugo — rende l'artefatto accessibile, lo proietta verso chi lo cerca
+Agency: passivo (dal lato dell'artefatto), attivo (dal lato del cercatore)
+Regolarita' L3: superamento — L'artefatto è 'da qualche parte' (separazione) e la ritrovabilità consente di raggiungerlo (propagazione).
+
+=== C4 — Accumulazione (struttura: CONTENT) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: Il corpus si espande nel tempo — l'accumulo è trasformazione nella direzione dell'espansione.
+Direzione del legame: saturo — proprietà della collezione
+Agency: neutro/passivo
+Regolarita' L1: manifestazione — La collezione muta perché cresce. L'accumulo è trasformazione nella direzione dell'espansione.
+Regolarita' L4: interazione_indiretta — Interagisce con L4 quando lo spazio è finito (content bloat — tensione strutturale tra persistenza e finitezza).
+
+=== C5 — Relazione (struttura: CONTENT) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: La relazione non cambia col tempo.
+Direzione del legame: bidirezionale — l'artefatto e ciò a cui è connesso
+Agency: attivo
+Regolarita' L3: superamento_laterale — Supera la separazione lateralmente — l'artefatto è connesso ad altri artefatti. Diverso da C3 (centrifugo): C5 è laterale.
+
+=== I1 — Esistenza quantificabile (struttura: INVENTORY) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: Il presente sovrascrive il precedente. L'interesse è per lo stato corrente, non per la storia.
+Direzione del legame: centrifugo — punta a qualcosa nel mondo e ne dice 'quanto'
+Agency: attivo (contare è un atto)
+Regolarita' L4: manifestazione — Rende L4 visibile. Se non conti, non sai che la risorsa è scarsa. Contare trasforma la scarsità da fatto ignoto a dato operativo.
+
+=== I2 — Finitezza (struttura: INVENTORY) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: Le risorse si esauriscono nel lungo termine (L1 opera su I2), ma nel breve la finitezza è uno stato stabile.
+Direzione del legame: saturo — proprietà intrinseca della risorsa
+Agency: passivo
+Regolarita' L4: incarnazione — L'atomo È la legge al livello atomico. La finitezza incarna L4 — la scarsità resa concreta.
+
+=== I3 — Appartenenza al contenitore (struttura: INVENTORY) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: L'appartenenza cambia — la cosa viene spostata, venduta, assegnata. L1 opera sulla relazione di possesso.
+Direzione del legame: direzionale — dall'oggetto al contenitore (possesso)
+Agency: passivo (l'oggetto non sceglie)
+Regolarita' L4: protezione — L'appartenenza (il proprietario) governa l'accesso alla risorsa scarsa.
+
+=== I4 — Stato (struttura: INVENTORY) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: Lo stato attuale sovrascrive il precedente. Il tempo come fotografia del presente.
+Direzione del legame: saturo — proprietà intrinseca (condizione corrente dell'entità)
+Agency: misto (passivo: il cibo scade; attivo: l'operatore segna 'riservato')
+Regolarita' L1: sottomissione — Lo stato muta sotto L1 — disponibile→riservato→in manutenzione→dismesso.
+
+=== T1 — Due parti (struttura: TRANSACTIONS) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: La transazione avviene in un istante ma le conseguenze persistono. Il tempo è un punto — prima e dopo sono stati diversi.
+Direzione del legame: bivalente — parte A e parte B
+Agency: attivo da entrambe le parti
+Regolarita' L3: presupposizione — Le due parti sono separate (L3) e scambiano per superare la separazione.
+Regolarita' L4: presupposizione — Scambiano perché le risorse sono scarse (L4).
+
+=== T2 — Oggetto di trasferimento (struttura: TRANSACTIONS) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: Prima l'oggetto era di A, dopo è di B.
+Direzione del legame: dall'origine alla destinazione — il flusso del trasferimento
+Agency: attivo
+Regolarita' L3: superamento_attivo — L'oggetto supera la separazione propagandosi da una parte all'altra.
+Regolarita' L4: presupposizione — Il trasferimento è necessario perché la risorsa è finita.
+
+=== T3 — Accordo (struttura: TRANSACTIONS) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: L'accordo si forma in un momento ('il sì') e persiste come vincolo.
+Direzione del legame: le due parti che concordano — presuppone T1
+Agency: attivo da entrambe le parti
+Regolarita' L5: risoluzione — L'accordo risolve il conflitto di interessi tra compratore e venditore.
+
+=== T4 — Irreversibilità (struttura: TRANSACTIONS) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: Unidirezionale — prima → dopo, senza ritorno. L'inversione è una nuova transazione, non un undo. La freccia del tempo.
+Direzione del legame: saturo — proprietà intrinseca della transazione completata
+Agency: neutro
+Regolarita' L1: vincolo_direzionale — L'irreversibilità vincola L1 — il sistema può mutare ma non all'indietro. La mutazione è unidirezionale.
+
+=== M1 — Identità (struttura: MEMBERSHIP) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: L'identità persiste sotto il cambiamento. Tu sei tu a 5 anni e a 50 anni. L'identità non combatte il tempo (come C1) — lo attraversa senza esserne toccata.
+Direzione del legame: saturo — proprietà intrinseca dell'entità
+Agency: misto (intrinseca: il volto; assegnata: l'username)
+Regolarita' L1: invarianza — Resiste passivamente alla mutabilità senza opporsi alla terminazione. Diverso dall'opposizione di C1 (che resiste attivamente).
+Regolarita' L2: sottomissione — L'identità può terminare (morte, cancellazione).
+
+=== M2 — Legame al gruppo (struttura: MEMBERSHIP) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: L'ingresso e l'uscita sono eventi puntuali. L'appartenenza stessa è durata. Il confine è un evento, l'appartenenza è uno stato.
+Direzione del legame: bivalente — l'entità e il gruppo. Dal membro al gruppo.
+Agency: misto (scelta, assegnazione, ereditarietà, o emergenza algoritmica)
+Regolarita' L4: indiretto — L'appartenenza a un gruppo è spesso esclusiva o limitata — ma non tutti i gruppi sono scarsi.
+
+=== M3 — Differenziazione (struttura: MEMBERSHIP) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: I livelli esistono in permanenza. Le assegnazioni individuali mutano.
+Direzione del legame: verticale — il criterio di differenziazione implica gerarchia
+Agency: attivo (qualcuno definisce i livelli e assegna i ruoli)
+Regolarita' L4: gestione — La differenziazione gestisce la scarsità distribuendo diritti diversi.
+Regolarita' L5: generazione — La differenziazione CREA la tensione: l'utente free vuole le funzioni premium. Relazione opposta a T3 (che risolve L5).
+
+=== M4 — Confine dentro/fuori (struttura: MEMBERSHIP) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT, P4_CONSTRAINT
+Relazione col tempo: Il confine è permanente come struttura, modulabile come permeabilità.
+Direzione del legame: centripeto — protegge un interno dall'esterno
+Agency: strutturale
+Regolarita' L3: incarnazione — Il confine separa (separazione tra dentro e fuori).
+Regolarita' L4: incarnazione — L'appartenenza è scarsa (il confine protegge le risorse interne).
+
+=== W1 — Unità di lavoro (struttura: WORKFLOW) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: L'unità di lavoro ha un inizio (entra nel processo) e una fine (esce processata). Il tempo come percorso.
+Direzione del legame: universale — accetta qualsiasi entità come input (la connessione dell'entità al processo)
+Agency: passivo (input)
+Regolarita' L1: sottomissione — L'unità subisce L1 — viene trasformata dal processo.
+
+=== W2 — Stati e transizioni (struttura: WORKFLOW) ===
+Proprieta' manifestate: P2_TRANSFORMATION, P3_RELATIONAL_FACT
+Relazione col tempo: Il tempo come ordine delle fasi. L'ordine è il dato — prima stato A, poi stato B.
+Direzione del legame: sequenziale — la sequenza dei cambiamenti con connessioni tra gli stati
+Agency: governato (dalle regole W3)
+Regolarita' L1: governance — W2 governa L1 — la mutabilità è strutturata, non casuale. Le transizioni seguono regole.
+
+=== W3 — Regole (struttura: WORKFLOW) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: Le regole esistono in permanenza (finché non vengono modificate).
+Direzione del legame: universale — attinge condizioni da qualsiasi struttura
+Agency: attivo (qualcuno definisce le regole)
+Regolarita' L5: arbitraggio — Le regole arbitrano i conflitti tra esigenze del processo.
+
+=== W4 — Responsabilità (struttura: WORKFLOW) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT, P5_PARTICIPATION
+Relazione col tempo: Duratura ma riassegnabile.
+Direzione del legame: bivalente — la fase/transizione e il responsabile. Connette processo a agente.
+Agency: attivo al meta-livello (qualcuno assegna); attivo in esecuzione (il responsabile agisce)
+
+=== S1 — Risorsa finita (struttura: SCHEDULING) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: Il tempo come ciò che viene consumato. La scarsità è temporale — 'ne ho pochi adesso'.
+Direzione del legame: centrifugo — la risorsa si offre per l'allocazione
+Agency: misto (la risorsa è finita passivamente, l'allocazione è attiva)
+Regolarita' L4: incarnazione — L4 nella dimensione temporale. In INVENTORY la scarsità è statica. In SCHEDULING la scarsità è temporale.
+
+=== S2 — Richiedente (struttura: SCHEDULING) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT, P5_PARTICIPATION
+Relazione col tempo: Il richiedente opera sotto L6 — agisce nel presente per un'allocazione nel futuro. Il tempo come proiezione.
+Direzione del legame: verso la risorsa — connette il richiedente a S1
+Agency: attivo (il richiedente chiede — atto intenzionale)
+Regolarita' L4: generazione — Il richiedente genera la domanda che rende la scarsità operativa.
+Regolarita' L5: generazione — Più richiedenti per la stessa risorsa = conflitto.
+Regolarita' L6: compimento — Il richiedente COMPIE L6 — la prenotazione è un atto nel presente per un'allocazione nel futuro.
+
+=== S3 — Slot temporali (struttura: SCHEDULING) ===
+Proprieta' manifestate: P1_STATE
+Relazione col tempo: Il tempo diviso in blocchi allocabili. Lo slot non è il tempo astratto — è il tempo porzionato in unità assegnabili.
+Direzione del legame: trivalente — la risorsa (S1), il periodo (il tempo), il richiedente (S2). Nodo di convergenza tridimensionale.
+Agency: misto (la struttura degli slot è definita attivamente, l'occupazione è determinata dalla domanda)
+Regolarita' L4: manifestazione — Lo slot è finito.
+Regolarita' L1: sottomissione — Lo slot muta — passa da disponibile a occupato a passato.
+
+=== S4 — Non-sovrapposizione (struttura: SCHEDULING) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: S4 non HA relazione col tempo — S4 PARLA del tempo. È una proprietà del tempo stesso.
+Direzione del legame: saturo — proprietà intrinseca dell'allocazione temporale
+Agency: nessuno (la non-sovrapposizione non è decisa — è un fatto del mondo)
+Regolarita' L4: incarnazione — L4 applicata al tempo — il tempo è la risorsa fondamentalmente non-moltiplicabile.
+
+=== CO1 — Emittente e destinatario (struttura: COMMUNICATION) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: Il messaggio viaggia nel tempo — il canale determina la velocità. Il tempo è il mezzo di propagazione, non il dato né il vincolo.
+Direzione del legame: bivalente — chi parla e chi ascolta
+Agency: attivo (emittente) + passivo/attivo (destinatario)
+Regolarita' L3: attivazione — CO1 è il punto dove L3 si manifesta intenzionalmente. Tre modi di superare L3: cercare (C3), trasferire (T2), comunicare (CO1).
+
+=== CO2 — Significato codificato (struttura: COMMUNICATION) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: Il codice condiviso deve persistere per funzionare.
+Direzione del legame: universale — incapsula significato da qualsiasi struttura
+Agency: attivo (qualcuno codifica)
+
+=== CO3 — Direzionalità (struttura: COMMUNICATION) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: L'atto di dirigere il messaggio avviene in un momento.
+Direzione del legame: verso chi — la direzione del messaggio
+Agency: attivo
+Regolarita' L3: superamento — CO3 supera L3 — il messaggio attraversa la separazione.
+
+=== CO4 — Canale (struttura: COMMUNICATION) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: Il canale esiste indipendentemente dal singolo messaggio. L'infrastruttura persiste.
+Direzione del legame: infrastrutturale — l'infrastruttura comunicativa
+Agency: strutturale
+Regolarita' L3: modulazione — La qualità del canale determina quanto facilmente la separazione è superata.
+
+=== N1 — Emissione involontaria (struttura: TELEMETRY) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: L'emissione e permanente — condizione di background continua.
+Direzione del legame: relativamente saturo — descrive la sorgente senza cercare legami esterni
+Agency: passivo
+
+=== N2 — Traccia temporale costitutiva (struttura: TELEMETRY) ===
+Proprieta' manifestate: P1_STATE, P2_TRANSFORMATION
+Relazione col tempo: Il tempo è DENTRO il dato. Se cambio il timestamp, il dato cambia significato. L'unico atomo dove il tempo è interno, non esterno.
+Direzione del legame: il segnale da datare — quasi universale perché il tempo è universale
+Agency: passivo nell'emissione, attivo nella cattura
+Regolarita' L1: documentazione — N2 documenta L1 — registra il fatto che le cose cambiano.
+Regolarita' L6: alimentazione — N2 fornisce la materia prima per L6. Senza serie storica, nessuna proiezione possibile.
+
+=== N3 — Indicazione indiretta (struttura: TELEMETRY) ===
+Proprieta' manifestate: P4_CONSTRAINT
+Relazione col tempo: L'indicazione è atemporale. Il timing è fornito da N2.
+Direzione del legame: il sistema indicato — il punto di legame più universale di tutti i 34 atomi
+Agency: split (passivo dal lato del segnale, attivo dal lato dell'osservatore)
+Regolarita' ALL: manifestazione_universale_emergente — N3 rende tutte le regolarità leggibili — non direttamente, ma perché indica sistemi governati dalle regolarità. La manifestazione universale è EMERGENTE dalla reattività universale, non intrinseca.
+
+=== N4 — Pattern per accumulazione (struttura: TELEMETRY) ===
+Proprieta' manifestate: P2_TRANSFORMATION
+Relazione col tempo: N4 solidifica il tempo in serie. Trasforma il flusso temporale in struttura dati persistente. Direzione opposta a N2: N2 va dal dato al tempo (ancoraggio), N4 va dal tempo al dato (solidificazione).
+Direzione del legame: i dati da accumulare
+Agency: passivo nel meccanismo, attivo nella configurazione
+Regolarita' L1: cattura_sistematica — N4 cattura L1 allo stato puro: ogni cambiamento produce un nuovo dato. N2 è il singolo fotogramma. N4 è il film.
+
+=== N5 — Asimmetria sorgente-osservatore (struttura: TELEMETRY) ===
+Proprieta' manifestate: P3_RELATIONAL_FACT
+Relazione col tempo: L'asimmetria persiste finché la sorgente non diventa consapevole. Durata indeterminata.
+Direzione del legame: bivalente — la sorgente e l'osservatore. INSTABILE — l'isomerizzazione verso CO1 è possibile.
+Agency: split asimmetrico (l'osservatore è attivo, la sorgente è passiva)

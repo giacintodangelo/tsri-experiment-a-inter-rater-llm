@@ -1,0 +1,158 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S8",
+  "system_title": "Cooperativa di pescatori di un piccolo porto",
+  "attempt": 1,
+  "elapsed_s": 46.0,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5275,
+    "completion_tokens": 1872,
+    "total_tokens": 11309
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "modifica degli statuti",
+      "removal_test": "Senza statuti persistenti, la cooperativa non avrebbe regole fondanti, base legale, o una struttura di governo a lungo termine. Si dissolverebbe in accordi informali."
+    },
+    {
+      "id": "C2",
+      "quote": "cataloga per specie e taglia",
+      "removal_test": "Senza una forma strutturata per i dati del pescato, sarebbe impossibile gestire l'inventario, stabilire prezzi coerenti o preparare lotti standardizzati per i mercati."
+    },
+    {
+      "id": "C4",
+      "quote": "ricevono mensilmente la loro quota proporzionalmente al pescato conferito",
+      "removal_test": "Senza l'accumulazione dei dati sui conferimenti di ogni membro durante il mese, sarebbe impossibile calcolare le quote proporzionali, facendo crollare il modello economico della cooperativa."
+    },
+    {
+      "id": "I1",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia",
+      "removal_test": "Se il pescato non fosse quantificato, la cooperativa non potrebbe gestirlo, venderlo, né calcolare le quote dei membri. L'operazione centrale del sistema sarebbe impossibile."
+    },
+    {
+      "id": "I2",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte.",
+      "removal_test": "Se il pescato (le scorte) fosse una risorsa infinita, non ci sarebbe bisogno di gestirlo, di variare i prezzi, o dell'intera cooperativa, che esiste per gestire una risorsa scarsa."
+    },
+    {
+      "id": "I3",
+      "quote": "pooling della pesca",
+      "removal_test": "Senza il concetto che il pescato appartiene al 'contenitore' comune della cooperativa, non esisterebbe un'entità collettiva. Ogni pescatore venderebbe per sé."
+    },
+    {
+      "id": "T1",
+      "quote": "distribuzione comune ai mercati del continente (Napoli, Palermo)",
+      "removal_test": "Senza le due parti (la cooperativa come venditore e i mercati come acquirenti), nessuna vendita potrebbe avvenire e la cooperativa non avrebbe entrate."
+    },
+    {
+      "id": "T2",
+      "quote": "I membri ricevono mensilmente la loro quota",
+      "removal_test": "Senza il trasferimento della quota economica ai membri, questi non avrebbero alcun incentivo a partecipare e il sistema crollerebbe."
+    },
+    {
+      "id": "T3",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte.",
+      "removal_test": "Senza un accordo sul prezzo, nessuna transazione di vendita potrebbe essere conclusa. La cooperativa non potrebbe vendere il suo prodotto."
+    },
+    {
+      "id": "T4",
+      "quote": "pescato conferito",
+      "removal_test": "Se il conferimento del pescato non fosse irreversibile, un pescatore potrebbe ritirare il proprio pesce se pensasse di ottenere un prezzo migliore altrove, distruggendo il principio del 'pooling' e la capacità di pianificazione della cooperativa."
+    },
+    {
+      "id": "M1",
+      "quote": "un voto per membro",
+      "removal_test": "Senza identità stabili e riconoscibili per ogni membro, sarebbe impossibile assegnare diritti di voto, tracciare i contributi o calcolare le quote."
+    },
+    {
+      "id": "M2",
+      "quote": "Nel 1962 hanno fondato una cooperativa",
+      "removal_test": "Senza il legame di appartenenza al gruppo, non esisterebbe una cooperativa, ma solo 22 pescatori indipendenti."
+    },
+    {
+      "id": "M4",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi.",
+      "removal_test": "Senza un confine definito tra 'dentro' e 'fuori', chiunque potrebbe reclamare i benefici della cooperativa (carburante scontato, cella frigo) senza contribuire, portando al collasso del sistema."
+    },
+    {
+      "id": "W1",
+      "quote": "Tornano verso le 10-11 con il pescato.",
+      "removal_test": "Senza il 'pescato' come unità di lavoro che entra nel sistema, l'intero processo giornaliero di pesatura, catalogazione e distribuzione non avrebbe un oggetto su cui operare."
+    },
+    {
+      "id": "W2",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti",
+      "removal_test": "Senza una sequenza definita di stati e transizioni (es. arrivato -> pesato -> catalogato -> in lotto), la gestione del pescato sarebbe caotica, inefficiente e soggetta a errori."
+    },
+    {
+      "id": "W3",
+      "quote": "3 espulsioni: tutte per pesca illegale (sottomisura, zone protette).",
+      "removal_test": "Senza regole chiare e sanzioni (come l'espulsione per pesca illegale), i comportamenti dannosi per la comunità non verrebbero scoraggiati, minando l'integrità, la reputazione e la sostenibilità della cooperativa."
+    },
+    {
+      "id": "W4",
+      "quote": "in base al meteo, che un membro anziano valuta",
+      "removal_test": "Senza l'assegnazione di questa responsabilità, un compito critico per la sicurezza potrebbe non essere svolto, oppure essere svolto in modo incoerente da più persone, generando confusione e rischio."
+    },
+    {
+      "id": "S1",
+      "quote": "non tutti — a rotazione",
+      "removal_test": "Se il 'diritto di pescare' in un dato giorno non fosse trattato come una risorsa finita da allocare, tutti potrebbero uscire sempre, con rischi di sovrasfruttamento delle risorse ittiche e iniquità."
+    },
+    {
+      "id": "S3",
+      "quote": "a rotazione",
+      "removal_test": "Senza il concetto di 'turni' o 'slot temporali', il sistema a rotazione non potrebbe essere implementato. Sarebbe un 'tutti contro tutti'."
+    },
+    {
+      "id": "S4",
+      "quote": "a rotazione",
+      "removal_test": "Se i turni di pesca potessero sovrapporsi, il principio stesso della rotazione, che serve a garantire un accesso ordinato e non simultaneo alla risorsa, perderebbe ogni significato."
+    },
+    {
+      "id": "N1",
+      "quote": "in base al meteo",
+      "removal_test": "Se l'ambiente non emettesse segnali involontari sul suo stato (vento, onde), non ci sarebbe alcuna informazione su cui basare la decisione di uscire in mare, aumentando enormemente il pericolo."
+    },
+    {
+      "id": "N3",
+      "quote": "meteo, che un membro anziano valuta",
+      "removal_test": "Se le condizioni del meteo (il segnale) non fossero un'indicazione indiretta delle condizioni del mare (il sistema di interesse), valutarle sarebbe un'azione inutile e senza scopo."
+    },
+    {
+      "id": "N5",
+      "quote": "meteo, che un membro anziano valuta",
+      "removal_test": "Il sistema si basa sul fatto che il meteo (sorgente) è inconsapevole di essere osservato. Se potesse reagire all'osservazione, ogni previsione diventerebbe impossibile."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C4",
+    "I1",
+    "I2",
+    "I3",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "M1",
+    "M2",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "S1",
+    "S3",
+    "S4",
+    "N1",
+    "N3",
+    "N5"
+  ],
+  "n_primitives": 23,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"modifica degli statuti\",\n      \"removal_test\": \"Senza statuti persistenti, la cooperativa non avrebbe regole fondanti, base legale, o una struttura di governo a lungo termine. Si dissolverebbe in accordi informali.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"cataloga per specie e taglia\",\n      \"removal_test\": \"Senza una forma strutturata per i dati del pescato, sarebbe impossibile gestire l'inventario, stabilire prezzi coerenti o preparare lotti standardizzati per i mercati.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"ricevono mensilmente la loro quota proporzionalmente al pescato conferito\",\n      \"removal_test\": \"Senza l'accumulazione dei dati sui conferimenti di ogni membro durante il mese, sarebbe impossibile calcolare le quote proporzionali, facendo crollare il modello economico della cooperativa.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia\",\n      \"removal_test\": \"Se il pescato non fosse quantificato, la cooperativa non potrebbe gestirlo, venderlo, né calcolare le quote dei membri. L'operazione centrale del sistema sarebbe impossibile.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte.\",\n      \"removal_test\": \"Se il pescato (le scorte) fosse una risorsa infinita, non ci sarebbe bisogno di gestirlo, di variare i prezzi, o dell'intera cooperativa, che esiste per gestire una risorsa scarsa.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"pooling della pesca\",\n      \"removal_test\": \"Senza il concetto che il pescato appartiene al 'contenitore' comune della cooperativa, non esisterebbe un'entità collettiva. Ogni pescatore venderebbe per sé.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"quote\": \"distribuzione comune ai mercati del continente (Napoli, Palermo)\",\n      \"removal_test\": \"Senza le due parti (la cooperativa come venditore e i mercati come acquirenti), nessuna vendita potrebbe avvenire e la cooperativa non avrebbe entrate.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"quote\": \"I membri ricevono mensilmente la loro quota\",\n      \"removal_test\": \"Senza il trasferimento della quota economica ai membri, questi non avrebbero alcun incentivo a partecipare e il sistema crollerebbe.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte.\",\n      \"removal_test\": \"Senza un accordo sul prezzo, nessuna transazione di vendita potrebbe essere conclusa. La cooperativa non potrebbe vendere il suo prodotto.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"quote\": \"pescato conferito\",\n      \"removal_test\": \"Se il conferimento del pescato non fosse irreversibile, un pescatore potrebbe ritirare il proprio pesce se pensasse di ottenere un prezzo migliore altrove, distruggendo il principio del 'pooling' e la capacità di pianificazione della cooperativa.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"un voto per membro\",\n      \"removal_test\": \"Senza identità stabili e riconoscibili per ogni membro, sarebbe impossibile assegnare diritti di voto, tracciare i contributi o calcolare le quote.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"Nel 1962 hanno fondato una cooperativa\",\n      \"removal_test\": \"Senza il legame di appartenenza al gruppo, non esisterebbe una cooperativa, ma solo 22 pescatori indipendenti.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi.\",\n      \"removal_test\": \"Senza un confine definito tra 'dentro' e 'fuori', chiunque potrebbe reclamare i benefici della cooperativa (carburante scontato, cella frigo) senza contribuire, portando al collasso del sistema.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"Tornano verso le 10-11 con il pescato.\",\n      \"removal_test\": \"Senza il 'pescato' come unità di lavoro che entra nel sistema, l'intero processo giornaliero di pesatura, catalogazione e distribuzione non avrebbe un oggetto su cui operare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti\",\n      \"removal_test\": \"Senza una sequenza definita di stati e transizioni (es. arrivato -> pesato -> catalogato -> in lotto), la gestione del pescato sarebbe caotica, inefficiente e soggetta a errori.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"3 espulsioni: tutte per pesca illegale (sottomisura, zone protette).\",\n      \"removal_test\": \"Senza regole chiare e sanzioni (come l'espulsione per pesca illegale), i comportamenti dannosi per la comunità non verrebbero scoraggiati, minando l'integrità, la reputazione e la sostenibilità della cooperativa.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"in base al meteo, che un membro anziano valuta\",\n      \"removal_test\": \"Senza l'assegnazione di questa responsabilità, un compito critico per la sicurezza potrebbe non essere svolto, oppure essere svolto in modo incoerente da più persone, generando confusione e rischio.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"quote\": \"non tutti — a rotazione\",\n      \"removal_test\": \"Se il 'diritto di pescare' in un dato giorno non fosse trattato come una risorsa finita da allocare, tutti potrebbero uscire sempre, con rischi di sovrasfruttamento delle risorse ittiche e iniquità.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"quote\": \"a rotazione\",\n      \"removal_test\": \"Senza il concetto di 'turni' o 'slot temporali', il sistema a rotazione non potrebbe essere implementato. Sarebbe un 'tutti contro tutti'.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"quote\": \"a rotazione\",\n      \"removal_test\": \"Se i turni di pesca potessero sovrapporsi, il principio stesso della rotazione, che serve a garantire un accesso ordinato e non simultaneo alla risorsa, perderebbe ogni significato.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"quote\": \"in base al meteo\",\n      \"removal_test\": \"Se l'ambiente non emettesse segnali involontari sul suo stato (vento, onde), non ci sarebbe alcuna informazione su cui basare la decisione di uscire in mare, aumentando enormemente il pericolo.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"quote\": \"meteo, che un membro anziano valuta\",\n      \"removal_test\": \"Se le condizioni del meteo (il segnale) non fossero un'indicazione indiretta delle condizioni del mare (il sistema di interesse), valutarle sarebbe un'azione inutile e senza scopo.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"quote\": \"meteo, che un membro anziano valuta\",\n      \"removal_test\": \"Il sistema si basa sul fatto che il meteo (sorgente) è inconsapevole di essere osservato. Se potesse reagire all'osservazione, ogni previsione diventerebbe impossibile.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T22:59:35.923624+00:00"
+}

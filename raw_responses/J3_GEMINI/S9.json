@@ -1,0 +1,128 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 47.92,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5281,
+    "completion_tokens": 1733,
+    "total_tokens": 11486
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "quote": "Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati...",
+      "removal_test": "Senza la raccolta e conservazione intenzionale di questi documenti, le prove della vita e delle virtù del candidato andrebbero perse nel tempo, rendendo impossibile qualsiasi valutazione."
+    },
+    {
+      "id": "C2",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).",
+      "removal_test": "Senza una forma definita dalle regole, il processo sarebbe arbitrario e incoerente. Mancherbbe una struttura standard per la raccolta delle prove, la valutazione e le decisioni."
+    },
+    {
+      "id": "C3",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.",
+      "removal_test": "Se il dossier, una volta compilato, non fosse ritrovabile, le commissioni competenti a Roma non potrebbero accedervi per esaminarlo, bloccando il processo dopo la fase diocesana."
+    },
+    {
+      "id": "C4",
+      "quote": "la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato...",
+      "removal_test": "Senza l'accumulazione, il dossier sarebbe un documento statico. Il sistema perderebbe la capacità di costruire un caso completo aggiungendo nuove testimonianze o prove man mano che vengono scoperte."
+    },
+    {
+      "id": "C5",
+      "quote": "testimonianze scritte e orali di chi ha conosciuto il candidato...",
+      "removal_test": "Senza la relazione, una testimonianza o la notizia di un miracolo sarebbero fatti isolati. Il sistema perderebbe il legame cruciale che collega quella prova allo specifico candidato, rendendola irrilevante per la sua causa."
+    },
+    {
+      "id": "I1",
+      "quote": "Per arrivare alla beatificazione serve un miracolo autenticato... Dopo un secondo miracolo (post-beatificazione): 'Santo'.",
+      "removal_test": "Senza la capacità di quantificare, il sistema perderebbe i suoi requisiti misurabili. La distinzione netta tra il primo miracolo per diventare 'Beato' e il secondo per diventare 'Santo' svanirebbe."
+    },
+    {
+      "id": "I3",
+      "quote": "la sua diocesi può avviare una causa di beatificazione.",
+      "removal_test": "Senza l'appartenenza, non ci sarebbe una giurisdizione chiara. Sarebbe incerto quale entità ecclesiastica (diocesi) sia responsabile per l'avvio e la gestione della fase iniziale della causa."
+    },
+    {
+      "id": "I4",
+      "quote": "il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. ... Dopo il primo miracolo: 'Beato'. ... alcune cause sono archiviate ('sospese')",
+      "removal_test": "Senza stati definiti, il processo non avrebbe tappe riconoscibili. Sarebbe impossibile tracciare formalmente il progresso di una causa attraverso status distinti come 'Venerabile', 'Beato' o 'sospesa'."
+    },
+    {
+      "id": "M1",
+      "quote": "Quando una persona cattolica muore in odore di santità...",
+      "removal_test": "Senza un'identità persistente e univoca, l'intero processo sarebbe impossibile, poiché è fondamentalmente centrato sulla valutazione della vita di un individuo specifico."
+    },
+    {
+      "id": "M2",
+      "quote": "il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.",
+      "removal_test": "Senza il legame a un gruppo, i titoli 'Venerabile', 'Beato' e 'Santo' sarebbero semplici aggettivi, non l'ammissione formale a un gruppo riconosciuto di figure sante con uno status speciale all'interno della Chiesa."
+    },
+    {
+      "id": "M3",
+      "quote": "Un postulatore (nominato) compila il dossier... esaminati da una commissione teologica... una commissione di cardinali... il Papa firma un decreto...",
+      "removal_test": "Senza differenziazione, il sistema mancherebbe di una gerarchia di ruoli e autorità. Il giudizio di tutti i partecipanti avrebbe lo stesso peso, rendendo impossibile arrivare a una decisione finale e autorevole."
+    },
+    {
+      "id": "M4",
+      "quote": "la sua diocesi può avviare una causa di beatificazione.",
+      "removal_test": "Senza un confine, non ci sarebbe una distinzione chiara tra un fedele defunto e un candidato alla santità. L'atto di 'avviare una causa' crea questo confine essenziale, spostando la persona nel 'contenitore' del processo."
+    },
+    {
+      "id": "W1",
+      "quote": "il dossier viene inviato a Roma...",
+      "removal_test": "Senza un'unità di lavoro, non ci sarebbe un 'oggetto' discreto da processare. Il sistema mancherebbe di una 'causa' o 'dossier' coerente da far avanzare attraverso le varie fasi di valutazione."
+    },
+    {
+      "id": "W2",
+      "quote": "fase diocesana... il dossier viene inviato a Roma... il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.",
+      "removal_test": "Senza stati e transizioni, il processo non avrebbe un ordine logico. Le fasi potrebbero avvenire in modo casuale (es. valutazione del miracolo prima delle virtù), distruggendo l'integrità procedurale."
+    },
+    {
+      "id": "W3",
+      "quote": "Per arrivare alla beatificazione serve un miracolo autenticato...",
+      "removal_test": "Senza regole, il passaggio da uno stato all'altro sarebbe arbitrario. Non esisterebbe un criterio definito (come il miracolo) per far avanzare un candidato da 'Venerabile' a 'Beato'."
+    },
+    {
+      "id": "W4",
+      "quote": "Un postulatore (nominato) compila il dossier.",
+      "removal_test": "Senza responsabilità, i compiti chiave non sarebbero assegnati. Il processo si fermerebbe perché nessuna persona o ente specifico sarebbe incaricato di azioni critiche come la compilazione delle prove o la loro valutazione."
+    },
+    {
+      "id": "CO1",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.",
+      "removal_test": "Senza un emittente e un destinatario, l'indagine diocesana rimarrebbe un evento locale e isolato. Mancherbbe il meccanismo per trasmettere i risultati all'autorità centrale (Roma) per i passi successivi."
+    },
+    {
+      "id": "CO2",
+      "quote": "vengono esaminati da una commissione teologica per escludere eresie.",
+      "removal_test": "Senza un significato codificato, la valutazione sarebbe impossibile. Termini come 'eresia' o 'virtù eroiche' richiedono un vocabolario teologico condiviso e preciso per evitare interpretazioni soggettive e garantire un giudizio coerente."
+    }
+  ],
+  "primitive_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "I1",
+    "I3",
+    "I4",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "CO1",
+    "CO2"
+  ],
+  "n_primitives": 18,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"quote\": \"Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati...\",\n      \"removal_test\": \"Senza la raccolta e conservazione intenzionale di questi documenti, le prove della vita e delle virtù del candidato andrebbero perse nel tempo, rendendo impossibile qualsiasi valutazione.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).\",\n      \"removal_test\": \"Senza una forma definita dalle regole, il processo sarebbe arbitrario e incoerente. Mancherbbe una struttura standard per la raccolta delle prove, la valutazione e le decisioni.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.\",\n      \"removal_test\": \"Se il dossier, una volta compilato, non fosse ritrovabile, le commissioni competenti a Roma non potrebbero accedervi per esaminarlo, bloccando il processo dopo la fase diocesana.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"quote\": \"la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato...\",\n      \"removal_test\": \"Senza l'accumulazione, il dossier sarebbe un documento statico. Il sistema perderebbe la capacità di costruire un caso completo aggiungendo nuove testimonianze o prove man mano che vengono scoperte.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"quote\": \"testimonianze scritte e orali di chi ha conosciuto il candidato...\",\n      \"removal_test\": \"Senza la relazione, una testimonianza o la notizia di un miracolo sarebbero fatti isolati. Il sistema perderebbe il legame cruciale che collega quella prova allo specifico candidato, rendendola irrilevante per la sua causa.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"quote\": \"Per arrivare alla beatificazione serve un miracolo autenticato... Dopo un secondo miracolo (post-beatificazione): 'Santo'.\",\n      \"removal_test\": \"Senza la capacità di quantificare, il sistema perderebbe i suoi requisiti misurabili. La distinzione netta tra il primo miracolo per diventare 'Beato' e il secondo per diventare 'Santo' svanirebbe.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione.\",\n      \"removal_test\": \"Senza l'appartenenza, non ci sarebbe una giurisdizione chiara. Sarebbe incerto quale entità ecclesiastica (diocesi) sia responsabile per l'avvio e la gestione della fase iniziale della causa.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"quote\": \"il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. ... Dopo il primo miracolo: 'Beato'. ... alcune cause sono archiviate ('sospese')\",\n      \"removal_test\": \"Senza stati definiti, il processo non avrebbe tappe riconoscibili. Sarebbe impossibile tracciare formalmente il progresso di una causa attraverso status distinti come 'Venerabile', 'Beato' o 'sospesa'.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"quote\": \"Quando una persona cattolica muore in odore di santità...\",\n      \"removal_test\": \"Senza un'identità persistente e univoca, l'intero processo sarebbe impossibile, poiché è fondamentalmente centrato sulla valutazione della vita di un individuo specifico.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"quote\": \"il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.\",\n      \"removal_test\": \"Senza il legame a un gruppo, i titoli 'Venerabile', 'Beato' e 'Santo' sarebbero semplici aggettivi, non l'ammissione formale a un gruppo riconosciuto di figure sante con uno status speciale all'interno della Chiesa.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier... esaminati da una commissione teologica... una commissione di cardinali... il Papa firma un decreto...\",\n      \"removal_test\": \"Senza differenziazione, il sistema mancherebbe di una gerarchia di ruoli e autorità. Il giudizio di tutti i partecipanti avrebbe lo stesso peso, rendendo impossibile arrivare a una decisione finale e autorevole.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione.\",\n      \"removal_test\": \"Senza un confine, non ci sarebbe una distinzione chiara tra un fedele defunto e un candidato alla santità. L'atto di 'avviare una causa' crea questo confine essenziale, spostando la persona nel 'contenitore' del processo.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"quote\": \"il dossier viene inviato a Roma...\",\n      \"removal_test\": \"Senza un'unità di lavoro, non ci sarebbe un 'oggetto' discreto da processare. Il sistema mancherebbe di una 'causa' o 'dossier' coerente da far avanzare attraverso le varie fasi di valutazione.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"quote\": \"fase diocesana... il dossier viene inviato a Roma... il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.\",\n      \"removal_test\": \"Senza stati e transizioni, il processo non avrebbe un ordine logico. Le fasi potrebbero avvenire in modo casuale (es. valutazione del miracolo prima delle virtù), distruggendo l'integrità procedurale.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"quote\": \"Per arrivare alla beatificazione serve un miracolo autenticato...\",\n      \"removal_test\": \"Senza regole, il passaggio da uno stato all'altro sarebbe arbitrario. Non esisterebbe un criterio definito (come il miracolo) per far avanzare un candidato da 'Venerabile' a 'Beato'.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier.\",\n      \"removal_test\": \"Senza responsabilità, i compiti chiave non sarebbero assegnati. Il processo si fermerebbe perché nessuna persona o ente specifico sarebbe incaricato di azioni critiche come la compilazione delle prove o la loro valutazione.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.\",\n      \"removal_test\": \"Senza un emittente e un destinatario, l'indagine diocesana rimarrebbe un evento locale e isolato. Mancherbbe il meccanismo per trasmettere i risultati all'autorità centrale (Roma) per i passi successivi.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"quote\": \"vengono esaminati da una commissione teologica per escludere eresie.\",\n      \"removal_test\": \"Senza un significato codificato, la valutazione sarebbe impossibile. Termini come 'eresia' o 'virtù eroiche' richiedono un vocabolario teologico condiviso e preciso per evitare interpretazioni soggettive e garantire un giudizio coerente.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T23:00:23.847241+00:00"
+}
