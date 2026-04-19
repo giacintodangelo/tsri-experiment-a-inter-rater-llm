@@ -1,0 +1,155 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S1",
+  "system_title": "Sistema di prenotazione voli (tipo Kayak/Skyscanner)",
+  "attempt": 2,
+  "elapsed_s": 64.2,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5413,
+    "completion_tokens": 2292,
+    "total_tokens": 13129
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.",
+      "removal_test": "Se rimuovessimo la capacità di registrare utenti e monitorare rotte, il sistema perderebbe una funzione di personalizzazione e notifica, ma la sua identità centrale di motore di ricerca di voli per utenti anonimi rimarrebbe intatta."
+    },
+    {
+      "id": "C2",
+      "tier": "NUCLEAR",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.",
+      "removal_test": "Se rimuovessimo la forma strutturata della richiesta, il sistema non potrebbe interrogare le compagnie aeree. Cesserebbe di essere un motore di ricerca funzionante, perdendo la sua identità fondamentale."
+    },
+    {
+      "id": "C3",
+      "tier": "NUCLEAR",
+      "quote": "permette agli utenti di cercare voli tra coppie di aeroporti in date specifiche.",
+      "removal_test": "Se rimuovessimo la capacità di trovare voli, il sistema perderebbe il suo scopo primario. La sua intera identità si basa sulla ritrovabilità delle opzioni di viaggio."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.",
+      "removal_test": "Se il sistema smettesse di accumulare e vendere statistiche di ricerca, il suo modello di business secondario svanirebbe, ma la sua funzione principale di aggregatore di voli per gli utenti finali non verrebbe alterata."
+    },
+    {
+      "id": "C5",
+      "tier": "NUCLEAR",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento.",
+      "removal_test": "Se rimuovessimo il reindirizzamento al sito della compagnia, l'utente potrebbe vedere i voli ma non agire. Il sistema passerebbe da aggregatore che facilita la prenotazione a semplice elenco informativo, perdendo un elemento chiave della sua identità."
+    },
+    {
+      "id": "I1",
+      "tier": "PRESENT",
+      "quote": "disponibilità residua di posti.",
+      "removal_test": "Se il sistema smettesse di mostrare il numero esatto di posti rimanenti, l'utente perderebbe un'informazione utile, ma potrebbe comunque cercare, trovare e confrontare voli. L'identità del sistema come aggregatore non crollerebbe."
+    },
+    {
+      "id": "I2",
+      "tier": "NUCLEAR",
+      "quote": "disponibilità residua di posti.",
+      "removal_test": "Se i posti su un volo non fossero finiti, l'intero concetto di 'disponibilità', 'prenotazione' e scarsità verrebbe meno. Il sistema, che si basa sulla ricerca di risorse scarse, diventerebbe privo di significato."
+    },
+    {
+      "id": "I3",
+      "tier": "NUCLEAR",
+      "quote": "Ciascuna opzione mostra compagnia, orari, prezzo corrente...",
+      "removal_test": "Se un'opzione di volo non fosse associata a una specifica compagnia aerea, l'informazione sarebbe incompleta e inutilizzabile. L'identità di un volo è inseparabile da quella del suo operatore."
+    },
+    {
+      "id": "I4",
+      "tier": "NUCLEAR",
+      "quote": "prezzo corrente, disponibilità residua di posti.",
+      "removal_test": "Se il sistema non mostrasse lo stato attuale (prezzo e disponibilità) dei voli, fornirebbe dati inutili o fuorvianti. La sua identità si fonda sull'offrire un'istantanea aggiornata e azionabile del mercato."
+    },
+    {
+      "id": "M1",
+      "tier": "PRESENT",
+      "quote": "Gli utenti registrati ricevono avvisi email...",
+      "removal_test": "Se rimuovessimo l'identità degli utenti registrati, il sistema perderebbe le funzionalità di personalizzazione come gli avvisi, ma la sua funzione principale di ricerca anonima di voli rimarrebbe pienamente operativa."
+    },
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.",
+      "removal_test": "Se non ci fosse la query dell'utente come 'unità di lavoro', l'intero processo del sistema non potrebbe iniziare. L'intero sistema è costruito per processare questa specifica unità di input."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "cercare voli... mostra una lista di opzioni... Quando seleziona un'opzione, la piattaforma lo reindirizza...",
+      "removal_test": "Se questa sequenza di stati e transizioni (ricerca -> risultati -> selezione -> reindirizzamento) venisse interrotta, il flusso utente fondamentale si spezzerebbe. Il sistema non sarebbe più un'applicazione interattiva per la prenotazione, ma un insieme disconnesso di informazioni."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici).",
+      "removal_test": "Se rimuovessimo le regole di filtraggio, il sistema diventerebbe meno usabile, specialmente per ricerche complesse, ma la sua funzione fondamentale di cercare e mostrare tutti i risultati disponibili rimarrebbe intatta."
+    },
+    {
+      "id": "S1",
+      "tier": "NUCLEAR",
+      "quote": "disponibilità residua di posti.",
+      "removal_test": "Se la risorsa 'posto su un volo specifico' non fosse finita e allocabile nel tempo, l'intero dominio dello scheduling e della prenotazione non esisterebbe. L'identità del sistema dipende da questa scarsità."
+    },
+    {
+      "id": "S2",
+      "tier": "NUCLEAR",
+      "quote": "permette agli utenti di cercare voli...",
+      "removal_test": "Se non ci fosse un 'richiedente' (l'utente), il sistema sarebbe inerte. È intrinsecamente progettato per rispondere a una domanda esterna; senza domanda, non ha funzione."
+    },
+    {
+      "id": "S3",
+      "tier": "NUCLEAR",
+      "quote": "Ciascuna opzione mostra compagnia, orari, prezzo corrente...",
+      "removal_test": "Se un volo non fosse definito da uno 'slot temporale' (gli orari di partenza e arrivo), sarebbe un'entità astratta e non prenotabile. L'identità del prodotto venduto è lo slot."
+    },
+    {
+      "id": "S4",
+      "tier": "NUCLEAR",
+      "quote": "(Implicito nella logica di 'disponibilità residua')",
+      "removal_test": "Se lo stesso posto potesse essere venduto più volte per lo stesso volo (violando la non-sovrapposizione), il concetto di prenotazione sicura crollerebbe. Questa è la regola fondamentale che rende l'intero sistema di scheduling necessario e affidabile."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.",
+      "removal_test": "Se rimuovessimo la comunicazione via email per gli avvisi di prezzo, il sistema perderebbe una feature proattiva, ma la sua funzione reattiva principale (cerca e trova) non verrebbe compromessa."
+    },
+    {
+      "id": "N1",
+      "tier": "PRESENT",
+      "quote": "I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie.",
+      "removal_test": "Il sistema osserva i prezzi come segnali emessi dagli algoritmi delle compagnie. Se questi prezzi fossero statici e non fluttuassero, il sistema sarebbe meno dinamico ma funzionerebbe ancora, mostrando semplicemente un listino prezzi fisso."
+    },
+    {
+      "id": "N2",
+      "tier": "NUCLEAR",
+      "quote": "prezzo corrente",
+      "removal_test": "Se il prezzo mostrato non fosse legato a un momento preciso ('adesso'), sarebbe un'informazione priva di valore e potenzialmente falsa, data la sua volatilità. L'identità del sistema è fornire dati la cui validità è costitutivamente legata al tempo."
+    },
+    {
+      "id": "N4",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.",
+      "removal_test": "Se il sistema smettesse di accumulare i dati di telemetria (le ricerche degli utenti) in serie storiche per analisi, perderebbe un prodotto dati secondario, ma la sua funzione primaria di aggregatore per i viaggiatori non ne risentirebbe."
+    },
+    {
+      "id": "N5",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie...",
+      "removal_test": "Il sistema osserva le ricerche degli utenti (sorgente passiva) per creare un prodotto per le compagnie (osservatore attivo). Se questa asimmetria venisse rimossa (es. smettendo di osservare), solo il business di intelligence di mercato cesserebbe, non la funzione principale."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 13,
+    "INFERRED": 0,
+    "PRESENT": 9
+  },
+  "n_total": 22,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.\",\n      \"removal_test\": \"Se rimuovessimo la capacità di registrare utenti e monitorare rotte, il sistema perderebbe una funzione di personalizzazione e notifica, ma la sua identità centrale di motore di ricerca di voli per utenti anonimi rimarrebbe intatta.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.\",\n      \"removal_test\": \"Se rimuovessimo la forma strutturata della richiesta, il sistema non potrebbe interrogare le compagnie aeree. Cesserebbe di essere un motore di ricerca funzionante, perdendo la sua identità fondamentale.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"permette agli utenti di cercare voli tra coppie di aeroporti in date specifiche.\",\n      \"removal_test\": \"Se rimuovessimo la capacità di trovare voli, il sistema perderebbe il suo scopo primario. La sua intera identità si basa sulla ritrovabilità delle opzioni di viaggio.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.\",\n      \"removal_test\": \"Se il sistema smettesse di accumulare e vendere statistiche di ricerca, il suo modello di business secondario svanirebbe, ma la sua funzione principale di aggregatore di voli per gli utenti finali non verrebbe alterata.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento.\",\n      \"removal_test\": \"Se rimuovessimo il reindirizzamento al sito della compagnia, l'utente potrebbe vedere i voli ma non agire. Il sistema passerebbe da aggregatore che facilita la prenotazione a semplice elenco informativo, perdendo un elemento chiave della sua identità.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"disponibilità residua di posti.\",\n      \"removal_test\": \"Se il sistema smettesse di mostrare il numero esatto di posti rimanenti, l'utente perderebbe un'informazione utile, ma potrebbe comunque cercare, trovare e confrontare voli. L'identità del sistema come aggregatore non crollerebbe.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"disponibilità residua di posti.\",\n      \"removal_test\": \"Se i posti su un volo non fossero finiti, l'intero concetto di 'disponibilità', 'prenotazione' e scarsità verrebbe meno. Il sistema, che si basa sulla ricerca di risorse scarse, diventerebbe privo di significato.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ciascuna opzione mostra compagnia, orari, prezzo corrente...\",\n      \"removal_test\": \"Se un'opzione di volo non fosse associata a una specifica compagnia aerea, l'informazione sarebbe incompleta e inutilizzabile. L'identità di un volo è inseparabile da quella del suo operatore.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"prezzo corrente, disponibilità residua di posti.\",\n      \"removal_test\": \"Se il sistema non mostrasse lo stato attuale (prezzo e disponibilità) dei voli, fornirebbe dati inutili o fuorvianti. La sua identità si fonda sull'offrire un'istantanea aggiornata e azionabile del mercato.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email...\",\n      \"removal_test\": \"Se rimuovessimo l'identità degli utenti registrati, il sistema perderebbe le funzionalità di personalizzazione come gli avvisi, ma la sua funzione principale di ricerca anonima di voli rimarrebbe pienamente operativa.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.\",\n      \"removal_test\": \"Se non ci fosse la query dell'utente come 'unità di lavoro', l'intero processo del sistema non potrebbe iniziare. L'intero sistema è costruito per processare questa specifica unità di input.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"cercare voli... mostra una lista di opzioni... Quando seleziona un'opzione, la piattaforma lo reindirizza...\",\n      \"removal_test\": \"Se questa sequenza di stati e transizioni (ricerca -> risultati -> selezione -> reindirizzamento) venisse interrotta, il flusso utente fondamentale si spezzerebbe. Il sistema non sarebbe più un'applicazione interattiva per la prenotazione, ma un insieme disconnesso di informazioni.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'utente può aggiungere filtri (bagaglio incluso, solo diretti, orari specifici).\",\n      \"removal_test\": \"Se rimuovessimo le regole di filtraggio, il sistema diventerebbe meno usabile, specialmente per ricerche complesse, ma la sua funzione fondamentale di cercare e mostrare tutti i risultati disponibili rimarrebbe intatta.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"disponibilità residua di posti.\",\n      \"removal_test\": \"Se la risorsa 'posto su un volo specifico' non fosse finita e allocabile nel tempo, l'intero dominio dello scheduling e della prenotazione non esisterebbe. L'identità del sistema dipende da questa scarsità.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"permette agli utenti di cercare voli...\",\n      \"removal_test\": \"Se non ci fosse un 'richiedente' (l'utente), il sistema sarebbe inerte. È intrinsecamente progettato per rispondere a una domanda esterna; senza domanda, non ha funzione.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ciascuna opzione mostra compagnia, orari, prezzo corrente...\",\n      \"removal_test\": \"Se un volo non fosse definito da uno 'slot temporale' (gli orari di partenza e arrivo), sarebbe un'entità astratta e non prenotabile. L'identità del prodotto venduto è lo slot.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"(Implicito nella logica di 'disponibilità residua')\",\n      \"removal_test\": \"Se lo stesso posto potesse essere venduto più volte per lo stesso volo (violando la non-sovrapposizione), il concetto di prenotazione sicura crollerebbe. Questa è la regola fondamentale che rende l'intero sistema di scheduling necessario e affidabile.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.\",\n      \"removal_test\": \"Se rimuovessimo la comunicazione via email per gli avvisi di prezzo, il sistema perderebbe una feature proattiva, ma la sua funzione reattiva principale (cerca e trova) non verrebbe compromessa.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie.\",\n      \"removal_test\": \"Il sistema osserva i prezzi come segnali emessi dagli algoritmi delle compagnie. Se questi prezzi fossero statici e non fluttuassero, il sistema sarebbe meno dinamico ma funzionerebbe ancora, mostrando semplicemente un listino prezzi fisso.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"prezzo corrente\",\n      \"removal_test\": \"Se il prezzo mostrato non fosse legato a un momento preciso ('adesso'), sarebbe un'informazione priva di valore e potenzialmente falsa, data la sua volatilità. L'identità del sistema è fornire dati la cui validità è costitutivamente legata al tempo.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.\",\n      \"removal_test\": \"Se il sistema smettesse di accumulare i dati di telemetria (le ricerche degli utenti) in serie storiche per analisi, perderebbe un prodotto dati secondario, ma la sua funzione primaria di aggregatore per i viaggiatori non ne risentirebbe.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie...\",\n      \"removal_test\": \"Il sistema osserva le ricerche degli utenti (sorgente passiva) per creare un prodotto per le compagnie (osservatore attivo). Se questa asimmetria venisse rimossa (es. smettendo di osservare), solo il business di intelligence di mercato cesserebbe, non la funzione principale.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T23:49:44.563830+00:00"
+}

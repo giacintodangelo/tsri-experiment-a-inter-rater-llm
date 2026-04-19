@@ -1,0 +1,93 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S10",
+  "system_title": "Conto corrente bancario",
+  "attempt": 1,
+  "elapsed_s": 10.15,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 764,
+    "prompt_tokens": 5548,
+    "total_tokens": 6312,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Un cittadino apre un conto corrente presso una banca.",
+      "removal_test": "Senza l'identità del cliente, il conto corrente non può esistere come entità associata a una persona specifica."
+    },
+    {
+      "id": "T1",
+      "tier": "NUCLEAR",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta.",
+      "removal_test": "Senza la relazione tra due parti (cliente e banca), le transazioni non possono avvenire, eliminando la funzione principale del conto corrente."
+    },
+    {
+      "id": "T2",
+      "tier": "NUCLEAR",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza l'oggetto di trasferimento, non ci sarebbero movimenti di denaro, rendendo il conto corrente inutile."
+    },
+    {
+      "id": "I1",
+      "tier": "PRESENT",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido.",
+      "removal_test": "Senza la quantificazione del saldo, il cliente non potrebbe sapere quanto denaro ha a disposizione, ma il conto esisterebbe ancora."
+    },
+    {
+      "id": "I2",
+      "tier": "PRESENT",
+      "quote": "Il fido ha un tasso di interesse: lo scoperto costa.",
+      "removal_test": "Senza la finitezza delle risorse (limite del fido), il conto corrente sarebbe meno regolato, ma continuerebbe a funzionare."
+    },
+    {
+      "id": "W2",
+      "tier": "PRESENT",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza stati e transizioni, non ci sarebbe un ordine strutturato delle operazioni, ma il conto potrebbe ancora esistere."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML).",
+      "removal_test": "Senza regole, il conto corrente sarebbe meno sicuro e regolamentato, ma continuerebbe a esistere."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "Senza la traccia temporale costitutiva, il cliente non avrebbe una cronologia delle transazioni, ma il conto esisterebbe ancora."
+    },
+    {
+      "id": "M2",
+      "tier": "INFERRED",
+      "quote": "Il cliente può chiudere il conto in qualsiasi momento; la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.",
+      "removal_test": "Senza il legame al gruppo (banca), il conto corrente perderebbe il suo contesto istituzionale, ma potrebbe ancora esistere come concetto astratto."
+    },
+    {
+      "id": "S1",
+      "tier": "INFERRED",
+      "quote": "Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.",
+      "removal_test": "Senza la risorsa finita (tempo e denaro), il conto corrente sarebbe meno regolato, ma continuerebbe a funzionare."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 3,
+    "INFERRED": 2,
+    "PRESENT": 5
+  },
+  "n_total": 10,
+  "raw_response": "{\"primitives\": [{\"id\": \"M1\", \"tier\": \"NUCLEAR\", \"quote\": \"Un cittadino apre un conto corrente presso una banca.\", \"removal_test\": \"Senza l'identità del cliente, il conto corrente non può esistere come entità associata a una persona specifica.\"}, {\"id\": \"T1\", \"tier\": \"NUCLEAR\", \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta.\", \"removal_test\": \"Senza la relazione tra due parti (cliente e banca), le transazioni non possono avvenire, eliminando la funzione principale del conto corrente.\"}, {\"id\": \"T2\", \"tier\": \"NUCLEAR\", \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\", \"removal_test\": \"Senza l'oggetto di trasferimento, non ci sarebbero movimenti di denaro, rendendo il conto corrente inutile.\"}, {\"id\": \"I1\", \"tier\": \"PRESENT\", \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido.\", \"removal_test\": \"Senza la quantificazione del saldo, il cliente non potrebbe sapere quanto denaro ha a disposizione, ma il conto esisterebbe ancora.\"}, {\"id\": \"I2\", \"tier\": \"PRESENT\", \"quote\": \"Il fido ha un tasso di interesse: lo scoperto costa.\", \"removal_test\": \"Senza la finitezza delle risorse (limite del fido), il conto corrente sarebbe meno regolato, ma continuerebbe a funzionare.\"}, {\"id\": \"W2\", \"tier\": \"PRESENT\", \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\", \"removal_test\": \"Senza stati e transizioni, non ci sarebbe un ordine strutturato delle operazioni, ma il conto potrebbe ancora esistere.\"}, {\"id\": \"W3\", \"tier\": \"PRESENT\", \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML).\", \"removal_test\": \"Senza regole, il conto corrente sarebbe meno sicuro e regolamentato, ma continuerebbe a esistere.\"}, {\"id\": \"N2\", \"tier\": \"PRESENT\", \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\", \"removal_test\": \"Senza la traccia temporale costitutiva, il cliente non avrebbe una cronologia delle transazioni, ma il conto esisterebbe ancora.\"}, {\"id\": \"M2\", \"tier\": \"INFERRED\", \"quote\": \"Il cliente può chiudere il conto in qualsiasi momento; la banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.\", \"removal_test\": \"Senza il legame al gruppo (banca), il conto corrente perderebbe il suo contesto istituzionale, ma potrebbe ancora esistere come concetto astratto.\"}, {\"id\": \"S1\", \"tier\": \"INFERRED\", \"quote\": \"Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.\", \"removal_test\": \"Senza la risorsa finita (tempo e denaro), il conto corrente sarebbe meno regolato, ma continuerebbe a funzionare.\"}]}",
+  "timestamp_utc": "2026-04-18T23:47:29.523707+00:00"
+}

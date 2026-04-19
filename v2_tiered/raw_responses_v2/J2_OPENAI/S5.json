@@ -1,0 +1,63 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S5",
+  "system_title": "Metamorfosi della rana",
+  "attempt": 1,
+  "elapsed_s": 5.03,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 405,
+    "prompt_tokens": 5530,
+    "total_tokens": 5935,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "P2_TRANSFORMATION",
+      "tier": "NUCLEAR",
+      "quote": "A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi.",
+      "removal_test": "Senza la trasformazione, il sistema non sarebbe più un ciclo di metamorfosi, ma solo una fase statica."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "Il ciclo si ripete: uova → girini → metamorfosi → adulti.",
+      "removal_test": "Senza stati e transizioni, non ci sarebbe un ciclo di vita strutturato, ma solo un insieme di eventi scollegati."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Il tempo dal girino all'adulto varia da 8 settimane a 2-3 anni secondo la specie e le condizioni.",
+      "removal_test": "Rimuovendo la traccia temporale, si perderebbe la comprensione della durata e variabilità del ciclo, ma il ciclo stesso esisterebbe ancora."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "cresce, accumula massa",
+      "removal_test": "Senza accumulazione, il girino non potrebbe crescere, ma il processo di metamorfosi potrebbe ancora avvenire in una forma diversa."
+    },
+    {
+      "id": "W1",
+      "tier": "INFERRED",
+      "quote": "Durante questa fase il girino è vulnerabile — nuota male, non mangia, deve stare vicino alla superficie per respirare con i polmoni in formazione.",
+      "removal_test": "L'unità di lavoro è inferita come il processo di metamorfosi che il girino subisce, ma la sua rimozione non distruggerebbe l'identità del sistema."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 2,
+    "INFERRED": 1,
+    "PRESENT": 2
+  },
+  "n_total": 5,
+  "raw_response": "{\"primitives\": [{\"id\": \"P2_TRANSFORMATION\", \"tier\": \"NUCLEAR\", \"quote\": \"A un certo punto — determinato da temperatura, disponibilità di cibo, livelli ormonali — inizia la metamorfosi.\", \"removal_test\": \"Senza la trasformazione, il sistema non sarebbe più un ciclo di metamorfosi, ma solo una fase statica.\"}, {\"id\": \"W2\", \"tier\": \"NUCLEAR\", \"quote\": \"Il ciclo si ripete: uova → girini → metamorfosi → adulti.\", \"removal_test\": \"Senza stati e transizioni, non ci sarebbe un ciclo di vita strutturato, ma solo un insieme di eventi scollegati.\"}, {\"id\": \"N2\", \"tier\": \"PRESENT\", \"quote\": \"Il tempo dal girino all'adulto varia da 8 settimane a 2-3 anni secondo la specie e le condizioni.\", \"removal_test\": \"Rimuovendo la traccia temporale, si perderebbe la comprensione della durata e variabilità del ciclo, ma il ciclo stesso esisterebbe ancora.\"}, {\"id\": \"C4\", \"tier\": \"PRESENT\", \"quote\": \"cresce, accumula massa\", \"removal_test\": \"Senza accumulazione, il girino non potrebbe crescere, ma il processo di metamorfosi potrebbe ancora avvenire in una forma diversa.\"}, {\"id\": \"W1\", \"tier\": \"INFERRED\", \"quote\": \"Durante questa fase il girino è vulnerabile — nuota male, non mangia, deve stare vicino alla superficie per respirare con i polmoni in formazione.\", \"removal_test\": \"L'unità di lavoro è inferita come il processo di metamorfosi che il girino subisce, ma la sua rimozione non distruggerebbe l'identità del sistema.\"}]}",
+  "timestamp_utc": "2026-04-18T23:46:57.671587+00:00"
+}

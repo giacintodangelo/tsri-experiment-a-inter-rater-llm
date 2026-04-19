@@ -1,0 +1,22 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S6",
+  "system_title": "Migrazione verticale del plancton",
+  "attempt": 2,
+  "elapsed_s": 69.11,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5461,
+    "completion_tokens": 0,
+    "total_tokens": 13650
+  },
+  "primitives_identified": [],
+  "tier_counts": {
+    "NUCLEAR": 0,
+    "INFERRED": 0,
+    "PRESENT": 0
+  },
+  "n_total": 0,
+  "raw_response": "EMPTY_RESPONSE {\"finish_reason\": \"2\", \"safety_ratings\": []}",
+  "timestamp_utc": "2026-04-18T23:55:43.041440+00:00"
+}

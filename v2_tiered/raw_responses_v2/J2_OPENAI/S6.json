@@ -1,0 +1,63 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S6",
+  "system_title": "Migrazione verticale del plancton",
+  "attempt": 1,
+  "elapsed_s": 4.35,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 426,
+    "prompt_tokens": 5526,
+    "total_tokens": 5952,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "La discesa mattutina e la salita serale sono sincronizzate dalla luce",
+      "removal_test": "Senza la sequenza di stati e transizioni (discesa e salita), la migrazione verticale non avverrebbe."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "L'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto",
+      "removal_test": "Senza le regole che innescano il movimento basato sulla luce, il comportamento sarebbe meno coordinato ma la migrazione potrebbe ancora avvenire in qualche forma."
+    },
+    {
+      "id": "W1",
+      "tier": "INFERRED",
+      "quote": "Ogni giorno, in tutti gli oceani del pianeta, miliardi di piccoli organismi ... compiono una migrazione verticale",
+      "removal_test": "Senza l'unità di lavoro (organismi migranti), il processo di migrazione non avrebbe soggetti, ma il concetto di migrazione potrebbe ancora esistere come fenomeno teorico."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "La migrazione influisce sulla pompa biologica dell'oceano",
+      "removal_test": "Senza la traccia temporale costitutiva, non si potrebbe correlare la migrazione con l'effetto sulla pompa biologica, ma la migrazione stessa continuerebbe."
+    },
+    {
+      "id": "N4",
+      "tier": "INFERRED",
+      "quote": "La migrazione, detta 'diel vertical migration', è il più grande movimento di biomassa del pianeta",
+      "removal_test": "Senza il pattern per accumulazione, non si potrebbe osservare il fenomeno come il più grande movimento di biomassa, ma la migrazione avverrebbe comunque."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 1,
+    "INFERRED": 2,
+    "PRESENT": 2
+  },
+  "n_total": 5,
+  "raw_response": "{\"primitives\": [{\"id\": \"W2\", \"tier\": \"NUCLEAR\", \"quote\": \"La discesa mattutina e la salita serale sono sincronizzate dalla luce\", \"removal_test\": \"Senza la sequenza di stati e transizioni (discesa e salita), la migrazione verticale non avverrebbe.\"}, {\"id\": \"W3\", \"tier\": \"PRESENT\", \"quote\": \"L'intensità luminosa scende sotto una soglia di percezione dell'occhio del copepode, innescando il nuoto verso l'alto\", \"removal_test\": \"Senza le regole che innescano il movimento basato sulla luce, il comportamento sarebbe meno coordinato ma la migrazione potrebbe ancora avvenire in qualche forma.\"}, {\"id\": \"W1\", \"tier\": \"INFERRED\", \"quote\": \"Ogni giorno, in tutti gli oceani del pianeta, miliardi di piccoli organismi ... compiono una migrazione verticale\", \"removal_test\": \"Senza l'unità di lavoro (organismi migranti), il processo di migrazione non avrebbe soggetti, ma il concetto di migrazione potrebbe ancora esistere come fenomeno teorico.\"}, {\"id\": \"N2\", \"tier\": \"PRESENT\", \"quote\": \"La migrazione influisce sulla pompa biologica dell'oceano\", \"removal_test\": \"Senza la traccia temporale costitutiva, non si potrebbe correlare la migrazione con l'effetto sulla pompa biologica, ma la migrazione stessa continuerebbe.\"}, {\"id\": \"N4\", \"tier\": \"INFERRED\", \"quote\": \"La migrazione, detta 'diel vertical migration', è il più grande movimento di biomassa del pianeta\", \"removal_test\": \"Senza il pattern per accumulazione, non si potrebbe osservare il fenomeno come il più grande movimento di biomassa, ma la migrazione avverrebbe comunque.\"}]}",
+  "timestamp_utc": "2026-04-18T23:47:02.018093+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S7",
+  "system_title": "Redazione di un quotidiano cartaceo",
+  "attempt": 1,
+  "elapsed_s": 5.55,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 680,
+    "prompt_tokens": 5570,
+    "total_tokens": 6250,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.",
+      "removal_test": "Senza l'unità di lavoro, il processo di revisione e pubblicazione degli articoli non esisterebbe."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "Ogni mattina alle 9, il direttore riunisce i capiredattori: si passano in rassegna le notizie della notte, si decide la 'prima pagina', si assegnano i pezzi.",
+      "removal_test": "Senza stati e transizioni, non ci sarebbe un flusso strutturato di lavoro dalla riunione mattutina alla pubblicazione."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.",
+      "removal_test": "Senza regole, il processo di revisione sarebbe meno strutturato, ma il giornale potrebbe ancora esistere."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "Un giornale nazionale ha una sala redazione con 80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport.",
+      "removal_test": "Senza legame al gruppo, i giornalisti non sarebbero organizzati in desk, ma il giornale potrebbe ancora funzionare."
+    },
+    {
+      "id": "M3",
+      "tier": "PRESENT",
+      "quote": "Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.",
+      "removal_test": "Senza differenziazione, i ruoli di revisione sarebbero meno chiari, ma il giornale potrebbe ancora esistere."
+    },
+    {
+      "id": "C1",
+      "tier": "INFERRED",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "Senza persistenza intenzionale, l'archivio storico non esisterebbe, ma il giornale quotidiano potrebbe ancora funzionare."
+    },
+    {
+      "id": "C3",
+      "tier": "INFERRED",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "Senza ritrovabilità, l'archivio sarebbe meno accessibile, ma il giornale quotidiano potrebbe ancora funzionare."
+    },
+    {
+      "id": "T1",
+      "tier": "INFERRED",
+      "quote": "Le news online seguono un ciclo diverso: pubblicazione continua, aggiornamenti, verifiche meno rigorose, metriche di click che influenzano le promozioni.",
+      "removal_test": "Senza due parti, l'interazione tra giornalisti e lettori online sarebbe meno definita, ma il giornale cartaceo potrebbe ancora esistere."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 2,
+    "INFERRED": 3,
+    "PRESENT": 3
+  },
+  "n_total": 8,
+  "raw_response": "{\"primitives\": [{\"id\": \"W1\", \"tier\": \"NUCLEAR\", \"quote\": \"Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.\", \"removal_test\": \"Senza l'unità di lavoro, il processo di revisione e pubblicazione degli articoli non esisterebbe.\"}, {\"id\": \"W2\", \"tier\": \"NUCLEAR\", \"quote\": \"Ogni mattina alle 9, il direttore riunisce i capiredattori: si passano in rassegna le notizie della notte, si decide la 'prima pagina', si assegnano i pezzi.\", \"removal_test\": \"Senza stati e transizioni, non ci sarebbe un flusso strutturato di lavoro dalla riunione mattutina alla pubblicazione.\"}, {\"id\": \"W3\", \"tier\": \"PRESENT\", \"quote\": \"Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.\", \"removal_test\": \"Senza regole, il processo di revisione sarebbe meno strutturato, ma il giornale potrebbe ancora esistere.\"}, {\"id\": \"M2\", \"tier\": \"PRESENT\", \"quote\": \"Un giornale nazionale ha una sala redazione con 80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport.\", \"removal_test\": \"Senza legame al gruppo, i giornalisti non sarebbero organizzati in desk, ma il giornale potrebbe ancora funzionare.\"}, {\"id\": \"M3\", \"tier\": \"PRESENT\", \"quote\": \"Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.\", \"removal_test\": \"Senza differenziazione, i ruoli di revisione sarebbero meno chiari, ma il giornale potrebbe ancora esistere.\"}, {\"id\": \"C1\", \"tier\": \"INFERRED\", \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\", \"removal_test\": \"Senza persistenza intenzionale, l'archivio storico non esisterebbe, ma il giornale quotidiano potrebbe ancora funzionare.\"}, {\"id\": \"C3\", \"tier\": \"INFERRED\", \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\", \"removal_test\": \"Senza ritrovabilità, l'archivio sarebbe meno accessibile, ma il giornale quotidiano potrebbe ancora funzionare.\"}, {\"id\": \"T1\", \"tier\": \"INFERRED\", \"quote\": \"Le news online seguono un ciclo diverso: pubblicazione continua, aggiornamenti, verifiche meno rigorose, metriche di click che influenzano le promozioni.\", \"removal_test\": \"Senza due parti, l'interazione tra giornalisti e lettori online sarebbe meno definita, ma il giornale cartaceo potrebbe ancora esistere.\"}]}",
+  "timestamp_utc": "2026-04-18T23:47:07.569494+00:00"
+}

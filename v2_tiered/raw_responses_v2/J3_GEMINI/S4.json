@@ -1,0 +1,167 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 64.48,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5455,
+    "completion_tokens": 3089,
+    "total_tokens": 13287
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.",
+      "removal_test": "Se non ci fossero riserve di glicogeno, il sistema sarebbe gravemente menomato nella sua capacità di alzare la glicemia, ma la parte del sistema che la abbassa (insulina) esisterebbe ancora. Il sistema sarebbe incompleto ma ancora riconoscibile come un sistema di regolazione della glicemia."
+    },
+    {
+      "id": "C2",
+      "tier": "NUCLEAR",
+      "quote": "si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali",
+      "removal_test": "Se l'insulina e i recettori non avessero una forma specifica e complementare, il legame non avverrebbe. Senza il legame, non c'è segnale e non c'è assorbimento di glucosio. L'intero meccanismo di feedback crolla. Il sistema cessa di esistere."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.",
+      "removal_test": "Il test HbA1c è un sistema di misurazione esterno al sistema di regolazione. Il corpo regola la glicemia che il test esista o meno. Rimuovere il test non altera in alcun modo il funzionamento del sistema biologico, ma solo la nostra capacità di osservarlo nel lungo periodo."
+    },
+    {
+      "id": "C5",
+      "tier": "NUCLEAR",
+      "quote": "si lega a recettori sulle cellule muscolari, adipose e epatiche",
+      "removal_test": "Il legame è l'atto che connette il segnale (insulina) all'azione (apertura dei canali). Se questa relazione non potesse essere stabilita, il messaggio ormonale sarebbe inviato ma mai ricevuto. Il sistema sarebbe spezzato e non funzionante."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).",
+      "removal_test": "L'intero scopo del sistema è regolare una quantità misurabile di glucosio. Se il glucosio non fosse un'entità quantificabile, non ci sarebbe un livello da misurare, né una 'finestra ristretta' da mantenere. Il concetto stesso di 'regolazione' perderebbe di significato."
+    },
+    {
+      "id": "I2",
+      "tier": "PRESENT",
+      "quote": "riserve di glicogeno.",
+      "removal_test": "La finitezza delle riserve di glicogeno è un vincolo importante, ma non definisce l'identità del sistema. Se le riserve fossero illimitate, il sistema funzionerebbe in modo diverso (e più semplicemente) in condizioni di digiuno, ma il loop di feedback per gestire l'iperglicemia rimarrebbe identico. Il sistema sarebbe ancora un regolatore di glicemia."
+    },
+    {
+      "id": "I3",
+      "tier": "NUCLEAR",
+      "quote": "assorbono glucosio dal sangue.",
+      "removal_test": "Il sistema si basa fondamentalmente sulla separazione spaziale del glucosio: o è 'nel sangue' (contenitore A) o è 'nelle cellule' (contenitore B). L'intero scopo dell'insulina è spostare il glucosio da A a B. Se non ci fosse questa appartenenza a contenitori distinti, il problema che il sistema risolve non esisterebbe."
+    },
+    {
+      "id": "I4",
+      "tier": "NUCLEAR",
+      "quote": "quando il glucosio sale dopo un pasto... quando il glucosio scende (digiuno, esercizio)",
+      "removal_test": "Il sistema è definito dalla sua capacità di reagire a stati diversi ('glicemia alta', 'glicemia bassa'). Se questi stati non esistessero o non fossero distinguibili, il sistema non avrebbe nulla a cui reagire. Le sue azioni (rilasciare insulina/glucagone) sarebbero prive di scopo."
+    },
+    {
+      "id": "T2",
+      "tier": "NUCLEAR",
+      "quote": "assorbono glucosio dal sangue.",
+      "removal_test": "L'azione centrale del sistema è il trasferimento di una sostanza (glucosio) da un luogo (sangue) a un altro (cellule), o dal fegato al sangue. Se questo trasferimento non potesse avvenire, la regolazione sarebbe impossibile. È l'atto esecutivo del sistema."
+    },
+    {
+      "id": "T4",
+      "tier": "PRESENT",
+      "quote": "Il cervello consuma glucosio esclusivamente",
+      "removal_test": "Il consumo irreversibile di glucosio da parte del cervello spiega perché l'ipoglicemia è così pericolosa, ma non è l'unica ragione per cui la glicemia è regolata. Anche se il consumo fosse reversibile, il sistema dovrebbe comunque gestire l'iperglicemia per prevenire danni a lungo termine. L'identità del sistema come regolatore persiste."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Due ormoni operano in opposizione. L'insulina... Il glucagone...",
+      "removal_test": "L'identità distinta e opposta di insulina e glucagone è il fondamento del controllo bidirezionale. Se fossero la stessa molecola o avessero lo stesso effetto, il sistema potrebbe solo spingere la glicemia in una direzione (es. solo abbassarla), perdendo la sua capacità di mantenere l'equilibrio. Non sarebbe più un sistema omeostatico."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "prodotta dalle cellule beta del pancreas... prodotta dalle cellule alfa",
+      "removal_test": "Il raggruppamento di cellule in 'alfa' e 'beta' è un dettaglio implementativo. Se una singola cellula multifunzionale producesse entrambi gli ormoni in base al segnale, il sistema di regolazione funzionerebbe ancora. L'identità del sistema risiede nella funzione, non nel raggruppamento specifico delle cellule che la eseguono."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "aprono canali e assorbono glucosio dal sangue.",
+      "removal_test": "Il confine della membrana cellulare (dentro/fuori) è il luogo fisico dove si manifesta il problema. L'azione del sistema è modulare la permeabilità di questo confine. Senza il confine, non ci sarebbe separazione tra il glucosio nel sangue e quello intracellulare, e l'intero sistema non avrebbe motivo di esistere."
+    },
+    {
+      "id": "W1",
+      "tier": "INFERRED",
+      "quote": "assorbono glucosio dal sangue.",
+      "removal_test": "È possibile vedere una molecola di glucosio come una 'unità di lavoro', ma è una metafora debole. Il sistema opera su una concentrazione continua, non su un flusso di item discreti. Rimuovere questa primitiva non toglie alcuna comprensione essenziale del sistema, che è meglio descritto come un sistema di controllo che come un workflow."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "quando il glucosio sale... viene rilasciata... assorbono glucosio... quando il glucosio scende... stimola il fegato a rilasciare glucosio",
+      "removal_test": "Questa sequenza di stati e transizioni (es. 'glicemia alta' -> 'rilascio insulina' -> 'glicemia normale') è la definizione stessa della logica di feedback del sistema. Se queste transizioni ordinate non esistessero, le azioni del sistema sarebbero casuali e non regolatorie. È l'algoritmo del sistema."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "viene rilasciata quando il glucosio sale... fa il contrario: quando il glucosio scende",
+      "removal_test": "Queste sono le regole che governano le transizioni di stato. Senza la regola 'SE glicemia alta ALLORA rilascia insulina', il sistema non saprebbe cosa fare. Le regole sono l'implementazione della sua intelligenza. Rimuoverle significa rimuovere la logica del sistema."
+    },
+    {
+      "id": "W4",
+      "tier": "NUCLEAR",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas... stimola il fegato a rilasciare glucosio",
+      "removal_test": "Il sistema si basa su una precisa divisione dei compiti: il pancreas è responsabile del sensing e della segnalazione, il fegato e i muscoli sono responsabili dell'azione. Se questa assegnazione di responsabilità venisse rimossa (es. il fegato inizia a produrre insulina), il sistema collasserebbe nel caos. La sua architettura è definita da queste responsabilità."
+    },
+    {
+      "id": "CO1",
+      "tier": "NUCLEAR",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas, ... si lega a recettori sulle cellule muscolari, adipose e epatiche",
+      "removal_test": "Il sistema è intrinsecamente comunicativo. Il pancreas (emittente) deve inviare un messaggio alle cellule bersaglio (destinatario). Se non ci fosse questa relazione emittente-destinatario, non ci sarebbe modo di coordinare l'azione a distanza. Il sistema non potrebbe funzionare."
+    },
+    {
+      "id": "CO2",
+      "tier": "NUCLEAR",
+      "quote": "L'insulina... aprono canali... Il glucagone... stimola il fegato a rilasciare glucosio",
+      "removal_test": "La molecola di insulina non è solo una sostanza, è un messaggio codificato il cui significato è 'assorbi glucosio'. Se questa molecola non portasse questo specifico significato (cioè non causasse quell'effetto), la comunicazione fallirebbe. Il codice è essenziale per la funzione."
+    },
+    {
+      "id": "CO4",
+      "tier": "PRESENT",
+      "quote": "mantiene la concentrazione di glucosio nel sangue",
+      "removal_test": "Il sangue è il canale di comunicazione attraverso cui viaggiano gli ormoni. È importante, ma se il segnale fosse trasmesso per via nervosa, sarebbe comunque un sistema di regolazione della glicemia. L'identità del sistema è nella segnalazione, non nel mezzo specifico utilizzato per essa."
+    },
+    {
+      "id": "N1",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso",
+      "removal_test": "Il livello di glucosio nel sangue non è un messaggio inviato intenzionalmente; è uno stato del sistema che viene letto come un segnale. Questa emissione involontaria è l'input fondamentale per l'intero loop di feedback. Se il pancreas non potesse leggere questo segnale, non saprebbe quando agire."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi",
+      "removal_test": "Simile a C4, questo è un sistema di misurazione esterno. Il fatto che l'esposizione al glucosio lasci una traccia temporale sui globuli rossi è una proprietà che permette l'osservazione, ma il sistema di regolazione stesso non dipende da questa traccia per funzionare. Rimuoverla non cambia il sistema biologico."
+    },
+    {
+      "id": "N3",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso... quando il glucosio sale dopo un pasto",
+      "removal_test": "Il pancreas non sa che 'c'è stato un pasto'. Reagisce a un indicatore indiretto: l'aumento del glucosio. Questa capacità di agire sulla base di un semplice proxy per uno stato del mondo molto più complesso è fondamentale per l'efficienza e l'identità del sistema come meccanismo di controllo omeostatico."
+    },
+    {
+      "id": "N5",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.",
+      "removal_test": "C'è un'asimmetria fondamentale: il pancreas (osservatore) 'guarda' il livello di glucosio (sorgente), ma il sistema metabolico generale non è consapevole di essere osservato. Questa relazione a senso unico è la base della telemetria e del controllo a feedback. Se la sorgente dovesse 'sapere' di essere osservata, sarebbe un sistema di comunicazione (CO), non di telemetria (N)."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 16,
+    "INFERRED": 1,
+    "PRESENT": 7
+  },
+  "n_total": 24,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"stimola il fegato a rilasciare glucosio dalle riserve di glicogeno.\",\n      \"removal_test\": \"Se non ci fossero riserve di glicogeno, il sistema sarebbe gravemente menomato nella sua capacità di alzare la glicemia, ma la parte del sistema che la abbassa (insulina) esisterebbe ancora. Il sistema sarebbe incompleto ma ancora riconoscibile come un sistema di regolazione della glicemia.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali\",\n      \"removal_test\": \"Se l'insulina e i recettori non avessero una forma specifica e complementare, il legame non avverrebbe. Senza il legame, non c'è segnale e non c'è assorbimento di glucosio. L'intero meccanismo di feedback crolla. Il sistema cessa di esistere.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.\",\n      \"removal_test\": \"Il test HbA1c è un sistema di misurazione esterno al sistema di regolazione. Il corpo regola la glicemia che il test esista o meno. Rimuovere il test non altera in alcun modo il funzionamento del sistema biologico, ma solo la nostra capacità di osservarlo nel lungo periodo.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari, adipose e epatiche\",\n      \"removal_test\": \"Il legame è l'atto che connette il segnale (insulina) all'azione (apertura dei canali). Se questa relazione non potesse essere stabilita, il messaggio ormonale sarebbe inviato ma mai ricevuto. Il sistema sarebbe spezzato e non funzionante.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno).\",\n      \"removal_test\": \"L'intero scopo del sistema è regolare una quantità misurabile di glucosio. Se il glucosio non fosse un'entità quantificabile, non ci sarebbe un livello da misurare, né una 'finestra ristretta' da mantenere. Il concetto stesso di 'regolazione' perderebbe di significato.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"riserve di glicogeno.\",\n      \"removal_test\": \"La finitezza delle riserve di glicogeno è un vincolo importante, ma non definisce l'identità del sistema. Se le riserve fossero illimitate, il sistema funzionerebbe in modo diverso (e più semplicemente) in condizioni di digiuno, ma il loop di feedback per gestire l'iperglicemia rimarrebbe identico. Il sistema sarebbe ancora un regolatore di glicemia.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"assorbono glucosio dal sangue.\",\n      \"removal_test\": \"Il sistema si basa fondamentalmente sulla separazione spaziale del glucosio: o è 'nel sangue' (contenitore A) o è 'nelle cellule' (contenitore B). L'intero scopo dell'insulina è spostare il glucosio da A a B. Se non ci fosse questa appartenenza a contenitori distinti, il problema che il sistema risolve non esisterebbe.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"quando il glucosio sale dopo un pasto... quando il glucosio scende (digiuno, esercizio)\",\n      \"removal_test\": \"Il sistema è definito dalla sua capacità di reagire a stati diversi ('glicemia alta', 'glicemia bassa'). Se questi stati non esistessero o non fossero distinguibili, il sistema non avrebbe nulla a cui reagire. Le sue azioni (rilasciare insulina/glucagone) sarebbero prive di scopo.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"assorbono glucosio dal sangue.\",\n      \"removal_test\": \"L'azione centrale del sistema è il trasferimento di una sostanza (glucosio) da un luogo (sangue) a un altro (cellule), o dal fegato al sangue. Se questo trasferimento non potesse avvenire, la regolazione sarebbe impossibile. È l'atto esecutivo del sistema.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il cervello consuma glucosio esclusivamente\",\n      \"removal_test\": \"Il consumo irreversibile di glucosio da parte del cervello spiega perché l'ipoglicemia è così pericolosa, ma non è l'unica ragione per cui la glicemia è regolata. Anche se il consumo fosse reversibile, il sistema dovrebbe comunque gestire l'iperglicemia per prevenire danni a lungo termine. L'identità del sistema come regolatore persiste.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Due ormoni operano in opposizione. L'insulina... Il glucagone...\",\n      \"removal_test\": \"L'identità distinta e opposta di insulina e glucagone è il fondamento del controllo bidirezionale. Se fossero la stessa molecola o avessero lo stesso effetto, il sistema potrebbe solo spingere la glicemia in una direzione (es. solo abbassarla), perdendo la sua capacità di mantenere l'equilibrio. Non sarebbe più un sistema omeostatico.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"prodotta dalle cellule beta del pancreas... prodotta dalle cellule alfa\",\n      \"removal_test\": \"Il raggruppamento di cellule in 'alfa' e 'beta' è un dettaglio implementativo. Se una singola cellula multifunzionale producesse entrambi gli ormoni in base al segnale, il sistema di regolazione funzionerebbe ancora. L'identità del sistema risiede nella funzione, non nel raggruppamento specifico delle cellule che la eseguono.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"aprono canali e assorbono glucosio dal sangue.\",\n      \"removal_test\": \"Il confine della membrana cellulare (dentro/fuori) è il luogo fisico dove si manifesta il problema. L'azione del sistema è modulare la permeabilità di questo confine. Senza il confine, non ci sarebbe separazione tra il glucosio nel sangue e quello intracellulare, e l'intero sistema non avrebbe motivo di esistere.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"assorbono glucosio dal sangue.\",\n      \"removal_test\": \"È possibile vedere una molecola di glucosio come una 'unità di lavoro', ma è una metafora debole. Il sistema opera su una concentrazione continua, non su un flusso di item discreti. Rimuovere questa primitiva non toglie alcuna comprensione essenziale del sistema, che è meglio descritto come un sistema di controllo che come un workflow.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"quando il glucosio sale... viene rilasciata... assorbono glucosio... quando il glucosio scende... stimola il fegato a rilasciare glucosio\",\n      \"removal_test\": \"Questa sequenza di stati e transizioni (es. 'glicemia alta' -> 'rilascio insulina' -> 'glicemia normale') è la definizione stessa della logica di feedback del sistema. Se queste transizioni ordinate non esistessero, le azioni del sistema sarebbero casuali e non regolatorie. È l'algoritmo del sistema.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"viene rilasciata quando il glucosio sale... fa il contrario: quando il glucosio scende\",\n      \"removal_test\": \"Queste sono le regole che governano le transizioni di stato. Senza la regola 'SE glicemia alta ALLORA rilascia insulina', il sistema non saprebbe cosa fare. Le regole sono l'implementazione della sua intelligenza. Rimuoverle significa rimuovere la logica del sistema.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas... stimola il fegato a rilasciare glucosio\",\n      \"removal_test\": \"Il sistema si basa su una precisa divisione dei compiti: il pancreas è responsabile del sensing e della segnalazione, il fegato e i muscoli sono responsabili dell'azione. Se questa assegnazione di responsabilità venisse rimossa (es. il fegato inizia a produrre insulina), il sistema collasserebbe nel caos. La sua architettura è definita da queste responsabilità.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas, ... si lega a recettori sulle cellule muscolari, adipose e epatiche\",\n      \"removal_test\": \"Il sistema è intrinsecamente comunicativo. Il pancreas (emittente) deve inviare un messaggio alle cellule bersaglio (destinatario). Se non ci fosse questa relazione emittente-destinatario, non ci sarebbe modo di coordinare l'azione a distanza. Il sistema non potrebbe funzionare.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'insulina... aprono canali... Il glucagone... stimola il fegato a rilasciare glucosio\",\n      \"removal_test\": \"La molecola di insulina non è solo una sostanza, è un messaggio codificato il cui significato è 'assorbi glucosio'. Se questa molecola non portasse questo specifico significato (cioè non causasse quell'effetto), la comunicazione fallirebbe. Il codice è essenziale per la funzione.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue\",\n      \"removal_test\": \"Il sangue è il canale di comunicazione attraverso cui viaggiano gli ormoni. È importante, ma se il segnale fosse trasmesso per via nervosa, sarebbe comunque un sistema di regolazione della glicemia. L'identità del sistema è nella segnalazione, non nel mezzo specifico utilizzato per essa.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso\",\n      \"removal_test\": \"Il livello di glucosio nel sangue non è un messaggio inviato intenzionalmente; è uno stato del sistema che viene letto come un segnale. Questa emissione involontaria è l'input fondamentale per l'intero loop di feedback. Se il pancreas non potesse leggere questo segnale, non saprebbe quando agire.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi\",\n      \"removal_test\": \"Simile a C4, questo è un sistema di misurazione esterno. Il fatto che l'esposizione al glucosio lasci una traccia temporale sui globuli rossi è una proprietà che permette l'osservazione, ma il sistema di regolazione stesso non dipende da questa traccia per funzionare. Rimuoverla non cambia il sistema biologico.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso... quando il glucosio sale dopo un pasto\",\n      \"removal_test\": \"Il pancreas non sa che 'c'è stato un pasto'. Reagisce a un indicatore indiretto: l'aumento del glucosio. Questa capacità di agire sulla base di un semplice proxy per uno stato del mondo molto più complesso è fondamentale per l'efficienza e l'identità del sistema come meccanismo di controllo omeostatico.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.\",\n      \"removal_test\": \"C'è un'asimmetria fondamentale: il pancreas (osservatore) 'guarda' il livello di glucosio (sorgente), ma il sistema metabolico generale non è consapevole di essere osservato. Questa relazione a senso unico è la base della telemetria e del controllo a feedback. Se la sorgente dovesse 'sapere' di essere osservata, sarebbe un sistema di comunicazione (CO), non di telemetria (N).\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-18T23:52:47.295113+00:00"
+}

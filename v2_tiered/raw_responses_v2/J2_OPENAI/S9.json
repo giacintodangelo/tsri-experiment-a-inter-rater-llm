@@ -1,0 +1,81 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 5.63,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 543,
+    "prompt_tokens": 5563,
+    "total_tokens": 6106,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "La fase diocesana prevede la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato",
+      "removal_test": "Senza l'unità di lavoro rappresentata dalla raccolta di testimonianze, il processo di beatificazione non potrebbe procedere."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "Se la fase diocesana conclude positivamente, il dossier viene inviato a Roma",
+      "removal_test": "Senza stati e transizioni, il processo non avrebbe una sequenza strutturata di fasi da seguire."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983)",
+      "removal_test": "Senza regole, il processo di beatificazione non avrebbe struttura né coerenza."
+    },
+    {
+      "id": "W4",
+      "tier": "PRESENT",
+      "quote": "Un postulatore (nominato) compila il dossier",
+      "removal_test": "La responsabilità è importante ma non essenziale per l'identità del processo, che potrebbe essere riconosciuto anche senza un responsabile specifico."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato",
+      "removal_test": "Il legame al gruppo è presente ma non essenziale; il processo potrebbe esistere con una diversa struttura di valutazione."
+    },
+    {
+      "id": "M3",
+      "tier": "PRESENT",
+      "quote": "Dopo parere positivo, il Papa firma un decreto",
+      "removal_test": "La differenziazione tra i ruoli (es. Papa, commissione) è presente ma non essenziale per l'esistenza del processo."
+    },
+    {
+      "id": "C1",
+      "tier": "INFERRED",
+      "quote": "Il processo può durare decenni o secoli",
+      "removal_test": "La persistenza intenzionale è inferibile nella durata del processo, ma non è essenziale per la sua identità."
+    },
+    {
+      "id": "C4",
+      "tier": "INFERRED",
+      "quote": "Si raccolgono gli scritti del candidato",
+      "removal_test": "L'accumulazione di documenti è inferibile ma non essenziale per l'identità del processo."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 3,
+    "INFERRED": 2,
+    "PRESENT": 3
+  },
+  "n_total": 8,
+  "raw_response": "{\"primitives\": [{\"id\": \"W1\", \"tier\": \"NUCLEAR\", \"quote\": \"La fase diocesana prevede la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato\", \"removal_test\": \"Senza l'unità di lavoro rappresentata dalla raccolta di testimonianze, il processo di beatificazione non potrebbe procedere.\"}, {\"id\": \"W2\", \"tier\": \"NUCLEAR\", \"quote\": \"Se la fase diocesana conclude positivamente, il dossier viene inviato a Roma\", \"removal_test\": \"Senza stati e transizioni, il processo non avrebbe una sequenza strutturata di fasi da seguire.\"}, {\"id\": \"W3\", \"tier\": \"NUCLEAR\", \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983)\", \"removal_test\": \"Senza regole, il processo di beatificazione non avrebbe struttura né coerenza.\"}, {\"id\": \"W4\", \"tier\": \"PRESENT\", \"quote\": \"Un postulatore (nominato) compila il dossier\", \"removal_test\": \"La responsabilità è importante ma non essenziale per l'identità del processo, che potrebbe essere riconosciuto anche senza un responsabile specifico.\"}, {\"id\": \"M2\", \"tier\": \"PRESENT\", \"quote\": \"Una commissione di cardinali e consultori valuta le 'virtù eroiche' del candidato\", \"removal_test\": \"Il legame al gruppo è presente ma non essenziale; il processo potrebbe esistere con una diversa struttura di valutazione.\"}, {\"id\": \"M3\", \"tier\": \"PRESENT\", \"quote\": \"Dopo parere positivo, il Papa firma un decreto\", \"removal_test\": \"La differenziazione tra i ruoli (es. Papa, commissione) è presente ma non essenziale per l'esistenza del processo.\"}, {\"id\": \"C1\", \"tier\": \"INFERRED\", \"quote\": \"Il processo può durare decenni o secoli\", \"removal_test\": \"La persistenza intenzionale è inferibile nella durata del processo, ma non è essenziale per la sua identità.\"}, {\"id\": \"C4\", \"tier\": \"INFERRED\", \"quote\": \"Si raccolgono gli scritti del candidato\", \"removal_test\": \"L'accumulazione di documenti è inferibile ma non essenziale per l'identità del processo.\"}]}",
+  "timestamp_utc": "2026-04-18T23:47:19.368914+00:00"
+}

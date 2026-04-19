@@ -1,0 +1,192 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S2",
+  "system_title": "Patch Tuesday Microsoft",
+  "attempt": 1,
+  "elapsed_s": 60.13,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6352,
+    "output_tokens": 3563,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "tier": "NUCLEAR",
+      "quote": "Microsoft rilascia un pacchetto cumulativo di aggiornamenti di sicurezza per Windows, Office e gli altri prodotti della famiglia",
+      "removal_test": "Senza persistenza intenzionale delle patch, non esiste nulla da distribuire. Il sistema è precisamente un meccanismo per rendere persistenti correzioni a vulnerabilità — senza C1 non c'è patch, non c'è Patch Tuesday."
+    },
+    {
+      "id": "C2",
+      "tier": "NUCLEAR",
+      "quote": "Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "Senza forma strutturata — CVE, classificazione per gravità, bollettino pubblico — le vulnerabilità sono rumore indistinto. Il sistema cesserebbe di essere un processo ingegneristico controllato e diventerebbe distribuzione caotica. La forma è identitaria."
+    },
+    {
+      "id": "C3",
+      "tier": "NUCLEAR",
+      "quote": "Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei",
+      "removal_test": "Senza ritrovabilità — bollettini pubblici, identificativi CVE — gli amministratori non possono localizzare le patch rilevanti per i propri sistemi. Il sistema perde la sua funzione di comunicazione strutturata del rischio. Rimane distribuzione cieca."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "pacchetto cumulativo di aggiornamenti di sicurezza",
+      "removal_test": "Il carattere cumulativo — l'accumulo di fix in un unico rilascio mensile — è centrale alla logica del Patch Tuesday, ma se ogni patch fosse rilasciata individualmente il sistema resterebbe riconoscibilmente un ciclo di patching. Impoverito, non distrutto."
+    },
+    {
+      "id": "C5",
+      "tier": "PRESENT",
+      "quote": "i sistemi affetti, eventuali workaround temporanei",
+      "removal_test": "Le relazioni tra patch e sistemi affetti, tra vulnerabilità e workaround, sono presenti e utili. Ma rimuoverle non distrugge il sistema — le patch verrebbero comunque distribuite e applicate."
+    },
+    {
+      "id": "I1",
+      "tier": "PRESENT",
+      "quote": "classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "La quantificazione della gravità rende operativa la scarsità di risorse degli amministratori (cosa patchare prima). Senza di essa il sistema è impoverito ma funziona ancora come meccanismo di distribuzione."
+    },
+    {
+      "id": "I4",
+      "tier": "NUCLEAR",
+      "quote": "i client le scaricano in background, richiedono riavvio, applicano il fix",
+      "removal_test": "Lo stato di ogni client — non aggiornato / in download / riavvio pendente / aggiornato — è l'oggetto operativo centrale del sistema. Senza tracciamento dello stato, non si può sapere se un sistema è vulnerabile o protetto. Il sistema cessa di essere gestibile."
+    },
+    {
+      "id": "T2",
+      "tier": "NUCLEAR",
+      "quote": "le patch vengono distribuite attraverso Windows Update: i client le scaricano in background",
+      "removal_test": "Il trasferimento della patch dal server Microsoft al client è il momento costitutivo del sistema. Senza questo trasferimento non esiste patching — esiste solo produzione interna di fix mai applicati."
+    },
+    {
+      "id": "T4",
+      "tier": "PRESENT",
+      "quote": "applicano il fix",
+      "removal_test": "L'applicazione della patch è irreversibile nel senso che il codice vulnerabile viene sostituito. Ma l'irreversibilità non è il punto identitario del sistema — è una proprietà della patch applicata. Il sistema resterebbe se stesso anche se esistesse un meccanismo di rollback."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni segnalazione riceve un identificativo CVE",
+      "removal_test": "Senza identità stabile delle vulnerabilità (CVE), l'intero sistema di tracciamento, assegnazione, bollettini e exploit-tracking collassa. Non si può parlare di 'quella vulnerabilità' attraverso il tempo e tra attori diversi. Il sistema perde coerenza."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "assegnata a un team interno",
+      "removal_test": "L'appartenenza di ogni CVE a un team interno è necessaria per il processo, ma è un dettaglio organizzativo. Senza di essa il sistema di patching resterebbe riconoscibile — solo meno strutturato internamente."
+    },
+    {
+      "id": "M3",
+      "tier": "NUCLEAR",
+      "quote": "classificata per gravità (Critical/Important/Moderate/Low)",
+      "removal_test": "La differenziazione per gravità è il meccanismo con cui il sistema comunica priorità agli amministratori e giustifica la propria esistenza come processo strutturato. Senza di essa, tutte le patch sono equivalenti — il sistema perde la sua capacità di guidare decisioni di rischio."
+    },
+    {
+      "id": "M4",
+      "tier": "PRESENT",
+      "quote": "vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC)",
+      "removal_test": "Il confine dentro/fuori — canali ufficiali, MSRC, programma Bug Bounty — separa il processo interno da quello esterno. Rimuoverlo impoverirebbe il sistema (chiunque potrebbe iniettare segnalazioni) ma il ciclo di patching resterebbe riconoscibile."
+    },
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità, e assegnata a un team interno. Prima della release, le patch vengono testate internamente",
+      "removal_test": "La vulnerabilità segnalata è l'unità di lavoro che attraversa l'intero processo: segnalazione → classificazione → assegnazione → sviluppo patch → test → rilascio. Senza questa unità processabile, non esiste workflow — esiste solo distribuzione."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "segnalate → classificate → assegnate → testate internamente → distribuite attraverso Windows Update → applicate",
+      "removal_test": "La sequenza ordinata di stati e transizioni è l'identità strutturale del Patch Tuesday come processo. Senza stati e transizioni definiti, il sistema non è un processo — è un evento casuale. Rimozione = collasso dell'identità."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Gli amministratori aziendali possono posticipare il deploy di 30 giorni tramite WSUS o Intune",
+      "removal_test": "Le regole che governano il processo — chi può posticipare, di quanto, attraverso quali canali; quali vulnerabilità sono Critical vs Low — strutturano il workflow. Senza regole, il processo è arbitrario. Il sistema cessa di essere ingegneristicamente controllato."
+    },
+    {
+      "id": "W4",
+      "tier": "PRESENT",
+      "quote": "assegnata a un team interno",
+      "removal_test": "La responsabilità assegnata a team specifici è necessaria per l'esecuzione, ma è un dettaglio organizzativo interno. Il sistema resterebbe riconoscibile anche con una struttura di responsabilità diversa o non esplicitata."
+    },
+    {
+      "id": "S1",
+      "tier": "PRESENT",
+      "quote": "Gli amministratori aziendali possono posticipare il deploy di 30 giorni",
+      "removal_test": "La finestra temporale di 30 giorni è una risorsa finita — scade e non è recuperabile. Ma la scarsità temporale non è il cuore identitario del sistema. Rimuoverla (deploy immediato obbligatorio) lascerebbe il sistema riconoscibile."
+    },
+    {
+      "id": "S3",
+      "tier": "NUCLEAR",
+      "quote": "Ogni secondo martedì del mese",
+      "removal_test": "Lo slot temporale fisso — il secondo martedì — è ciò che trasforma un processo di patching generico nel Patch Tuesday. È il dato nominale del sistema. Senza questo slot ricorrente, il sistema è semplicemente 'aggiornamenti Microsoft', non Patch Tuesday."
+    },
+    {
+      "id": "S4",
+      "tier": "PRESENT",
+      "quote": "Ogni secondo martedì del mese [...] posticipare il deploy di 30 giorni",
+      "removal_test": "La non-sovrapposizione temporale — un solo Patch Tuesday per mese, la finestra di 30 giorni che non si sovrappone al ciclo successivo — è presente ma non identitaria. Il sistema resterebbe se stesso anche con sovrapposizioni parziali."
+    },
+    {
+      "id": "CO1",
+      "tier": "NUCLEAR",
+      "quote": "vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali [...] dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty",
+      "removal_test": "Senza la relazione emittente-destinatario tra ricercatori e Microsoft, il sistema non ha input. Le vulnerabilità non vengono scoperte internamente in modo sufficiente — il flusso di segnalazione è costitutivo del processo."
+    },
+    {
+      "id": "CO2",
+      "tier": "NUCLEAR",
+      "quote": "Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei",
+      "removal_test": "Il significato codificato — il formato standardizzato CVE, il bollettino, la classificazione — è ciò che rende le informazioni sulle vulnerabilità interpretabili da amministratori, vendor, attaccanti. Senza codifica condivisa, il sistema non comunica. Collasso identitario."
+    },
+    {
+      "id": "CO3",
+      "tier": "PRESENT",
+      "quote": "le patch vengono distribuite attraverso Windows Update",
+      "removal_test": "La direzionalità — Microsoft verso i client — è presente ma coincide largamente con T2. Come primitiva autonoma di COMMUNICATION, è presente ma non aggiunge identità distinta."
+    },
+    {
+      "id": "CO4",
+      "tier": "NUCLEAR",
+      "quote": "distribuite attraverso Windows Update [...] tramite WSUS o Intune",
+      "removal_test": "Windows Update, WSUS, Intune sono l'infrastruttura di canale senza cui la distribuzione non avviene fisicamente. Senza canale, le patch esistono ma non raggiungono i client. Il sistema cessa di funzionare."
+    },
+    {
+      "id": "N1",
+      "tier": "PRESENT",
+      "quote": "i client le scaricano in background",
+      "removal_test": "I client emettono segnali involontari — stato di aggiornamento, telemetria di compatibilità — che alimentano il processo. Presente ma non identitario: il sistema funzionerebbe anche senza questa emissione passiva."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Ogni secondo martedì del mese [...] Nei 30 giorni precedenti",
+      "removal_test": "La traccia temporale è costitutiva dei dati di telemetria e del ciclo mensile, ma come primitiva autonoma è presente senza essere identitaria. Il sistema resterebbe se stesso senza esplicitare il timestamp come dato interno."
+    },
+    {
+      "id": "N3",
+      "tier": "NUCLEAR",
+      "quote": "I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati — il fenomeno detto 'exploit Wednesday'",
+      "removal_test": "L'exploit Wednesday è la prova che le patch indicano indirettamente lo stato di vulnerabilità dei sistemi non aggiornati. Questa indicazione indiretta è ciò che rende il Patch Tuesday un evento con conseguenze di sicurezza reali — non solo un aggiornamento software. Senza N3, il sistema perde la sua dimensione di rischio strutturale."
+    },
+    {
+      "id": "N5",
+      "tier": "NUCLEAR",
+      "quote": "I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati",
+      "removal_test": "L'asimmetria sorgente-osservatore — i client non aggiornati non sanno di essere osservati/sfruttati dagli attaccanti — è il meccanismo che genera l'exploit Wednesday e giustifica l'urgenza del patching. Senza questa asimmetria, il Patch Tuesday è manutenzione ordinaria, non risposta a una minaccia strutturale."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 16,
+    "INFERRED": 0,
+    "PRESENT": 12
+  },
+  "n_total": 28,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Microsoft rilascia un pacchetto cumulativo di aggiornamenti di sicurezza per Windows, Office e gli altri prodotti della famiglia\",\n      \"removal_test\": \"Senza persistenza intenzionale delle patch, non esiste nulla da distribuire. Il sistema è precisamente un meccanismo per rendere persistenti correzioni a vulnerabilità — senza C1 non c'è patch, non c'è Patch Tuesday.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"Senza forma strutturata — CVE, classificazione per gravità, bollettino pubblico — le vulnerabilità sono rumore indistinto. Il sistema cesserebbe di essere un processo ingegneristico controllato e diventerebbe distribuzione caotica. La forma è identitaria.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei\",\n      \"removal_test\": \"Senza ritrovabilità — bollettini pubblici, identificativi CVE — gli amministratori non possono localizzare le patch rilevanti per i propri sistemi. Il sistema perde la sua funzione di comunicazione strutturata del rischio. Rimane distribuzione cieca.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"pacchetto cumulativo di aggiornamenti di sicurezza\",\n      \"removal_test\": \"Il carattere cumulativo — l'accumulo di fix in un unico rilascio mensile — è centrale alla logica del Patch Tuesday, ma se ogni patch fosse rilasciata individualmente il sistema resterebbe riconoscibilmente un ciclo di patching. Impoverito, non distrutto.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"i sistemi affetti, eventuali workaround temporanei\",\n      \"removal_test\": \"Le relazioni tra patch e sistemi affetti, tra vulnerabilità e workaround, sono presenti e utili. Ma rimuoverle non distrugge il sistema — le patch verrebbero comunque distribuite e applicate.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"La quantificazione della gravità rende operativa la scarsità di risorse degli amministratori (cosa patchare prima). Senza di essa il sistema è impoverito ma funziona ancora come meccanismo di distribuzione.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"i client le scaricano in background, richiedono riavvio, applicano il fix\",\n      \"removal_test\": \"Lo stato di ogni client — non aggiornato / in download / riavvio pendente / aggiornato — è l'oggetto operativo centrale del sistema. Senza tracciamento dello stato, non si può sapere se un sistema è vulnerabile o protetto. Il sistema cessa di essere gestibile.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"le patch vengono distribuite attraverso Windows Update: i client le scaricano in background\",\n      \"removal_test\": \"Il trasferimento della patch dal server Microsoft al client è il momento costitutivo del sistema. Senza questo trasferimento non esiste patching — esiste solo produzione interna di fix mai applicati.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"applicano il fix\",\n      \"removal_test\": \"L'applicazione della patch è irreversibile nel senso che il codice vulnerabile viene sostituito. Ma l'irreversibilità non è il punto identitario del sistema — è una proprietà della patch applicata. Il sistema resterebbe se stesso anche se esistesse un meccanismo di rollback.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE\",\n      \"removal_test\": \"Senza identità stabile delle vulnerabilità (CVE), l'intero sistema di tracciamento, assegnazione, bollettini e exploit-tracking collassa. Non si può parlare di 'quella vulnerabilità' attraverso il tempo e tra attori diversi. Il sistema perde coerenza.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"assegnata a un team interno\",\n      \"removal_test\": \"L'appartenenza di ogni CVE a un team interno è necessaria per il processo, ma è un dettaglio organizzativo. Senza di essa il sistema di patching resterebbe riconoscibile — solo meno strutturato internamente.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"classificata per gravità (Critical/Important/Moderate/Low)\",\n      \"removal_test\": \"La differenziazione per gravità è il meccanismo con cui il sistema comunica priorità agli amministratori e giustifica la propria esistenza come processo strutturato. Senza di essa, tutte le patch sono equivalenti — il sistema perde la sua capacità di guidare decisioni di rischio.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali (Microsoft Security Response Center, MSRC)\",\n      \"removal_test\": \"Il confine dentro/fuori — canali ufficiali, MSRC, programma Bug Bounty — separa il processo interno da quello esterno. Rimuoverlo impoverirebbe il sistema (chiunque potrebbe iniettare segnalazioni) ma il ciclo di patching resterebbe riconoscibile.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni segnalazione riceve un identificativo CVE, viene classificata per gravità, e assegnata a un team interno. Prima della release, le patch vengono testate internamente\",\n      \"removal_test\": \"La vulnerabilità segnalata è l'unità di lavoro che attraversa l'intero processo: segnalazione → classificazione → assegnazione → sviluppo patch → test → rilascio. Senza questa unità processabile, non esiste workflow — esiste solo distribuzione.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"segnalate → classificate → assegnate → testate internamente → distribuite attraverso Windows Update → applicate\",\n      \"removal_test\": \"La sequenza ordinata di stati e transizioni è l'identità strutturale del Patch Tuesday come processo. Senza stati e transizioni definiti, il sistema non è un processo — è un evento casuale. Rimozione = collasso dell'identità.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Gli amministratori aziendali possono posticipare il deploy di 30 giorni tramite WSUS o Intune\",\n      \"removal_test\": \"Le regole che governano il processo — chi può posticipare, di quanto, attraverso quali canali; quali vulnerabilità sono Critical vs Low — strutturano il workflow. Senza regole, il processo è arbitrario. Il sistema cessa di essere ingegneristicamente controllato.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"assegnata a un team interno\",\n      \"removal_test\": \"La responsabilità assegnata a team specifici è necessaria per l'esecuzione, ma è un dettaglio organizzativo interno. Il sistema resterebbe riconoscibile anche con una struttura di responsabilità diversa o non esplicitata.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli amministratori aziendali possono posticipare il deploy di 30 giorni\",\n      \"removal_test\": \"La finestra temporale di 30 giorni è una risorsa finita — scade e non è recuperabile. Ma la scarsità temporale non è il cuore identitario del sistema. Rimuoverla (deploy immediato obbligatorio) lascerebbe il sistema riconoscibile.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni secondo martedì del mese\",\n      \"removal_test\": \"Lo slot temporale fisso — il secondo martedì — è ciò che trasforma un processo di patching generico nel Patch Tuesday. È il dato nominale del sistema. Senza questo slot ricorrente, il sistema è semplicemente 'aggiornamenti Microsoft', non Patch Tuesday.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni secondo martedì del mese [...] posticipare il deploy di 30 giorni\",\n      \"removal_test\": \"La non-sovrapposizione temporale — un solo Patch Tuesday per mese, la finestra di 30 giorni che non si sovrappone al ciclo successivo — è presente ma non identitaria. Il sistema resterebbe se stesso anche con sovrapposizioni parziali.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"vulnerabilità vengono segnalate a Microsoft tramite canali ufficiali [...] dai ricercatori indipendenti, dai vendor di antivirus, dal programma Bug Bounty\",\n      \"removal_test\": \"Senza la relazione emittente-destinatario tra ricercatori e Microsoft, il sistema non ha input. Le vulnerabilità non vengono scoperte internamente in modo sufficiente — il flusso di segnalazione è costitutivo del processo.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ciascuna patch ha un bollettino pubblico che descrive la vulnerabilità risolta, i sistemi affetti, eventuali workaround temporanei\",\n      \"removal_test\": \"Il significato codificato — il formato standardizzato CVE, il bollettino, la classificazione — è ciò che rende le informazioni sulle vulnerabilità interpretabili da amministratori, vendor, attaccanti. Senza codifica condivisa, il sistema non comunica. Collasso identitario.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"le patch vengono distribuite attraverso Windows Update\",\n      \"removal_test\": \"La direzionalità — Microsoft verso i client — è presente ma coincide largamente con T2. Come primitiva autonoma di COMMUNICATION, è presente ma non aggiunge identità distinta.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"distribuite attraverso Windows Update [...] tramite WSUS o Intune\",\n      \"removal_test\": \"Windows Update, WSUS, Intune sono l'infrastruttura di canale senza cui la distribuzione non avviene fisicamente. Senza canale, le patch esistono ma non raggiungono i client. Il sistema cessa di funzionare.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"i client le scaricano in background\",\n      \"removal_test\": \"I client emettono segnali involontari — stato di aggiornamento, telemetria di compatibilità — che alimentano il processo. Presente ma non identitario: il sistema funzionerebbe anche senza questa emissione passiva.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni secondo martedì del mese [...] Nei 30 giorni precedenti\",\n      \"removal_test\": \"La traccia temporale è costitutiva dei dati di telemetria e del ciclo mensile, ma come primitiva autonoma è presente senza essere identitaria. Il sistema resterebbe se stesso senza esplicitare il timestamp come dato interno.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati — il fenomeno detto 'exploit Wednesday'\",\n      \"removal_test\": \"L'exploit Wednesday è la prova che le patch indicano indirettamente lo stato di vulnerabilità dei sistemi non aggiornati. Questa indicazione indiretta è ciò che rende il Patch Tuesday un evento con conseguenze di sicurezza reali — non solo un aggiornamento software. Senza N3, il sistema perde la sua dimensione di rischio strutturale.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"I nuovi attaccanti, dopo il martedì, reverse-engineerizzano le patch per sfruttare i client non aggiornati\",\n      \"removal_test\": \"L'asimmetria sorgente-osservatore — i client non aggiornati non sanno di essere osservati/sfruttati dagli attaccanti — è il meccanismo che genera l'exploit Wednesday e giustifica l'urgenza del patching. Senza questa asimmetria, il Patch Tuesday è manutenzione ordinaria, non risposta a una minaccia strutturale.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:38:48.224502+00:00"
+}

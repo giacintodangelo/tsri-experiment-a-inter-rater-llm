@@ -1,0 +1,81 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S8",
+  "system_title": "Cooperativa di pescatori di un piccolo porto",
+  "attempt": 1,
+  "elapsed_s": 6.16,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 605,
+    "prompt_tokens": 5554,
+    "total_tokens": 6159,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 5120
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "M2",
+      "tier": "NUCLEAR",
+      "quote": "Nel 1962 hanno fondato una cooperativa",
+      "removal_test": "Senza il legame al gruppo della cooperativa, i pescatori opererebbero individualmente, perdendo l'identità di cooperativa."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni",
+      "removal_test": "Senza il confine dentro/fuori, non ci sarebbe controllo sull'appartenenza alla cooperativa, compromettendo la sua identità."
+    },
+    {
+      "id": "T1",
+      "tier": "PRESENT",
+      "quote": "Le decisioni importanti ... sono prese in assemblea con un voto per membro",
+      "removal_test": "Senza la struttura di due parti (membri e assemblea), la cooperativa potrebbe ancora esistere, ma con un diverso processo decisionale."
+    },
+    {
+      "id": "T3",
+      "tier": "PRESENT",
+      "quote": "Le decisioni importanti ... sono prese in assemblea con un voto per membro",
+      "removal_test": "Senza l'accordo, le decisioni potrebbero essere prese in modo diverso, ma la cooperativa continuerebbe a esistere."
+    },
+    {
+      "id": "S1",
+      "tier": "PRESENT",
+      "quote": "acquisto collettivo di reti e carburante a prezzi scontati",
+      "removal_test": "Senza la gestione delle risorse finite, la cooperativa sarebbe meno efficiente, ma continuerebbe a operare."
+    },
+    {
+      "id": "S2",
+      "tier": "PRESENT",
+      "quote": "Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione, e in base al meteo, che un membro anziano valuta)",
+      "removal_test": "Senza il richiedente, la gestione delle uscite sarebbe meno organizzata, ma la cooperativa continuerebbe a funzionare."
+    },
+    {
+      "id": "W3",
+      "tier": "INFERRED",
+      "quote": "Le decisioni importanti ... sono prese in assemblea con un voto per membro",
+      "removal_test": "Senza regole, la cooperativa sarebbe meno strutturata, ma potrebbe ancora esistere in una forma più caotica."
+    },
+    {
+      "id": "I3",
+      "tier": "INFERRED",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati",
+      "removal_test": "Senza l'appartenenza al contenitore, la gestione del pescato sarebbe meno organizzata, ma la cooperativa continuerebbe a operare."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 2,
+    "INFERRED": 2,
+    "PRESENT": 4
+  },
+  "n_total": 8,
+  "raw_response": "{\"primitives\": [{\"id\": \"M2\", \"tier\": \"NUCLEAR\", \"quote\": \"Nel 1962 hanno fondato una cooperativa\", \"removal_test\": \"Senza il legame al gruppo della cooperativa, i pescatori opererebbero individualmente, perdendo l'identità di cooperativa.\"}, {\"id\": \"M4\", \"tier\": \"NUCLEAR\", \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni\", \"removal_test\": \"Senza il confine dentro/fuori, non ci sarebbe controllo sull'appartenenza alla cooperativa, compromettendo la sua identità.\"}, {\"id\": \"T1\", \"tier\": \"PRESENT\", \"quote\": \"Le decisioni importanti ... sono prese in assemblea con un voto per membro\", \"removal_test\": \"Senza la struttura di due parti (membri e assemblea), la cooperativa potrebbe ancora esistere, ma con un diverso processo decisionale.\"}, {\"id\": \"T3\", \"tier\": \"PRESENT\", \"quote\": \"Le decisioni importanti ... sono prese in assemblea con un voto per membro\", \"removal_test\": \"Senza l'accordo, le decisioni potrebbero essere prese in modo diverso, ma la cooperativa continuerebbe a esistere.\"}, {\"id\": \"S1\", \"tier\": \"PRESENT\", \"quote\": \"acquisto collettivo di reti e carburante a prezzi scontati\", \"removal_test\": \"Senza la gestione delle risorse finite, la cooperativa sarebbe meno efficiente, ma continuerebbe a operare.\"}, {\"id\": \"S2\", \"tier\": \"PRESENT\", \"quote\": \"Ogni mattina alle 4 i pescatori escono (non tutti — a rotazione, e in base al meteo, che un membro anziano valuta)\", \"removal_test\": \"Senza il richiedente, la gestione delle uscite sarebbe meno organizzata, ma la cooperativa continuerebbe a funzionare.\"}, {\"id\": \"W3\", \"tier\": \"INFERRED\", \"quote\": \"Le decisioni importanti ... sono prese in assemblea con un voto per membro\", \"removal_test\": \"Senza regole, la cooperativa sarebbe meno strutturata, ma potrebbe ancora esistere in una forma più caotica.\"}, {\"id\": \"I3\", \"tier\": \"INFERRED\", \"quote\": \"La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati\", \"removal_test\": \"Senza l'appartenenza al contenitore, la gestione del pescato sarebbe meno organizzata, ma la cooperativa continuerebbe a operare.\"}]}",
+  "timestamp_utc": "2026-04-18T23:47:13.734388+00:00"
+}

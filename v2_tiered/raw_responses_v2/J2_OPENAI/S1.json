@@ -1,0 +1,81 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S1",
+  "system_title": "Sistema di prenotazione voli (tipo Kayak/Skyscanner)",
+  "attempt": 1,
+  "elapsed_s": 10.49,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 620,
+    "prompt_tokens": 5484,
+    "total_tokens": 6104,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "C3",
+      "tier": "NUCLEAR",
+      "quote": "Una piattaforma web permette agli utenti di cercare voli tra coppie di aeroporti in date specifiche.",
+      "removal_test": "Senza la ritrovabilità, gli utenti non potrebbero cercare voli, rendendo il sistema inutile."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "Ciascuna opzione mostra compagnia, orari, prezzo corrente, disponibilità residua di posti.",
+      "removal_test": "Senza l'esistenza quantificabile, non si potrebbe mostrare la disponibilità residua di posti, compromettendo la funzionalità principale del sistema."
+    },
+    {
+      "id": "S1",
+      "tier": "NUCLEAR",
+      "quote": "I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie.",
+      "removal_test": "Senza la risorsa finita, non ci sarebbe scarsità di posti o variazione di prezzo, eliminando la dinamica di prenotazione."
+    },
+    {
+      "id": "S2",
+      "tier": "NUCLEAR",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.",
+      "removal_test": "Senza il richiedente, non ci sarebbe nessuno a generare la domanda per i voli, rendendo il sistema inutile."
+    },
+    {
+      "id": "S3",
+      "tier": "PRESENT",
+      "quote": "L'utente inserisce ... date ...",
+      "removal_test": "Senza gli slot temporali, non si potrebbero specificare le date dei voli, ma il sistema potrebbe ancora esistere in una forma limitata."
+    },
+    {
+      "id": "T2",
+      "tier": "PRESENT",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento.",
+      "removal_test": "Senza l'oggetto di trasferimento, non ci sarebbe il passaggio di informazioni per completare la prenotazione, ma il sistema potrebbe ancora mostrare voli."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.",
+      "removal_test": "Senza emittente e destinatario, non ci sarebbero notifiche email, ma il sistema di prenotazione di base potrebbe ancora funzionare."
+    },
+    {
+      "id": "N2",
+      "tier": "INFERRED",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.",
+      "removal_test": "Senza la traccia temporale costitutiva, le statistiche di ricerca non avrebbero contesto temporale, ma il sistema di prenotazione potrebbe ancora operare."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 4,
+    "INFERRED": 1,
+    "PRESENT": 3
+  },
+  "n_total": 8,
+  "raw_response": "{\"primitives\": [{\"id\": \"C3\", \"tier\": \"NUCLEAR\", \"quote\": \"Una piattaforma web permette agli utenti di cercare voli tra coppie di aeroporti in date specifiche.\", \"removal_test\": \"Senza la ritrovabilità, gli utenti non potrebbero cercare voli, rendendo il sistema inutile.\"}, {\"id\": \"I1\", \"tier\": \"NUCLEAR\", \"quote\": \"Ciascuna opzione mostra compagnia, orari, prezzo corrente, disponibilità residua di posti.\", \"removal_test\": \"Senza l'esistenza quantificabile, non si potrebbe mostrare la disponibilità residua di posti, compromettendo la funzionalità principale del sistema.\"}, {\"id\": \"S1\", \"tier\": \"NUCLEAR\", \"quote\": \"I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie.\", \"removal_test\": \"Senza la risorsa finita, non ci sarebbe scarsità di posti o variazione di prezzo, eliminando la dinamica di prenotazione.\"}, {\"id\": \"S2\", \"tier\": \"NUCLEAR\", \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri.\", \"removal_test\": \"Senza il richiedente, non ci sarebbe nessuno a generare la domanda per i voli, rendendo il sistema inutile.\"}, {\"id\": \"S3\", \"tier\": \"PRESENT\", \"quote\": \"L'utente inserisce ... date ...\", \"removal_test\": \"Senza gli slot temporali, non si potrebbero specificare le date dei voli, ma il sistema potrebbe ancora esistere in una forma limitata.\"}, {\"id\": \"T2\", \"tier\": \"PRESENT\", \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento.\", \"removal_test\": \"Senza l'oggetto di trasferimento, non ci sarebbe il passaggio di informazioni per completare la prenotazione, ma il sistema potrebbe ancora mostrare voli.\"}, {\"id\": \"CO1\", \"tier\": \"PRESENT\", \"quote\": \"Gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia.\", \"removal_test\": \"Senza emittente e destinatario, non ci sarebbero notifiche email, ma il sistema di prenotazione di base potrebbe ancora funzionare.\"}, {\"id\": \"N2\", \"tier\": \"INFERRED\", \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato.\", \"removal_test\": \"Senza la traccia temporale costitutiva, le statistiche di ricerca non avrebbero contesto temporale, ma il sistema di prenotazione potrebbe ancora operare.\"}]}",
+  "timestamp_utc": "2026-04-18T23:46:29.828345+00:00"
+}

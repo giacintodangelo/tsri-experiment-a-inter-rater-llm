@@ -1,0 +1,174 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S1",
+  "system_title": "Sistema di prenotazione voli (tipo Kayak/Skyscanner)",
+  "attempt": 1,
+  "elapsed_s": 67.4,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6334,
+    "output_tokens": 3821,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "S1",
+      "tier": "NUCLEAR",
+      "quote": "disponibilità residua di posti",
+      "removal_test": "Senza la scarsità della risorsa (posti su un volo), non esiste ragione di prenotare né di cercare. Il sistema esiste precisamente perché i posti sono finiti e contesi. Rimuovendo S1, il fenomeno 'prenotazione voli' cessa di esistere come tale."
+    },
+    {
+      "id": "S2",
+      "tier": "NUCLEAR",
+      "quote": "L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri",
+      "removal_test": "Il richiedente che esprime una domanda specifica su una risorsa scarsa è il motore dell'intero sistema. Senza un soggetto che chiede, la piattaforma non ha ragione di esistere. Rimuovendo S2, il sistema perde il suo attore primario e cessa di essere un sistema di prenotazione."
+    },
+    {
+      "id": "S3",
+      "tier": "NUCLEAR",
+      "quote": "date specifiche [...] orari [...] ciascuna opzione mostra compagnia, orari, prezzo corrente",
+      "removal_test": "Il volo è per definizione un'allocazione di posti in uno slot temporale preciso (data, ora, tratta). Senza slot temporali, non esistono 'voli' ma solo tratte astratte. Il sistema cesserebbe di essere un sistema di prenotazione voli e diventerebbe qualcos'altro. NUCLEAR."
+    },
+    {
+      "id": "S4",
+      "tier": "NUCLEAR",
+      "quote": "disponibilità residua di posti [...] numero di passeggeri",
+      "removal_test": "Un posto non può essere assegnato a due passeggeri contemporaneamente sullo stesso volo. La non-sovrapposizione è una proprietà fisica del tempo e dello spazio fisico dell'aereo. Senza S4, il concetto stesso di 'prenotazione' si dissolve. NUCLEAR."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "disponibilità residua di posti",
+      "removal_test": "La quantificazione esplicita dei posti residui è ciò che rende operativa la scarsità. Senza sapere 'quanti ne restano', l'utente non può decidere con urgenza né la piattaforma può mostrare disponibilità. Rimuovendo I1, il sistema perde la sua funzione informativa centrale sulla scarsità."
+    },
+    {
+      "id": "CO1",
+      "tier": "NUCLEAR",
+      "quote": "La piattaforma interroga decine di compagnie aeree e aggregatori [...] gli utenti registrati ricevono avvisi email",
+      "removal_test": "Il sistema è strutturalmente un mediatore comunicativo tra utenti e compagnie aeree. Senza la relazione emittente-destinatario (piattaforma↔compagnie, piattaforma↔utente), non esiste aggregazione né notifica. Il sistema cessa di essere un aggregatore."
+    },
+    {
+      "id": "C3",
+      "tier": "NUCLEAR",
+      "quote": "permette agli utenti di cercare voli [...] mostra una lista di opzioni ordinabili per prezzo, durata, numero di scali",
+      "removal_test": "La ritrovabilità — rendere accessibili opzioni di volo disperse tra decine di compagnie — è la proposta di valore fondamentale della piattaforma. Senza C3, la piattaforma non è distinguibile da un sito di una singola compagnia. Rimuovendo C3, il sistema cessa di essere un aggregatore/motore di ricerca."
+    },
+    {
+      "id": "T1",
+      "tier": "NUCLEAR",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento. La piattaforma non vende direttamente — guadagna una commissione.",
+      "removal_test": "Il sistema esiste per facilitare una transazione tra due parti (passeggero e compagnia aerea). Senza la struttura a due parti, non c'è né commissione né ragione economica della piattaforma. Rimuovendo T1, il modello di business collassa."
+    },
+    {
+      "id": "L5_via_M3",
+      "tier": "PRESENT",
+      "quote": "lista di opzioni ordinabili per prezzo, durata, numero di scali [...] filtri (bagaglio incluso, solo diretti, orari specifici)",
+      "removal_test": "Nota: questa voce è rimossa — M3 non è applicabile direttamente qui. Vedi M3 separato."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie",
+      "removal_test": "La traccia temporale è costitutiva del dato di prezzo: un prezzo senza timestamp è inutilizzabile in un sistema di prezzi dinamici. Senza N2, il sistema non può mostrare prezzi affidabili né generare avvisi di soglia. Il sistema è impoverito ma resta riconoscibilmente un motore di ricerca voli — PRESENT."
+    },
+    {
+      "id": "N4",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "L'accumulo sistematico di dati di ricerca nel tempo produce il prodotto secondario (intelligence). Senza N4, questo flusso di ricavo scompare, ma il sistema resta funzionante come motore di ricerca. PRESENT."
+    },
+    {
+      "id": "N3",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato [...] I prezzi fluttuano in base alla domanda",
+      "removal_test": "Le ricerche degli utenti indicano indirettamente la domanda di mercato su rotte e date — segnale che indica un sistema sottostante (comportamento dei viaggiatori). Senza N3, la piattaforma perde la capacità di produrre intelligence. PRESENT ma non NUCLEAR perché la funzione primaria (ricerca voli) sopravvive."
+    },
+    {
+      "id": "N5",
+      "tier": "PRESENT",
+      "quote": "Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato",
+      "removal_test": "Gli utenti che cercano voli non sanno che i loro comportamenti aggregati vengono venduti come prodotto. Asimmetria strutturale tra sorgente (utente ignaro) e osservatore (piattaforma che monetizza). Rimuovendo N5, il modello di business secondario cambia natura ma il sistema di ricerca voli sopravvive. PRESENT."
+    },
+    {
+      "id": "CO3",
+      "tier": "PRESENT",
+      "quote": "gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia",
+      "removal_test": "La direzionalità del messaggio (piattaforma → utente specifico, su rotta specifica, sotto soglia specifica) è chiaramente manifestata. Senza CO3, gli avvisi non esistono, ma il motore di ricerca principale sopravvive. PRESENT."
+    },
+    {
+      "id": "CO2",
+      "tier": "PRESENT",
+      "quote": "aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri [...] ordinabili per prezzo, durata, numero di scali",
+      "removal_test": "Il sistema opera su un codice condiviso preciso: codici IATA, formati data, unità di misura del prezzo. Senza CO2, la comunicazione tra utente, piattaforma e compagnie è impossibile. Tuttavia CO2 è infrastruttura implicita — rimuoverla distrugge il sistema tecnico ma non è ciò che lo definisce concettualmente. PRESENT."
+    },
+    {
+      "id": "C5",
+      "tier": "PRESENT",
+      "quote": "ciascuna opzione mostra compagnia, orari, prezzo corrente, disponibilità residua [...] bagaglio incluso, numero di scali",
+      "removal_test": "Ogni opzione di volo è un artefatto informativo connesso ad altri artefatti (compagnia, aeroporti, tariffe, regole bagaglio). Senza C5, le opzioni sarebbero atomi isolati non confrontabili. Il sistema è impoverito ma sopravvive. PRESENT."
+    },
+    {
+      "id": "W2",
+      "tier": "PRESENT",
+      "quote": "L'utente inserisce [...] la piattaforma interroga [...] mostra una lista [...] l'utente può aggiungere filtri [...] quando seleziona un'opzione, la piattaforma lo reindirizza",
+      "removal_test": "Il sistema ha una sequenza di stati precisa: ricerca → risultati → filtro → selezione → redirect. Senza questa struttura di stati e transizioni, il flusso utente non esiste. Tuttavia il sistema resterebbe riconoscibile anche con un flusso semplificato. PRESENT."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "filtri (bagaglio incluso, solo diretti, orari specifici) [...] quando il prezzo scende sotto una soglia",
+      "removal_test": "Le regole che governano quali risultati mostrare, quali filtri applicare, quando scattano gli avvisi, sono chiaramente presenti. Senza W3, il sistema non può filtrare né notificare. PRESENT — il sistema è impoverito ma la ricerca base sopravvive."
+    },
+    {
+      "id": "T3",
+      "tier": "PRESENT",
+      "quote": "Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento",
+      "removal_test": "L'accordo tra passeggero e compagnia (il contratto di trasporto) è il punto di arrivo del flusso. Senza T3, non c'è transazione completata. Tuttavia la piattaforma stessa non gestisce T3 — lo delega. Il sistema di ricerca sopravvive senza che T3 avvenga sulla piattaforma. PRESENT."
+    },
+    {
+      "id": "T2",
+      "tier": "PRESENT",
+      "quote": "La piattaforma non vende direttamente — guadagna una commissione",
+      "removal_test": "Il trasferimento di denaro (commissione) e il trasferimento del diritto al posto (biglietto) sono oggetti di trasferimento chiari. Senza T2, non c'è modello economico. Il sistema di ricerca sopravvive ma perde la sua ragione commerciale. PRESENT."
+    },
+    {
+      "id": "M1",
+      "tier": "PRESENT",
+      "quote": "gli utenti registrati ricevono avvisi email",
+      "removal_test": "L'identità dell'utente registrato è necessaria per associare preferenze, rotte monitorate e avvisi. Senza M1, non esistono utenti registrati né avvisi personalizzati. Il motore di ricerca anonimo sopravvive. PRESENT."
+    },
+    {
+      "id": "M2",
+      "tier": "INFERRED",
+      "quote": "gli utenti registrati [...] la piattaforma [...] le compagnie aeree",
+      "removal_test": "Esistono gruppi distinti (utenti registrati vs anonimi, compagnie partner vs non-partner) ma il legame al gruppo non è tematizzato esplicitamente come struttura centrale. INFERRED."
+    },
+    {
+      "id": "I4",
+      "tier": "INFERRED",
+      "quote": "disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata",
+      "removal_test": "Lo stato corrente di un volo (disponibile, quasi esaurito, esaurito) è implicitamente presente nella disponibilità residua e nella fluttuazione dei prezzi. Non è tematizzato esplicitamente come ciclo di vita dell'entità. INFERRED."
+    },
+    {
+      "id": "C4",
+      "tier": "INFERRED",
+      "quote": "Le statistiche di ricerca aggregate",
+      "removal_test": "L'accumulo di dati di ricerca nel tempo è presente ma è un effetto collaterale del funzionamento, non una struttura esplicitamente descritta. INFERRED — N4 cattura meglio questo aspetto."
+    },
+    {
+      "id": "CO4",
+      "tier": "INFERRED",
+      "quote": "La piattaforma interroga decine di compagnie aeree e aggregatori [...] avvisi email",
+      "removal_test": "Il canale (API verso le compagnie, email verso gli utenti) è infrastruttura implicita ma non descritta come struttura propria del sistema. INFERRED."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 8,
+    "INFERRED": 4,
+    "PRESENT": 13
+  },
+  "n_total": 25,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"S1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"disponibilità residua di posti\",\n      \"removal_test\": \"Senza la scarsità della risorsa (posti su un volo), non esiste ragione di prenotare né di cercare. Il sistema esiste precisamente perché i posti sono finiti e contesi. Rimuovendo S1, il fenomeno 'prenotazione voli' cessa di esistere come tale.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'utente inserisce aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri\",\n      \"removal_test\": \"Il richiedente che esprime una domanda specifica su una risorsa scarsa è il motore dell'intero sistema. Senza un soggetto che chiede, la piattaforma non ha ragione di esistere. Rimuovendo S2, il sistema perde il suo attore primario e cessa di essere un sistema di prenotazione.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"date specifiche [...] orari [...] ciascuna opzione mostra compagnia, orari, prezzo corrente\",\n      \"removal_test\": \"Il volo è per definizione un'allocazione di posti in uno slot temporale preciso (data, ora, tratta). Senza slot temporali, non esistono 'voli' ma solo tratte astratte. Il sistema cesserebbe di essere un sistema di prenotazione voli e diventerebbe qualcos'altro. NUCLEAR.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"disponibilità residua di posti [...] numero di passeggeri\",\n      \"removal_test\": \"Un posto non può essere assegnato a due passeggeri contemporaneamente sullo stesso volo. La non-sovrapposizione è una proprietà fisica del tempo e dello spazio fisico dell'aereo. Senza S4, il concetto stesso di 'prenotazione' si dissolve. NUCLEAR.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"disponibilità residua di posti\",\n      \"removal_test\": \"La quantificazione esplicita dei posti residui è ciò che rende operativa la scarsità. Senza sapere 'quanti ne restano', l'utente non può decidere con urgenza né la piattaforma può mostrare disponibilità. Rimuovendo I1, il sistema perde la sua funzione informativa centrale sulla scarsità.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La piattaforma interroga decine di compagnie aeree e aggregatori [...] gli utenti registrati ricevono avvisi email\",\n      \"removal_test\": \"Il sistema è strutturalmente un mediatore comunicativo tra utenti e compagnie aeree. Senza la relazione emittente-destinatario (piattaforma↔compagnie, piattaforma↔utente), non esiste aggregazione né notifica. Il sistema cessa di essere un aggregatore.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"permette agli utenti di cercare voli [...] mostra una lista di opzioni ordinabili per prezzo, durata, numero di scali\",\n      \"removal_test\": \"La ritrovabilità — rendere accessibili opzioni di volo disperse tra decine di compagnie — è la proposta di valore fondamentale della piattaforma. Senza C3, la piattaforma non è distinguibile da un sito di una singola compagnia. Rimuovendo C3, il sistema cessa di essere un aggregatore/motore di ricerca.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento. La piattaforma non vende direttamente — guadagna una commissione.\",\n      \"removal_test\": \"Il sistema esiste per facilitare una transazione tra due parti (passeggero e compagnia aerea). Senza la struttura a due parti, non c'è né commissione né ragione economica della piattaforma. Rimuovendo T1, il modello di business collassa.\"\n    },\n    {\n      \"id\": \"L5_via_M3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"lista di opzioni ordinabili per prezzo, durata, numero di scali [...] filtri (bagaglio incluso, solo diretti, orari specifici)\",\n      \"removal_test\": \"Nota: questa voce è rimossa — M3 non è applicabile direttamente qui. Vedi M3 separato.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I prezzi fluttuano nel corso della giornata in base alla domanda e all'algoritmo dinamico delle compagnie\",\n      \"removal_test\": \"La traccia temporale è costitutiva del dato di prezzo: un prezzo senza timestamp è inutilizzabile in un sistema di prezzi dinamici. Senza N2, il sistema non può mostrare prezzi affidabili né generare avvisi di soglia. Il sistema è impoverito ma resta riconoscibilmente un motore di ricerca voli — PRESENT.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"L'accumulo sistematico di dati di ricerca nel tempo produce il prodotto secondario (intelligence). Senza N4, questo flusso di ricavo scompare, ma il sistema resta funzionante come motore di ricerca. PRESENT.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato [...] I prezzi fluttuano in base alla domanda\",\n      \"removal_test\": \"Le ricerche degli utenti indicano indirettamente la domanda di mercato su rotte e date — segnale che indica un sistema sottostante (comportamento dei viaggiatori). Senza N3, la piattaforma perde la capacità di produrre intelligence. PRESENT ma non NUCLEAR perché la funzione primaria (ricerca voli) sopravvive.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le statistiche di ricerca aggregate vengono vendute alle compagnie come intelligence di mercato\",\n      \"removal_test\": \"Gli utenti che cercano voli non sanno che i loro comportamenti aggregati vengono venduti come prodotto. Asimmetria strutturale tra sorgente (utente ignaro) e osservatore (piattaforma che monetizza). Rimuovendo N5, il modello di business secondario cambia natura ma il sistema di ricerca voli sopravvive. PRESENT.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"gli utenti registrati ricevono avvisi email quando il prezzo di una rotta monitorata scende sotto una soglia\",\n      \"removal_test\": \"La direzionalità del messaggio (piattaforma → utente specifico, su rotta specifica, sotto soglia specifica) è chiaramente manifestata. Senza CO3, gli avvisi non esistono, ma il motore di ricerca principale sopravvive. PRESENT.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"aeroporto di partenza, aeroporto di arrivo, date, numero di passeggeri [...] ordinabili per prezzo, durata, numero di scali\",\n      \"removal_test\": \"Il sistema opera su un codice condiviso preciso: codici IATA, formati data, unità di misura del prezzo. Senza CO2, la comunicazione tra utente, piattaforma e compagnie è impossibile. Tuttavia CO2 è infrastruttura implicita — rimuoverla distrugge il sistema tecnico ma non è ciò che lo definisce concettualmente. PRESENT.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"ciascuna opzione mostra compagnia, orari, prezzo corrente, disponibilità residua [...] bagaglio incluso, numero di scali\",\n      \"removal_test\": \"Ogni opzione di volo è un artefatto informativo connesso ad altri artefatti (compagnia, aeroporti, tariffe, regole bagaglio). Senza C5, le opzioni sarebbero atomi isolati non confrontabili. Il sistema è impoverito ma sopravvive. PRESENT.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'utente inserisce [...] la piattaforma interroga [...] mostra una lista [...] l'utente può aggiungere filtri [...] quando seleziona un'opzione, la piattaforma lo reindirizza\",\n      \"removal_test\": \"Il sistema ha una sequenza di stati precisa: ricerca → risultati → filtro → selezione → redirect. Senza questa struttura di stati e transizioni, il flusso utente non esiste. Tuttavia il sistema resterebbe riconoscibile anche con un flusso semplificato. PRESENT.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"filtri (bagaglio incluso, solo diretti, orari specifici) [...] quando il prezzo scende sotto una soglia\",\n      \"removal_test\": \"Le regole che governano quali risultati mostrare, quali filtri applicare, quando scattano gli avvisi, sono chiaramente presenti. Senza W3, il sistema non può filtrare né notificare. PRESENT — il sistema è impoverito ma la ricerca base sopravvive.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Quando seleziona un'opzione, la piattaforma lo reindirizza al sito della compagnia per il pagamento\",\n      \"removal_test\": \"L'accordo tra passeggero e compagnia (il contratto di trasporto) è il punto di arrivo del flusso. Senza T3, non c'è transazione completata. Tuttavia la piattaforma stessa non gestisce T3 — lo delega. Il sistema di ricerca sopravvive senza che T3 avvenga sulla piattaforma. PRESENT.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"La piattaforma non vende direttamente — guadagna una commissione\",\n      \"removal_test\": \"Il trasferimento di denaro (commissione) e il trasferimento del diritto al posto (biglietto) sono oggetti di trasferimento chiari. Senza T2, non c'è modello economico. Il sistema di ricerca sopravvive ma perde la sua ragione commerciale. PRESENT.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"gli utenti registrati ricevono avvisi email\",\n      \"removal_test\": \"L'identità dell'utente registrato è necessaria per associare preferenze, rotte monitorate e avvisi. Senza M1, non esistono utenti registrati né avvisi personalizzati. Il motore di ricerca anonimo sopravvive. PRESENT.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"gli utenti registrati [...] la piattaforma [...] le compagnie aeree\",\n      \"removal_test\": \"Esistono gruppi distinti (utenti registrati vs anonimi, compagnie partner vs non-partner) ma il legame al gruppo non è tematizzato esplicitamente come struttura centrale. INFERRED.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"disponibilità residua di posti [...] I prezzi fluttuano nel corso della giornata\",\n      \"removal_test\": \"Lo stato corrente di un volo (disponibile, quasi esaurito, esaurito) è implicitamente presente nella disponibilità residua e nella fluttuazione dei prezzi. Non è tematizzato esplicitamente come ciclo di vita dell'entità. INFERRED.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Le statistiche di ricerca aggregate\",\n      \"removal_test\": \"L'accumulo di dati di ricerca nel tempo è presente ma è un effetto collaterale del funzionamento, non una struttura esplicitamente descritta. INFERRED — N4 cattura meglio questo aspetto.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"La piattaforma interroga decine di compagnie aeree e aggregatori [...] avvisi email\",\n      \"removal_test\": \"Il canale (API verso le compagnie, email verso gli utenti) è infrastruttura implicita ma non descritta come struttura propria del sistema. INFERRED.\"\n    }\n  ]\n}\n```\n\n---\n\n**Note metodologiche post-analisi:**\n\n1. **Il cuore del sistema è SCHEDULING** (S1+S2+S3+S4 tutti NUCLEAR): un sistema di prenotazione voli è, nella sua essenza più profonda, un problema di allocazione di risorse scarse in slot temporali non sovrapponibili. Questa è la struttura che non può essere rimossa senza distruggere l'identità del fenomeno.\n\n2. **C3 è NUCLEAR** nonostante appartenga a CONTENT: la ritrovabilità aggregata è ciò che distingue Kayak da un sito di una singola compagnia. È l'identità differenziale del sistema.\n\n3. **T1 è NUCLEAR** perché il modello a due parti (con commissione) è l'identità economica della piattaforma — non un dettaglio implementativo.\n\n4. **Ho eliminato la voce errata** `L5_via_M3` che era un residuo di ragionamento intermedio non valido come primitiva.\n\n5. **N5 è PRESENT e non NUCLEAR**: l'asimmetria sorgente-osservatore (utenti ignari venduti come dato) è strutturalmente reale ma non è ciò che il sistema *è* — è ciò che il sistema *fa anche*.",
+  "timestamp_utc": "2026-04-18T23:37:48.097106+00:00"
+}

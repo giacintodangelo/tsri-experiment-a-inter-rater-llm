@@ -1,0 +1,63 @@
+{
+  "llm": "J2_OPENAI",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 8.12,
+  "model_reported": "gpt-4o-2024-08-06",
+  "usage": {
+    "completion_tokens": 452,
+    "prompt_tokens": 5532,
+    "total_tokens": 5984,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "primitives_identified": [
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "Due ormoni operano in opposizione. L'insulina... viene rilasciata quando il glucosio sale... Il glucagone... fa il contrario: quando il glucosio scende...",
+      "removal_test": "Senza la sequenza di rilascio di insulina e glucagone in risposta ai livelli di glucosio, il sistema di regolazione della glicemia non funzionerebbe."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.",
+      "removal_test": "Senza le regole che determinano quando rilasciare insulina o glucagone, il sistema non potrebbe regolare i livelli di glucosio."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.",
+      "removal_test": "Rimuovendo la traccia temporale costitutiva, si perderebbe la capacità di monitorare la glicemia media nel tempo, ma il sistema di regolazione immediata della glicemia continuerebbe a funzionare."
+    },
+    {
+      "id": "M1",
+      "tier": "INFERRED",
+      "quote": "Il cervello consuma glucosio esclusivamente...",
+      "removal_test": "L'identità del cervello come consumatore esclusivo di glucosio è inferita, ma non essenziale per il funzionamento del sistema di regolazione della glicemia."
+    },
+    {
+      "id": "N5",
+      "tier": "INFERRED",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.",
+      "removal_test": "L'asimmetria tra il glucosio come sorgente di segnale e il pancreas come osservatore è inferita, ma non essenziale per il funzionamento del sistema."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 2,
+    "INFERRED": 2,
+    "PRESENT": 1
+  },
+  "n_total": 5,
+  "raw_response": "{\"primitives\": [{\"id\": \"W2\", \"tier\": \"NUCLEAR\", \"quote\": \"Due ormoni operano in opposizione. L'insulina... viene rilasciata quando il glucosio sale... Il glucagone... fa il contrario: quando il glucosio scende...\", \"removal_test\": \"Senza la sequenza di rilascio di insulina e glucagone in risposta ai livelli di glucosio, il sistema di regolazione della glicemia non funzionerebbe.\"}, {\"id\": \"W3\", \"tier\": \"NUCLEAR\", \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.\", \"removal_test\": \"Senza le regole che determinano quando rilasciare insulina o glucagone, il sistema non potrebbe regolare i livelli di glucosio.\"}, {\"id\": \"N2\", \"tier\": \"PRESENT\", \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio.\", \"removal_test\": \"Rimuovendo la traccia temporale costitutiva, si perderebbe la capacità di monitorare la glicemia media nel tempo, ma il sistema di regolazione immediata della glicemia continuerebbe a funzionare.\"}, {\"id\": \"M1\", \"tier\": \"INFERRED\", \"quote\": \"Il cervello consuma glucosio esclusivamente...\", \"removal_test\": \"L'identità del cervello come consumatore esclusivo di glucosio è inferita, ma non essenziale per il funzionamento del sistema di regolazione della glicemia.\"}, {\"id\": \"N5\", \"tier\": \"INFERRED\", \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica.\", \"removal_test\": \"L'asimmetria tra il glucosio come sorgente di segnale e il pancreas come osservatore è inferita, ma non essenziale per il funzionamento del sistema.\"}]}",
+  "timestamp_utc": "2026-04-18T23:46:52.642889+00:00"
+}

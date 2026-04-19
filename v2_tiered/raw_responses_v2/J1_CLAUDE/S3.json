@@ -1,0 +1,216 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S3",
+  "system_title": "Replit (IDE collaborativo live)",
+  "attempt": 1,
+  "elapsed_s": 71.73,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6324,
+    "output_tokens": 4387,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "tier": "NUCLEAR",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Senza persistenza intenzionale non esiste un 'Repl' — il codice scritto svanisce alla chiusura del browser. Il sistema cessa di essere un IDE e diventa una scratch pad effimera. L'archiviazione a 6 mesi è la stessa primitiva che si manifesta in negativo: la persistenza viene revocata. NUCLEAR."
+    },
+    {
+      "id": "C2",
+      "tier": "NUCLEAR",
+      "quote": "Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.",
+      "removal_test": "Il codice sorgente è forma nel senso più letterale: struttura sintattica vincolata. Senza C2 non esiste 'file', non esiste 'codice', non esiste nulla da eseguire o versionare. Il sistema collassa prima ancora di iniziare. NUCLEAR."
+    },
+    {
+      "id": "C3",
+      "tier": "NUCLEAR",
+      "quote": "I progetti pubblici sono ricercabili, fork-abili, citabili.",
+      "removal_test": "La ricercabilità dei Repl pubblici è una delle funzioni identitarie della piattaforma come ecosistema aperto. Senza C3 i progetti esistono ma sono irraggiungibili da chi non ha già il link — il marketplace, il fork, la citabilità collassano. Il sistema perde la sua dimensione di piattaforma pubblica e diventa un IDE privato. NUCLEAR per l'identità di Replit come piattaforma, non solo come editor."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi.",
+      "removal_test": "Il corpus di checkpoint cresce nel tempo — ogni salvataggio automatico è un atto di accumulazione. Senza C4 il versioning non esiste come storia, solo come snapshot singolo. Il sistema resta un IDE funzionante ma perde la dimensione storica del codice. PRESENT."
+    },
+    {
+      "id": "C5",
+      "tier": "PRESENT",
+      "quote": "I progetti pubblici sono ricercabili, fork-abili, citabili.",
+      "removal_test": "Il fork crea una relazione esplicita tra Repl originale e derivato. La citabilità è una relazione tra progetti. Senza C5 i Repl sono isole senza connessioni tra loro — si perde la dimensione di grafo della conoscenza. Il sistema resta funzionante ma impoverito. PRESENT."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.",
+      "removal_test": "Senza la quantificazione delle risorse consumate non è possibile bloccare l'esecuzione a quota esaurita, non è possibile differenziare i tier, non è possibile vendere upgrade. Il modello di business e il sistema di controllo delle risorse collassano simultaneamente. NUCLEAR."
+    },
+    {
+      "id": "I2",
+      "tier": "NUCLEAR",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati, suddivisi in tier (free, hacker, teams). Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.",
+      "removal_test": "Se le risorse fossero infinite non esisterebbero tier, quota, blocchi, marketplace di upgrade. L'intera architettura economica e tecnica del sistema presuppone la finitezza. Senza I2 Replit non ha modello di business. NUCLEAR."
+    },
+    {
+      "id": "I3",
+      "tier": "PRESENT",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Ogni Repl appartiene a qualcuno — l'owner controlla chi può accedere. Senza appartenenza al contenitore non esistono permessi differenziati né inviti. Il sistema resta funzionante ma perde il controllo dell'accesso. PRESENT."
+    },
+    {
+      "id": "I4",
+      "tier": "PRESENT",
+      "quote": "Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "I Repl hanno stati: attivo, archiviato. Le risorse hanno stati: disponibile, esaurita, bloccata. Senza I4 non si può distinguere un Repl attivo da uno archiviato né una quota disponibile da una esaurita. Il sistema perde la capacità di gestire il ciclo di vita. PRESENT."
+    },
+    {
+      "id": "T2",
+      "tier": "PRESENT",
+      "quote": "Un marketplace permette di vendere template.",
+      "removal_test": "Il marketplace implica trasferimento: il template passa dal venditore all'acquirente (o almeno i diritti d'uso). Senza T2 il marketplace non ha oggetto di scambio. Il sistema perde la dimensione economica ma resta un IDE funzionante. PRESENT."
+    },
+    {
+      "id": "T3",
+      "tier": "PRESENT",
+      "quote": "Un marketplace permette di vendere template.",
+      "removal_test": "La vendita presuppone un accordo tra venditore e acquirente su prezzo e condizioni. Senza T3 non esiste transazione commerciale, solo cessione unilaterale. Il marketplace collassa ma il resto del sistema sopravvive. PRESENT."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni utente ha un cursore colorato visibile agli altri in tempo reale.",
+      "removal_test": "Il cursore colorato è la manifestazione visiva dell'identità dell'utente nel documento condiviso. Senza M1 non si sa chi sta scrivendo cosa — la collaborazione live diventa una scrittura anonima indistinguibile. Il sistema cessa di essere 'collaborativo' nel senso proprio. NUCLEAR."
+    },
+    {
+      "id": "M2",
+      "tier": "NUCLEAR",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "L'appartenenza a un Repl (come collaboratore) è la struttura che rende possibile la collaborazione controllata. Senza M2 non esistono collaboratori, solo owner — il sistema diventa un IDE personale. NUCLEAR per l'identità collaborativa del sistema."
+    },
+    {
+      "id": "M3",
+      "tier": "NUCLEAR",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin. I tier (free, hacker, teams).",
+      "removal_test": "La differenziazione opera su due assi: permessi (read/write/admin) e tier di account (free/hacker/teams). Senza M3 tutti gli utenti hanno gli stessi diritti e le stesse risorse — il modello di business e il controllo degli accessi collassano. NUCLEAR."
+    },
+    {
+      "id": "M4",
+      "tier": "PRESENT",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin.",
+      "removal_test": "Il confine dentro/fuori di un Repl separa chi può accedere da chi non può. Senza M4 tutti i Repl sarebbero pubblici e modificabili da chiunque. Il sistema perde la protezione della proprietà intellettuale. PRESENT — il confine esiste ma non è l'elemento più caratterizzante."
+    },
+    {
+      "id": "W1",
+      "tier": "PRESENT",
+      "quote": "Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.",
+      "removal_test": "Il codice è l'unità di lavoro che entra nel processo di esecuzione. Senza W1 non c'è nulla da processare. Tuttavia W1 è così implicita nell'idea stessa di IDE che la sua assenza è impensabile — il test di rimozione non aggiunge informazione. PRESENT per non inflazionare NUCLEAR."
+    },
+    {
+      "id": "W2",
+      "tier": "PRESENT",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Le esecuzioni di programmi usano il quota mensile.",
+      "removal_test": "Il codice attraversa stati: in scrittura → salvato → in esecuzione → completato/bloccato. Il versioning automatico è una sequenza di stati. Senza W2 non esiste pipeline di esecuzione né storia delle versioni. PRESENT."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "se esaurito, l'esecuzione viene bloccata o rallentata. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.",
+      "removal_test": "Le regole governano quando bloccare l'esecuzione, quando archiviare, quali permessi consentono quale azione. Senza W3 il sistema non sa quando intervenire — le quote non vengono applicate, l'archiviazione non avviene. PRESENT."
+    },
+    {
+      "id": "W4",
+      "tier": "PRESENT",
+      "quote": "Gli utenti possono invitare collaboratori con permessi read/write/admin. Gli amministratori di un team vedono dashboard con attività dei membri.",
+      "removal_test": "I permessi admin assegnano responsabilità specifiche su fasi del workflow (gestione team, approvazione accessi). Senza W4 nessuno è responsabile di nulla — il sistema di governance del team collassa. PRESENT."
+    },
+    {
+      "id": "S1",
+      "tier": "NUCLEAR",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "CPU, memoria, storage, quota mensile sono risorse finite allocate nel tempo. Senza S1 non esiste il concetto di quota, non esiste il blocco dell'esecuzione, non esistono i tier. Il sistema di resource management — cuore del modello economico — collassa. NUCLEAR."
+    },
+    {
+      "id": "S2",
+      "tier": "PRESENT",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata.",
+      "removal_test": "Ogni utente che esegue un programma è un richiedente di risorse computazionali. Senza S2 non c'è domanda, non c'è consumo, non c'è quota. Ma S2 è implicita in qualsiasi sistema con utenti — non è distintiva di Replit. PRESENT."
+    },
+    {
+      "id": "S3",
+      "tier": "INFERRED",
+      "quote": "Le esecuzioni di programmi usano il quota mensile dell'account.",
+      "removal_test": "La quota mensile implica slot temporali (il mese come unità). Ma Replit non espone esplicitamente slot prenotabili — la temporalità è implicita nel reset mensile della quota. Debolmente inferibile. INFERRED."
+    },
+    {
+      "id": "S4",
+      "tier": "INFERRED",
+      "quote": "ogni 'Repl' ha CPU, memoria, e storage limitati.",
+      "removal_test": "La CPU non può essere assegnata due volte allo stesso ciclo di clock — la non-sovrapposizione è una proprietà fisica sottostante. Ma Replit non la espone come concetto esplicito. INFERRED."
+    },
+    {
+      "id": "CO1",
+      "tier": "NUCLEAR",
+      "quote": "Un sistema di chat integrata accompagna il codice.",
+      "removal_test": "La chat integrata è la primitiva comunicativa esplicita del sistema. Senza CO1 la collaborazione live è muta — i cursori si muovono ma nessuno può coordinarsi verbalmente senza uscire dalla piattaforma. Il sistema perde una dimensione identitaria della collaborazione. NUCLEAR."
+    },
+    {
+      "id": "CO2",
+      "tier": "PRESENT",
+      "quote": "Ghostwriter, un assistente AI che suggerisce completamenti e può generare codice da descrizioni.",
+      "removal_test": "Ghostwriter deve interpretare descrizioni in linguaggio naturale e produrre codice — un atto di codifica/decodifica del significato. Senza CO2 Ghostwriter non può tradurre l'intenzione in codice. PRESENT."
+    },
+    {
+      "id": "CO3",
+      "tier": "PRESENT",
+      "quote": "Gli utenti possono invitare collaboratori. Un sistema di chat integrata accompagna il codice.",
+      "removal_test": "I messaggi in chat sono diretti a specifici collaboratori o al gruppo. Gli inviti sono diretti a specifici utenti. Senza CO3 la comunicazione è broadcast indifferenziato. PRESENT."
+    },
+    {
+      "id": "CO4",
+      "tier": "PRESENT",
+      "quote": "Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.",
+      "removal_test": "Il canale di comunicazione è l'infrastruttura che rende possibile sia la chat che la visibilità dei cursori in tempo reale. Senza CO4 non c'è mezzo di trasmissione — la collaborazione live collassa. PRESENT (il canale è infrastruttura, non identità)."
+    },
+    {
+      "id": "N1",
+      "tier": "PRESENT",
+      "quote": "Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "Gli utenti emettono involontariamente segnali (ore di lavoro, linee scritte, pattern) che vengono catturati dalla dashboard. Senza N1 non c'è materia prima per la dashboard amministrativa. PRESENT."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori di un team vedono dashboard con attività dei membri: ore spent.",
+      "removal_test": "Ogni checkpoint ha un timestamp. Le ore spent sono misurate nel tempo. Senza N2 i checkpoint sono snapshot senza ordine temporale — il versioning perde la sua dimensione storica. PRESENT."
+    },
+    {
+      "id": "N3",
+      "tier": "PRESENT",
+      "quote": "Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "Le ore spent e le linee di codice indicano indirettamente produttività, engagement, salute del progetto — non li misurano direttamente. Senza N3 la dashboard mostra dati grezzi senza capacità inferenziale. PRESENT."
+    },
+    {
+      "id": "N4",
+      "tier": "PRESENT",
+      "quote": "I file sono versionati automaticamente con checkpoint ogni pochi secondi. dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "I checkpoint accumulati nel tempo formano la serie storica del codice. I pattern di collaborazione emergono dall'accumulo di eventi. Senza N4 non esistono né versioning né pattern — solo l'istante corrente. PRESENT."
+    },
+    {
+      "id": "N5",
+      "tier": "NUCLEAR",
+      "quote": "Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.",
+      "removal_test": "I membri del team non sanno necessariamente cosa vedono gli amministratori nella dashboard — l'asimmetria informativa è strutturale e intenzionale. Senza N5 non esiste supervisione amministrativa: o tutti vedono tutto (simmetria) o nessuno vede nulla. La dashboard amministrativa è una funzione identitaria del tier 'teams'. NUCLEAR."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 11,
+    "INFERRED": 2,
+    "PRESENT": 19
+  },
+  "n_total": 32,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Senza persistenza intenzionale non esiste un 'Repl' — il codice scritto svanisce alla chiusura del browser. Il sistema cessa di essere un IDE e diventa una scratch pad effimera. L'archiviazione a 6 mesi è la stessa primitiva che si manifesta in negativo: la persistenza viene revocata. NUCLEAR.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.\",\n      \"removal_test\": \"Il codice sorgente è forma nel senso più letterale: struttura sintattica vincolata. Senza C2 non esiste 'file', non esiste 'codice', non esiste nulla da eseguire o versionare. Il sistema collassa prima ancora di iniziare. NUCLEAR.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"I progetti pubblici sono ricercabili, fork-abili, citabili.\",\n      \"removal_test\": \"La ricercabilità dei Repl pubblici è una delle funzioni identitarie della piattaforma come ecosistema aperto. Senza C3 i progetti esistono ma sono irraggiungibili da chi non ha già il link — il marketplace, il fork, la citabilità collassano. Il sistema perde la sua dimensione di piattaforma pubblica e diventa un IDE privato. NUCLEAR per l'identità di Replit come piattaforma, non solo come editor.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi.\",\n      \"removal_test\": \"Il corpus di checkpoint cresce nel tempo — ogni salvataggio automatico è un atto di accumulazione. Senza C4 il versioning non esiste come storia, solo come snapshot singolo. Il sistema resta un IDE funzionante ma perde la dimensione storica del codice. PRESENT.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I progetti pubblici sono ricercabili, fork-abili, citabili.\",\n      \"removal_test\": \"Il fork crea una relazione esplicita tra Repl originale e derivato. La citabilità è una relazione tra progetti. Senza C5 i Repl sono isole senza connessioni tra loro — si perde la dimensione di grafo della conoscenza. Il sistema resta funzionante ma impoverito. PRESENT.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.\",\n      \"removal_test\": \"Senza la quantificazione delle risorse consumate non è possibile bloccare l'esecuzione a quota esaurita, non è possibile differenziare i tier, non è possibile vendere upgrade. Il modello di business e il sistema di controllo delle risorse collassano simultaneamente. NUCLEAR.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati, suddivisi in tier (free, hacker, teams). Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata o rallentata.\",\n      \"removal_test\": \"Se le risorse fossero infinite non esisterebbero tier, quota, blocchi, marketplace di upgrade. L'intera architettura economica e tecnica del sistema presuppone la finitezza. Senza I2 Replit non ha modello di business. NUCLEAR.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Ogni Repl appartiene a qualcuno — l'owner controlla chi può accedere. Senza appartenenza al contenitore non esistono permessi differenziati né inviti. Il sistema resta funzionante ma perde il controllo dell'accesso. PRESENT.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"I Repl hanno stati: attivo, archiviato. Le risorse hanno stati: disponibile, esaurita, bloccata. Senza I4 non si può distinguere un Repl attivo da uno archiviato né una quota disponibile da una esaurita. Il sistema perde la capacità di gestire il ciclo di vita. PRESENT.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un marketplace permette di vendere template.\",\n      \"removal_test\": \"Il marketplace implica trasferimento: il template passa dal venditore all'acquirente (o almeno i diritti d'uso). Senza T2 il marketplace non ha oggetto di scambio. Il sistema perde la dimensione economica ma resta un IDE funzionante. PRESENT.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un marketplace permette di vendere template.\",\n      \"removal_test\": \"La vendita presuppone un accordo tra venditore e acquirente su prezzo e condizioni. Senza T3 non esiste transazione commerciale, solo cessione unilaterale. Il marketplace collassa ma il resto del sistema sopravvive. PRESENT.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni utente ha un cursore colorato visibile agli altri in tempo reale.\",\n      \"removal_test\": \"Il cursore colorato è la manifestazione visiva dell'identità dell'utente nel documento condiviso. Senza M1 non si sa chi sta scrivendo cosa — la collaborazione live diventa una scrittura anonima indistinguibile. Il sistema cessa di essere 'collaborativo' nel senso proprio. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"L'appartenenza a un Repl (come collaboratore) è la struttura che rende possibile la collaborazione controllata. Senza M2 non esistono collaboratori, solo owner — il sistema diventa un IDE personale. NUCLEAR per l'identità collaborativa del sistema.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin. I tier (free, hacker, teams).\",\n      \"removal_test\": \"La differenziazione opera su due assi: permessi (read/write/admin) e tier di account (free/hacker/teams). Senza M3 tutti gli utenti hanno gli stessi diritti e le stesse risorse — il modello di business e il controllo degli accessi collassano. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin.\",\n      \"removal_test\": \"Il confine dentro/fuori di un Repl separa chi può accedere da chi non può. Senza M4 tutti i Repl sarebbero pubblici e modificabili da chiunque. Il sistema perde la protezione della proprietà intellettuale. PRESENT — il confine esiste ma non è l'elemento più caratterizzante.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un ambiente di programmazione nel browser dove più persone possono scrivere codice nello stesso file contemporaneamente.\",\n      \"removal_test\": \"Il codice è l'unità di lavoro che entra nel processo di esecuzione. Senza W1 non c'è nulla da processare. Tuttavia W1 è così implicita nell'idea stessa di IDE che la sua assenza è impensabile — il test di rimozione non aggiunge informazione. PRESENT per non inflazionare NUCLEAR.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Le esecuzioni di programmi usano il quota mensile.\",\n      \"removal_test\": \"Il codice attraversa stati: in scrittura → salvato → in esecuzione → completato/bloccato. Il versioning automatico è una sequenza di stati. Senza W2 non esiste pipeline di esecuzione né storia delle versioni. PRESENT.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"se esaurito, l'esecuzione viene bloccata o rallentata. Quando un Repl non viene modificato per 6 mesi in account free, viene archiviato.\",\n      \"removal_test\": \"Le regole governano quando bloccare l'esecuzione, quando archiviare, quali permessi consentono quale azione. Senza W3 il sistema non sa quando intervenire — le quote non vengono applicate, l'archiviazione non avviene. PRESENT.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti possono invitare collaboratori con permessi read/write/admin. Gli amministratori di un team vedono dashboard con attività dei membri.\",\n      \"removal_test\": \"I permessi admin assegnano responsabilità specifiche su fasi del workflow (gestione team, approvazione accessi). Senza W4 nessuno è responsabile di nulla — il sistema di governance del team collassa. PRESENT.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati. Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"CPU, memoria, storage, quota mensile sono risorse finite allocate nel tempo. Senza S1 non esiste il concetto di quota, non esiste il blocco dell'esecuzione, non esistono i tier. Il sistema di resource management — cuore del modello economico — collassa. NUCLEAR.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account; se esaurito, l'esecuzione viene bloccata.\",\n      \"removal_test\": \"Ogni utente che esegue un programma è un richiedente di risorse computazionali. Senza S2 non c'è domanda, non c'è consumo, non c'è quota. Ma S2 è implicita in qualsiasi sistema con utenti — non è distintiva di Replit. PRESENT.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Le esecuzioni di programmi usano il quota mensile dell'account.\",\n      \"removal_test\": \"La quota mensile implica slot temporali (il mese come unità). Ma Replit non espone esplicitamente slot prenotabili — la temporalità è implicita nel reset mensile della quota. Debolmente inferibile. INFERRED.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"ogni 'Repl' ha CPU, memoria, e storage limitati.\",\n      \"removal_test\": \"La CPU non può essere assegnata due volte allo stesso ciclo di clock — la non-sovrapposizione è una proprietà fisica sottostante. Ma Replit non la espone come concetto esplicito. INFERRED.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Un sistema di chat integrata accompagna il codice.\",\n      \"removal_test\": \"La chat integrata è la primitiva comunicativa esplicita del sistema. Senza CO1 la collaborazione live è muta — i cursori si muovono ma nessuno può coordinarsi verbalmente senza uscire dalla piattaforma. Il sistema perde una dimensione identitaria della collaborazione. NUCLEAR.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ghostwriter, un assistente AI che suggerisce completamenti e può generare codice da descrizioni.\",\n      \"removal_test\": \"Ghostwriter deve interpretare descrizioni in linguaggio naturale e produrre codice — un atto di codifica/decodifica del significato. Senza CO2 Ghostwriter non può tradurre l'intenzione in codice. PRESENT.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli utenti possono invitare collaboratori. Un sistema di chat integrata accompagna il codice.\",\n      \"removal_test\": \"I messaggi in chat sono diretti a specifici collaboratori o al gruppo. Gli inviti sono diretti a specifici utenti. Senza CO3 la comunicazione è broadcast indifferenziato. PRESENT.\"\n    },\n    {\n      \"id\": \"CO4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un sistema di chat integrata accompagna il codice. Ogni utente ha un cursore colorato visibile agli altri in tempo reale.\",\n      \"removal_test\": \"Il canale di comunicazione è l'infrastruttura che rende possibile sia la chat che la visibilità dei cursori in tempo reale. Senza CO4 non c'è mezzo di trasmissione — la collaborazione live collassa. PRESENT (il canale è infrastruttura, non identità).\"\n    },\n    {\n      \"id\": \"N1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"Gli utenti emettono involontariamente segnali (ore di lavoro, linee scritte, pattern) che vengono catturati dalla dashboard. Senza N1 non c'è materia prima per la dashboard amministrativa. PRESENT.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. Gli amministratori di un team vedono dashboard con attività dei membri: ore spent.\",\n      \"removal_test\": \"Ogni checkpoint ha un timestamp. Le ore spent sono misurate nel tempo. Senza N2 i checkpoint sono snapshot senza ordine temporale — il versioning perde la sua dimensione storica. PRESENT.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"Le ore spent e le linee di codice indicano indirettamente produttività, engagement, salute del progetto — non li misurano direttamente. Senza N3 la dashboard mostra dati grezzi senza capacità inferenziale. PRESENT.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I file sono versionati automaticamente con checkpoint ogni pochi secondi. dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"I checkpoint accumulati nel tempo formano la serie storica del codice. I pattern di collaborazione emergono dall'accumulo di eventi. Senza N4 non esistono né versioning né pattern — solo l'istante corrente. PRESENT.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Gli amministratori di un team vedono dashboard con attività dei membri: ore spent, linee di codice, pattern di collaborazione.\",\n      \"removal_test\": \"I membri del team non sanno necessariamente cosa vedono gli amministratori nella dashboard — l'asimmetria informativa è strutturale e intenzionale. Senza N5 non esiste supervisione amministrativa: o tutti vedono tutto (simmetria) o nessuno vede nulla. La dashboard amministrativa è una funzione identitaria del tier 'teams'. NUCLEAR.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:39:59.958918+00:00"
+}

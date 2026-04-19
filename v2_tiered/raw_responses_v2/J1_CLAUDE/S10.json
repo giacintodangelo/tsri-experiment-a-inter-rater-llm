@@ -1,0 +1,168 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S10",
+  "system_title": "Conto corrente bancario",
+  "attempt": 1,
+  "elapsed_s": 61.1,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6388,
+    "output_tokens": 3882,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "T1",
+      "tier": "NUCLEAR",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta.",
+      "removal_test": "Senza due parti (banca e cliente, o cliente e controparte) tra cui avviene uno scambio, non esiste transazione bancaria. Il conto corrente è per definizione uno strumento di scambio tra parti. Rimuovendo T1 il sistema cessa di essere un conto corrente."
+    },
+    {
+      "id": "T2",
+      "tier": "NUCLEAR",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta. Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Senza un oggetto che si trasferisce (il denaro che passa da A a B), non c'è transazione bancaria. Il trasferimento di valore è l'atto costitutivo del conto corrente. Rimuovendo T2 il sistema perde la sua funzione primaria."
+    },
+    {
+      "id": "T4",
+      "tier": "NUCLEAR",
+      "quote": "L'inversione è una nuova transazione, non un undo. / I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni.",
+      "removal_test": "Se le transazioni fossero reversibili arbitrariamente, il sistema bancario collasserebbe: nessun pagamento sarebbe definitivo. L'irreversibilità è ciò che rende il saldo un dato affidabile e il conto uno strumento legale. Rimuovendo T4 il sistema cessa di essere un conto corrente."
+    },
+    {
+      "id": "T3",
+      "tier": "NUCLEAR",
+      "quote": "Per farlo presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica, assegna un IBAN e una carta.",
+      "removal_test": "Senza accordo (contratto di conto corrente, accettazione delle condizioni, verifica KYC) non esiste rapporto bancario. L'accordo è il fondamento giuridico del conto. Rimuovendo T3 il sistema non può esistere legalmente."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. Il saldo può essere positivo o negativo.",
+      "removal_test": "Il saldo è la quantificazione esatta della disponibilità. Senza I1 non si sa quanto denaro c'è nel conto. Il conto corrente senza saldo quantificato non è un conto corrente — è un registro di eventi senza stato corrente. Rimuovendo I1 il sistema perde la sua funzione operativa fondamentale."
+    },
+    {
+      "id": "I4",
+      "tier": "NUCLEAR",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido. / La banca può bloccare transazioni sospette. / In caso di decesso del titolare, il conto viene congelato.",
+      "removal_test": "Il conto ha stati discreti (attivo, bloccato, congelato, chiuso; saldo positivo/negativo/a fido) che determinano cosa è possibile fare. Senza stati il sistema non può distinguere un conto operativo da uno congelato. Rimuovendo I4 il sistema perde la capacità di governare le operazioni consentite."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "La banca verifica, assegna un IBAN e una carta. / In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.",
+      "removal_test": "L'IBAN identifica univocamente il conto; il titolare identifica univocamente il cliente. Senza identità non si può sapere a chi appartiene il denaro, chi può operare, chi eredita. Rimuovendo M1 il sistema non può attribuire la proprietà del saldo a nessuno."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi. / La banca può chiuderlo unilateralmente per inattività o violazione dei termini.",
+      "removal_test": "Il confine dentro/fuori definisce chi può accedere al conto e quali operazioni sono consentite. Senza questo confine chiunque potrebbe operare sul conto di chiunque. Rimuovendo M4 il sistema perde la sua funzione di custodia sicura."
+    },
+    {
+      "id": "N2",
+      "tier": "NUCLEAR",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. / I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni.",
+      "removal_test": "La data è costitutiva di ogni transazione bancaria: senza timestamp non si può calcolare il saldo progressivo, non si può produrre l'estratto conto, non si può applicare l'imposta di bollo sulla giacenza media annua. Rimuovendo N2 il sistema perde la sua capacità di tenuta contabile."
+    },
+    {
+      "id": "N4",
+      "tier": "NUCLEAR",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "L'estratto conto è la serie storica accumulata di tutte le transazioni. Senza accumulo sistematico dei dati non esiste estratto conto, non esiste audit trail, non esiste conformità normativa bancaria. Rimuovendo N4 il sistema non può adempiere ai suoi obblighi legali e informativi."
+    },
+    {
+      "id": "I2",
+      "tier": "PRESENT",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido (linea di credito concessa dalla banca). Il fido ha un tasso di interesse: lo scoperto costa.",
+      "removal_test": "La finitezza del saldo (non si può spendere più di quanto si ha, salvo fido) è chiaramente presente e struttura le operazioni. Tuttavia il sistema resterebbe riconoscibilmente un conto corrente anche concettualizzato senza I2 esplicita — I1 già cattura la quantità disponibile. I2 è presente ma non aggiunge identità oltre I1."
+    },
+    {
+      "id": "I3",
+      "tier": "PRESENT",
+      "quote": "Un cittadino apre un conto corrente presso una banca. / In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.",
+      "removal_test": "L'appartenenza del conto al titolare (e poi agli eredi) è chiaramente manifestata. Tuttavia M1 (identità del titolare) già cattura la relazione essenziale. I3 aggiunge la dimensione del contenitore-possesso ma il sistema resterebbe riconoscibile senza questa primitiva esplicitata."
+    },
+    {
+      "id": "W2",
+      "tier": "PRESENT",
+      "quote": "Il cliente deposita stipendi, fa bonifici, paga con carta. / La banca può bloccare transazioni sospette. / In caso di decesso del titolare, il conto viene congelato. / Il cliente può chiudere il conto in qualsiasi momento.",
+      "removal_test": "Il conto attraversa stati (aperto → operativo → bloccato/congelato → chiuso) con transizioni regolate. Questa sequenza è chiaramente presente. Tuttavia I4 già cattura gli stati; W2 aggiunge la dimensione della sequenzialità governata ma il sistema resterebbe riconoscibile senza questa primitiva."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML). / Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale. / La banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.",
+      "removal_test": "Le regole che governano le transizioni (soglie AML, soglia bollo, inattività 24 mesi) sono esplicitamente presenti. Il sistema resterebbe un conto corrente senza queste regole specifiche, ma le regole sono chiaramente manifestate e strutturano il comportamento del sistema."
+    },
+    {
+      "id": "W4",
+      "tier": "PRESENT",
+      "quote": "La banca verifica. / La banca può bloccare transazioni sospette: il cliente viene contattato per chiarire l'origine dei fondi. / La banca può chiuderlo unilateralmente.",
+      "removal_test": "La banca ha responsabilità esplicite su fasi specifiche (verifica KYC, blocco AML, chiusura unilaterale). Il cliente ha responsabilità su altre (chiarire l'origine dei fondi). La responsabilità è presente ma non è ciò che rende il sistema un conto corrente — è una caratteristica operativa."
+    },
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. / Ogni mese il cliente riceve un estratto conto con tutte le operazioni.",
+      "removal_test": "La persistenza intenzionale delle registrazioni è chiaramente presente — le transazioni vengono conservate deliberatamente contro la dissoluzione. Tuttavia N4 già cattura l'accumulo sistematico. C1 aggiunge la dimensione della volontà di conservare ma non è ciò che distingue il sistema."
+    },
+    {
+      "id": "C3",
+      "tier": "PRESENT",
+      "quote": "Ogni mese il cliente riceve un estratto conto con tutte le operazioni. / La banca verifica, assegna un IBAN.",
+      "removal_test": "L'estratto conto e l'IBAN rendono le informazioni ritrovabili dal cliente. Se le transazioni fossero registrate ma non accessibili al cliente, il sistema sarebbe gravemente impoverito. Tuttavia il sistema resterebbe un conto corrente (dal lato bancario) anche senza questa primitiva esplicitata."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "Un cittadino apre un conto corrente presso una banca. Per farlo presenta documento di identità, codice fiscale, referenze lavorative.",
+      "removal_test": "Il legame del cliente al gruppo 'correntisti della banca' è chiaramente presente — l'apertura del conto è l'atto di ingresso nel gruppo. Il sistema resterebbe riconoscibile senza questa primitiva esplicitata, ma il legame al gruppo è una caratteristica strutturale del rapporto bancario."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi. / Ogni mese il cliente riceve un estratto conto.",
+      "removal_test": "La comunicazione banca-cliente (estratto conto mensile, contatto per AML) è chiaramente presente. Il sistema resterebbe un conto corrente senza comunicazione esplicita, ma la comunicazione è una caratteristica operativa rilevante."
+    },
+    {
+      "id": "CO3",
+      "tier": "PRESENT",
+      "quote": "I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni e commissioni.",
+      "removal_test": "La direzionalità del bonifico (verso uno specifico IBAN destinatario) è esplicitamente presente. Il sistema resterebbe un conto corrente senza questa primitiva esplicitata, ma la direzionalità è una caratteristica strutturale del bonifico."
+    },
+    {
+      "id": "N3",
+      "tier": "PRESENT",
+      "quote": "Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido. / Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.",
+      "removal_test": "Il saldo indica indirettamente la salute finanziaria del cliente; la giacenza media indica indirettamente il comportamento del correntista nel tempo. Queste indicazioni indirette sono presenti ma non costitutive dell'identità del sistema."
+    },
+    {
+      "id": "S1",
+      "tier": "INFERRED",
+      "quote": "Il fido ha un tasso di interesse: lo scoperto costa. / I bonifici verso l'estero richiedono più giorni e commissioni.",
+      "removal_test": "La liquidità disponibile è una risorsa finita (non si può spendere più del saldo + fido), e il tempo di elaborazione dei bonifici è una risorsa finita. Tuttavia questa finitezza è già catturata da I1 e I2. S1 è debolmente inferibile come dimensione temporale della scarsità ma non aggiunge informazione sostanziale."
+    },
+    {
+      "id": "CO2",
+      "tier": "INFERRED",
+      "quote": "Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.",
+      "removal_test": "Il formato standardizzato delle transazioni (IBAN, causale, importo in euro) implica un codice condiviso tra banca e cliente. Tuttavia questa è una caratteristica tecnica di sfondo — il sistema resterebbe pienamente riconoscibile senza esplicitare questa primitiva."
+    },
+    {
+      "id": "N5",
+      "tier": "INFERRED",
+      "quote": "La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi.",
+      "removal_test": "La banca osserva il comportamento del cliente (pattern di transazioni) senza che il cliente sia necessariamente consapevole di essere monitorato per AML. L'asimmetria sorgente-osservatore è debolmente inferibile ma periferica all'identità del sistema."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 10,
+    "INFERRED": 3,
+    "PRESENT": 11
+  },
+  "n_total": 24,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"T1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta.\",\n      \"removal_test\": \"Senza due parti (banca e cliente, o cliente e controparte) tra cui avviene uno scambio, non esiste transazione bancaria. Il conto corrente è per definizione uno strumento di scambio tra parti. Rimuovendo T1 il sistema cessa di essere un conto corrente.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta. Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\",\n      \"removal_test\": \"Senza un oggetto che si trasferisce (il denaro che passa da A a B), non c'è transazione bancaria. Il trasferimento di valore è l'atto costitutivo del conto corrente. Rimuovendo T2 il sistema perde la sua funzione primaria.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'inversione è una nuova transazione, non un undo. / I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni.\",\n      \"removal_test\": \"Se le transazioni fossero reversibili arbitrariamente, il sistema bancario collasserebbe: nessun pagamento sarebbe definitivo. L'irreversibilità è ciò che rende il saldo un dato affidabile e il conto uno strumento legale. Rimuovendo T4 il sistema cessa di essere un conto corrente.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Per farlo presenta documento di identità, codice fiscale, referenze lavorative. La banca verifica, assegna un IBAN e una carta.\",\n      \"removal_test\": \"Senza accordo (contratto di conto corrente, accettazione delle condizioni, verifica KYC) non esiste rapporto bancario. L'accordo è il fondamento giuridico del conto. Rimuovendo T3 il sistema non può esistere legalmente.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. Il saldo può essere positivo o negativo.\",\n      \"removal_test\": \"Il saldo è la quantificazione esatta della disponibilità. Senza I1 non si sa quanto denaro c'è nel conto. Il conto corrente senza saldo quantificato non è un conto corrente — è un registro di eventi senza stato corrente. Rimuovendo I1 il sistema perde la sua funzione operativa fondamentale.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido. / La banca può bloccare transazioni sospette. / In caso di decesso del titolare, il conto viene congelato.\",\n      \"removal_test\": \"Il conto ha stati discreti (attivo, bloccato, congelato, chiuso; saldo positivo/negativo/a fido) che determinano cosa è possibile fare. Senza stati il sistema non può distinguere un conto operativo da uno congelato. Rimuovendo I4 il sistema perde la capacità di governare le operazioni consentite.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La banca verifica, assegna un IBAN e una carta. / In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.\",\n      \"removal_test\": \"L'IBAN identifica univocamente il conto; il titolare identifica univocamente il cliente. Senza identità non si può sapere a chi appartiene il denaro, chi può operare, chi eredita. Rimuovendo M1 il sistema non può attribuire la proprietà del saldo a nessuno.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi. / La banca può chiuderlo unilateralmente per inattività o violazione dei termini.\",\n      \"removal_test\": \"Il confine dentro/fuori definisce chi può accedere al conto e quali operazioni sono consentite. Senza questo confine chiunque potrebbe operare sul conto di chiunque. Rimuovendo M4 il sistema perde la sua funzione di custodia sicura.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. / I bonifici verso IBAN italiani arrivano in giornata; verso l'estero richiedono più giorni.\",\n      \"removal_test\": \"La data è costitutiva di ogni transazione bancaria: senza timestamp non si può calcolare il saldo progressivo, non si può produrre l'estratto conto, non si può applicare l'imposta di bollo sulla giacenza media annua. Rimuovendo N2 il sistema perde la sua capacità di tenuta contabile.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\",\n      \"removal_test\": \"L'estratto conto è la serie storica accumulata di tutte le transazioni. Senza accumulo sistematico dei dati non esiste estratto conto, non esiste audit trail, non esiste conformità normativa bancaria. Rimuovendo N4 il sistema non può adempiere ai suoi obblighi legali e informativi.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido (linea di credito concessa dalla banca). Il fido ha un tasso di interesse: lo scoperto costa.\",\n      \"removal_test\": \"La finitezza del saldo (non si può spendere più di quanto si ha, salvo fido) è chiaramente presente e struttura le operazioni. Tuttavia il sistema resterebbe riconoscibilmente un conto corrente anche concettualizzato senza I2 esplicita — I1 già cattura la quantità disponibile. I2 è presente ma non aggiunge identità oltre I1.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un cittadino apre un conto corrente presso una banca. / In caso di decesso del titolare, il conto viene congelato fino alla dichiarazione di successione degli eredi.\",\n      \"removal_test\": \"L'appartenenza del conto al titolare (e poi agli eredi) è chiaramente manifestata. Tuttavia M1 (identità del titolare) già cattura la relazione essenziale. I3 aggiunge la dimensione del contenitore-possesso ma il sistema resterebbe riconoscibile senza questa primitiva esplicitata.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il cliente deposita stipendi, fa bonifici, paga con carta. / La banca può bloccare transazioni sospette. / In caso di decesso del titolare, il conto viene congelato. / Il cliente può chiudere il conto in qualsiasi momento.\",\n      \"removal_test\": \"Il conto attraversa stati (aperto → operativo → bloccato/congelato → chiuso) con transizioni regolate. Questa sequenza è chiaramente presente. Tuttavia I4 già cattura gli stati; W2 aggiunge la dimensione della sequenzialità governata ma il sistema resterebbe riconoscibile senza questa primitiva.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML). / Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale. / La banca può chiuderlo unilateralmente per inattività (>24 mesi) o violazione dei termini.\",\n      \"removal_test\": \"Le regole che governano le transizioni (soglie AML, soglia bollo, inattività 24 mesi) sono esplicitamente presenti. Il sistema resterebbe un conto corrente senza queste regole specifiche, ma le regole sono chiaramente manifestate e strutturano il comportamento del sistema.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"La banca verifica. / La banca può bloccare transazioni sospette: il cliente viene contattato per chiarire l'origine dei fondi. / La banca può chiuderlo unilateralmente.\",\n      \"removal_test\": \"La banca ha responsabilità esplicite su fasi specifiche (verifica KYC, blocco AML, chiusura unilaterale). Il cliente ha responsabilità su altre (chiarire l'origine dei fondi). La responsabilità è presente ma non è ciò che rende il sistema un conto corrente — è una caratteristica operativa.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione. / Ogni mese il cliente riceve un estratto conto con tutte le operazioni.\",\n      \"removal_test\": \"La persistenza intenzionale delle registrazioni è chiaramente presente — le transazioni vengono conservate deliberatamente contro la dissoluzione. Tuttavia N4 già cattura l'accumulo sistematico. C1 aggiunge la dimensione della volontà di conservare ma non è ciò che distingue il sistema.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni mese il cliente riceve un estratto conto con tutte le operazioni. / La banca verifica, assegna un IBAN.\",\n      \"removal_test\": \"L'estratto conto e l'IBAN rendono le informazioni ritrovabili dal cliente. Se le transazioni fossero registrate ma non accessibili al cliente, il sistema sarebbe gravemente impoverito. Tuttavia il sistema resterebbe un conto corrente (dal lato bancario) anche senza questa primitiva esplicitata.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Un cittadino apre un conto corrente presso una banca. Per farlo presenta documento di identità, codice fiscale, referenze lavorative.\",\n      \"removal_test\": \"Il legame del cliente al gruppo 'correntisti della banca' è chiaramente presente — l'apertura del conto è l'atto di ingresso nel gruppo. Il sistema resterebbe riconoscibile senza questa primitiva esplicitata, ma il legame al gruppo è una caratteristica strutturale del rapporto bancario.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi. / Ogni mese il cliente riceve un estratto conto.\",\n      \"removal_test\": \"La comunicazione banca-cliente (estratto conto mensile, contatto per AML) è chiaramente presente. Il sistema resterebbe un conto corrente senza comunicazione esplicita, ma la comunicazione è una caratteristica operativa rilevante.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I bonifici verso IBAN italiani arrivano in giornata (bonifici istantanei in pochi secondi); verso l'estero richiedono più giorni e commissioni.\",\n      \"removal_test\": \"La direzionalità del bonifico (verso uno specifico IBAN destinatario) è esplicitamente presente. Il sistema resterebbe un conto corrente senza questa primitiva esplicitata, ma la direzionalità è una caratteristica strutturale del bonifico.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il saldo può essere positivo (a credito) o negativo se il cliente ha un fido. / Su conto sopra soglia (5000€ di giacenza media annua) matura l'imposta di bollo statale.\",\n      \"removal_test\": \"Il saldo indica indirettamente la salute finanziaria del cliente; la giacenza media indica indirettamente il comportamento del correntista nel tempo. Queste indicazioni indirette sono presenti ma non costitutive dell'identità del sistema.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Il fido ha un tasso di interesse: lo scoperto costa. / I bonifici verso l'estero richiedono più giorni e commissioni.\",\n      \"removal_test\": \"La liquidità disponibile è una risorsa finita (non si può spendere più del saldo + fido), e il tempo di elaborazione dei bonifici è una risorsa finita. Tuttavia questa finitezza è già catturata da I1 e I2. S1 è debolmente inferibile come dimensione temporale della scarsità ma non aggiunge informazione sostanziale.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Ogni transazione viene registrata: data, importo, controparte, causale, saldo dopo l'operazione.\",\n      \"removal_test\": \"Il formato standardizzato delle transazioni (IBAN, causale, importo in euro) implica un codice condiviso tra banca e cliente. Tuttavia questa è una caratteristica tecnica di sfondo — il sistema resterebbe pienamente riconoscibile senza esplicitare questa primitiva.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"La banca può bloccare transazioni sospette per antiriciclaggio (AML): il cliente viene contattato per chiarire l'origine dei fondi.\",\n      \"removal_test\": \"La banca osserva il comportamento del cliente (pattern di transazioni) senza che il cliente sia necessariamente consapevole di essere monitorato per AML. L'asimmetria sorgente-osservatore è debolmente inferibile ma periferica all'identità del sistema.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:46:19.331614+00:00"
+}

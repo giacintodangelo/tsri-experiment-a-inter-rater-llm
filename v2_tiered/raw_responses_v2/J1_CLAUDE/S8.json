@@ -1,0 +1,162 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S8",
+  "system_title": "Cooperativa di pescatori di un piccolo porto",
+  "attempt": 1,
+  "elapsed_s": 50.54,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6389,
+    "output_tokens": 3444,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "22 barche di pescatori, tutte a conduzione familiare [...] Nel 1962 hanno fondato una cooperativa [...] L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni",
+      "removal_test": "Senza identità stabile dei membri non esiste cooperativa: non si può calcolare la quota proporzionale, non si può votare, non si può espellere. Il sistema collassa in un mercato anonimo. NUCLEAR."
+    },
+    {
+      "id": "M2",
+      "tier": "NUCLEAR",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni",
+      "removal_test": "Senza legame formale al gruppo non esiste cooperativa — esiste solo un insieme di pescatori. Il pooling, la distribuzione delle quote, il voto: tutto presuppone l'appartenenza certificata. Rimuovendo M2 il sistema cessa di essere una cooperativa. NUCLEAR."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "L'ammissione di nuovi pescatori richiede il voto di due terzi [...] 3 espulsioni: tutte per pesca illegale",
+      "removal_test": "Il confine dentro/fuori è il meccanismo che rende la cooperativa un soggetto collettivo distinto dal mercato aperto. Senza confine, chiunque potrebbe accedere al pooling e alle risorse condivise. Il sistema perderebbe la sua natura cooperativa. NUCLEAR."
+    },
+    {
+      "id": "T1",
+      "tier": "NUCLEAR",
+      "quote": "pooling della pesca, distribuzione comune ai mercati [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni",
+      "removal_test": "La cooperativa esiste per mediare scambi: il pescatore conferisce pescato, riceve quota monetaria; la cooperativa vende ai mercati del continente. Senza la struttura a due parti (membro↔cooperativa, cooperativa↔mercato) non c'è cooperativa ma solo pesca individuale. NUCLEAR."
+    },
+    {
+      "id": "T2",
+      "tier": "NUCLEAR",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati del continente [...] I membri ricevono mensilmente la loro quota",
+      "removal_test": "Il pescato si trasferisce dal pescatore alla cooperativa, poi ai mercati; il denaro si trasferisce nella direzione opposta. Senza oggetto di trasferimento non c'è né pooling né distribuzione delle quote. Il sistema cessa di funzionare. NUCLEAR."
+    },
+    {
+      "id": "I1",
+      "tier": "NUCLEAR",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia [...] I prezzi all'ingrosso variano giornalmente secondo domanda e scorte",
+      "removal_test": "Senza quantificazione del pescato conferito non si può calcolare la quota proporzionale di ciascun membro. La pesatura è l'atto fondante della distribuzione equa. Rimuovendo I1 il sistema di ripartizione collassa. NUCLEAR."
+    },
+    {
+      "id": "I3",
+      "tier": "NUCLEAR",
+      "quote": "acquisto collettivo di reti e carburante a prezzi scontati, gestione condivisa di una cella frigorifera al porto [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito",
+      "removal_test": "La cooperativa gestisce risorse collettive (cella frigorifera, reti, carburante) e il pescato conferito appartiene temporaneamente alla cooperativa prima di essere distribuito. Senza appartenenza al contenitore non si può distinguere il patrimonio collettivo da quello individuale. NUCLEAR."
+    },
+    {
+      "id": "M3",
+      "tier": "PRESENT",
+      "quote": "un membro anziano valuta [il meteo] [...] Le decisioni importanti sono prese in assemblea con un voto per membro [...] L'ammissione di nuovi pescatori richiede il voto di due terzi",
+      "removal_test": "Esiste una differenziazione implicita: il membro anziano ha un ruolo riconosciuto, la regola dei due terzi implica che non tutti i voti hanno lo stesso peso decisionale in certi contesti. Tuttavia la cooperativa funzionerebbe anche con una struttura completamente piatta. PRESENT."
+    },
+    {
+      "id": "W3",
+      "tier": "PRESENT",
+      "quote": "a rotazione, e in base al meteo [...] L'ammissione di nuovi pescatori richiede il voto di due terzi [...] 3 espulsioni: tutte per pesca illegale (sottomisura, zone protette)",
+      "removal_test": "Le regole strutturano il funzionamento: chi esce in mare, come si ammettono nuovi membri, cosa costituisce motivo di espulsione. Senza regole il sistema diventa arbitrario ma non cessa di essere una cooperativa di pescatori. PRESENT."
+    },
+    {
+      "id": "W4",
+      "tier": "PRESENT",
+      "quote": "un membro anziano valuta [il meteo] [...] La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti",
+      "removal_test": "Esistono responsabilità assegnate: il membro anziano per la valutazione meteo, chi gestisce la pesatura e catalogazione. Senza responsabilità assegnate il sistema funzionerebbe in modo caotico ma resterebbe riconoscibile. PRESENT."
+    },
+    {
+      "id": "T3",
+      "tier": "PRESENT",
+      "quote": "Nel 1962 hanno fondato una cooperativa [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni",
+      "removal_test": "Lo statuto cooperativo è un accordo fondante che vincola tutti i membri. Le trattenute per spese comuni presuppongono un accordo accettato. Senza accordo formale il sistema resterebbe operativo come prassi informale, ma perderebbe la sua struttura giuridica. PRESENT."
+    },
+    {
+      "id": "T4",
+      "tier": "PRESENT",
+      "quote": "In 60 anni ci sono state 3 espulsioni [...] I prezzi all'ingrosso variano giornalmente secondo domanda e scorte",
+      "removal_test": "Le espulsioni sono irreversibili (non risultano reintegrazioni). Le vendite ai mercati sono transazioni completate. L'irreversibilità è presente ma non è ciò che definisce la cooperativa — è una proprietà delle sue transazioni. PRESENT."
+    },
+    {
+      "id": "I2",
+      "tier": "PRESENT",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] acquisto collettivo di reti e carburante a prezzi scontati",
+      "removal_test": "La finitezza del pescato giornaliero e delle risorse condivise (carburante, reti) è la ragione economica della cooperativa. Senza scarsità non ci sarebbe bisogno di pooling. Tuttavia la finitezza è un dato di sfondo, non una primitiva operativa esplicita del sistema. PRESENT."
+    },
+    {
+      "id": "I4",
+      "tier": "PRESENT",
+      "quote": "La cooperativa pesa, cataloga per specie e taglia [...] gestione condivisa di una cella frigorifera al porto",
+      "removal_test": "Il pescato ha stati rilevanti: appena conferito, catalogato, in cella, spedito, venduto. La cella frigorifera stessa ha uno stato di occupazione. Senza tracciamento degli stati la logistica si complica ma il sistema resta riconoscibile. PRESENT."
+    },
+    {
+      "id": "S1",
+      "tier": "PRESENT",
+      "quote": "gestione condivisa di una cella frigorifera al porto [...] a rotazione, e in base al meteo",
+      "removal_test": "La cella frigorifera è una risorsa finita condivisa. Le uscite in mare sono a rotazione — implicano una risorsa (slot di uscita, capacità di pesca) da allocare. Senza scarsità temporale delle risorse condivise il sistema funzionerebbe diversamente ma resterebbe una cooperativa. PRESENT."
+    },
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "Nel 1962 hanno fondato una cooperativa [...] In 60 anni ci sono state 3 espulsioni [...] Le decisioni importanti sono prese in assemblea",
+      "removal_test": "Lo statuto, i verbali delle assemblee, la storia delle espulsioni: la cooperativa mantiene intenzionalmente una memoria istituzionale. Senza persistenza documentale il sistema resterebbe operativo ma perderebbe continuità giuridica e storica. PRESENT."
+    },
+    {
+      "id": "W2",
+      "tier": "PRESENT",
+      "quote": "Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 con il pescato. La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti",
+      "removal_test": "Esiste una sequenza operativa giornaliera: uscita→pesca→rientro→pesatura→catalogazione→preparazione lotti→distribuzione. Senza questa sequenza ordinata il sistema funzionerebbe in modo caotico ma resterebbe una cooperativa. PRESENT."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 [...] I prezzi all'ingrosso variano giornalmente",
+      "removal_test": "Il timestamp è costitutivo del dato operativo: il pescato del 3 marzo è diverso dal pescato del 4 marzo per freschezza, prezzo, destinazione. Senza ancoraggio temporale la gestione della cella e dei lotti diventa impossibile. Tuttavia è una proprietà operativa, non identitaria. PRESENT."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "Le decisioni importanti sono prese in assemblea con un voto per membro [...] un membro anziano valuta [il meteo]",
+      "removal_test": "L'assemblea presuppone comunicazione tra membri. La valutazione meteo viene comunicata ai pescatori. Senza comunicazione il coordinamento collettivo è impossibile, ma CO1 è infrastruttura del sistema, non la sua identità. PRESENT."
+    },
+    {
+      "id": "C5",
+      "tier": "INFERRED",
+      "quote": "cataloga per specie e taglia [...] Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie",
+      "removal_test": "La catalogazione per specie e taglia implica relazioni tra lotti e destinazioni (mercato continentale vs. locale), tra specie e prezzi. Presente ma periferica — il sistema funzionerebbe anche con una gestione meno relazionale. INFERRED."
+    },
+    {
+      "id": "N3",
+      "tier": "INFERRED",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] un membro anziano valuta [il meteo]",
+      "removal_test": "I prezzi variabili indicano indirettamente lo stato del mercato; il meteo indica indirettamente le condizioni di pesca. Entrambi sono segnali indiretti usati per decisioni operative. Presente in modo sottile — rimuoverla non cambia la descrizione del sistema. INFERRED."
+    },
+    {
+      "id": "N4",
+      "tier": "INFERRED",
+      "quote": "I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] I membri ricevono mensilmente la loro quota",
+      "removal_test": "Il calcolo mensile delle quote implica accumulo di dati giornalieri sul pescato conferito. I prezzi variabili implicano una serie storica implicita. L'accumulo sistematico è inferibile ma non descritto esplicitamente. INFERRED."
+    },
+    {
+      "id": "S2",
+      "tier": "INFERRED",
+      "quote": "Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie",
+      "removal_test": "Ristoranti e pescherie sono richiedenti che si rivolgono alla cooperativa per ottenere pescato. La domanda locale è presente ma descritta come dato di sfondo, non come meccanismo strutturato. INFERRED."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 7,
+    "INFERRED": 4,
+    "PRESENT": 12
+  },
+  "n_total": 23,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"22 barche di pescatori, tutte a conduzione familiare [...] Nel 1962 hanno fondato una cooperativa [...] L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni\",\n      \"removal_test\": \"Senza identità stabile dei membri non esiste cooperativa: non si può calcolare la quota proporzionale, non si può votare, non si può espellere. Il sistema collassa in un mercato anonimo. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi. In 60 anni ci sono state 3 espulsioni\",\n      \"removal_test\": \"Senza legame formale al gruppo non esiste cooperativa — esiste solo un insieme di pescatori. Il pooling, la distribuzione delle quote, il voto: tutto presuppone l'appartenenza certificata. Rimuovendo M2 il sistema cessa di essere una cooperativa. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'ammissione di nuovi pescatori richiede il voto di due terzi [...] 3 espulsioni: tutte per pesca illegale\",\n      \"removal_test\": \"Il confine dentro/fuori è il meccanismo che rende la cooperativa un soggetto collettivo distinto dal mercato aperto. Senza confine, chiunque potrebbe accedere al pooling e alle risorse condivise. Il sistema perderebbe la sua natura cooperativa. NUCLEAR.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"pooling della pesca, distribuzione comune ai mercati [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni\",\n      \"removal_test\": \"La cooperativa esiste per mediare scambi: il pescatore conferisce pescato, riceve quota monetaria; la cooperativa vende ai mercati del continente. Senza la struttura a due parti (membro↔cooperativa, cooperativa↔mercato) non c'è cooperativa ma solo pesca individuale. NUCLEAR.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti per i mercati del continente [...] I membri ricevono mensilmente la loro quota\",\n      \"removal_test\": \"Il pescato si trasferisce dal pescatore alla cooperativa, poi ai mercati; il denaro si trasferisce nella direzione opposta. Senza oggetto di trasferimento non c'è né pooling né distribuzione delle quote. Il sistema cessa di funzionare. NUCLEAR.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia [...] I prezzi all'ingrosso variano giornalmente secondo domanda e scorte\",\n      \"removal_test\": \"Senza quantificazione del pescato conferito non si può calcolare la quota proporzionale di ciascun membro. La pesatura è l'atto fondante della distribuzione equa. Rimuovendo I1 il sistema di ripartizione collassa. NUCLEAR.\"\n    },\n    {\n      \"id\": \"I3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"acquisto collettivo di reti e carburante a prezzi scontati, gestione condivisa di una cella frigorifera al porto [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito\",\n      \"removal_test\": \"La cooperativa gestisce risorse collettive (cella frigorifera, reti, carburante) e il pescato conferito appartiene temporaneamente alla cooperativa prima di essere distribuito. Senza appartenenza al contenitore non si può distinguere il patrimonio collettivo da quello individuale. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"un membro anziano valuta [il meteo] [...] Le decisioni importanti sono prese in assemblea con un voto per membro [...] L'ammissione di nuovi pescatori richiede il voto di due terzi\",\n      \"removal_test\": \"Esiste una differenziazione implicita: il membro anziano ha un ruolo riconosciuto, la regola dei due terzi implica che non tutti i voti hanno lo stesso peso decisionale in certi contesti. Tuttavia la cooperativa funzionerebbe anche con una struttura completamente piatta. PRESENT.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"a rotazione, e in base al meteo [...] L'ammissione di nuovi pescatori richiede il voto di due terzi [...] 3 espulsioni: tutte per pesca illegale (sottomisura, zone protette)\",\n      \"removal_test\": \"Le regole strutturano il funzionamento: chi esce in mare, come si ammettono nuovi membri, cosa costituisce motivo di espulsione. Senza regole il sistema diventa arbitrario ma non cessa di essere una cooperativa di pescatori. PRESENT.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"un membro anziano valuta [il meteo] [...] La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti\",\n      \"removal_test\": \"Esistono responsabilità assegnate: il membro anziano per la valutazione meteo, chi gestisce la pesatura e catalogazione. Senza responsabilità assegnate il sistema funzionerebbe in modo caotico ma resterebbe riconoscibile. PRESENT.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Nel 1962 hanno fondato una cooperativa [...] I membri ricevono mensilmente la loro quota proporzionalmente al pescato conferito, meno le trattenute per spese comuni\",\n      \"removal_test\": \"Lo statuto cooperativo è un accordo fondante che vincola tutti i membri. Le trattenute per spese comuni presuppongono un accordo accettato. Senza accordo formale il sistema resterebbe operativo come prassi informale, ma perderebbe la sua struttura giuridica. PRESENT.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"In 60 anni ci sono state 3 espulsioni [...] I prezzi all'ingrosso variano giornalmente secondo domanda e scorte\",\n      \"removal_test\": \"Le espulsioni sono irreversibili (non risultano reintegrazioni). Le vendite ai mercati sono transazioni completate. L'irreversibilità è presente ma non è ciò che definisce la cooperativa — è una proprietà delle sue transazioni. PRESENT.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] acquisto collettivo di reti e carburante a prezzi scontati\",\n      \"removal_test\": \"La finitezza del pescato giornaliero e delle risorse condivise (carburante, reti) è la ragione economica della cooperativa. Senza scarsità non ci sarebbe bisogno di pooling. Tuttavia la finitezza è un dato di sfondo, non una primitiva operativa esplicita del sistema. PRESENT.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"La cooperativa pesa, cataloga per specie e taglia [...] gestione condivisa di una cella frigorifera al porto\",\n      \"removal_test\": \"Il pescato ha stati rilevanti: appena conferito, catalogato, in cella, spedito, venduto. La cella frigorifera stessa ha uno stato di occupazione. Senza tracciamento degli stati la logistica si complica ma il sistema resta riconoscibile. PRESENT.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"gestione condivisa di una cella frigorifera al porto [...] a rotazione, e in base al meteo\",\n      \"removal_test\": \"La cella frigorifera è una risorsa finita condivisa. Le uscite in mare sono a rotazione — implicano una risorsa (slot di uscita, capacità di pesca) da allocare. Senza scarsità temporale delle risorse condivise il sistema funzionerebbe diversamente ma resterebbe una cooperativa. PRESENT.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Nel 1962 hanno fondato una cooperativa [...] In 60 anni ci sono state 3 espulsioni [...] Le decisioni importanti sono prese in assemblea\",\n      \"removal_test\": \"Lo statuto, i verbali delle assemblee, la storia delle espulsioni: la cooperativa mantiene intenzionalmente una memoria istituzionale. Senza persistenza documentale il sistema resterebbe operativo ma perderebbe continuità giuridica e storica. PRESENT.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 con il pescato. La cooperativa pesa, cataloga per specie e taglia, e prepara i lotti\",\n      \"removal_test\": \"Esiste una sequenza operativa giornaliera: uscita→pesca→rientro→pesatura→catalogazione→preparazione lotti→distribuzione. Senza questa sequenza ordinata il sistema funzionerebbe in modo caotico ma resterebbe una cooperativa. PRESENT.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Ogni mattina alle 4 i pescatori escono [...] Tornano verso le 10-11 [...] I prezzi all'ingrosso variano giornalmente\",\n      \"removal_test\": \"Il timestamp è costitutivo del dato operativo: il pescato del 3 marzo è diverso dal pescato del 4 marzo per freschezza, prezzo, destinazione. Senza ancoraggio temporale la gestione della cella e dei lotti diventa impossibile. Tuttavia è una proprietà operativa, non identitaria. PRESENT.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Le decisioni importanti sono prese in assemblea con un voto per membro [...] un membro anziano valuta [il meteo]\",\n      \"removal_test\": \"L'assemblea presuppone comunicazione tra membri. La valutazione meteo viene comunicata ai pescatori. Senza comunicazione il coordinamento collettivo è impossibile, ma CO1 è infrastruttura del sistema, non la sua identità. PRESENT.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"cataloga per specie e taglia [...] Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie\",\n      \"removal_test\": \"La catalogazione per specie e taglia implica relazioni tra lotti e destinazioni (mercato continentale vs. locale), tra specie e prezzi. Presente ma periferica — il sistema funzionerebbe anche con una gestione meno relazionale. INFERRED.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] un membro anziano valuta [il meteo]\",\n      \"removal_test\": \"I prezzi variabili indicano indirettamente lo stato del mercato; il meteo indica indirettamente le condizioni di pesca. Entrambi sono segnali indiretti usati per decisioni operative. Presente in modo sottile — rimuoverla non cambia la descrizione del sistema. INFERRED.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"I prezzi all'ingrosso variano giornalmente secondo domanda e scorte [...] I membri ricevono mensilmente la loro quota\",\n      \"removal_test\": \"Il calcolo mensile delle quote implica accumulo di dati giornalieri sul pescato conferito. I prezzi variabili implicano una serie storica implicita. L'accumulo sistematico è inferibile ma non descritto esplicitamente. INFERRED.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Una parte del pescato rimane sull'isola per il consumo locale: ristoranti, pescherie, famiglie\",\n      \"removal_test\": \"Ristoranti e pescherie sono richiedenti che si rivolgono alla cooperativa per ottenere pescato. La domanda locale è presente ma descritta come dato di sfondo, non come meccanismo strutturato. INFERRED.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:44:18.848746+00:00"
+}

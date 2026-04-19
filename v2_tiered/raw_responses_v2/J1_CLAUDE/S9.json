@@ -1,0 +1,150 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 59.38,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6397,
+    "output_tokens": 3836,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "la sua diocesi può avviare una causa di beatificazione [...] il dossier viene inviato a Roma [...] una commissione di cardinali e consultori valuta",
+      "removal_test": "Il candidato defunto è l'unità di lavoro che entra nel processo e viene 'processata' attraverso le fasi. Senza un'entità che subisce la trasformazione valutativa, non esiste alcun processo — solo regole astratte senza oggetto. Il sistema cesserebbe di essere una causa, diventando un codice normativo generico. NUCLEAR."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "La fase diocesana [...] il dossier viene inviato a Roma [...] Dopo parere positivo, il Papa firma un decreto [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'",
+      "removal_test": "La sequenza Diocesi → Roma → Venerabile → Beato → Santo è l'ossatura del sistema. Senza stati ordinati e transizioni definite, non esiste una 'causa' — esiste al massimo una valutazione informale. Il sistema cesserebbe di essere riconoscibile come processo canonico. NUCLEAR."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983) [...] per escludere eresie [...] virtù eroiche [...] miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica",
+      "removal_test": "Le regole canoniche definiscono cosa conta come prova valida, quali transizioni sono ammesse, cosa costituisce un miracolo. Senza W3, il processo non ha criteri di avanzamento — ogni fase diventa arbitraria. Il sistema cesserebbe di essere un processo giuridico-canonico. NUCLEAR."
+    },
+    {
+      "id": "W4",
+      "tier": "NUCLEAR",
+      "quote": "Un postulatore (nominato) compila il dossier [...] una commissione di cardinali e consultori valuta [...] commissione medica e poi teologica [...] il Papa firma un decreto",
+      "removal_test": "Ogni fase ha un responsabile specifico: postulatore, commissione teologica diocesana, Congregazione, commissione medica, Papa. Senza l'assegnazione di responsabilità a ruoli definiti, il processo non ha agenti che lo fanno avanzare. Il sistema cesserebbe di funzionare come istituzione. NUCLEAR."
+    },
+    {
+      "id": "T4",
+      "tier": "NUCLEAR",
+      "quote": "Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'. [...] L'inversione è una nuova transazione, non un undo",
+      "removal_test": "Il titolo di Beato o Santo, una volta conferito dal Papa, è irreversibile nella struttura del sistema (la canonizzazione è infallibile per dottrina). Senza irreversibilità, il titolo non avrebbe il peso ontologico che lo distingue da una valutazione revocabile. Il sistema cesserebbe di essere una dichiarazione definitiva. NUCLEAR."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Quando una persona cattolica muore [...] la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie",
+      "removal_test": "L'identità persistente del candidato defunto — riconoscibile attraverso testimonianze, scritti, storia di vita — è ciò che rende possibile valutarlo. Senza identità stabile, non si può attribuire a 'quella persona' le virtù eroiche o i miracoli. Il sistema cesserebbe di essere una valutazione di un individuo specifico. NUCLEAR."
+    },
+    {
+      "id": "C1",
+      "tier": "NUCLEAR",
+      "quote": "Si raccolgono gli scritti del candidato — lettere, diari, omelie [...] Un postulatore (nominato) compila il dossier [...] il dossier viene inviato a Roma",
+      "removal_test": "Il dossier è la materializzazione persistente dell'intera istruttoria. Senza persistenza intenzionale degli scritti, delle testimonianze, del dossier, il processo non può attraversare decenni né essere trasmesso da Roma. Il sistema cesserebbe di poter durare nel tempo (alcune cause durano secoli). NUCLEAR."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "la raccolta di testimonianze scritte e orali [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie [...] Un postulatore (nominato) compila il dossier",
+      "removal_test": "Il corpus probatorio si accumula progressivamente — testimonianze, scritti, referti medici, pareri teologici. Senza accumulazione, il dossier non cresce verso la soglia di sufficienza. Il sistema sarebbe impoverito (non si capirebbe come si costruisce la prova), ma l'identità del processo resterebbe riconoscibile. PRESENT."
+    },
+    {
+      "id": "C2",
+      "tier": "PRESENT",
+      "quote": "virtù eroiche [...] miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente [...] per escludere eresie",
+      "removal_test": "I criteri di valutazione (forma delle virtù eroiche, forma del miracolo valido) sono vincoli strutturali che definiscono cosa può essere ammesso come prova. Senza forma, ogni testimonianza sarebbe equivalente. Il sistema sarebbe meno preciso ma resterebbe riconoscibile come processo valutativo. PRESENT."
+    },
+    {
+      "id": "C5",
+      "tier": "PRESENT",
+      "quote": "testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori, gente comune che afferma di aver ricevuto grazie",
+      "removal_test": "Le testimonianze connettono il candidato ad altri artefatti probatori (le grazie ricevute, i rapporti con confessori). Senza relazioni tra artefatti, il dossier sarebbe una raccolta di elementi isolati. Il sistema resterebbe riconoscibile ma perderebbe la rete probatoria. PRESENT."
+    },
+    {
+      "id": "C3",
+      "tier": "PRESENT",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi [...] alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente",
+      "removal_test": "Il dossier deve essere ritrovabile dalla Congregazione, e le cause sospese devono poter essere riaperte. Senza ritrovabilità, il sistema non potrebbe gestire cause pluridecennali né riaprire archivi. Il sistema resterebbe riconoscibile ma perderebbe la capacità di gestire la propria storia. PRESENT."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "Quando una persona cattolica muore [...] Un postulatore (nominato) [...] una commissione di cardinali e consultori [...] commissione medica e poi teologica",
+      "removal_test": "Il legame al gruppo è duplice: il candidato appartiene alla Chiesa cattolica (condizione necessaria per avviare la causa), e gli attori istituzionali appartengono a organi specifici (Congregazione, commissioni). Senza appartenenza, non si potrebbe determinare chi ha giurisdizione. Il sistema resterebbe riconoscibile ma perderebbe la sua struttura istituzionale. PRESENT."
+    },
+    {
+      "id": "M3",
+      "tier": "PRESENT",
+      "quote": "il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo' [...] una commissione di cardinali e consultori [...] il Papa firma un decreto",
+      "removal_test": "La differenziazione opera su due livelli: i titoli progressivi (Venerabile < Beato < Santo) e la gerarchia degli attori (consultori < cardinali < Papa). Senza differenziazione, non esisterebbe la progressione che dà senso al processo. Il sistema sarebbe impoverito ma resterebbe riconoscibile. PRESENT."
+    },
+    {
+      "id": "M4",
+      "tier": "PRESENT",
+      "quote": "Quando una persona cattolica muore [...] per escludere eresie [...] Il processo ha regole canoniche codificate",
+      "removal_test": "Il confine dentro/fuori opera su più livelli: chi può essere candidato (cattolico, non eretico), chi ha autorità nel processo (istituzioni canoniche), cosa conta come prova valida. Senza confine, chiunque potrebbe essere candidato con qualsiasi prova. Il sistema resterebbe riconoscibile ma perderebbe la sua specificità cattolica. PRESENT."
+    },
+    {
+      "id": "T3",
+      "tier": "PRESENT",
+      "quote": "commissione medica e poi teologica [...] una commissione di cardinali e consultori valuta [...] il Papa firma un decreto",
+      "removal_test": "Ogni fase richiede un accordo istituzionale — la commissione medica deve concordare sull'inspiegabilità, la commissione teologica deve concordare sul miracolo, il Papa deve firmare. Senza accordo formalizzato, le decisioni non avrebbero validità canonica. Il sistema resterebbe riconoscibile ma perderebbe la sua natura deliberativa. PRESENT."
+    },
+    {
+      "id": "N3",
+      "tier": "PRESENT",
+      "quote": "gente comune che afferma di aver ricevuto grazie [...] una guarigione inspiegabile medicalmente, attestata da una commissione medica",
+      "removal_test": "Le grazie e i miracoli sono segnali indiretti dello stato interiore del candidato (santità) — indicano qualcosa che non può essere osservato direttamente. Senza indicazione indiretta, il sistema non avrebbe modo di inferire la santità da eventi osservabili. Il sistema resterebbe riconoscibile ma perderebbe il suo meccanismo probatorio centrale. PRESENT."
+    },
+    {
+      "id": "N5",
+      "tier": "PRESENT",
+      "quote": "testimonianze scritte e orali di chi ha conosciuto il candidato [...] gente comune che afferma di aver ricevuto grazie",
+      "removal_test": "Il candidato è defunto e non partecipa al processo — è la sorgente inconsapevole di segnali (scritti, comportamenti, grazie) che altri osservano e interpretano. L'asimmetria sorgente-osservatore è strutturale: il candidato non può difendersi né confermare. Il sistema resterebbe riconoscibile senza questa primitiva esplicitata, ma essa cattura qualcosa di reale. PRESENT."
+    },
+    {
+      "id": "I1",
+      "tier": "INFERRED",
+      "quote": "Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'",
+      "removal_test": "I miracoli vengono contati (uno per la beatificazione, due per la canonizzazione). La quantificazione è presente ma periferica — il sistema non è un sistema di gestione di risorse quantificate. Rimuoverla non cambia l'identità del sistema. INFERRED."
+    },
+    {
+      "id": "I4",
+      "tier": "INFERRED",
+      "quote": "alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente [...] il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo'",
+      "removal_test": "Ogni causa ha uno stato corrente (attiva, sospesa, conclusa) e ogni candidato ha uno stato canonico (nessuno, Venerabile, Beato, Santo). Lo stato è presente ma è già catturato da W2 (stati e transizioni del workflow). INFERRED."
+    },
+    {
+      "id": "N2",
+      "tier": "INFERRED",
+      "quote": "Il processo può durare decenni o secoli [...] lettere, diari, omelie",
+      "removal_test": "Gli scritti del candidato (lettere, diari) portano timestamp impliciti che li collocano nella vita del candidato. La dimensione temporale è presente ma non è il dato operativo centrale del sistema. INFERRED."
+    },
+    {
+      "id": "N4",
+      "tier": "INFERRED",
+      "quote": "la raccolta di testimonianze scritte e orali [...] Un postulatore (nominato) compila il dossier",
+      "removal_test": "Il dossier è un'accumulazione sistematica di dati nel tempo. Tuttavia, N4 come pattern per accumulazione telemetrica è debolmente presente — il dossier è più un corpus probatorio (C4) che una serie temporale di segnali. INFERRED."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 7,
+    "INFERRED": 4,
+    "PRESENT": 10
+  },
+  "n_total": 21,
+  "raw_response": "Analizzerò il sistema con rigore, applicando il test di rimozione letterale per ogni primitiva.\n\n**Ragionamento preliminare sul sistema:**\nUna causa di beatificazione è fondamentalmente un *processo istruttorio* che valuta se una persona defunta ha vissuto virtù eroiche e ha operato miracoli, per attribuirle un titolo canonico progressivo. L'identità del sistema risiede in: (1) la valutazione di un candidato defunto, (2) attraverso fasi sequenziali con regole codificate, (3) con responsabilità distribuite tra attori istituzionali, (4) verso una decisione papale irreversibile.\n\n```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"W1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione [...] il dossier viene inviato a Roma [...] una commissione di cardinali e consultori valuta\",\n      \"removal_test\": \"Il candidato defunto è l'unità di lavoro che entra nel processo e viene 'processata' attraverso le fasi. Senza un'entità che subisce la trasformazione valutativa, non esiste alcun processo — solo regole astratte senza oggetto. Il sistema cesserebbe di essere una causa, diventando un codice normativo generico. NUCLEAR.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"La fase diocesana [...] il dossier viene inviato a Roma [...] Dopo parere positivo, il Papa firma un decreto [...] Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo: 'Santo'\",\n      \"removal_test\": \"La sequenza Diocesi → Roma → Venerabile → Beato → Santo è l'ossatura del sistema. Senza stati ordinati e transizioni definite, non esiste una 'causa' — esiste al massimo una valutazione informale. Il sistema cesserebbe di essere riconoscibile come processo canonico. NUCLEAR.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983) [...] per escludere eresie [...] virtù eroiche [...] miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente, attestata da una commissione medica e poi teologica\",\n      \"removal_test\": \"Le regole canoniche definiscono cosa conta come prova valida, quali transizioni sono ammesse, cosa costituisce un miracolo. Senza W3, il processo non ha criteri di avanzamento — ogni fase diventa arbitraria. Il sistema cesserebbe di essere un processo giuridico-canonico. NUCLEAR.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier [...] una commissione di cardinali e consultori valuta [...] commissione medica e poi teologica [...] il Papa firma un decreto\",\n      \"removal_test\": \"Ogni fase ha un responsabile specifico: postulatore, commissione teologica diocesana, Congregazione, commissione medica, Papa. Senza l'assegnazione di responsabilità a ruoli definiti, il processo non ha agenti che lo fanno avanzare. Il sistema cesserebbe di funzionare come istituzione. NUCLEAR.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'. [...] L'inversione è una nuova transazione, non un undo\",\n      \"removal_test\": \"Il titolo di Beato o Santo, una volta conferito dal Papa, è irreversibile nella struttura del sistema (la canonizzazione è infallibile per dottrina). Senza irreversibilità, il titolo non avrebbe il peso ontologico che lo distingue da una valutazione revocabile. Il sistema cesserebbe di essere una dichiarazione definitiva. NUCLEAR.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Quando una persona cattolica muore [...] la raccolta di testimonianze scritte e orali di chi ha conosciuto il candidato [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie\",\n      \"removal_test\": \"L'identità persistente del candidato defunto — riconoscibile attraverso testimonianze, scritti, storia di vita — è ciò che rende possibile valutarlo. Senza identità stabile, non si può attribuire a 'quella persona' le virtù eroiche o i miracoli. Il sistema cesserebbe di essere una valutazione di un individuo specifico. NUCLEAR.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Si raccolgono gli scritti del candidato — lettere, diari, omelie [...] Un postulatore (nominato) compila il dossier [...] il dossier viene inviato a Roma\",\n      \"removal_test\": \"Il dossier è la materializzazione persistente dell'intera istruttoria. Senza persistenza intenzionale degli scritti, delle testimonianze, del dossier, il processo non può attraversare decenni né essere trasmesso da Roma. Il sistema cesserebbe di poter durare nel tempo (alcune cause durano secoli). NUCLEAR.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"la raccolta di testimonianze scritte e orali [...] Si raccolgono gli scritti del candidato — lettere, diari, omelie [...] Un postulatore (nominato) compila il dossier\",\n      \"removal_test\": \"Il corpus probatorio si accumula progressivamente — testimonianze, scritti, referti medici, pareri teologici. Senza accumulazione, il dossier non cresce verso la soglia di sufficienza. Il sistema sarebbe impoverito (non si capirebbe come si costruisce la prova), ma l'identità del processo resterebbe riconoscibile. PRESENT.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"virtù eroiche [...] miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente [...] per escludere eresie\",\n      \"removal_test\": \"I criteri di valutazione (forma delle virtù eroiche, forma del miracolo valido) sono vincoli strutturali che definiscono cosa può essere ammesso come prova. Senza forma, ogni testimonianza sarebbe equivalente. Il sistema sarebbe meno preciso ma resterebbe riconoscibile come processo valutativo. PRESENT.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori, gente comune che afferma di aver ricevuto grazie\",\n      \"removal_test\": \"Le testimonianze connettono il candidato ad altri artefatti probatori (le grazie ricevute, i rapporti con confessori). Senza relazioni tra artefatti, il dossier sarebbe una raccolta di elementi isolati. Il sistema resterebbe riconoscibile ma perderebbe la rete probatoria. PRESENT.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi [...] alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente\",\n      \"removal_test\": \"Il dossier deve essere ritrovabile dalla Congregazione, e le cause sospese devono poter essere riaperte. Senza ritrovabilità, il sistema non potrebbe gestire cause pluridecennali né riaprire archivi. Il sistema resterebbe riconoscibile ma perderebbe la capacità di gestire la propria storia. PRESENT.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Quando una persona cattolica muore [...] Un postulatore (nominato) [...] una commissione di cardinali e consultori [...] commissione medica e poi teologica\",\n      \"removal_test\": \"Il legame al gruppo è duplice: il candidato appartiene alla Chiesa cattolica (condizione necessaria per avviare la causa), e gli attori istituzionali appartengono a organi specifici (Congregazione, commissioni). Senza appartenenza, non si potrebbe determinare chi ha giurisdizione. Il sistema resterebbe riconoscibile ma perderebbe la sua struttura istituzionale. PRESENT.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo' [...] una commissione di cardinali e consultori [...] il Papa firma un decreto\",\n      \"removal_test\": \"La differenziazione opera su due livelli: i titoli progressivi (Venerabile < Beato < Santo) e la gerarchia degli attori (consultori < cardinali < Papa). Senza differenziazione, non esisterebbe la progressione che dà senso al processo. Il sistema sarebbe impoverito ma resterebbe riconoscibile. PRESENT.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Quando una persona cattolica muore [...] per escludere eresie [...] Il processo ha regole canoniche codificate\",\n      \"removal_test\": \"Il confine dentro/fuori opera su più livelli: chi può essere candidato (cattolico, non eretico), chi ha autorità nel processo (istituzioni canoniche), cosa conta come prova valida. Senza confine, chiunque potrebbe essere candidato con qualsiasi prova. Il sistema resterebbe riconoscibile ma perderebbe la sua specificità cattolica. PRESENT.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"commissione medica e poi teologica [...] una commissione di cardinali e consultori valuta [...] il Papa firma un decreto\",\n      \"removal_test\": \"Ogni fase richiede un accordo istituzionale — la commissione medica deve concordare sull'inspiegabilità, la commissione teologica deve concordare sul miracolo, il Papa deve firmare. Senza accordo formalizzato, le decisioni non avrebbero validità canonica. Il sistema resterebbe riconoscibile ma perderebbe la sua natura deliberativa. PRESENT.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"gente comune che afferma di aver ricevuto grazie [...] una guarigione inspiegabile medicalmente, attestata da una commissione medica\",\n      \"removal_test\": \"Le grazie e i miracoli sono segnali indiretti dello stato interiore del candidato (santità) — indicano qualcosa che non può essere osservato direttamente. Senza indicazione indiretta, il sistema non avrebbe modo di inferire la santità da eventi osservabili. Il sistema resterebbe riconoscibile ma perderebbe il suo meccanismo probatorio centrale. PRESENT.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"testimonianze scritte e orali di chi ha conosciuto il candidato [...] gente comune che afferma di aver ricevuto grazie\",\n      \"removal_test\": \"Il candidato è defunto e non partecipa al processo — è la sorgente inconsapevole di segnali (scritti, comportamenti, grazie) che altri osservano e interpretano. L'asimmetria sorgente-osservatore è strutturale: il candidato non può difendersi né confermare. Il sistema resterebbe riconoscibile senza questa primitiva esplicitata, ma essa cattura qualcosa di reale. PRESENT.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'\",\n      \"removal_test\": \"I miracoli vengono contati (uno per la beatificazione, due per la canonizzazione). La quantificazione è presente ma periferica — il sistema non è un sistema di gestione di risorse quantificate. Rimuoverla non cambia l'identità del sistema. INFERRED.\"\n    },\n    {\n      \"id\": \"I4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente [...] il titolo di 'Venerabile' [...] 'Beato' [...] 'Santo'\",\n      \"removal_test\": \"Ogni causa ha uno stato corrente (attiva, sospesa, conclusa) e ogni candidato ha uno stato canonico (nessuno, Venerabile, Beato, Santo). Lo stato è presente ma è già catturato da W2 (stati e transizioni del workflow). INFERRED.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Il processo può durare decenni o secoli [...] lettere, diari, omelie\",\n      \"removal_test\": \"Gli scritti del candidato (lettere, diari) portano timestamp impliciti che li collocano nella vita del candidato. La dimensione temporale è presente ma non è il dato operativo centrale del sistema. INFERRED.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"la raccolta di testimonianze scritte e orali [...] Un postulatore (nominato) compila il dossier\",\n      \"removal_test\": \"Il dossier è un'accumulazione sistematica di dati nel tempo. Tuttavia, N4 come pattern per accumulazione telemetrica è debolmente presente — il dossier è più un corpus probatorio (C4) che una serie temporale di segnali. INFERRED.\"\n    }\n  ]\n}\n```\n\n**Nota metodologica:** Ho escluso S1/S2/S3/S4 (SCHEDULING) perché il sistema non alloca risorse temporali scarse in senso operativo — la durata del processo è una conseguenza, non una risorsa gestita. Ho escluso CO1/CO2/CO3/CO4 (COMMUNICATION) perché la comunicazione istituzionale è un mezzo del processo, non una sua struttura costitutiva. Ho escluso T1/T2 (TRANSACTIONS) perché non c'è trasferimento di oggetti tra parti — la valutazione non è uno scambio. Ho escluso I2/I3 (INVENTORY) perché le risorse non sono il focus del sistema.",
+  "timestamp_utc": "2026-04-18T23:45:18.232666+00:00"
+}

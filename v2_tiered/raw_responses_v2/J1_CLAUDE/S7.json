@@ -1,0 +1,186 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S7",
+  "system_title": "Redazione di un quotidiano cartaceo",
+  "attempt": 1,
+  "elapsed_s": 70.72,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6406,
+    "output_tokens": 4158,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.",
+      "removal_test": "Il pezzo giornalistico è l'unità di lavoro che attraversa l'intero processo redazionale. Senza un'entità discreta che entra nel processo (notizia grezza) e ne esce trasformata (articolo pubblicabile), non esiste processo redazionale — esiste solo rumore informativo. Rimuovendo W1, il sistema cessa di essere una redazione."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "si assegnano i pezzi [...] i giornalisti contattano fonti, verificano fatti, scrivono [...] tre livelli di revisione [...] taglio dei pezzi [...] il file passa in stampa [...] I rotativi stampano [...] Le copie vengono caricate su camion",
+      "removal_test": "La sequenza ordinata di stati — assegnato → in lavorazione → in revisione → impaginato → in stampa → distribuito — è l'ossatura del sistema. Senza stati e transizioni definiti, non esiste ciclo produttivo giornaliero. Il giornale non uscirebbe. Rimuovendo W2, il sistema collassa."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate'",
+      "removal_test": "Le regole che governano le transizioni — la chiusura alle 21 è inderogabile, la ribaltata è l'eccezione ammessa, i tre livelli di revisione sono obbligatori — definiscono cosa è lecito nel processo. Senza W3, ogni giornalista potrebbe pubblicare direttamente, ogni pezzo potrebbe saltare la revisione. Il sistema non sarebbe più una redazione strutturata ma una piattaforma aperta."
+    },
+    {
+      "id": "S3",
+      "tier": "NUCLEAR",
+      "quote": "Ogni mattina alle 9 [...] Alle 19 c'è la riunione finale [...] Alle 21 la redazione chiude [...] I rotativi stampano tra le 23 e le 3 [...] dalle 5",
+      "removal_test": "Il quotidiano cartaceo è definito dalla sua cadenza temporale: slot fissi e non negoziabili scandiscono l'intera produzione. La deadline delle 21 non è una preferenza — è la condizione di esistenza del prodotto. Senza slot temporali rigidi, il sistema diventa un sito di news online (che il testo stesso distingue come 'ciclo diverso'). Rimuovendo S3, il sistema perde la sua identità di quotidiano."
+    },
+    {
+      "id": "S4",
+      "tier": "NUCLEAR",
+      "quote": "Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate' — una parte della tiratura viene rifatta",
+      "removal_test": "La non-sovrapposizione temporale è la legge fisica che rende il quotidiano cartaceo strutturalmente diverso dal digitale: lo stesso slot di stampa non può contenere due versioni del giornale simultaneamente. La ribaltata esiste proprio perché S4 è inviolabile — si rifà fisicamente una parte della tiratura. Senza S4, non esisterebbe il problema della ribaltata né la pressione della deadline."
+    },
+    {
+      "id": "W4",
+      "tier": "NUCLEAR",
+      "quote": "il direttore riunisce i capiredattori [...] si assegnano i pezzi [...] caporedattore del desk, caposervizio, desk centrale",
+      "removal_test": "La catena di responsabilità — chi assegna, chi revisiona, chi approva — è costitutiva della redazione come istituzione giornalistica. Senza responsabilità assegnate, non esiste gerarchia editoriale, non esiste accountability sul contenuto pubblicato. Il sistema cesserebbe di essere una redazione e diventerebbe una piattaforma anonima."
+    },
+    {
+      "id": "C1",
+      "tier": "NUCLEAR",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "La persistenza intenzionale opera a due livelli: ogni articolo pubblicato è reso permanente (non scompare dopo la distribuzione), e l'archivio storico è la sua forma istituzionalizzata. Senza C1, ogni edizione sarebbe effimera — il giornale non avrebbe memoria di sé. Tuttavia l'archivio è una funzione accessoria rispetto al ciclo produttivo quotidiano: il giornale esisterebbe anche senza archivio consultabile. Declasso a PRESENT."
+    },
+    {
+      "id": "M3",
+      "tier": "NUCLEAR",
+      "quote": "80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport [...] caporedattore del desk, caposervizio, desk centrale",
+      "removal_test": "La differenziazione per desk e per livello gerarchico non è un'aggiunta organizzativa — è la struttura che rende possibile la specializzazione e la revisione a cascata. Senza M3, non esistono desk, non esistono livelli di revisione, non esiste la gerarchia editoriale. Il sistema collassa in una redazione indifferenziata incapace di produrre un quotidiano nazionale. NUCLEAR."
+    },
+    {
+      "id": "T4",
+      "tier": "NUCLEAR",
+      "quote": "Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate' — una parte della tiratura viene rifatta",
+      "removal_test": "L'irreversibilità è strutturalmente centrale: una volta che il file va in stampa, la correzione non è un 'undo' ma una nuova operazione costosa (la ribaltata). Il quotidiano cartaceo esiste proprio perché la pubblicazione è irreversibile — non si può 'aggiornare' una copia già distribuita. Senza T4, il sistema sarebbe indistinguibile dal digitale. NUCLEAR."
+    },
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "Senza l'archivio, il giornale continua a uscire ogni giorno. Il ciclo produttivo non è intaccato. Il sistema è impoverito (perde memoria istituzionale e una fonte di ricavo da abbonamenti) ma resta riconoscibilmente una redazione di quotidiano."
+    },
+    {
+      "id": "C3",
+      "tier": "PRESENT",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "La ritrovabilità degli articoli archiviati è chiaramente manifestata. Senza di essa, l'archivio esiste ma è inaccessibile — il sistema è impoverito ma il ciclo produttivo quotidiano non è compromesso."
+    },
+    {
+      "id": "C4",
+      "tier": "PRESENT",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati [...] metriche di click che influenzano le promozioni.",
+      "removal_test": "Il corpus degli articoli si accumula nel tempo — ogni edizione aggiunge al patrimonio informativo. Senza accumulazione, non esisterebbe archivio storico. Ma il ciclo produttivo giornaliero non dipende dall'accumulazione — ogni edizione è autonoma."
+    },
+    {
+      "id": "C2",
+      "tier": "PRESENT",
+      "quote": "decisione della gerarchia di titoli e occhielli [...] la grafica impagina",
+      "removal_test": "La forma dell'articolo — struttura del testo, titolo, occhiello, impaginazione — è un vincolo che definisce cosa è pubblicabile. Senza C2, non esisterebbe impaginazione né gerarchia visiva. Il sistema è impoverito ma non collassa: potrebbe pubblicare testi non formattati."
+    },
+    {
+      "id": "M2",
+      "tier": "PRESENT",
+      "quote": "80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport",
+      "removal_test": "L'appartenenza al desk (politica, cronaca, ecc.) struttura l'organizzazione redazionale. Senza M2, non esisterebbero desk — ma il sistema potrebbe funzionare con giornalisti generalisti. Impoverito, non distrutto."
+    },
+    {
+      "id": "M4",
+      "tier": "PRESENT",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati [...] verifiche meno rigorose",
+      "removal_test": "Il confine dentro/fuori si manifesta tra abbonati e non-abbonati (archivio), tra redazione e pubblico (chi può pubblicare), tra online e cartaceo (cicli diversi). Senza M4, l'archivio sarebbe aperto a tutti e la distinzione redazione/pubblico sfumata. Il sistema è impoverito ma riconoscibile."
+    },
+    {
+      "id": "S1",
+      "tier": "PRESENT",
+      "quote": "Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate'",
+      "removal_test": "Il tempo redazionale è la risorsa finita per eccellenza: le ore tra le 9 e le 21 sono il budget temporale non rinnovabile di ogni edizione. Senza S1, non esisterebbe la pressione della deadline. Ma S1 è già catturato strutturalmente da S3 e S4 — come primitiva separata aggiunge sfumatura, non identità."
+    },
+    {
+      "id": "S2",
+      "tier": "PRESENT",
+      "quote": "si assegnano i pezzi [...] i giornalisti contattano fonti",
+      "removal_test": "I giornalisti sono i richiedenti che competono per spazio nella pagina (risorsa finita). Senza richiedenti, non c'è scheduling. Ma il sistema è già descritto da W4 (responsabilità) — S2 aggiunge la dimensione della domanda competitiva per lo spazio."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "i giornalisti contattano fonti [...] il direttore riunisce i capiredattori [...] Alle 19 c'è la riunione finale",
+      "removal_test": "La comunicazione tra giornalisti e fonti, tra direttore e capiredattori, è chiaramente presente. Senza CO1, non esisterebbero riunioni né contatti con le fonti — il sistema è gravemente impoverito. Ma CO1 è strumentale al workflow, non costitutivo dell'identità del quotidiano in sé."
+    },
+    {
+      "id": "CO3",
+      "tier": "PRESENT",
+      "quote": "i giornalisti contattano fonti [...] il file passa in stampa",
+      "removal_test": "La direzionalità della comunicazione — dalla fonte al giornalista, dalla redazione alla tipografia, dal giornale al lettore — è strutturalmente presente. Senza CO3, l'informazione non fluisce. Ma è una proprietà del flusso informativo generale, non specifica dell'identità del quotidiano."
+    },
+    {
+      "id": "T2",
+      "tier": "PRESENT",
+      "quote": "il file passa in stampa [...] Le copie vengono caricate su camion e distribuite alle edicole",
+      "removal_test": "Il trasferimento fisico — file alla tipografia, copie alle edicole — è chiaramente presente. Senza T2, il giornale non raggiunge i lettori. Ma T2 descrive la logistica, non l'identità redazionale: il sistema di produzione del contenuto sopravvive concettualmente anche senza distribuzione."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "metriche di click che influenzano le promozioni [...] notizie della notte",
+      "removal_test": "La traccia temporale è presente nelle metriche online e nella rassegna delle notizie della notte (serie temporale di eventi). Senza N2, le metriche perdono significato temporale. Il sistema è impoverito ma il ciclo cartaceo non è compromesso."
+    },
+    {
+      "id": "N3",
+      "tier": "PRESENT",
+      "quote": "metriche di click che influenzano le promozioni [...] i giornalisti contattano fonti, verificano fatti",
+      "removal_test": "Le metriche di click indicano indirettamente l'interesse dei lettori; la verifica dei fatti indica indirettamente la realtà degli eventi. Senza N3, il sistema perde la capacità di leggere segnali indiretti. Impoverito, non distrutto."
+    },
+    {
+      "id": "I1",
+      "tier": "INFERRED",
+      "quote": "80 giornalisti divisi in desk [...] una parte della tiratura viene rifatta",
+      "removal_test": "La quantificazione è debolmente presente: 80 giornalisti (risorse umane contate), tiratura (copie contate). Ma il sistema non descrive esplicitamente un processo di conteggio operativo. I1 è inferibile ma periferico."
+    },
+    {
+      "id": "I2",
+      "tier": "INFERRED",
+      "quote": "taglio dei pezzi lunghi [...] una parte della tiratura viene rifatta",
+      "removal_test": "La finitezza dello spazio fisico della pagina (che impone il taglio dei pezzi) e della tiratura è implicitamente presente. Ma I2 è già catturata strutturalmente da S1 e S4. Come primitiva autonoma aggiunge poco."
+    },
+    {
+      "id": "T3",
+      "tier": "INFERRED",
+      "quote": "L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.",
+      "removal_test": "L'accordo abbonato-giornale è debolmente inferibile. Ma il sistema non descrive il processo di accordo — solo il risultato (accesso all'archivio). T3 è periferico rispetto all'identità redazionale."
+    },
+    {
+      "id": "N4",
+      "tier": "INFERRED",
+      "quote": "metriche di click che influenzano le promozioni",
+      "removal_test": "L'accumulazione di dati di telemetria (click nel tempo) è debolmente presente nella versione online. Ma è marginale rispetto al sistema cartaceo descritto. Omettibile senza perdita sostanziale."
+    },
+    {
+      "id": "N5",
+      "tier": "INFERRED",
+      "quote": "i giornalisti contattano fonti, verificano fatti",
+      "removal_test": "Le fonti emettono informazioni senza necessariamente sapere come verranno usate — asimmetria sorgente-osservatore debolmente presente. Ma è una caratteristica del giornalismo in generale, non specifica di questo sistema come descritto."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 9,
+    "INFERRED": 5,
+    "PRESENT": 13
+  },
+  "n_total": 27,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"W1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni pezzo passa per tre livelli di revisione: caporedattore del desk, caposervizio, desk centrale.\",\n      \"removal_test\": \"Il pezzo giornalistico è l'unità di lavoro che attraversa l'intero processo redazionale. Senza un'entità discreta che entra nel processo (notizia grezza) e ne esce trasformata (articolo pubblicabile), non esiste processo redazionale — esiste solo rumore informativo. Rimuovendo W1, il sistema cessa di essere una redazione.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"si assegnano i pezzi [...] i giornalisti contattano fonti, verificano fatti, scrivono [...] tre livelli di revisione [...] taglio dei pezzi [...] il file passa in stampa [...] I rotativi stampano [...] Le copie vengono caricate su camion\",\n      \"removal_test\": \"La sequenza ordinata di stati — assegnato → in lavorazione → in revisione → impaginato → in stampa → distribuito — è l'ossatura del sistema. Senza stati e transizioni definiti, non esiste ciclo produttivo giornaliero. Il giornale non uscirebbe. Rimuovendo W2, il sistema collassa.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate'\",\n      \"removal_test\": \"Le regole che governano le transizioni — la chiusura alle 21 è inderogabile, la ribaltata è l'eccezione ammessa, i tre livelli di revisione sono obbligatori — definiscono cosa è lecito nel processo. Senza W3, ogni giornalista potrebbe pubblicare direttamente, ogni pezzo potrebbe saltare la revisione. Il sistema non sarebbe più una redazione strutturata ma una piattaforma aperta.\"\n    },\n    {\n      \"id\": \"S3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Ogni mattina alle 9 [...] Alle 19 c'è la riunione finale [...] Alle 21 la redazione chiude [...] I rotativi stampano tra le 23 e le 3 [...] dalle 5\",\n      \"removal_test\": \"Il quotidiano cartaceo è definito dalla sua cadenza temporale: slot fissi e non negoziabili scandiscono l'intera produzione. La deadline delle 21 non è una preferenza — è la condizione di esistenza del prodotto. Senza slot temporali rigidi, il sistema diventa un sito di news online (che il testo stesso distingue come 'ciclo diverso'). Rimuovendo S3, il sistema perde la sua identità di quotidiano.\"\n    },\n    {\n      \"id\": \"S4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate' — una parte della tiratura viene rifatta\",\n      \"removal_test\": \"La non-sovrapposizione temporale è la legge fisica che rende il quotidiano cartaceo strutturalmente diverso dal digitale: lo stesso slot di stampa non può contenere due versioni del giornale simultaneamente. La ribaltata esiste proprio perché S4 è inviolabile — si rifà fisicamente una parte della tiratura. Senza S4, non esisterebbe il problema della ribaltata né la pressione della deadline.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"il direttore riunisce i capiredattori [...] si assegnano i pezzi [...] caporedattore del desk, caposervizio, desk centrale\",\n      \"removal_test\": \"La catena di responsabilità — chi assegna, chi revisiona, chi approva — è costitutiva della redazione come istituzione giornalistica. Senza responsabilità assegnate, non esiste gerarchia editoriale, non esiste accountability sul contenuto pubblicato. Il sistema cesserebbe di essere una redazione e diventerebbe una piattaforma anonima.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\",\n      \"removal_test\": \"La persistenza intenzionale opera a due livelli: ogni articolo pubblicato è reso permanente (non scompare dopo la distribuzione), e l'archivio storico è la sua forma istituzionalizzata. Senza C1, ogni edizione sarebbe effimera — il giornale non avrebbe memoria di sé. Tuttavia l'archivio è una funzione accessoria rispetto al ciclo produttivo quotidiano: il giornale esisterebbe anche senza archivio consultabile. Declasso a PRESENT.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport [...] caporedattore del desk, caposervizio, desk centrale\",\n      \"removal_test\": \"La differenziazione per desk e per livello gerarchico non è un'aggiunta organizzativa — è la struttura che rende possibile la specializzazione e la revisione a cascata. Senza M3, non esistono desk, non esistono livelli di revisione, non esiste la gerarchia editoriale. Il sistema collassa in una redazione indifferenziata incapace di produrre un quotidiano nazionale. NUCLEAR.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate' — una parte della tiratura viene rifatta\",\n      \"removal_test\": \"L'irreversibilità è strutturalmente centrale: una volta che il file va in stampa, la correzione non è un 'undo' ma una nuova operazione costosa (la ribaltata). Il quotidiano cartaceo esiste proprio perché la pubblicazione è irreversibile — non si può 'aggiornare' una copia già distribuita. Senza T4, il sistema sarebbe indistinguibile dal digitale. NUCLEAR.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\",\n      \"removal_test\": \"Senza l'archivio, il giornale continua a uscire ogni giorno. Il ciclo produttivo non è intaccato. Il sistema è impoverito (perde memoria istituzionale e una fonte di ricavo da abbonamenti) ma resta riconoscibilmente una redazione di quotidiano.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\",\n      \"removal_test\": \"La ritrovabilità degli articoli archiviati è chiaramente manifestata. Senza di essa, l'archivio esiste ma è inaccessibile — il sistema è impoverito ma il ciclo produttivo quotidiano non è compromesso.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati [...] metriche di click che influenzano le promozioni.\",\n      \"removal_test\": \"Il corpus degli articoli si accumula nel tempo — ogni edizione aggiunge al patrimonio informativo. Senza accumulazione, non esisterebbe archivio storico. Ma il ciclo produttivo giornaliero non dipende dall'accumulazione — ogni edizione è autonoma.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"decisione della gerarchia di titoli e occhielli [...] la grafica impagina\",\n      \"removal_test\": \"La forma dell'articolo — struttura del testo, titolo, occhiello, impaginazione — è un vincolo che definisce cosa è pubblicabile. Senza C2, non esisterebbe impaginazione né gerarchia visiva. Il sistema è impoverito ma non collassa: potrebbe pubblicare testi non formattati.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"80 giornalisti divisi in desk: politica, cronaca, esteri, economia, cultura, sport\",\n      \"removal_test\": \"L'appartenenza al desk (politica, cronaca, ecc.) struttura l'organizzazione redazionale. Senza M2, non esisterebbero desk — ma il sistema potrebbe funzionare con giornalisti generalisti. Impoverito, non distrutto.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati [...] verifiche meno rigorose\",\n      \"removal_test\": \"Il confine dentro/fuori si manifesta tra abbonati e non-abbonati (archivio), tra redazione e pubblico (chi può pubblicare), tra online e cartaceo (cicli diversi). Senza M4, l'archivio sarebbe aperto a tutti e la distinzione redazione/pubblico sfumata. Il sistema è impoverito ma riconoscibile.\"\n    },\n    {\n      \"id\": \"S1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Alle 21 la redazione chiude: il file passa in stampa [...] Le correzioni dell'ultima ora possono richiedere 'ribaltate'\",\n      \"removal_test\": \"Il tempo redazionale è la risorsa finita per eccellenza: le ore tra le 9 e le 21 sono il budget temporale non rinnovabile di ogni edizione. Senza S1, non esisterebbe la pressione della deadline. Ma S1 è già catturato strutturalmente da S3 e S4 — come primitiva separata aggiunge sfumatura, non identità.\"\n    },\n    {\n      \"id\": \"S2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"si assegnano i pezzi [...] i giornalisti contattano fonti\",\n      \"removal_test\": \"I giornalisti sono i richiedenti che competono per spazio nella pagina (risorsa finita). Senza richiedenti, non c'è scheduling. Ma il sistema è già descritto da W4 (responsabilità) — S2 aggiunge la dimensione della domanda competitiva per lo spazio.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"i giornalisti contattano fonti [...] il direttore riunisce i capiredattori [...] Alle 19 c'è la riunione finale\",\n      \"removal_test\": \"La comunicazione tra giornalisti e fonti, tra direttore e capiredattori, è chiaramente presente. Senza CO1, non esisterebbero riunioni né contatti con le fonti — il sistema è gravemente impoverito. Ma CO1 è strumentale al workflow, non costitutivo dell'identità del quotidiano in sé.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"i giornalisti contattano fonti [...] il file passa in stampa\",\n      \"removal_test\": \"La direzionalità della comunicazione — dalla fonte al giornalista, dalla redazione alla tipografia, dal giornale al lettore — è strutturalmente presente. Senza CO3, l'informazione non fluisce. Ma è una proprietà del flusso informativo generale, non specifica dell'identità del quotidiano.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"il file passa in stampa [...] Le copie vengono caricate su camion e distribuite alle edicole\",\n      \"removal_test\": \"Il trasferimento fisico — file alla tipografia, copie alle edicole — è chiaramente presente. Senza T2, il giornale non raggiunge i lettori. Ma T2 descrive la logistica, non l'identità redazionale: il sistema di produzione del contenuto sopravvive concettualmente anche senza distribuzione.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"metriche di click che influenzano le promozioni [...] notizie della notte\",\n      \"removal_test\": \"La traccia temporale è presente nelle metriche online e nella rassegna delle notizie della notte (serie temporale di eventi). Senza N2, le metriche perdono significato temporale. Il sistema è impoverito ma il ciclo cartaceo non è compromesso.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"metriche di click che influenzano le promozioni [...] i giornalisti contattano fonti, verificano fatti\",\n      \"removal_test\": \"Le metriche di click indicano indirettamente l'interesse dei lettori; la verifica dei fatti indica indirettamente la realtà degli eventi. Senza N3, il sistema perde la capacità di leggere segnali indiretti. Impoverito, non distrutto.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"80 giornalisti divisi in desk [...] una parte della tiratura viene rifatta\",\n      \"removal_test\": \"La quantificazione è debolmente presente: 80 giornalisti (risorse umane contate), tiratura (copie contate). Ma il sistema non descrive esplicitamente un processo di conteggio operativo. I1 è inferibile ma periferico.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"taglio dei pezzi lunghi [...] una parte della tiratura viene rifatta\",\n      \"removal_test\": \"La finitezza dello spazio fisico della pagina (che impone il taglio dei pezzi) e della tiratura è implicitamente presente. Ma I2 è già catturata strutturalmente da S1 e S4. Come primitiva autonoma aggiunge poco.\"\n    },\n    {\n      \"id\": \"T3\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"L'archivio storico del giornale, digitalizzato, è consultabile dagli abbonati.\",\n      \"removal_test\": \"L'accordo abbonato-giornale è debolmente inferibile. Ma il sistema non descrive il processo di accordo — solo il risultato (accesso all'archivio). T3 è periferico rispetto all'identità redazionale.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"metriche di click che influenzano le promozioni\",\n      \"removal_test\": \"L'accumulazione di dati di telemetria (click nel tempo) è debolmente presente nella versione online. Ma è marginale rispetto al sistema cartaceo descritto. Omettibile senza perdita sostanziale.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"i giornalisti contattano fonti, verificano fatti\",\n      \"removal_test\": \"Le fonti emettono informazioni senza necessariamente sapere come verranno usate — asimmetria sorgente-osservatore debolmente presente. Ma è una caratteristica del giornalismo in generale, non specifica di questo sistema come descritto.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:43:28.303541+00:00"
+}

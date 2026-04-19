@@ -1,0 +1,113 @@
+{
+  "llm": "J3_GEMINI",
+  "system": "S9",
+  "system_title": "Causa di beatificazione nella Chiesa cattolica",
+  "attempt": 1,
+  "elapsed_s": 46.51,
+  "model_reported": "gemini-2.5-pro",
+  "usage": {
+    "prompt_tokens": 5491,
+    "completion_tokens": 1640,
+    "total_tokens": 11517
+  },
+  "primitives_identified": [
+    {
+      "id": "C1",
+      "tier": "NUCLEAR",
+      "quote": "Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati...",
+      "removal_test": "Se le testimonianze e gli scritti non fossero intenzionalmente preservati contro il tempo, non esisterebbe alcuna prova da esaminare. L'intero processo, che è basato sull'evidenza, cesserebbe di esistere."
+    },
+    {
+      "id": "C2",
+      "tier": "NUCLEAR",
+      "quote": "Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).",
+      "removal_test": "Senza regole codificate e una forma definita, il processo diventerebbe una valutazione arbitraria e soggettiva, non una 'causa' formale e ripetibile. La sua identità legale e teologica andrebbe persa."
+    },
+    {
+      "id": "C4",
+      "tier": "NUCLEAR",
+      "quote": "Un postulatore (nominato) compila il dossier.",
+      "removal_test": "Il processo è definito dalla creazione di un corpo completo di prove. Se le prove non potessero essere accumulate in un unico dossier, il concetto di 'causa' come caso unificato da giudicare scomparirebbe."
+    },
+    {
+      "id": "C5",
+      "tier": "NUCLEAR",
+      "quote": "testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori...",
+      "removal_test": "Se le prove raccolte (testimonianze, scritti, miracoli) non fossero esplicitamente collegate al candidato specifico, la valutazione sarebbe priva di significato. L'intero processo si fonda su questa connessione."
+    },
+    {
+      "id": "M1",
+      "tier": "NUCLEAR",
+      "quote": "Quando una persona cattolica muore in odore di santità, la sua diocesi può avviare una causa...",
+      "removal_test": "Il processo è incentrato su un individuo specifico. Se l'identità del candidato non fosse chiaramente stabilita e persistente, non ci sarebbe un soggetto per l'indagine."
+    },
+    {
+      "id": "M2",
+      "tier": "NUCLEAR",
+      "quote": "Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'.",
+      "removal_test": "Lo scopo ultimo del processo è ammettere formalmente il candidato nel gruppo dei 'Beati' o dei 'Santi'. Senza questo esito di appartenenza a un gruppo, il processo non avrebbe alcun obiettivo."
+    },
+    {
+      "id": "M3",
+      "tier": "NUCLEAR",
+      "quote": "il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. Per arrivare alla beatificazione... 'Beato'... 'Santo'.",
+      "removal_test": "Il processo non è una singola decisione binaria, ma una progressione attraverso livelli di riconoscimento distinti e gerarchici. Rimuovere questa differenziazione cambierebbe fondamentalmente la natura e la struttura del risultato."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente.",
+      "removal_test": "Il processo è un meccanismo per decidere chi attraversa il confine per entrare nel gruppo dei santi riconosciuti. Se non ci fosse un confine chiaro (dentro/fuori), la dichiarazione papale non avrebbe alcun significato."
+    },
+    {
+      "id": "W1",
+      "tier": "NUCLEAR",
+      "quote": "la sua diocesi può avviare una causa di beatificazione.",
+      "removal_test": "La 'causa' (o la sua manifestazione fisica, il dossier) è l'oggetto che si muove attraverso il sistema. Senza questa unità di lavoro discreta, non ci sarebbe nulla da processare."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "fase diocesana... inviato a Roma... il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.",
+      "removal_test": "Il sistema è definito come una sequenza di fasi. Rimuovere il concetto di stati distinti e le transizioni tra di essi smantellerebbe il processo stesso, lasciando solo una raccolta di attività non correlate."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "Per arrivare alla beatificazione serve un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente...",
+      "removal_test": "La progressione tra gli stati è governata da regole esplicite. Senza queste regole (es. 'è richiesto un miracolo'), le transizioni sarebbero arbitrarie e il sistema perderebbe il suo carattere di procedura formale e canonica."
+    },
+    {
+      "id": "W4",
+      "tier": "NUCLEAR",
+      "quote": "Un postulatore... compila il dossier... una commissione di cardinali... valuta... il Papa firma un decreto.",
+      "removal_test": "Il processo è eseguito da attori specifici con ruoli definiti. Se queste responsabilità non fossero assegnate, le azioni necessarie non verrebbero intraprese e il flusso di lavoro cesserebbe di funzionare."
+    },
+    {
+      "id": "C3",
+      "tier": "PRESENT",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.",
+      "removal_test": "Il dossier deve essere trovato e accessibile dalle varie commissioni. Se non fosse rintracciabile, il processo si fermerebbe. Tuttavia, questa è una necessità funzionale, non l'identità centrale. L'identità è la valutazione, non la logistica del trasferimento dei file."
+    },
+    {
+      "id": "CO1",
+      "tier": "PRESENT",
+      "quote": "il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.",
+      "removal_test": "La comunicazione tra la diocesi (emittente) e Roma (destinatario) è essenziale per l'avanzamento del processo. Se questo canale di comunicazione venisse rimosso, il processo sarebbe limitato al livello diocesano, ma il concetto di indagine locale rimarrebbe riconoscibile."
+    },
+    {
+      "id": "CO2",
+      "tier": "PRESENT",
+      "quote": "vengono esaminati da una commissione teologica per escludere eresie.",
+      "removal_test": "L'uso di un linguaggio teologico e canonico condiviso ('eresie', 'virtù eroiche') è cruciale per una valutazione coerente. Se questo codice venisse rimosso, la valutazione diventerebbe soggettiva, ma l'obiettivo generale di valutare la santità di una persona sarebbe ancora riconoscibile."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 12,
+    "INFERRED": 0,
+    "PRESENT": 3
+  },
+  "n_total": 15,
+  "raw_response": "{\n  \"primitives\": [\n    {\n      \"id\": \"C1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Si raccolgono gli scritti del candidato — lettere, diari, omelie — e vengono esaminati...\",\n      \"removal_test\": \"Se le testimonianze e gli scritti non fossero intenzionalmente preservati contro il tempo, non esisterebbe alcuna prova da esaminare. L'intero processo, che è basato sull'evidenza, cesserebbe di esistere.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il processo ha regole canoniche codificate (Divinus Perfectionis Magister, 1983).\",\n      \"removal_test\": \"Senza regole codificate e una forma definita, il processo diventerebbe una valutazione arbitraria e soggettiva, non una 'causa' formale e ripetibile. La sua identità legale e teologica andrebbe persa.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Un postulatore (nominato) compila il dossier.\",\n      \"removal_test\": \"Il processo è definito dalla creazione di un corpo completo di prove. Se le prove non potessero essere accumulate in un unico dossier, il concetto di 'causa' come caso unificato da giudicare scomparirebbe.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"testimonianze scritte e orali di chi ha conosciuto il candidato: famiglia, amici, confessori...\",\n      \"removal_test\": \"Se le prove raccolte (testimonianze, scritti, miracoli) non fossero esplicitamente collegate al candidato specifico, la valutazione sarebbe priva di significato. L'intero processo si fonda su questa connessione.\"\n    },\n    {\n      \"id\": \"M1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Quando una persona cattolica muore in odore di santità, la sua diocesi può avviare una causa...\",\n      \"removal_test\": \"Il processo è incentrato su un individuo specifico. Se l'identità del candidato non fosse chiaramente stabilita e persistente, non ci sarebbe un soggetto per l'indagine.\"\n    },\n    {\n      \"id\": \"M2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Dopo il primo miracolo: 'Beato'. Dopo un secondo miracolo (post-beatificazione): 'Santo'.\",\n      \"removal_test\": \"Lo scopo ultimo del processo è ammettere formalmente il candidato nel gruppo dei 'Beati' o dei 'Santi'. Senza questo esito di appartenenza a un gruppo, il processo non avrebbe alcun obiettivo.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"il Papa firma un decreto che attribuisce il titolo di 'Venerabile'. Per arrivare alla beatificazione... 'Beato'... 'Santo'.\",\n      \"removal_test\": \"Il processo non è una singola decisione binaria, ma una progressione attraverso livelli di riconoscimento distinti e gerarchici. Rimuovere questa differenziazione cambierebbe fondamentalmente la natura e la struttura del risultato.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"alcune cause sono archiviate ('sospese') se l'evidenza è insufficiente.\",\n      \"removal_test\": \"Il processo è un meccanismo per decidere chi attraversa il confine per entrare nel gruppo dei santi riconosciuti. Se non ci fosse un confine chiaro (dentro/fuori), la dichiarazione papale non avrebbe alcun significato.\"\n    },\n    {\n      \"id\": \"W1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"la sua diocesi può avviare una causa di beatificazione.\",\n      \"removal_test\": \"La 'causa' (o la sua manifestazione fisica, il dossier) è l'oggetto che si muove attraverso il sistema. Senza questa unità di lavoro discreta, non ci sarebbe nulla da processare.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"fase diocesana... inviato a Roma... il Papa firma un decreto che attribuisce il titolo di 'Venerabile'.\",\n      \"removal_test\": \"Il sistema è definito come una sequenza di fasi. Rimuovere il concetto di stati distinti e le transizioni tra di essi smantellerebbe il processo stesso, lasciando solo una raccolta di attività non correlate.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Per arrivare alla beatificazione serve un miracolo autenticato — tipicamente una guarigione inspiegabile medicalmente...\",\n      \"removal_test\": \"La progressione tra gli stati è governata da regole esplicite. Senza queste regole (es. 'è richiesto un miracolo'), le transizioni sarebbero arbitrarie e il sistema perderebbe il suo carattere di procedura formale e canonica.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Un postulatore... compila il dossier... una commissione di cardinali... valuta... il Papa firma un decreto.\",\n      \"removal_test\": \"Il processo è eseguito da attori specifici con ruoli definiti. Se queste responsabilità non fossero assegnate, le azioni necessarie non verrebbero intraprese e il flusso di lavoro cesserebbe di funzionare.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.\",\n      \"removal_test\": \"Il dossier deve essere trovato e accessibile dalle varie commissioni. Se non fosse rintracciabile, il processo si fermerebbe. Tuttavia, questa è una necessità funzionale, non l'identità centrale. L'identità è la valutazione, non la logistica del trasferimento dei file.\"\n    },\n    {\n      \"id\": \"CO1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"il dossier viene inviato a Roma, alla Congregazione delle Cause dei Santi.\",\n      \"removal_test\": \"La comunicazione tra la diocesi (emittente) e Roma (destinatario) è essenziale per l'avanzamento del processo. Se questo canale di comunicazione venisse rimosso, il processo sarebbe limitato al livello diocesano, ma il concetto di indagine locale rimarrebbe riconoscibile.\"\n    },\n    {\n      \"id\": \"CO2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"vengono esaminati da una commissione teologica per escludere eresie.\",\n      \"removal_test\": \"L'uso di un linguaggio teologico e canonico condiviso ('eresie', 'virtù eroiche') è cruciale per una valutazione coerente. Se questo codice venisse rimosso, la valutazione diventerebbe soggettiva, ma l'obiettivo generale di valutare la santità di una persona sarebbe ancora riconoscibile.\"\n    }\n  ]\n}",
+  "timestamp_utc": "2026-04-19T00:00:57.756198+00:00"
+}

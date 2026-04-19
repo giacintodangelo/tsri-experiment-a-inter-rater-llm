@@ -1,0 +1,132 @@
+{
+  "llm": "J1_CLAUDE",
+  "system": "S4",
+  "system_title": "Regolazione endocrina della glicemia",
+  "attempt": 1,
+  "elapsed_s": 44.46,
+  "model_reported": "claude-sonnet-4-6",
+  "usage": {
+    "input_tokens": 6356,
+    "output_tokens": 2681,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "primitives_identified": [
+    {
+      "id": "I4",
+      "tier": "NUCLEAR",
+      "quote": "Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)",
+      "removal_test": "Senza uno stato corrente misurabile della glicemia, il sistema di regolazione non ha nulla su cui operare. Non esiste 'glicemia alta' o 'glicemia bassa' — solo rumore. Il sistema cessa di essere un sistema di regolazione."
+    },
+    {
+      "id": "I2",
+      "tier": "NUCLEAR",
+      "quote": "Il cervello consuma glucosio esclusivamente: una caduta prolungata porta a confusione, svenimento, coma",
+      "removal_test": "Se il glucosio non fosse una risorsa finita e scarsa, non ci sarebbe nulla da regolare. La finitezza è la ragione ontologica dell'intero sistema. Senza I2, il feedback loop non ha senso di esistere."
+    },
+    {
+      "id": "W2",
+      "tier": "NUCLEAR",
+      "quote": "L'insulina [...] viene rilasciata quando il glucosio sale [...] Il glucagone [...] fa il contrario: quando il glucosio scende [...] stimola il fegato a rilasciare glucosio",
+      "removal_test": "Il sistema è definito da transizioni di stato ordinate e causalmente concatenate: glucosio sale → insulina rilasciata → glucosio scende → glucagone rilasciato. Senza stati e transizioni strutturate, non c'è omeostasi — c'è solo chimica casuale."
+    },
+    {
+      "id": "W3",
+      "tier": "NUCLEAR",
+      "quote": "si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue",
+      "removal_test": "Le regole biochimiche (recettori, soglie, meccanismi di percezione chimica) determinano quali transizioni sono valide e quando. Senza W3, il sistema non sa quando rilasciare insulina vs glucagone. L'identità regolatoria collassa."
+    },
+    {
+      "id": "N1",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Il glucosio emette involontariamente un segnale chimico che il pancreas percepisce senza che il glucosio 'intenda' comunicare. Questa emissione passiva è il meccanismo trigger dell'intero loop. Senza N1, il feedback non si attiva mai."
+    },
+    {
+      "id": "N3",
+      "tier": "NUCLEAR",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "La concentrazione di glucosio indica indirettamente lo stato metabolico dell'organismo — non è misurata direttamente come 'fame' o 'sazietà' ma inferita chimicamente. Senza questa indicazione indiretta, il pancreas non può distinguere stati e il sistema di regolazione è cieco."
+    },
+    {
+      "id": "W4",
+      "tier": "NUCLEAR",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas [...] Il glucagone, prodotto dalle cellule alfa",
+      "removal_test": "Cellule beta e cellule alfa hanno responsabilità distinte e non intercambiabili nel processo. Senza l'assegnazione di responsabilità a agenti specifici, il workflow non ha esecutori e il sistema non può rispondere differenzialmente agli stimoli."
+    },
+    {
+      "id": "M4",
+      "tier": "NUCLEAR",
+      "quote": "mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)",
+      "removal_test": "La 'finestra ristretta' è un confine dentro/fuori: valori dentro la finestra sono normali, valori fuori attivano risposte correttive. Senza questo confine, non esiste la distinzione normo/iper/ipoglicemia e il sistema non sa quando intervenire."
+    },
+    {
+      "id": "T1",
+      "tier": "PRESENT",
+      "quote": "si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue",
+      "removal_test": "Il legame insulina-recettore è una transazione tra due parti (ormone e cellula bersaglio). Senza questa struttura relazionale a due parti, il meccanismo d'azione è incomprensibile, ma il sistema di regolazione potrebbe essere descritto in termini puramente di flusso senza perdere la sua identità fondamentale."
+    },
+    {
+      "id": "T2",
+      "tier": "PRESENT",
+      "quote": "stimola il fegato a rilasciare glucosio dalle riserve di glicogeno [...] le cellule [...] assorbono glucosio dal sangue",
+      "removal_test": "Il glucosio si trasferisce fisicamente: dal sangue alle cellule (insulina) o dal fegato al sangue (glucagone). Il trasferimento è reale e direzionale. Senza T2 il sistema è impoverito nella descrizione del meccanismo, ma l'identità regolatoria sopravvive concettualmente."
+    },
+    {
+      "id": "T4",
+      "tier": "PRESENT",
+      "quote": "Se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue danneggiando vasi, reni, nervi nel lungo termine",
+      "removal_test": "Il danno cronico da iperglicemia è irreversibile — i vasi danneggiati non si riparano spontaneamente. Questa irreversibilità è clinicamente centrale ma non definitoria del sistema di regolazione in sé: il sistema esiste anche senza considerare le conseguenze del suo fallimento."
+    },
+    {
+      "id": "N2",
+      "tier": "PRESENT",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio",
+      "removal_test": "HbA1c è esplicitamente una traccia temporale: il glucosio lascia un'impronta cumulativa nel tempo sui globuli rossi. Senza N2, questo strumento diagnostico non esiste, ma il sistema fisiologico di regolazione continua a operare."
+    },
+    {
+      "id": "N4",
+      "tier": "PRESENT",
+      "quote": "Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio",
+      "removal_test": "HbA1c è un pattern per accumulazione biologica: ogni giorno di esposizione al glucosio si somma alla glicazione dell'emoglobina, producendo una serie storica incarnata nella molecola. Presente e rilevante diagnosticamente, ma non costitutivo del loop omeostatico."
+    },
+    {
+      "id": "C1",
+      "tier": "PRESENT",
+      "quote": "mantiene la concentrazione di glucosio nel sangue in una finestra ristretta",
+      "removal_test": "L'omeostasi è per definizione persistenza intenzionale di uno stato contro le perturbazioni. Il sistema combatte attivamente la dissoluzione dell'equilibrio glicemico. Tuttavia C1 è già catturata funzionalmente da W2+W3+I2 — la sua rimozione come primitiva separata impoverisce la descrizione ma non la distrugge."
+    },
+    {
+      "id": "M3",
+      "tier": "PRESENT",
+      "quote": "L'insulina, prodotta dalle cellule beta del pancreas [...] Il glucagone, prodotto dalle cellule alfa [...] cellule muscolari, adipose e epatiche",
+      "removal_test": "Il sistema è strutturato in livelli differenziati di cellule con ruoli distinti e diritti d'azione diversi (solo le beta producono insulina, solo le alfa glucagone, solo le cellule bersaglio rispondono). La differenziazione è reale e funzionale, ma è già parzialmente catturata da W4."
+    },
+    {
+      "id": "CO3",
+      "tier": "INFERRED",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Il segnale chimico ha una direzionalità (dal glucosio al pancreas, dall'ormone alla cellula bersaglio). Ma questa direzionalità è quasi interamente catturata da N1+N3 — CO3 aggiunge poco di autonomo e può essere omessa senza perdita sostanziale."
+    },
+    {
+      "id": "I1",
+      "tier": "INFERRED",
+      "quote": "mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)",
+      "removal_test": "La concentrazione in mg/dL è una quantificazione esplicita. Ma il sistema descritto non è un sistema di conteggio — la quantificazione è strumentale alla regolazione, non costitutiva. I4 cattura già lo stato corrente in modo più pertinente."
+    },
+    {
+      "id": "N5",
+      "tier": "INFERRED",
+      "quote": "Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica",
+      "removal_test": "Il glucosio non sa di essere monitorato — c'è asimmetria sorgente-osservatore tra glucosio (passivo) e pancreas (osservatore attivo). Tuttavia questa asimmetria è già implicita in N1 e N3. N5 è debolmente inferibile come sfumatura aggiuntiva."
+    }
+  ],
+  "tier_counts": {
+    "NUCLEAR": 8,
+    "INFERRED": 3,
+    "PRESENT": 7
+  },
+  "n_total": 18,
+  "raw_response": "```json\n{\n  \"primitives\": [\n    {\n      \"id\": \"I4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il corpo umano mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)\",\n      \"removal_test\": \"Senza uno stato corrente misurabile della glicemia, il sistema di regolazione non ha nulla su cui operare. Non esiste 'glicemia alta' o 'glicemia bassa' — solo rumore. Il sistema cessa di essere un sistema di regolazione.\"\n    },\n    {\n      \"id\": \"I2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il cervello consuma glucosio esclusivamente: una caduta prolungata porta a confusione, svenimento, coma\",\n      \"removal_test\": \"Se il glucosio non fosse una risorsa finita e scarsa, non ci sarebbe nulla da regolare. La finitezza è la ragione ontologica dell'intero sistema. Senza I2, il feedback loop non ha senso di esistere.\"\n    },\n    {\n      \"id\": \"W2\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'insulina [...] viene rilasciata quando il glucosio sale [...] Il glucagone [...] fa il contrario: quando il glucosio scende [...] stimola il fegato a rilasciare glucosio\",\n      \"removal_test\": \"Il sistema è definito da transizioni di stato ordinate e causalmente concatenate: glucosio sale → insulina rilasciata → glucosio scende → glucagone rilasciato. Senza stati e transizioni strutturate, non c'è omeostasi — c'è solo chimica casuale.\"\n    },\n    {\n      \"id\": \"W3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue\",\n      \"removal_test\": \"Le regole biochimiche (recettori, soglie, meccanismi di percezione chimica) determinano quali transizioni sono valide e quando. Senza W3, il sistema non sa quando rilasciare insulina vs glucagone. L'identità regolatoria collassa.\"\n    },\n    {\n      \"id\": \"N1\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Il glucosio emette involontariamente un segnale chimico che il pancreas percepisce senza che il glucosio 'intenda' comunicare. Questa emissione passiva è il meccanismo trigger dell'intero loop. Senza N1, il feedback non si attiva mai.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"La concentrazione di glucosio indica indirettamente lo stato metabolico dell'organismo — non è misurata direttamente come 'fame' o 'sazietà' ma inferita chimicamente. Senza questa indicazione indiretta, il pancreas non può distinguere stati e il sistema di regolazione è cieco.\"\n    },\n    {\n      \"id\": \"W4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas [...] Il glucagone, prodotto dalle cellule alfa\",\n      \"removal_test\": \"Cellule beta e cellule alfa hanno responsabilità distinte e non intercambiabili nel processo. Senza l'assegnazione di responsabilità a agenti specifici, il workflow non ha esecutori e il sistema non può rispondere differenzialmente agli stimoli.\"\n    },\n    {\n      \"id\": \"M4\",\n      \"tier\": \"NUCLEAR\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)\",\n      \"removal_test\": \"La 'finestra ristretta' è un confine dentro/fuori: valori dentro la finestra sono normali, valori fuori attivano risposte correttive. Senza questo confine, non esiste la distinzione normo/iper/ipoglicemia e il sistema non sa quando intervenire.\"\n    },\n    {\n      \"id\": \"T1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"si lega a recettori sulle cellule muscolari, adipose e epatiche, che aprono canali e assorbono glucosio dal sangue\",\n      \"removal_test\": \"Il legame insulina-recettore è una transazione tra due parti (ormone e cellula bersaglio). Senza questa struttura relazionale a due parti, il meccanismo d'azione è incomprensibile, ma il sistema di regolazione potrebbe essere descritto in termini puramente di flusso senza perdere la sua identità fondamentale.\"\n    },\n    {\n      \"id\": \"T2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"stimola il fegato a rilasciare glucosio dalle riserve di glicogeno [...] le cellule [...] assorbono glucosio dal sangue\",\n      \"removal_test\": \"Il glucosio si trasferisce fisicamente: dal sangue alle cellule (insulina) o dal fegato al sangue (glucagone). Il trasferimento è reale e direzionale. Senza T2 il sistema è impoverito nella descrizione del meccanismo, ma l'identità regolatoria sopravvive concettualmente.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Se l'insulina è insufficiente o le cellule sono resistenti (diabete), il glucosio resta elevato nel sangue danneggiando vasi, reni, nervi nel lungo termine\",\n      \"removal_test\": \"Il danno cronico da iperglicemia è irreversibile — i vasi danneggiati non si riparano spontaneamente. Questa irreversibilità è clinicamente centrale ma non definitoria del sistema di regolazione in sé: il sistema esiste anche senza considerare le conseguenze del suo fallimento.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio\",\n      \"removal_test\": \"HbA1c è esplicitamente una traccia temporale: il glucosio lascia un'impronta cumulativa nel tempo sui globuli rossi. Senza N2, questo strumento diagnostico non esiste, ma il sistema fisiologico di regolazione continua a operare.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"Il test HbA1c misura la glicemia media degli ultimi 3 mesi integrando l'esposizione dei globuli rossi al glucosio\",\n      \"removal_test\": \"HbA1c è un pattern per accumulazione biologica: ogni giorno di esposizione al glucosio si somma alla glicazione dell'emoglobina, producendo una serie storica incarnata nella molecola. Presente e rilevante diagnosticamente, ma non costitutivo del loop omeostatico.\"\n    },\n    {\n      \"id\": \"C1\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue in una finestra ristretta\",\n      \"removal_test\": \"L'omeostasi è per definizione persistenza intenzionale di uno stato contro le perturbazioni. Il sistema combatte attivamente la dissoluzione dell'equilibrio glicemico. Tuttavia C1 è già catturata funzionalmente da W2+W3+I2 — la sua rimozione come primitiva separata impoverisce la descrizione ma non la distrugge.\"\n    },\n    {\n      \"id\": \"M3\",\n      \"tier\": \"PRESENT\",\n      \"quote\": \"L'insulina, prodotta dalle cellule beta del pancreas [...] Il glucagone, prodotto dalle cellule alfa [...] cellule muscolari, adipose e epatiche\",\n      \"removal_test\": \"Il sistema è strutturato in livelli differenziati di cellule con ruoli distinti e diritti d'azione diversi (solo le beta producono insulina, solo le alfa glucagone, solo le cellule bersaglio rispondono). La differenziazione è reale e funzionale, ma è già parzialmente catturata da W4.\"\n    },\n    {\n      \"id\": \"CO3\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Il segnale chimico ha una direzionalità (dal glucosio al pancreas, dall'ormone alla cellula bersaglio). Ma questa direzionalità è quasi interamente catturata da N1+N3 — CO3 aggiunge poco di autonomo e può essere omessa senza perdita sostanziale.\"\n    },\n    {\n      \"id\": \"I1\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"mantiene la concentrazione di glucosio nel sangue in una finestra ristretta (~70-100 mg/dL a digiuno)\",\n      \"removal_test\": \"La concentrazione in mg/dL è una quantificazione esplicita. Ma il sistema descritto non è un sistema di conteggio — la quantificazione è strumentale alla regolazione, non costitutiva. I4 cattura già lo stato corrente in modo più pertinente.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"tier\": \"INFERRED\",\n      \"quote\": \"Il pancreas riceve il segnale dal glucosio stesso attraverso meccanismi di percezione chimica\",\n      \"removal_test\": \"Il glucosio non sa di essere monitorato — c'è asimmetria sorgente-osservatore tra glucosio (passivo) e pancreas (osservatore attivo). Tuttavia questa asimmetria è già implicita in N1 e N3. N5 è debolmente inferibile come sfumatura aggiuntiva.\"\n    }\n  ]\n}\n```",
+  "timestamp_utc": "2026-04-18T23:40:44.418937+00:00"
+}
